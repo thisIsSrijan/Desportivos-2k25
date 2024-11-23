@@ -1,1 +1,1 @@
-# Desportivos-2k25
+# Designed and Developed by GDG on Campus, LNMIIT
