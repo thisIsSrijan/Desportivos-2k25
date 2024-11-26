@@ -1,16 +1,12 @@
-// src/App.jsx
-import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Register from "./pages/Register";
+import './App.css'
 
 function App() {
+
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Register />} />
-      </Routes>
-    </Router>
-  );
+    <>
+      <h1>Desportivos'25</h1>
+    </>
+  )
 }
 
-export default App;
+export default App
