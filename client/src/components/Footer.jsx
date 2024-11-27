@@ -1,5 +1,6 @@
 import React from "react";
 import "../index.css";
+import Marquee from "react-fast-marquee"
 
 function Footer() {
   const dot = "/Ellipse 36 (1).png";
@@ -22,8 +23,8 @@ function Footer() {
   };
 
   return (
-    <div className="w-full h-[100vh] overflow-hidden bg-gray-100">
-      <marquee
+    <div className="w-full overflow-hidden bg-gray-100">
+      {/* <marquee
         scrollamount="20"
         behavior="scroll"
         direction="left"
@@ -37,7 +38,18 @@ function Footer() {
             Register Now
           </span>
         </div>
-      </marquee>
+      </marquee> */}
+
+
+      <Marquee speed={150} autoFill={true}>
+      <div className="flex space-x-12">
+          {renderTextWithDot()}
+          <span className="text-6xl sm:text-7xl md:text-9xl dharma-gothic-c mt-5 ">
+            Register Now
+          </span>
+        </div>
+      </Marquee>
+      
       <div className="w-full h-1 bg-black"></div>
 
       <div className="flex justify-center">
