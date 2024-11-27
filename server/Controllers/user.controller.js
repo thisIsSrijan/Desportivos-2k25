@@ -1,6 +1,9 @@
 import { z } from "zod";
 import nodemailer from "nodemailer";
 import User from "../model/usermodel.js";
+import { configDotenv } from "dotenv";
+
+configDotenv();
 
 const userSchema = z.object({
   Name: z.string().min(1, "Name is required").max(100, "Name is too long"),
@@ -16,13 +19,13 @@ const sendThankYouEmail = async (Name, Email) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "adityabajpayee7@gmail.com",
-      pass: "tgwemtwmbyynmvbp",
+      user: process.env.EMAIL,
+      pass: process.env.PASSWORD,
     },
   });
 
   const mailOptions = {
-    from: "adityabajpayee7@gmail.com",
+    from: process.env.EMAIL,
     to: Email,
     subject: "Thank You for Registering - Despo'2K25",
     text: `Hi ${Name},\n\nThank you for registering for Despo'2K25! We are thrilled to have you join us. Stay tuned for more updates about the event.\n\nBest regards,\nThe Despo'2K25 Team`,
