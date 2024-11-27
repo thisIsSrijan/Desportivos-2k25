@@ -1,7 +1,7 @@
 import { z } from "zod";
-import nodemailer from "nodemailer";
 import User from "../model/usermodel.js";
 import { configDotenv } from "dotenv";
+import sendEmail from "../Utils/mailSender.js";
 
 configDotenv();
 
@@ -14,25 +14,6 @@ const userSchema = z.object({
   State: z.string().min(1, "State is required"),
   Domain: z.string().min(1, "Domain is required"),
 });
-
-const sendThankYouEmail = async (Name, Email) => {
-  const transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: process.env.EMAIL,
-      pass: process.env.PASSWORD,
-    },
-  });
-
-  const mailOptions = {
-    from: process.env.EMAIL,
-    to: Email,
-    subject: "Thank You for Registering - Despo'2K25",
-    text: `Hi ${Name},\n\nThank you for registering for Despo'2K25! We are thrilled to have you join us. Stay tuned for more updates about the event.\n\nBest regards,\nThe Despo'2K25 Team`,
-  };
-
-  await transporter.sendMail(mailOptions);
-};
 
 async function registerUser(req, res) {
   try {
@@ -64,7 +45,7 @@ async function registerUser(req, res) {
 
     await user.save();
 
-    await sendThankYouEmail(Name, Email);
+    await sendEmail(Name, Email);
 
     return res.status(200).json({ message: "Registered Successfully" });
   } catch (error) {
