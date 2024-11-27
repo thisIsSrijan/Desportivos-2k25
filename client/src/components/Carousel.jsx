@@ -26,7 +26,7 @@ function Carousel() {
   }, []);
 
   return (
-    <div className="relative flex h-full w-full justify-center items-center overflow-hidden">
+    <div className="relative bg-black flex h-full w-full justify-center items-center overflow-hidden">
       <AnimatePresence mode="popLayout">
         {words_images.map(
           (item, index) =>
@@ -35,15 +35,18 @@ function Carousel() {
                 key={item.word}
                 className="h-screen w-screen relative flex justify-center items-center"
               >
-                <motion.img
-                  initial={{ x: 100, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
+         <motion.img
+                  initial={{ x: 100, opacity: 0 }} 
+                  animate={{ x: 0, opacity: 1 }}  
                   exit={{
-                    x: -100,
+                    x: -100, 
                     opacity: 0,
-                    transition: { duration: 0 },
+                    transition: { duration: 0.5 },
                   }}
-                  transition={{ duration: 0.3 }}
+                  transition={{
+                    duration: 1, 
+                    ease: "easeInOut",
+                  }}
                   src={item.image}
                   alt={item.word}
                   className="w-screen h-screen object-cover select-none"
@@ -54,10 +57,10 @@ function Carousel() {
                   exit={{
                     y: 50,
                     opacity: 0,
-                    transition: { duration: 0 },
+                    transition: { duration: 0.5 },
                   }}
                   transition={{
-                    duration: 0.4,
+                    duration: 0.6,
                     ease: "easeInOut",
                   }}
                   className={`absolute text-8xl lg:text-[12rem] tracking-wider text-center select-none z-10 ${
