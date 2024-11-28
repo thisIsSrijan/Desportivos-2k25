@@ -7,9 +7,14 @@ module.exports = {
       backdropBlur: {
         'custom': '40.14px', // Custom blur value
       },
+      screens: {
+        'custom': {'min': '640px', 'max': '767.5px'},
+      },
       fontFamily: {
         dharma: ['"Dharma Gothic C"', 'sans-serif'], 
       },
+      fontSize: {
+        'xxs': '0.625rem', // 10px
       screens: {
         "xsm": "200px",
         "sm": "576px", // Small devices (phones, ≥ 576px)
