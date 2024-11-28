@@ -25,16 +25,16 @@ function Footer() {
 
   return (
     <div
-      className="relative w-full h-[45vh] sm:h-[90vh] md:h-[74vh] lg:h-screen bg-cover bg-center bg-no-repeat overflow-hidden"
+      className="relative w-full h-[400px] custom:h-[500px] md:h-[600px] lg:h-[750px] bg-cover bg-center bg-no-repeat overflow-hidden"
       style={{ backgroundImage: `url(${bgImg})` }}
     >
-      <div className="absolute mt-10 left-0 bottom-10 lg:bottom-20 w-full">
+      <div className="absolute mt-10 top-5 left-0 bottom-10 lg:bottom-20 w-full">
         <Marquee speed={150} autoFill={true} className="overflow-hidden no-scrollbar">
           <div className="flex space-x-8">{renderTextWithDot()}</div>
         </Marquee>
         <div className="w-full h-[1px] bg-white"></div>
 
-        <div className="w-[97%] md:w-[80%] lg:w-[97%] mx-auto rounded-3xl mt-[4rem] lg:mt-[5rem] h-[150px] md:h-[300px] lg:h-[370px] bg-orange-600 p-4 sm:p-6">
+        <div className="w-[97%] md:w-[80%] lg:w-[97%] mx-auto rounded-3xl mt-[4rem] lg:mt-[5rem] h-[150px] custom:h-[200px] md:h-[300px] lg:h-[370px] bg-orange-600 p-4 sm:p-6">
           <div className="flex justify-between items-center">
             <a
               href="mailto:desportivos@lnmiit.ac.in"
@@ -54,14 +54,14 @@ function Footer() {
         
           <div className="flex justify-center">
             <img
-              className="h-[60px] sm:h-[100px] md:h-[150px] lg:w-[500px] lg:h-[250px]"
+              className="h-[60px] sm:h-[100px] md:h-[150px] lg:w-[500px] lg:h-[250px] relative lg:right-10 right-2 sm:right-6"
               src={despo_text}
               alt="Desportivos Text"
             />
           </div>
 
           <div className="flex justify-center">
-            <p className="text-white text-xs md:text-lg">PRIVACY POLICY</p>
+            <p className="text-white text-xxs sm:text-xs md:text-lg ">PRIVACY POLICY</p>
           </div>
 
           <div className="flex justify-between items-center">
