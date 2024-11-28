@@ -7,5 +7,6 @@
   src: url("./fonts/DharmaGothicC.woff") format("woff");
 }
 .dharma-gothic-c {
-  font-family: "Dharma Gothic C", sans-serif;
+  /* font-family: "Dharma Gothic C", "sans-serif"; */
+  font-family: 'Dharma Gothic C', 'sans-serif';
 } 

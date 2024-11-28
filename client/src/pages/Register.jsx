@@ -1,33 +1,31 @@
 import React, { useState, useEffect } from "react";
 import { State, City } from "country-state-city"; // Importing required modules
-import redbg from '../assets/redbg.png';
-import bottombg from '../assets/bottombg.png';
-import topbg from '../assets/topbg.png';
+import redbg from "../assets/redbg.png";
+import bottombg from "../assets/bottombg.png";
+import topbg from "../assets/topbg.png";
 import "font-awesome/css/font-awesome.min.css";
-
 
 const Register = () => {
   const [fieldsVisible, setFieldsVisible] = useState(false);
   const [arrowVisible, setArrowVisible] = useState(true);
 
-
   const handleArrowClick = () => {
     console.log("Arrow clicked!"); // Debugging the click
-  
+
     // Get the current scroll position
     const currentScrollY = window.scrollY;
-  
+
     // Scroll by a specific number of pixels (10-12px)
     window.scrollTo({
       top: currentScrollY + 460, // Scroll by 12px
-      behavior: "smooth" // Smooth scroll
+      behavior: "smooth", // Smooth scroll
     });
-  
+
     // Optionally, make the fields visible after the scroll (as before)
     setFieldsVisible(true);
 
     // Hide the arrow after it's clicked
-  setArrowVisible(false);
+    setArrowVisible(false);
   };
 
   const handleRegister = () => alert("Register Clicked");
@@ -67,20 +65,27 @@ const Register = () => {
   return (
     <div className="h-screen ">
       {/* Top Background */}
-      <div className="w-full xsm:h-[15.54%] sm:h-[20%] md:h-[25.54%] bg-no-repeat xsm:bg-[center_top_45%] sm:bg-[center_top_45%] xl:bg-[center_top_48%] xsm:bg-[length:240%] sm:bg-[length:190%] md:bg-[length:240%] lg:bg-[length:140%] xl:bg-[length:140%]" style={{ backgroundImage: `url(${redbg})` }}>
-
+      <div
+        className="w-full xsm:h-[15.54%] sm:h-[20%] md:h-[25.54%] bg-no-repeat xsm:bg-[center_top_45%] sm:bg-[center_top_45%] xl:bg-[center_top_48%] xsm:bg-[length:240%] sm:bg-[length:190%] md:bg-[length:240%] lg:bg-[length:140%] xl:bg-[length:140%]"
+        style={{ backgroundImage: `url(${redbg})` }}
+      >
         {/* REGISTER NOW Text */}
         <div className="relative">
-        <h1 className=" absolute xsm:top-[85px] customBreakpoint:top-[119px] sm:top-[100px] md:top-[130px] lg:top-[120px] xl:top-[120px] 2xl:top-[140px]  xsm:left-[50px] customBreakpoint:left-[80px] sm:left-[20px] md:left-[143px] lg:left-[160px] xl:left-[270px] 2xl:left-[320px] uxl:left-[350px] xsm:text-3xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl text-white uppercase font-extrabold text-effect font-dharma">
-          Register Now
-        </h1>
-
+          <h1 className=" absolute xsm:top-[85px] customBreakpoint:top-[119px] sm:top-[100px] md:top-[130px] lg:top-[120px] xl:top-[120px] 2xl:top-[140px]  xsm:left-[50px] customBreakpoint:left-[80px] sm:left-[20px] md:left-[143px] lg:left-[160px] xl:left-[270px] 2xl:left-[320px] uxl:left-[350px] xsm:text-3xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl text-white uppercase font-extrabold text-effect font-dharma">
+            Register Now
+          </h1>
         </div>
       </div>
 
       {/* Bottom Background  */}
-      <div className="w-full xsm:h-[148%] sm:h-[142%]  md:h-screen xl:h-screen z-10 bg-cover" style={{ backgroundImage: `url(${bottombg})` }}>
-        <div className="xsm:w-[90%] md:w-[79.15%] lg:w-[50%] 2xl:w-[60%] xsm:h-[900px] sm:h-[480px] absolute xsm:top-[18%] sm:top-[25%] md:top-[33.65%]  xsm:left-[5%] md:left-[8.92%]  lg:left-[23%] xsm:p-3 md:p-4 md:rounded-lg mt-4 " style={{ backgroundImage: `url(${topbg})` }}>
+      <div
+        className="w-full xsm:h-[148%] sm:h-[142%]  md:h-screen xl:h-screen z-10 bg-cover"
+        style={{ backgroundImage: `url(${bottombg})` }}
+      >
+        <div
+          className="xsm:w-[90%] md:w-[79.15%] lg:w-[50%] 2xl:w-[60%] xsm:h-[900px] sm:h-[480px] absolute xsm:top-[18%] sm:top-[25%] md:top-[33.65%]  xsm:left-[5%] md:left-[8.92%]  lg:left-[23%] xsm:p-3 md:p-4 md:rounded-lg mt-4 "
+          style={{ backgroundImage: `url(${topbg})` }}
+        >
           <div className="grid grid-cols-1 sm:grid-cols-2 xsm:gap-4  md:gap-y-4 md:gap-x-9">
             {/* Name Text Input */}
             <div className="flex flex-col">
@@ -131,29 +136,31 @@ const Register = () => {
             </div>
 
             {/* State Dropdown */}
-<div className="flex flex-col">
-  <label className="text-white">State</label>
-  <select
-    value={state}
-    onChange={(e) => setState(e.target.value)}
-    className={`p-2 border border-gray-300 rounded-md font-medium ${
-      state ? "bg-orange-600 text-white" : "bg-[#625342] text-white"
-    }`}
-  >
-    <option value="" className="text-black">Select a State</option>
-    {stateOptions.map((option) => (
-      <option
-        key={option.isoCode}
-        value={option.isoCode}
-        className={`text-black bg-[#493d33] hover:bg-[#6b5b4c] ${
-          state === option.isoCode ? "bg-orange-600 text-white" : ""
-        }`}
-      >
-        {option.name}
-      </option>
-    ))}
-  </select>
-</div>
+            <div className="flex flex-col">
+              <label className="text-white">State</label>
+              <select
+                value={state}
+                onChange={(e) => setState(e.target.value)}
+                className={`p-2 border border-gray-300 rounded-md font-medium ${
+                  state ? "bg-orange-600 text-white" : "bg-[#625342] text-white"
+                }`}
+              >
+                <option value="" className="text-black">
+                  Select a State
+                </option>
+                {stateOptions.map((option) => (
+                  <option
+                    key={option.isoCode}
+                    value={option.isoCode}
+                    className={`text-black bg-[#493d33] hover:bg-[#6b5b4c] ${
+                      state === option.isoCode ? "bg-orange-600 text-white" : ""
+                    }`}
+                  >
+                    {option.name}
+                  </option>
+                ))}
+              </select>
+            </div>
 
             {/* City Dropdown */}
             <div className="flex flex-col">
@@ -173,13 +180,14 @@ const Register = () => {
 
               {/* Conditional rendering of the arrow icon */}
               {arrowVisible && (
-              <div className=" flex justify-center items-center xsm:flex sm:hidden ">
-                <i className="fa fa-angle-down text-white mt-2"
-                  onClick={handleArrowClick}
-                ></i>
-              </div>
+                <div className=" flex justify-center items-center xsm:flex sm:hidden ">
+                  <i
+                    className="fa fa-angle-down text-white mt-2"
+                    onClick={handleArrowClick}
+                  ></i>
+                </div>
               )}
-              </div>
+            </div>
 
             {/* Domain Dropdown */}
             <div className="flex flex-col">
@@ -251,7 +259,10 @@ const Register = () => {
           </div>
         </div>
       </div>
-      <div id="form-section" style={{ height: "100px", backgroundColor: "#f0f0f0" }}></div>
+      <div
+        id="form-section"
+        style={{ height: "100px", backgroundColor: "#f0f0f0" }}
+      ></div>
     </div>
   );
 };
