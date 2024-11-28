@@ -10,10 +10,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
     "country-state-city": "^3.2.1",
+<<<<<<< HEAD
     "font-awesome": "^4.7.0",
+=======
+    "framer-motion": "^11.11.17",
+>>>>>>> b9d0034c593a51e1f60234c7fabfe415ad18f589
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-fast-marquee": "^1.6.5",
     "react-router-dom": "^7.0.1",
     "react-select": "^5.8.3"
   },
