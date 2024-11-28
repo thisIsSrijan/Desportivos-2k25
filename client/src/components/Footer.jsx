@@ -18,23 +18,23 @@ function Footer() {
           <span className="text-6xl sm:text-7xl md:text-9xl dharma-gothic-c text-white">
             REGISTER NOW
           </span>
-          <img className="w-6 h-5" src={dot} alt="dot" />
+          <img className="w-5 h-5" src={dot} alt="dot" />
         </div>
       ));
   };
 
   return (
     <div
-      className="relative w-full h-screen bg-cover bg-center bg-no-repeat overflow-hidden"
+      className="relative w-full h-[45vh] sm:h-[90vh] md:h-[74vh] lg:h-screen bg-cover bg-center bg-no-repeat overflow-hidden"
       style={{ backgroundImage: `url(${bgImg})` }}
     >
-      <div className="absolute mt-10 left-0 w-full">
+      <div className="absolute mt-10 left-0 bottom-10 lg:bottom-20 w-full">
         <Marquee speed={150} autoFill={true} className="overflow-hidden no-scrollbar">
           <div className="flex space-x-8">{renderTextWithDot()}</div>
         </Marquee>
         <div className="w-full h-[1px] bg-white"></div>
 
-        <div className="w-[97%] md:w-[80%] lg:w-[97%] mx-auto rounded-3xl mt-[5rem] h-[150px] md:h-[300px] lg:h-[370px] bg-orange-600 p-4 sm:p-6">
+        <div className="w-[97%] md:w-[80%] lg:w-[97%] mx-auto rounded-3xl mt-[4rem] lg:mt-[5rem] h-[150px] md:h-[300px] lg:h-[370px] bg-orange-600 p-4 sm:p-6">
           <div className="flex justify-between items-center">
             <a
               href="mailto:desportivos@lnmiit.ac.in"
