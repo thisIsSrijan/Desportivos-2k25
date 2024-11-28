@@ -13,6 +13,7 @@ const userSchema = z.object({
   City: z.string().min(1, "City is required"),
   State: z.string().min(1, "State is required"),
   Domain: z.string().min(1, "Domain is required"),
+  Sports: z.string().min(1, "this field is required"),
 });
 
 async function registerUser(req, res) {
@@ -22,11 +23,11 @@ async function registerUser(req, res) {
     return res.status(400).json({ message: error.errors[0]?.message });
   }
 
-  const { Name, CollegeName, PhoneNumber, Email, City, State, Domain } =
+  const { Name, CollegeName, PhoneNumber, Email, City, State, Domain, Sports } =
     req.body;
 
   try {
-    const existingUser = await User.findOne({ Email, Domain });
+    const existingUser = await User.findOne({ Email, Domain, Sports });
     if (existingUser) {
       return res
         .status(400)
@@ -41,11 +42,12 @@ async function registerUser(req, res) {
       City,
       State,
       Domain,
+      Sports,
     });
 
     await user.save();
 
-    await sendEmail(Name, Email);
+    await sendEmail(Name, Email, Domain, Sports);
 
     return res.status(200).json({ message: "Registered Successfully" });
   } catch (error) {

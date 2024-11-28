@@ -1,7 +1,7 @@
 import nodemailer from "nodemailer";
 import mailTemplate from "./mailtemplates.js";
 
-const sendEmail = async (Name, Email) => {
+const sendEmail = async (Name, Email, Domain, Sports) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
@@ -10,7 +10,7 @@ const sendEmail = async (Name, Email) => {
     },
   });
 
-  const Mailer = mailTemplate(Name);
+  const Mailer = mailTemplate(Name, Domain, Sports);
 
   const mailOptions = {
     from: process.env.EMAIL,
@@ -20,6 +20,7 @@ const sendEmail = async (Name, Email) => {
   };
 
   await transporter.sendMail(mailOptions);
+  console.log("mail sent");
 };
 
 export default sendEmail;

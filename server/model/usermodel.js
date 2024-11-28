@@ -29,6 +29,10 @@ const userschema = new Schema({
     type: String,
     required: true,
   },
+  Sports: {
+    type: String,
+    required: true,
+  },
 });
 
 const User = model("User", userschema);
