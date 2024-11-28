@@ -71,7 +71,7 @@ const Register = () => {
       >
         {/* REGISTER NOW Text */}
         <div className="relative">
-          <h1 className=" absolute xsm:top-[85px] customBreakpoint:top-[119px] sm:top-[100px] md:top-[130px] lg:top-[120px] xl:top-[120px] 2xl:top-[140px]  xsm:left-[50px] customBreakpoint:left-[80px] sm:left-[20px] md:left-[143px] lg:left-[160px] xl:left-[270px] 2xl:left-[320px] uxl:left-[350px] xsm:text-3xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl text-white uppercase font-extrabold text-effect font-dharma">
+          <h1 className=" absolute xsm:top-[85px] customBreakpoint:top-[119px] sm:top-[100px] md:top-[130px] lg:top-[120px] xl:top-[120px] 2xl:top-[140px]  xsm:left-[50px] customBreakpoint:left-[80px] sm:left-[20px] md:left-[143px] lg:left-[160px] xl:left-[270px] 2xl:left-[320px] uxl:left-[350px] xsm:text-3xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl text-white uppercase font-extrabold text-effect">
             Register Now
           </h1>
         </div>
@@ -245,13 +245,13 @@ const Register = () => {
 
           <div className="flex flex-wrap justify-evenly items-center mt-5 space-y-2 xsm:mt-36 sm:mt-6">
             <button
-              className="font-dharma bg-transparent text-[rgba(164,164,164,1)] font-extrabold leading-[60px] tracking-[5%] border px-2 xsm:mt-2"
+              className=" bg-transparent text-[rgba(164,164,164,1)] font-extrabold leading-[60px] tracking-[5%] border px-2 xsm:mt-2"
               onClick={handleRegister}
             >
               REGISTER
             </button>
             <button
-              className="font-dharma bg-transparent text-[rgba(164,164,164,1)] font-extrabold leading-[60px] tracking-[5%] border px-2"
+              className="bg-transparent text-[rgba(164,164,164,1)] font-extrabold leading-[60px] tracking-[5%] border px-2"
               onClick={handleRuleBook}
             >
               RULEBOOK
@@ -259,10 +259,15 @@ const Register = () => {
           </div>
         </div>
       </div>
-      <div
+
+
+
+      {/* WHY WAS THIS DIV HERE!??????? :( */}
+
+      {/* <div
         id="form-section"
         style={{ height: "100px", backgroundColor: "#f0f0f0" }}
-      ></div>
+      ></div> */}
     </div>
   );
 };
