@@ -71,7 +71,7 @@ const Register = () => {
       >
         {/* REGISTER NOW Text */}
         <div className="relative text-center ">
-          <h1 className=" absolute xsm:top-[132px] customBreakpoint:top-[129px] sm:top-[150px] md:top-[185px] lg:top-[185px] xl:top-[183px] 2xl:top-[170px] xsm:left-[50px]  customBreakpoint:left-[80px] sm:left-[100px] md:left-[193px] lg:left-[235px] xl:left-[365px] 2xl:left-[375px] uxl:left-[350px] xsm:text-3xl  sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl text-white uppercase font-extrabold text-effect">
+          <h1 className=" absolute xsm:top-[132px] customBreakpoint:top-[129px] sm:top-[150px] md:top-[185px] lg:top-[185px] xl:top-[183px] 2xl:top-[170px] xsm:left-[50px]  customBreakpoint:left-[80px] sm:left-[100px] md:left-[153px] lg:left-[235px] xl:left-[365px] 2xl:left-[375px] uxl:left-[350px] xsm:text-3xl  sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl text-white uppercase font-extrabold text-effect">
             Register Now
           </h1>
         </div>
@@ -83,7 +83,7 @@ const Register = () => {
         style={{ backgroundImage: `url(${bottombg})` }}
       >
         <div
-          className="xsm:w-[90%] md:w-[580px] lg:w-[550px] xl:w-[570px] 2xl:w-[700px] xsm:h-[900px] sm:h-[480px] absolute xsm:top-[169px] sm:top-[199px] md:top-[26px]  xl:top-[270px] xsm:left-[18px]  md:left-[158px]  lg:left-[238px] xl:left-[350px] 2xl:left-[385px] xsm:p-3 md:p-4 md:rounded-lg mt-4 "
+          className="xsm:w-[90%] md:w-[580px] lg:w-[550px] xl:w-[570px] 2xl:w-[700px] xsm:h-[900px] sm:h-[480px] absolute xsm:top-[169px] sm:top-[199px] md:top-[245px] lg:top-[255px]  xl:top-[270px] xsm:left-[18px]  md:left-[118px]  lg:left-[238px] xl:left-[350px] 2xl:left-[385px] xsm:p-3 md:p-4 md:rounded-lg mt-4 "
           style={{ backgroundImage: `url(${topbg})` }}
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 xsm:gap-4  md:gap-y-4 md:gap-x-9">
