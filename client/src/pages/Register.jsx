@@ -17,7 +17,7 @@ const Register = () => {
 
     // Scroll by a specific number of pixels (10-12px)
     window.scrollTo({
-      top: currentScrollY + 460, // Scroll by 12px
+      top: currentScrollY + 440, // Scroll by 12px
       behavior: "smooth", // Smooth scroll
     });
 
@@ -63,15 +63,15 @@ const Register = () => {
   }, [state]);
 
   return (
-    <div className="h-screen ">
+    <   div className="min-h-screen">
       {/* Top Background */}
       <div
-        className="w-full xsm:h-[15.54%] sm:h-[20%] md:h-[25.54%] bg-no-repeat xsm:bg-[center_top_45%] sm:bg-[center_top_45%] xl:bg-[center_top_48%] xsm:bg-[length:240%] sm:bg-[length:190%] md:bg-[length:240%] lg:bg-[length:140%] xl:bg-[length:140%]"
+        className="w-full xsm:h-[150px] sm:h-[180px] md:h-[220px] bg-no-repeat xsm:bg-[center_top_45%] sm:bg-[center_top_45%]   xl:bg-[center_top_48%] xsm:bg-[length:320%] sm:bg-[length:250%] md:bg-[length:240%] lg:bg-[length:200%] xl:bg-[length:180%]"
         style={{ backgroundImage: `url(${redbg})` }}
       >
         {/* REGISTER NOW Text */}
-        <div className="relative">
-          <h1 className=" absolute xsm:top-[85px] customBreakpoint:top-[119px] sm:top-[100px] md:top-[130px] lg:top-[120px] xl:top-[120px] 2xl:top-[140px]  xsm:left-[50px] customBreakpoint:left-[80px] sm:left-[20px] md:left-[143px] lg:left-[160px] xl:left-[270px] 2xl:left-[320px] uxl:left-[350px] xsm:text-3xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl text-white uppercase font-extrabold text-effect">
+        <div className="relative text-center ">
+          <h1 className=" absolute xsm:top-[132px] customBreakpoint:top-[129px] sm:top-[150px] md:top-[185px] lg:top-[185px] xl:top-[183px] 2xl:top-[170px] xsm:left-[50px]  customBreakpoint:left-[80px] sm:left-[100px] md:left-[193px] lg:left-[235px] xl:left-[365px] 2xl:left-[375px] uxl:left-[350px] xsm:text-3xl  sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl text-white uppercase font-extrabold text-effect">
             Register Now
           </h1>
         </div>
@@ -79,11 +79,11 @@ const Register = () => {
 
       {/* Bottom Background  */}
       <div
-        className="w-full xsm:h-[148%] sm:h-[142%]  md:h-screen xl:h-screen z-10 bg-cover"
+        className="w-full xsm:h-[988px] sm:h-[550px]  md:h-[1150px] xl:h-[630px] 2xl:h-[650px] z-10 bg-cover"
         style={{ backgroundImage: `url(${bottombg})` }}
       >
         <div
-          className="xsm:w-[90%] md:w-[79.15%] lg:w-[50%] 2xl:w-[60%] xsm:h-[900px] sm:h-[480px] absolute xsm:top-[18%] sm:top-[25%] md:top-[33.65%]  xsm:left-[5%] md:left-[8.92%]  lg:left-[23%] xsm:p-3 md:p-4 md:rounded-lg mt-4 "
+          className="xsm:w-[90%] md:w-[580px] lg:w-[550px] xl:w-[570px] 2xl:w-[700px] xsm:h-[900px] sm:h-[480px] absolute xsm:top-[169px] sm:top-[199px] md:top-[26px]  xl:top-[270px] xsm:left-[18px]  md:left-[158px]  lg:left-[238px] xl:left-[350px] 2xl:left-[385px] xsm:p-3 md:p-4 md:rounded-lg mt-4 "
           style={{ backgroundImage: `url(${topbg})` }}
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 xsm:gap-4  md:gap-y-4 md:gap-x-9">
@@ -141,7 +141,7 @@ const Register = () => {
               <select
                 value={state}
                 onChange={(e) => setState(e.target.value)}
-                className={`p-2 border border-gray-300 rounded-md font-medium ${
+                className={`p-2 border border-gray-400 rounded-md font-medium ${
                   state ? "bg-orange-600 text-white" : "bg-[#625342] text-white"
                 }`}
               >
