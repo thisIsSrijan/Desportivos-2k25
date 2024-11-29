@@ -33,7 +33,7 @@ function Carousel() {
         <img
           src={logo}
           alt="Logo"
-          className="absolute h-[150px] w-30 top-1.5 z-10 -left-3"
+          className="absolute h-[140px] w-30 top-1 z-10 -left-4"
           onClick={() => (window.location.href = "/")}
           style={{ cursor: "pointer" }} // Adds a pointer cursor for better UX
         />
