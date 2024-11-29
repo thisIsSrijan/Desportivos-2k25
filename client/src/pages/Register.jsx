@@ -4,6 +4,7 @@ import redbg from "../assets/redbg.png";
 import bottombg from "../assets/bottombg.png";
 import topbg from "../assets/topbg.png";
 import "font-awesome/css/font-awesome.min.css";
+import { Link } from "react-router-dom";
 
 const Register = () => {
   const [fieldsVisible, setFieldsVisible] = useState(false);
@@ -62,33 +63,74 @@ const Register = () => {
     }
   }, [state]);
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const formData = {
+      Name: name,
+      State: state,
+      CollegeName: collegeName,
+      City: city,
+      PhoneNumber: phone,
+      Email: email,
+      Domain: DomainName,
+      Sports: selectedSport || selectedESport,
+    };
+
+    try {
+      console.log("Form data:", formData);
+      const response = await fetch("https://despo.onrender.com/api/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      console.log(response);
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      const data = await response.json();
+      console.log("Form Submitted:", data);
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    }
+  };
+
   return (
-    <   div className="lg:min-h-screen">
+    <div className="lg:min-h-screen h-full w-screen overflow-x-hidden">
       {/* Top Background */}
       <div
-        className="w-full xsm:h-[150px] sm:h-[180px] md:h-[220px] bg-no-repeat xsm:bg-[center_top_45%] sm:bg-[center_top_45%]   xl:bg-[center_top_48%] xsm:bg-[length:320%] sm:bg-[length:250%] md:bg-[length:240%] lg:bg-[length:200%] xl:bg-[length:180%]"
+        className="relative w-screen h-64 bg-cover bg-center"
         style={{ backgroundImage: `url(${redbg})` }}
       >
         {/* REGISTER NOW Text */}
-        <div className="relative text-center ">
-          <h1 className=" absolute xsm:top-[132px] customBreakpoint:top-[129px] sm:top-[150px] md:top-[185px] lg:top-[185px] xl:top-[183px] 2xl:top-[170px] xsm:left-[50px]  customBreakpoint:left-[80px] sm:left-[100px] md:left-[153px] lg:left-[235px] xl:left-[365px] 2xl:left-[375px] uxl:left-[350px] xsm:text-3xl  sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl text-white uppercase font-extrabold text-effect">
-            Register Now
-          </h1>
-        </div>
+        <h1 className="ml-8 xs:text-4xl text-6xl absolute top-52 mt-3 sm:left-1/4  lg:left-1/4 xs:left-28  text-white uppercase font-extrabold text-effect z-10">
+          Register Now
+        </h1>
       </div>
-
+      <Link
+        to="/"
+        className="absolute w-fit h-fit p-2 right-4 top-7 border-4 border-[#F85B02] shadow-[2px_1.5px_13px_#F85B02] rounded-xl z-10 text-white text-2xl bg-[#424242BF] font-squid hover:bg-[#515151bf] hover:scale-105"
+      >
+        Home
+      </Link>
       {/* Bottom Background  */}
       <div
-        className="w-full xsm:h-[988px] sm:h-[550px]  md:h-[1150px] xl:h-[630px] 2xl:h-[650px] z-10 bg-cover"
+        className="w-screen  h-full  bg-cover py-20 "
         style={{ backgroundImage: `url(${bottombg})` }}
       >
         <div
-          className="xsm:w-[90%] md:w-[580px] lg:w-[550px] xl:w-[570px] 2xl:w-[700px] xsm:h-[900px] sm:h-[480px] absolute xsm:top-[169px] sm:top-[199px] md:top-[245px] lg:top-[255px]  xl:top-[270px] xsm:left-[18px]  md:left-[118px]  lg:left-[238px] xl:left-[350px] 2xl:left-[385px] xsm:p-3 md:p-4 md:rounded-lg mt-4 "
+          className=" md:rounded-lg xsm:mx-10 sm:mx-20  p-10 bg-cover z-5"
           style={{ backgroundImage: `url(${topbg})` }}
         >
-          <div className="grid grid-cols-1 sm:grid-cols-2 xsm:gap-4  md:gap-y-4 md:gap-x-9">
+          <form
+            // onSubmit={handleSubmit}
+            className="grid grid-cols-1 sm:grid-cols-2 xsm:gap-5  md:gap-y-4 md:gap-x-9 "
+          >
             {/* Name Text Input */}
-            <div className="flex flex-col">
+            <div className="flex flex-col my-3">
               <label className="text-white">Name</label>
               <input
                 type="text"
@@ -100,7 +142,7 @@ const Register = () => {
             </div>
 
             {/* Phone Number Text Input */}
-            <div className="flex flex-col">
+            <div className="flex flex-col my-3">
               <label className="text-white">Phone Number</label>
               <input
                 type="text"
@@ -112,7 +154,7 @@ const Register = () => {
             </div>
 
             {/* College Name Text Input */}
-            <div className="flex flex-col">
+            <div className="flex flex-col my-3">
               <label className="text-white">College Name</label>
               <input
                 type="text"
@@ -124,7 +166,7 @@ const Register = () => {
             </div>
 
             {/* Email-ID Text Input */}
-            <div className="flex flex-col">
+            <div className="flex flex-col my-3">
               <label className="text-white">Email-ID</label>
               <input
                 type="text"
@@ -136,7 +178,7 @@ const Register = () => {
             </div>
 
             {/* State Dropdown */}
-            <div className="flex flex-col">
+            <div className="flex flex-col my-3">
               <label className="text-white">State</label>
               <select
                 value={state}
@@ -163,7 +205,7 @@ const Register = () => {
             </div>
 
             {/* City Dropdown */}
-            <div className="flex flex-col">
+            <div className="flex flex-col my-3">
               <label className="text-white">City</label>
               <select
                 value={city}
@@ -190,7 +232,7 @@ const Register = () => {
             </div>
 
             {/* Domain Dropdown */}
-            <div className="flex flex-col">
+            <div className="flex flex-col ">
               <label className="text-white">Domain</label>
               <select
                 value={DomainName}
@@ -198,13 +240,13 @@ const Register = () => {
                 className="p-2 border border-gray-300 rounded-md bg-[#625342] text-white"
               >
                 <option value="">Select Domain</option>
-                <option value="domain1">Sports</option>
-                <option value="domain2">ESports</option>
+                <option value="Sports">Sports</option>
+                <option value="Esports">ESports</option>
               </select>
             </div>
 
             {/* Conditional rendering of sports dropdown */}
-            {DomainName === "domain1" && (
+            {DomainName === "Sports" && (
               <div className="flex flex-col">
                 <label className="text-white">Sports</label>
                 <select
@@ -228,7 +270,7 @@ const Register = () => {
                 </select>
               </div>
             )}
-            {DomainName === "domain2" && (
+            {DomainName === "Esports" && (
               <div className="flex flex-col">
                 <label className="text-white">ESports</label>
                 <select
@@ -241,17 +283,18 @@ const Register = () => {
                 </select>
               </div>
             )}
-          </div>
+          </form>
 
-          <div className="flex flex-wrap justify-evenly items-center mt-5 space-y-2 xsm:mt-36 sm:mt-6">
+          <div className="flex flex-wrap justify-evenly items-center space-y-2 m-2 my-6">
             <button
-              className=" bg-transparent text-[rgba(164,164,164,1)] font-extrabold leading-[60px] tracking-[5%] border px-2 xsm:mt-2"
-              onClick={handleRegister}
+              type="submit"
+              onClick={handleSubmit}
+              className=" bg-transparent text-[rgba(164,164,164,1)] font-extrabold leading-[60px] tracking-[5%] border px-2  m-2 my-6 hover:bg-black"
             >
               REGISTER
             </button>
             <button
-              className="bg-transparent text-[rgba(164,164,164,1)] font-extrabold leading-[60px] tracking-[5%] border px-2"
+              className="bg-transparent text-[rgba(164,164,164,1)] font-extrabold leading-[60px] tracking-[5%] border px-2 m-2 my-6 hover:bg-black"
               onClick={handleRuleBook}
             >
               RULEBOOK
@@ -259,15 +302,6 @@ const Register = () => {
           </div>
         </div>
       </div>
-
-
-
-      {/* WHY WAS THIS DIV HERE!??????? :( */}
-
-      {/* <div
-        id="form-section"
-        style={{ height: "100px", backgroundColor: "#f0f0f0" }}
-      ></div> */}
     </div>
   );
 };

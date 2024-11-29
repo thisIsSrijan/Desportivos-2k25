@@ -47,6 +47,7 @@ module.exports = {
       },
       screens: {
         xsm: "200px",
+        xs: "331",
         sm: "576px", // Small devices (phones, ≥ 576px)
         md: "768px", // Medium devices (tablets, ≥ 768px)
         lg: "992px", // Large devices (desktops, ≥ 992px)
