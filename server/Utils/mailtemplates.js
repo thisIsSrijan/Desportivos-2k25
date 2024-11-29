@@ -16,7 +16,7 @@ function Mail(Name, Domain, Sports) {
   <body style="font-family: Arial, sans-serif;line-height: 1.6;margin: 0;padding: 0;background-color: #f4f4f4;">
     <div class="email-container" style="max-width: 600px;margin: 20px auto;background: #ffffff;border: 1px solid #dddddd;border-radius: 8px;overflow: hidden;box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
         <div class="email-header" style="background-color: #cc4b00;color: #ffffff;padding-top: 20px;padding-bottom: 20px;display: flex;align-items: center;justify-content: center;">
-        <img src="https://res.cloudinary.com/dturzqo8m/image/upload/v1732778532/xvllv0mgxvf2soy1iobd.png" alt="Desportivos 25" style="position: absolute;margin-top:14px;margin-right:540px;margin-bottom: 65px;width: 40px;height: 40px;">
+        <img src="https://res.cloudinary.com/dturzqo8m/image/upload/v1732778532/xvllv0mgxvf2soy1iobd.png" alt="Desportivos 25" style="margin-bottom:65px;margin-right:20px;width:50px;height:50px">
         <h1 style="padding: 20px;font-size: 1.8rem;margin: 0;">Welcome to Desportivos 2025!</h1>
       </div>
 
