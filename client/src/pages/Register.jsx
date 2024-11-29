@@ -87,14 +87,20 @@ const Register = () => {
         body: JSON.stringify(formData),
       });
       console.log(response);
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
+      // if (!response.ok) {
+      //   throw new Error(response.status);
+      // }
 
-      const data = await response.json();
-      console.log("Form Submitted:", data);
+      const responsedata = await response.json();
+      if (responsedata.message == "Registered Successfully") {
+        console.log("Form Submitted:", responsedata);
+        alert("You are Registered successfully Kindly check your Email");
+      } else {
+        throw new Error(responsedata.message);
+      }
     } catch (error) {
       console.error("Error submitting form:", error);
+      alert("Error submitting form:" + error);
     }
   };
 
