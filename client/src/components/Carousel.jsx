@@ -6,6 +6,8 @@ import image3 from "/carouselImages/3.png";
 import image4 from "/carouselImages/4.png";
 import moto from "/moto.png";
 import "../index.css";
+import logo from "../assets/image.png";
+import { Link } from "react-router-dom";
 
 function Carousel() {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -27,6 +29,22 @@ function Carousel() {
 
   return (
     <div className="relative bg-black flex h-full w-full justify-center items-center overflow-hidden">
+      <div>
+        <img
+          src={logo}
+          alt="Logo"
+          className="absolute h-[150px] w-30 top-1.5 z-10 -left-3"
+          onClick={() => (window.location.href = "/")}
+          style={{ cursor: "pointer" }} // Adds a pointer cursor for better UX
+        />
+      </div>
+
+      <Link
+        to="/register"
+        className="absolute w-fit h-fit p-2 right-4 top-7 border-4 border-[#F85B02] shadow-[2px_1.5px_13px_#F85B02] rounded-xl z-10 text-white text-2xl bg-[#424242BF] font-squid hover:bg-[#515151bf] hover:scale-105"
+      >
+        Register
+      </Link>
       <AnimatePresence mode="popLayout">
         {words_images.map(
           (item, index) =>
@@ -35,16 +53,16 @@ function Carousel() {
                 key={item.word}
                 className="h-screen w-screen relative flex justify-center items-center"
               >
-         <motion.img
-                  initial={{ x: 100, opacity: 0 }} 
-                  animate={{ x: 0, opacity: 1 }}  
+                <motion.img
+                  initial={{ x: 100, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
                   exit={{
-                    x: -100, 
+                    x: -100,
                     opacity: 0,
                     transition: { duration: 0.5 },
                   }}
                   transition={{
-                    duration: 1, 
+                    duration: 1,
                     ease: "easeInOut",
                   }}
                   src={item.image}
