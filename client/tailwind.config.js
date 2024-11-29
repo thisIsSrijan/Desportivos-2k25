@@ -53,7 +53,8 @@ module.exports = {
         "xl": "1200px", // Extra large devices (large desktops, ≥ 1200px)
         "2xl": "1400px", // Extra extra large devices (larger desktops, ≥ 1400px)
         'customBreakpoint': '400px',
-        "uxl": "1500px"
+        "uxl": "1500px",
+        "custom": {'min': '576px', 'max': '767.5px'}
   
       },
     },

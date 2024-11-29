@@ -63,7 +63,7 @@ const Register = () => {
   }, [state]);
 
   return (
-    <   div className="min-h-screen">
+    <   div className="lg:min-h-screen">
       {/* Top Background */}
       <div
         className="w-full xsm:h-[150px] sm:h-[180px] md:h-[220px] bg-no-repeat xsm:bg-[center_top_45%] sm:bg-[center_top_45%]   xl:bg-[center_top_48%] xsm:bg-[length:320%] sm:bg-[length:250%] md:bg-[length:240%] lg:bg-[length:200%] xl:bg-[length:180%]"
