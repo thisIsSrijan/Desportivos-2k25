@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { State, City } from "country-state-city"; // Importing required modules
-import redbg from "../assets/redbg.png";
-import bottombg from "../assets/bottombg.png";
-import topbg from "../assets/topbg.png";
+// import redbg from "../assets/redbg.png";
+// import bottombg from "../assets/bottombg.png";
+// import topbg from "../assets/topbg.png";
 import "font-awesome/css/font-awesome.min.css";
 
 const Register = () => {
@@ -67,7 +67,7 @@ const Register = () => {
       {/* Top Background */}
       <div
         className="w-full xsm:h-[15.54%] sm:h-[20%] md:h-[25.54%] bg-no-repeat xsm:bg-[center_top_45%] sm:bg-[center_top_45%] xl:bg-[center_top_48%] xsm:bg-[length:240%] sm:bg-[length:190%] md:bg-[length:240%] lg:bg-[length:140%] xl:bg-[length:140%]"
-        style={{ backgroundImage: `url(${redbg})` }}
+        style={{ backgroundImage: "url('https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952364/redbg_j0otcw.png')"}}
       >
         {/* REGISTER NOW Text */}
         <div className="relative">
@@ -80,11 +80,11 @@ const Register = () => {
       {/* Bottom Background  */}
       <div
         className="w-full xsm:h-[148%] sm:h-[142%]  md:h-screen xl:h-screen z-10 bg-cover"
-        style={{ backgroundImage: `url(${bottombg})` }}
+        style={{ backgroundImage: "url('https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732953786/bottombg_bgswml.png')" }}
       >
         <div
           className="xsm:w-[90%] md:w-[79.15%] lg:w-[50%] 2xl:w-[60%] xsm:h-[900px] sm:h-[480px] absolute xsm:top-[18%] sm:top-[25%] md:top-[33.65%]  xsm:left-[5%] md:left-[8.92%]  lg:left-[23%] xsm:p-3 md:p-4 md:rounded-lg mt-4 "
-          style={{ backgroundImage: `url(${topbg})` }}
+          style={{ backgroundImage: "url('https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952363/topbg_xhjmoc.png')" }}
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 xsm:gap-4  md:gap-y-4 md:gap-x-9">
             {/* Name Text Input */}
