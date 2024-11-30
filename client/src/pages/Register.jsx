@@ -79,13 +79,16 @@ const Register = () => {
 
     try {
       console.log("Form data:", formData);
-      const response = await fetch("https://despo.onrender.com/api/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://testbackenddespo.vercel.app/api/register",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
       console.log(response);
       // if (!response.ok) {
       //   throw new Error(response.status);
