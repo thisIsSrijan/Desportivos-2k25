@@ -1,3 +1,4 @@
+     
 // module.exports = {
 //   content: [
 //     './src/**/*.{js,jsx,ts,tsx}',  // Make sure this matches the path to your React files
@@ -39,7 +40,9 @@ module.exports = {
   theme: {
     extend: {
       backdropBlur: {
-        custom: "40.14px", // Custom blur value
+        'custom': '40.14px', // Custom blur value
+      }, fontSize: {
+         'xxs': '0.625rem', // 10px
       },
       fontFamily: {
         dharma: ['"Dharma Gothic C"', "sans-serif"],
@@ -61,3 +64,5 @@ module.exports = {
   },
   plugins: [],
 };
+
+
