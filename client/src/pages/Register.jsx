@@ -111,8 +111,8 @@ const Register = () => {
     <div className="lg:min-h-screen h-full w-screen overflow-x-hidden">
       {/* Top Background */}
       <div
-        className="w-full xsm:h-[15.54%] sm:h-[20%] md:h-[25.54%] bg-no-repeat xsm:bg-[center_top_45%] sm:bg-[center_top_45%] xl:bg-[center_top_48%] xsm:bg-[length:240%] sm:bg-[length:190%] md:bg-[length:240%] lg:bg-[length:140%] xl:bg-[length:140%]"
-        style={{ backgroundImage: "url('https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952364/redbg_j0otcw.png')"}}
+        className="relative w-screen h-64 bg-cover bg-center"
+        style={{ backgroundImage: `url('https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952364/redbg_j0otcw.png` }}
       >
         {/* REGISTER NOW Text */}
         <h1 className="ml-8 xs:text-4xl text-6xl absolute top-52 mt-3 sm:left-1/4  lg:left-1/4 xs:left-28  text-white uppercase font-extrabold text-effect z-10">
@@ -127,12 +127,12 @@ const Register = () => {
       </Link>
       {/* Bottom Background  */}
       <div
-        className="w-full xsm:h-[148%] sm:h-[142%]  md:h-screen xl:h-screen z-10 bg-cover"
-        style={{ backgroundImage: "url('https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732953786/bottombg_bgswml.png')" }}
+        className="w-screen  h-full  bg-cover py-20 "
+        style={{ backgroundImage: `url(https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732953786/bottombg_bgswml.png)` }}
       >
         <div
-          className="xsm:w-[90%] md:w-[79.15%] lg:w-[50%] 2xl:w-[60%] xsm:h-[900px] sm:h-[480px] absolute xsm:top-[18%] sm:top-[25%] md:top-[33.65%]  xsm:left-[5%] md:left-[8.92%]  lg:left-[23%] xsm:p-3 md:p-4 md:rounded-lg mt-4 "
-          style={{ backgroundImage: "url('https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952363/topbg_xhjmoc.png')" }}
+          className=" md:rounded-lg xsm:mx-10 sm:mx-20  p-10 bg-cover z-5"
+          style={{ backgroundImage: `url('https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952363/topbg_xhjmoc.png` }}
         >
           <form
             // onSubmit={handleSubmit}
