@@ -10,7 +10,7 @@ const Preloader = ({ onFinish }) => {
   return (
     <div className="preloader flex justify-center items-center h-screen w-screen bg-black">
       <video
-        src="/loaderEnd.mp4"
+        src="/Loader.mp4"
         autoPlay
         muted
         onEnded={onFinish}
