@@ -112,32 +112,35 @@ const Register = () => {
       {/* Top Background */}
       <div
         className="relative w-screen h-64 bg-cover bg-center"
-        style={{ backgroundImage: `url('https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952364/redbg_j0otcw.png` }}
+        style={{
+          backgroundImage: `url('https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952364/redbg_j0otcw.png`,
+        }}
       >
         {/* REGISTER NOW Text */}
-        <h1 className="ml-8 xs:text-4xl text-6xl absolute top-52 mt-3 sm:left-1/4  lg:left-1/4 xs:left-28  text-white uppercase font-extrabold text-effect z-10">
+        <h1 className="absolute top-57 md:top-54 lg:top-51 uxl:top-47 w-full text-center text-5xl md:text-7xl lg:text-8xl uxl:text-9xl  text-white uppercase font-extrabold text-effect z-10">
           Register Now
         </h1>
       </div>
       <Link
         to="/"
-        className="absolute w-fit h-fit p-2 right-4 top-7 border-4 border-[#F85B02] shadow-[2px_1.5px_13px_#F85B02] rounded-xl z-10 text-white text-2xl bg-[#424242BF] font-squid hover:bg-[#515151bf] hover:scale-105"
+        className="text-center absolute w-28 xs:w-36 h-fit p-2 right-4 top-7 border-4 border-[#F85B02] shadow-[2px_1.5px_13px_#F85B02] rounded-xl z-10 text-white text-2xl bg-[#424242BF] font-squid hover:bg-[#515151bf] hover:scale-105"
       >
         Home
       </Link>
       {/* Bottom Background  */}
       <div
         className="w-screen  h-full  bg-cover py-20 "
-        style={{ backgroundImage: `url(https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732953786/bottombg_bgswml.png)` }}
+        style={{
+          backgroundImage: `url(https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732953786/bottombg_bgswml.png)`,
+        }}
       >
         <div
-          className=" md:rounded-lg xsm:mx-10 sm:mx-20  p-10 bg-cover z-5"
-          style={{ backgroundImage: `url('https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952363/topbg_xhjmoc.png` }}
+          className="uxl:mt-5 md:rounded-lg mx-8 p-8 sm:mx-26 sm:p-6 md:mx-36 md:p-12 md2:mx-44 lg:mx-56 lg2:mx-64 lg2:p-24 uxl:max-w-[1200px] uxl:mx-auto bg-cover z-5 min-w-[200px] md:min-w-[480px] lg2:min-w-[750px]"
+          style={{
+            backgroundImage: `url('https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952363/topbg_xhjmoc.png`,
+          }}
         >
-          <form
-            // onSubmit={handleSubmit}
-            className="grid grid-cols-1 sm:grid-cols-2 xsm:gap-5  md:gap-y-4 md:gap-x-9 "
-          >
+          <form className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-y-4 md:gap-x-9 lg:gap-y-6 md:mx-auto max-w-4xl">
             {/* Name Text Input */}
             <div className="flex flex-col my-3">
               <label className="text-white">Name</label>
@@ -192,7 +195,7 @@ const Register = () => {
               <select
                 value={state}
                 onChange={(e) => setState(e.target.value)}
-                className={`p-2 border border-gray-400 rounded-md font-medium ${
+                className={`p-2 border border-gray-300 rounded-md font-medium ${
                   state ? "bg-orange-600 text-white" : "bg-[#625342] text-white"
                 }`}
               >
@@ -228,20 +231,10 @@ const Register = () => {
                   </option>
                 ))}
               </select>
-
-              {/* Conditional rendering of the arrow icon */}
-              {arrowVisible && (
-                <div className=" flex justify-center items-center xsm:flex sm:hidden ">
-                  <i
-                    className="fa fa-angle-down text-white mt-2"
-                    onClick={handleArrowClick}
-                  ></i>
-                </div>
-              )}
             </div>
 
             {/* Domain Dropdown */}
-            <div className="flex flex-col ">
+            <div className="flex flex-col my-3">
               <label className="text-white">Domain</label>
               <select
                 value={DomainName}
@@ -256,7 +249,7 @@ const Register = () => {
 
             {/* Conditional rendering of sports dropdown */}
             {DomainName === "Sports" && (
-              <div className="flex flex-col">
+              <div className="flex flex-col my-3">
                 <label className="text-white">Sports</label>
                 <select
                   value={selectedSport}
@@ -280,7 +273,7 @@ const Register = () => {
               </div>
             )}
             {DomainName === "Esports" && (
-              <div className="flex flex-col">
+              <div className="flex flex-col my-3">
                 <label className="text-white">ESports</label>
                 <select
                   value={selectedESport}
@@ -294,16 +287,16 @@ const Register = () => {
             )}
           </form>
 
-          <div className="flex flex-wrap justify-evenly items-center space-y-2 m-2 my-6">
+          <div className="flex flex-wrap justify-evenly items-center m-2">
             <button
               type="submit"
               onClick={handleSubmit}
-              className=" bg-transparent text-[rgba(164,164,164,1)] font-extrabold leading-[60px] tracking-[5%] border px-2  m-2 my-6 hover:bg-black"
+              className="min-w-36 bg-transparent text-[rgba(164,164,164,1)] font-extrabold leading-[60px] tracking-[5%] border px-2  m-2 hover:bg-black"
             >
               REGISTER
             </button>
             <button
-              className="bg-transparent text-[rgba(164,164,164,1)] font-extrabold leading-[60px] tracking-[5%] border px-2 m-2 my-6 hover:bg-black"
+              className="min-w-36 bg-transparent text-[rgba(164,164,164,1)] font-extrabold leading-[60px] tracking-[5%] border px-2 m-2 hover:bg-black"
               onClick={handleRuleBook}
             >
               RULEBOOK

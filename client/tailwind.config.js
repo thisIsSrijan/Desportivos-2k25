@@ -39,6 +39,21 @@ module.exports = {
   ],
   theme: {
     extend: {
+      spacing:{
+        60: '15rem',
+        59: '14.75rem',
+        58: '14.5rem',
+        57: '14.25rem',
+        55: '13.75rem',
+        54: '13.5rem',
+        53: '13.25rem',
+        52: '13rem',
+        51: '12.75rem',
+        50: '12.5rem',
+        49: '12.25rem',
+        47: '11.75rem',
+        164: '41rem',
+      },
       backdropBlur: {
         'custom': '40.14px', // Custom blur value
       }, fontSize: {
@@ -50,7 +65,7 @@ module.exports = {
       },
       screens: {
         xsm: "200px",
-        xs: "331",
+        xs: "331px",
         sm: "576px", // Small devices (phones, ≥ 576px)
         md: "768px", // Medium devices (tablets, ≥ 768px)
         lg: "992px", // Large devices (desktops, ≥ 992px)
@@ -59,6 +74,8 @@ module.exports = {
         customBreakpoint: "400px",
         uxl: "1500px",
         custom: { min: "576px", max: "767.5px" },
+        lg2:"1264",
+        md2: "836",
       },
     },
   },
