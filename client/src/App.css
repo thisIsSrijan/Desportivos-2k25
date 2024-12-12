@@ -6,3 +6,42 @@
     background-clip: text;
     mix-blend-mode:normal;
 }
+
+/* For WebKit-based browsers (Chrome, Safari, Opera) */
+.popup-content::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+  }
+  
+  /* For Firefox */
+  .popup-content {
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+  }
+  
+  /* For Internet Explorer and older Edge versions */
+  .popup-content {
+    -ms-overflow-style: none; /* Hide scrollbar in IE */
+  }
+  
+  .popup-content {
+    overflow: auto; /* Ensure scrolling works */
+  }
+
+  /* Toast Notification Animations */
+.Toastify__toast {
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
+  transform-origin: 50% 0;
+}
+
+/* Disappear Animation */
+.Toastify__toast--success {
+  background: linear-gradient(to right, #0abf3055, #22242f 30%);
+}
+
+.Toastify__toast--error {
+  background: linear-gradient(to right, #0abf3055,#22242f 30%);
+}
+
+.Toastify__toast--default {
+  background: #0abf3055;
+}
