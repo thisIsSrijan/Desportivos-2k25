@@ -108,7 +108,7 @@ const Register = () => {
   };
 
   return (
-    <div className="lg:min-h-screen h-full w-screen overflow-x-hidden">
+    <div className="h-full w-full overflow-x-hidden">
       {/* Top Background */}
       <div
         className="relative w-screen h-64 bg-cover bg-center"
