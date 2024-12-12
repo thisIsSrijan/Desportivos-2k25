@@ -123,9 +123,9 @@ const Register = () => {
       </div>
       <Link
         to="/"
-        className="text-center absolute w-28 xs:w-36 h-fit p-2 right-4 top-7 border-4 border-[#F85B02] shadow-[2px_1.5px_13px_#F85B02] rounded-xl z-10 text-white text-2xl bg-[#424242BF] font-squid hover:bg-[#515151bf] hover:scale-105"
+        className="text-center align-middle absolute w-fit h-fit py-2 px-5 right-8 sm:right-16 sm:top-[75px] top-[64px] border-2 border-[#F85B02] shadow-[2px_1.5px_13px_#F85B02] rounded-xl z-10 text-white text-xl lg:text-3xl bg-[#424242BF] font-squid hover:bg-[#515151bf] hover:scale-105"
       >
-        Home
+        HOME
       </Link>
       {/* Bottom Background  */}
       <div

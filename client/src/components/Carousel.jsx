@@ -33,7 +33,7 @@ function Carousel() {
         <img
           src={logo}
           alt="Logo"
-          className="absolute h-[140px] w-30 top-1 z-10 -left-4"
+          className="absolute lg:h-[150px] sm:h-[120px] h-[100px] w-30 top-[24px] left-[1px] sm:left-[16px] z-10"
           onClick={() => (window.location.href = "/")}
           style={{ cursor: "pointer" }} // Adds a pointer cursor for better UX
         />
@@ -41,9 +41,9 @@ function Carousel() {
 
       <Link
         to="/register"
-        className="absolute w-fit h-fit p-2 right-4 top-7 border-4 border-[#F85B02] shadow-[2px_1.5px_13px_#F85B02] rounded-xl z-10 text-white text-2xl bg-[#424242BF] font-squid hover:bg-[#515151bf] hover:scale-105"
+        className="text-center align-middle absolute w-fit h-fit p-2 right-8 sm:right-16 sm:top-[75px] top-[64px] border-2 border-[#F85B02] shadow-[2px_1.5px_13px_#F85B02] rounded-xl z-10 text-white text-xl lg:text-3xl bg-[#424242BF] font-squid hover:bg-[#515151bf] hover:scale-105"
       >
-        Register
+        REGISTER
       </Link>
       <AnimatePresence mode="popLayout">
         {words_images.map(
