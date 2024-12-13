@@ -8,5 +8,14 @@
 }
 .dharma-gothic-c {
   /* font-family: "Dharma Gothic C", "sans-serif"; */
-  font-family: 'Dharma Gothic C', 'sans-serif';
-} 
+  font-family: "Dharma Gothic C", "sans-serif";
+}
+
+@font-face {
+  font-family: "Game Of Squids";
+  src: url("./fonts/Game Of Squids.ttf") format("truetype");
+}
+
+.squid {
+  font-family: "Game Of Squids", sans-serif;
+}

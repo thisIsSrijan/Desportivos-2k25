@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { State, City } from "country-state-city"; // Importing required modules
-import redbg from "../assets/redbg.png";
-import bottombg from "../assets/bottombg.png";
-import topbg from "../assets/topbg.png";
+// import redbg from "../assets/redbg.png";
+// import bottombg from "../assets/bottombg.png";
+// import topbg from "../assets/topbg.png";
 import "font-awesome/css/font-awesome.min.css";
+import { Link } from "react-router-dom";
 
 const Register = () => {
   const [fieldsVisible, setFieldsVisible] = useState(false);
@@ -17,7 +18,7 @@ const Register = () => {
 
     // Scroll by a specific number of pixels (10-12px)
     window.scrollTo({
-      top: currentScrollY + 460, // Scroll by 12px
+      top: currentScrollY + 440, // Scroll by 12px
       behavior: "smooth", // Smooth scroll
     });
 
@@ -62,33 +63,86 @@ const Register = () => {
     }
   }, [state]);
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const formData = {
+      Name: name,
+      State: state,
+      CollegeName: collegeName,
+      City: city,
+      PhoneNumber: phone,
+      Email: email,
+      Domain: DomainName,
+      Sports: selectedSport || selectedESport,
+    };
+
+    try {
+      console.log("Form data:", formData);
+      const response = await fetch(
+        "https://testbackenddespo.vercel.app/api/register",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+      console.log(response);
+      // if (!response.ok) {
+      //   throw new Error(response.status);
+      // }
+
+      const responsedata = await response.json();
+      if (responsedata.message == "Registered Successfully") {
+        console.log("Form Submitted:", responsedata);
+        alert("You are Registered successfully Kindly check your Email");
+      } else {
+        throw new Error(responsedata.message);
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Error submitting form:" + error);
+    }
+  };
+
   return (
-    <div className="h-screen ">
+    <div className="h-full w-full overflow-x-hidden">
       {/* Top Background */}
       <div
-        className="w-full xsm:h-[15.54%] sm:h-[20%] md:h-[25.54%] bg-no-repeat xsm:bg-[center_top_45%] sm:bg-[center_top_45%] xl:bg-[center_top_48%] xsm:bg-[length:240%] sm:bg-[length:190%] md:bg-[length:240%] lg:bg-[length:140%] xl:bg-[length:140%]"
-        style={{ backgroundImage: `url(${redbg})` }}
+        className="relative w-screen h-64 bg-cover bg-center"
+        style={{
+          backgroundImage: `url('https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952364/redbg_j0otcw.png`,
+        }}
       >
         {/* REGISTER NOW Text */}
-        <div className="relative">
-          <h1 className=" absolute xsm:top-[85px] customBreakpoint:top-[119px] sm:top-[100px] md:top-[130px] lg:top-[120px] xl:top-[120px] 2xl:top-[140px]  xsm:left-[50px] customBreakpoint:left-[80px] sm:left-[20px] md:left-[143px] lg:left-[160px] xl:left-[270px] 2xl:left-[320px] uxl:left-[350px] xsm:text-3xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl text-white uppercase font-extrabold text-effect">
-            Register Now
-          </h1>
-        </div>
+        <h1 className="absolute top-57 md:top-54 lg:top-51 uxl:top-47 w-full text-center text-5xl md:text-7xl lg:text-8xl uxl:text-9xl  text-white uppercase font-extrabold text-effect z-10">
+          Register Now
+        </h1>
       </div>
-
+      <Link
+        to="/"
+        className="text-center align-middle absolute w-fit h-fit py-2 px-5 right-8 sm:right-16 sm:top-[75px] top-[64px] border-2 border-[#F85B02] shadow-[2px_1.5px_13px_#F85B02] rounded-xl z-10 text-white text-xl lg:text-3xl bg-[#424242BF] font-squid hover:bg-[#515151bf] hover:scale-105"
+      >
+        HOME
+      </Link>
       {/* Bottom Background  */}
       <div
-        className="w-full xsm:h-[148%] sm:h-[142%]  md:h-screen xl:h-screen z-10 bg-cover"
-        style={{ backgroundImage: `url(${bottombg})` }}
+        className="w-screen  h-full  bg-cover py-20 "
+        style={{
+          backgroundImage: `url(https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732953786/bottombg_bgswml.png)`,
+        }}
       >
         <div
-          className="xsm:w-[90%] md:w-[79.15%] lg:w-[50%] 2xl:w-[60%] xsm:h-[900px] sm:h-[480px] absolute xsm:top-[18%] sm:top-[25%] md:top-[33.65%]  xsm:left-[5%] md:left-[8.92%]  lg:left-[23%] xsm:p-3 md:p-4 md:rounded-lg mt-4 "
-          style={{ backgroundImage: `url(${topbg})` }}
+          className="uxl:mt-5 md:rounded-lg mx-8 p-8 sm:mx-26 sm:p-6 md:mx-36 md:p-12 md2:mx-44 lg:mx-56 lg2:mx-64 lg2:p-24 uxl:max-w-[1200px] uxl:mx-auto bg-cover z-5 min-w-[200px] md:min-w-[480px] lg2:min-w-[750px]"
+          style={{
+            backgroundImage: `url('https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952363/topbg_xhjmoc.png`,
+          }}
         >
-          <div className="grid grid-cols-1 sm:grid-cols-2 xsm:gap-4  md:gap-y-4 md:gap-x-9">
+          <form className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-y-4 md:gap-x-9 lg:gap-y-6 md:mx-auto max-w-4xl">
             {/* Name Text Input */}
-            <div className="flex flex-col">
+            <div className="flex flex-col my-3">
               <label className="text-white">Name</label>
               <input
                 type="text"
@@ -100,7 +154,7 @@ const Register = () => {
             </div>
 
             {/* Phone Number Text Input */}
-            <div className="flex flex-col">
+            <div className="flex flex-col my-3">
               <label className="text-white">Phone Number</label>
               <input
                 type="text"
@@ -112,7 +166,7 @@ const Register = () => {
             </div>
 
             {/* College Name Text Input */}
-            <div className="flex flex-col">
+            <div className="flex flex-col my-3">
               <label className="text-white">College Name</label>
               <input
                 type="text"
@@ -124,7 +178,7 @@ const Register = () => {
             </div>
 
             {/* Email-ID Text Input */}
-            <div className="flex flex-col">
+            <div className="flex flex-col my-3">
               <label className="text-white">Email-ID</label>
               <input
                 type="text"
@@ -136,7 +190,7 @@ const Register = () => {
             </div>
 
             {/* State Dropdown */}
-            <div className="flex flex-col">
+            <div className="flex flex-col my-3">
               <label className="text-white">State</label>
               <select
                 value={state}
@@ -163,7 +217,7 @@ const Register = () => {
             </div>
 
             {/* City Dropdown */}
-            <div className="flex flex-col">
+            <div className="flex flex-col my-3">
               <label className="text-white">City</label>
               <select
                 value={city}
@@ -177,20 +231,10 @@ const Register = () => {
                   </option>
                 ))}
               </select>
-
-              {/* Conditional rendering of the arrow icon */}
-              {arrowVisible && (
-                <div className=" flex justify-center items-center xsm:flex sm:hidden ">
-                  <i
-                    className="fa fa-angle-down text-white mt-2"
-                    onClick={handleArrowClick}
-                  ></i>
-                </div>
-              )}
             </div>
 
             {/* Domain Dropdown */}
-            <div className="flex flex-col">
+            <div className="flex flex-col my-3">
               <label className="text-white">Domain</label>
               <select
                 value={DomainName}
@@ -198,14 +242,14 @@ const Register = () => {
                 className="p-2 border border-gray-300 rounded-md bg-[#625342] text-white"
               >
                 <option value="">Select Domain</option>
-                <option value="domain1">Sports</option>
-                <option value="domain2">ESports</option>
+                <option value="Sports">Sports</option>
+                <option value="Esports">ESports</option>
               </select>
             </div>
 
             {/* Conditional rendering of sports dropdown */}
-            {DomainName === "domain1" && (
-              <div className="flex flex-col">
+            {DomainName === "Sports" && (
+              <div className="flex flex-col my-3">
                 <label className="text-white">Sports</label>
                 <select
                   value={selectedSport}
@@ -228,8 +272,8 @@ const Register = () => {
                 </select>
               </div>
             )}
-            {DomainName === "domain2" && (
-              <div className="flex flex-col">
+            {DomainName === "Esports" && (
+              <div className="flex flex-col my-3">
                 <label className="text-white">ESports</label>
                 <select
                   value={selectedESport}
@@ -241,17 +285,18 @@ const Register = () => {
                 </select>
               </div>
             )}
-          </div>
+          </form>
 
-          <div className="flex flex-wrap justify-evenly items-center mt-5 space-y-2 xsm:mt-36 sm:mt-6">
+          <div className="flex flex-wrap justify-evenly items-center m-2">
             <button
-              className=" bg-transparent text-[rgba(164,164,164,1)] font-extrabold leading-[60px] tracking-[5%] border px-2 xsm:mt-2"
-              onClick={handleRegister}
+              type="submit"
+              onClick={handleSubmit}
+              className="min-w-36 bg-transparent text-[rgba(164,164,164,1)] font-extrabold leading-[60px] tracking-[5%] border px-2  m-2 hover:bg-black"
             >
               REGISTER
             </button>
             <button
-              className="bg-transparent text-[rgba(164,164,164,1)] font-extrabold leading-[60px] tracking-[5%] border px-2"
+              className="min-w-36 bg-transparent text-[rgba(164,164,164,1)] font-extrabold leading-[60px] tracking-[5%] border px-2 m-2 hover:bg-black"
               onClick={handleRuleBook}
             >
               RULEBOOK

@@ -1,20 +1,22 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import image1 from "/carouselImages/1.png";
-import image2 from "/carouselImages/2.png";
-import image3 from "/carouselImages/3.png";
-import image4 from "/carouselImages/4.png";
-import moto from "/moto.png";
+// import image1 from "/carouselImages/1.png";
+// import image2 from "/carouselImages/2.png";
+// import image3 from "/carouselImages/3.png";
+// import image4 from "/carouselImages/4.png";
+// import moto from "/moto.png";
 import "../index.css";
+import logo from "../assets/image.png";
+import { Link } from "react-router-dom";
 
 function Carousel() {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const interval = 4500;
   const words_images = [
-    { word: "DESPORTIVOS' 25", image: image1 },
-    { word: "SPORTS", image: image2 },
-    { word: "PRONITE", image: image3 },
-    { word: "ESPORTS", image: image4 },
+    { word: "DESPORTIVOS' 25", image: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952256/1_qjkggx.png" },
+    { word: "SPORTS", image: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952256/2_iun5fj.png" },
+    { word: "PRONITE", image:  "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952257/3_p2ilnb.png"},
+    { word: "ESPORTS", image: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952258/4_a7xisu.png" },
   ];
 
   useEffect(() => {
@@ -27,6 +29,22 @@ function Carousel() {
 
   return (
     <div className="relative bg-black flex h-full w-full justify-center items-center overflow-hidden">
+      <div>
+        <img
+          src={logo}
+          alt="Logo"
+          className="absolute lg:h-[150px] sm:h-[120px] h-[100px] w-30 top-[24px] left-[1px] sm:left-[16px] z-10"
+          onClick={() => (window.location.href = "/")}
+          style={{ cursor: "pointer" }} // Adds a pointer cursor for better UX
+        />
+      </div>
+
+      <Link
+        to="/register"
+        className="text-center align-middle absolute w-fit h-fit p-2 right-8 sm:right-16 sm:top-[75px] top-[64px] border-2 border-[#F85B02] shadow-[2px_1.5px_13px_#F85B02] rounded-xl z-10 text-white text-xl lg:text-3xl bg-[#424242BF] font-squid hover:bg-[#515151bf] hover:scale-105"
+      >
+        REGISTER
+      </Link>
       <AnimatePresence mode="popLayout">
         {words_images.map(
           (item, index) =>
@@ -35,16 +53,16 @@ function Carousel() {
                 key={item.word}
                 className="h-screen w-screen relative flex justify-center items-center"
               >
-         <motion.img
-                  initial={{ x: 100, opacity: 0 }} 
-                  animate={{ x: 0, opacity: 1 }}  
+                <motion.img
+                  initial={{ x: 100, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
                   exit={{
-                    x: -100, 
+                    x: -100,
                     opacity: 0,
                     transition: { duration: 0.5 },
                   }}
                   transition={{
-                    duration: 1, 
+                    duration: 1,
                     ease: "easeInOut",
                   }}
                   src={item.image}
@@ -70,7 +88,7 @@ function Carousel() {
                   {item.word}
                 </motion.div>
                 <img
-                  src={moto}
+                  src="https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952325/moto_khggbl.png"
                   alt="moto"
                   className="absolute bottom-3 right-3 w-24 h-auto"
                 />
