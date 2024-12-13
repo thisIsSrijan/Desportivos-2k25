@@ -33,7 +33,7 @@
 // }
 // }
 
-module.exports = {
+export default = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}", // Make sure this matches the path to your React files
   ],
