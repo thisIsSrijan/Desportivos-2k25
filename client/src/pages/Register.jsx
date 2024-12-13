@@ -185,7 +185,7 @@ const Register = () => {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Enter Name"
-                className="p-2 border border-gray-300 rounded-md bg-[#625342] font-medium"
+                className="p-2 text-gray-400 border border-gray-300 rounded-md bg-[#625342] font-medium"
               />
             </div>
 
@@ -209,7 +209,7 @@ const Register = () => {
                 value={collegeName}
                 onChange={(e) => setCollegeName(e.target.value)}
                 placeholder="Enter College Name"
-                className="p-2 border border-gray-300 rounded-md bg-[#625342] font-medium"
+                className="p-2 text-gray-400 border border-gray-300 rounded-md bg-[#625342] font-medium"
               />
             </div>
 
@@ -221,7 +221,7 @@ const Register = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter Email-ID"
-                className="p-2 border border-gray-300 rounded-md bg-[#625342] font-medium"
+                className="p-2 text-gray-400 border border-gray-300 rounded-md bg-[#625342] font-medium"
               />
             </div>
 
@@ -258,11 +258,18 @@ const Register = () => {
               <select
                 value={city}
                 onChange={(e) => setCity(e.target.value)}
-                className="p-2 border border-gray-300 rounded-md bg-[#625342] text-white"
+                className={`p-2 border border-gray-300 rounded-md font-medium ${
+                  state ? "bg-orange-600 text-white" : "bg-[#625342] text-white"
+                }`}
               >
                 <option value="">Select a City</option>
                 {cityOptions.map((option) => (
-                  <option key={option.isoCode} value={option.name}>
+                  <option key={option.isoCode} 
+                  value={option.name}
+                  className={`text-black bg-[#493d33] hover:bg-[#6b5b4c] ${
+                    state === option.isoCode ? "bg-orange-600 text-white" : ""
+                  }`}
+                  >
                     {option.name}
                   </option>
                 ))}
