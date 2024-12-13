@@ -8,8 +8,6 @@ import { Link } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-
-
 const Register = () => {
   const [fieldsVisible, setFieldsVisible] = useState(false);
   const [arrowVisible, setArrowVisible] = useState(true);
@@ -75,12 +73,12 @@ const Register = () => {
     }
   }, [state]);
 
-  //stop scrolling in bg when popup 
+  //stop scrolling in bg when popup
   useEffect(() => {
     if (popupVisible) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = "auto";
     }
   }, [popupVisible]);
 
@@ -119,13 +117,10 @@ const Register = () => {
       if (responsedata.message == "Registered Successfully") {
         console.log(formData);
         toast.success("Registered successfully! Please check your email.");
-        }
-         else {
-          toast.error(` Registration Error: ${responsedata.message})`
-          );    
-         }
-        }
-          catch (error) {
+      } else {
+        toast.error(` Registration Error: ${responsedata.message})`);
+      }
+    } catch (error) {
       console.error("Error submitting form:", error);
       toast.error(" Server Error - Unable to Submit the Form");
     }
@@ -133,7 +128,7 @@ const Register = () => {
 
   return (
     <div className="h-full w-screen overflow-x-hidden">
-    <ToastContainer
+      <ToastContainer
         position="top-right"
         autoClose={3000}
         hideProgressBar={false}
@@ -143,7 +138,6 @@ const Register = () => {
         pauseOnFocusLoss
         draggable
         pauseOnHover
-        
       />
       {/* Top Background */}
       <div
@@ -331,8 +325,6 @@ const Register = () => {
             >
               REGISTER
             </button>
-      
-
 
             <button
               className="min-w-36 bg-transparent text-[rgba(164,164,164,1)] font-extrabold leading-[60px] tracking-[5%] border px-2 m-2 hover:bg-black"
@@ -344,14 +336,14 @@ const Register = () => {
         </div>
       </div>
 
-
       {/* Popup Component */}
       {popupVisible && (
         <div className="fixed inset-0  bg-opacity-70 flex justify-center items-center z-50 overflow-auto">
-          <div className="popup-content rounded-lg shadow-lg w-11/12 md:w-2/3 lg:w-1/2  lg:h-1/2 py-5  px-9 relative "
-          style={{
-          backgroundImage: `url(https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732953786/bottombg_bgswml.png)`,
-        }}
+          <div
+            className="popup-content rounded-lg shadow-lg w-11/12 md:w-2/3 lg:w-1/2 py-5  px-9 relative xl:px-12 xl:py-6 bg-cover border-2 border-white "
+            style={{
+              backgroundImage: `url(https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732953786/bottombg_bgswml.png)`,
+            }}
           >
             <button
               onClick={closePopup}
@@ -359,14 +351,28 @@ const Register = () => {
             >
               &#x2715;
             </button>
-            <h2 className="text-7xl font-bold mb-4 text-white font-dharma tracking-wide text-center">GUIDELINES</h2>
-            <p className="text-white text-justify text-md lg:text-xl">
-           <p className=" mb-3 lg:mb-5"> 1. Every participant from each team must register individually.</p>
-           <p className="mb-3 lg:mb-5"> 2. A participant may register for multiple sports or e-sports events.</p>
-            <p className="mb-3 lg:mb-5">3. Upon registration, the participant will receive a confirmation email regarding their registered event.</p>
-            <p className=" mb-3 lg:mb-5">4. For any further queries, the participant can contact the person mentioned in the email.</p>
-
-            </p>
+            <h2 className="text-7xl font-bold mb-4 text-white font-dharma tracking-wide text-center">
+              GUIDELINES
+            </h2>
+            <div className="text-white text-justify text-md lg:text-xl xl:text-center xl:text-2xl">
+              <p className=" mb-3 lg:mb-5">
+                {" "}
+                1. Every participant from each team must register individually.
+              </p>
+              <p className="mb-3 lg:mb-5">
+                {" "}
+                2. A participant may register for multiple sports or e-sports
+                events.
+              </p>
+              <p className="mb-3 lg:mb-5">
+                3. Upon registration, the participant will receive a
+                confirmation email regarding their registered event.
+              </p>
+              <p className=" mb-3 lg:mb-5">
+                4. For any further queries, the participant can contact the
+                person mentioned in the email.
+              </p>
+            </div>
           </div>
         </div>
       )}
