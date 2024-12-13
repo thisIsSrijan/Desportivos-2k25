@@ -15,7 +15,7 @@ const sendEmail = async (Name, Email, Domain, Sports) => {
   const mailOptions = {
     from: process.env.EMAIL,
     to: Email,
-    subject: Mailer.title,
+    subject: `Thank you for registering in Desportivos'25`,
     html: Mailer.html,
   };
 
