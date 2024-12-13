@@ -6,7 +6,16 @@
     background-clip: text;
     mix-blend-mode:normal;
 }
-
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 /* For WebKit-based browsers (Chrome, Safari, Opera) */
 .popup-content::-webkit-scrollbar {
     display: none; /* Hide scrollbar */
@@ -23,6 +32,8 @@
   }
   
   .popup-content {
+    animation: scaleUp 0.4s ease-in-out; /* Animation duration and easing */
+  transform-origin: center; /* Set the origin for scaling */
     overflow: auto; /* Ensure scrolling works */
   }
 

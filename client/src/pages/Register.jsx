@@ -118,7 +118,7 @@ const Register = () => {
       const responsedata = await response.json();
       if (responsedata.message == "Registered Successfully") {
         console.log(formData);
-        toast.success("✅ Registered successfully! Please check your email.");
+        toast.success("Registered successfully! Please check your email.");
         }
          else {
           toast.error(` Registration Error: ${responsedata.message})`
@@ -127,12 +127,24 @@ const Register = () => {
         }
           catch (error) {
       console.error("Error submitting form:", error);
-      toast.error("📛 Server Error - Unable to Submit the Form");
+      toast.error(" Server Error - Unable to Submit the Form");
     }
   };
 
   return (
     <div className="lg:min-h-screen h-full w-screen overflow-x-hidden">
+    <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        
+      />
       {/* Top Background */}
       <div
         className="relative w-screen h-64 bg-cover bg-center"
@@ -319,20 +331,7 @@ const Register = () => {
             >
               REGISTER
             </button>
-
-            {/* Include ToastContainer inside Register Component */}
-      <ToastContainer
-        position="top-right"
-        autoClose={3000}
-        hideProgressBar={false}
-        newestOnTop
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        
-      />
+      
 
 
             <button
