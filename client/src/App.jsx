@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 import Register from "./pages/Register";
-import "./app.css";
+import "./App.css";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 

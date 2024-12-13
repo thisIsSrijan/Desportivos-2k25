@@ -335,7 +335,6 @@ const Register = () => {
           </div>
         </div>
       </div>
-
       {/* Popup Component */}
       {popupVisible && (
         <div className="fixed inset-0  bg-opacity-70 flex justify-center items-center z-50 overflow-auto">
