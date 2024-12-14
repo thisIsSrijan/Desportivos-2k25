@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useRef } from "react";
 import { State, City } from "country-state-city"; // Importing required modules
 // import redbg from "../assets/redbg.png";
 // import bottombg from "../assets/bottombg.png";
@@ -81,7 +81,6 @@ const Register = () => {
       document.body.style.overflow = "auto";
     }
   }, [popupVisible]);
-
 
   const [isSubmitting, setIsSubmitting] = useState(false); // State to disable the button during submission
   const handleSubmit = async (e) => {
