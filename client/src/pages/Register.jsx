@@ -8,8 +8,6 @@ import { Link } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-
-
 const Register = () => {
   const [fieldsVisible, setFieldsVisible] = useState(false);
   const [arrowVisible, setArrowVisible] = useState(true);
@@ -75,12 +73,12 @@ const Register = () => {
     }
   }, [state]);
 
-  //stop scrolling in bg when popup 
+  //stop scrolling in bg when popup
   useEffect(() => {
     if (popupVisible) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = "auto";
     }
   }, [popupVisible]);
 
@@ -149,7 +147,7 @@ const Register = () => {
 
   return (
     <div className="h-full w-screen overflow-x-hidden">
-    <ToastContainer
+      <ToastContainer
         position="top-right"
         autoClose={3000}
         hideProgressBar={false}
@@ -159,7 +157,6 @@ const Register = () => {
         pauseOnFocusLoss
         draggable
         pauseOnHover
-        
       />
       {/* Top Background */}
       <div
@@ -175,7 +172,7 @@ const Register = () => {
       </div>
       <Link
         to="/"
-        className="text-center align-middle absolute w-fit h-fit py-2 px-5 right-8 sm:right-16 sm:top-[75px] top-[64px] border-2 border-[#F85B02] shadow-[2px_1.5px_13px_#F85B02] rounded-xl z-10 text-white text-xl lg:text-3xl bg-[#424242BF] font-squid hover:bg-[#515151bf] hover:scale-105"
+        className="text-center align-middle absolute w-fit h-fit py-2 px-5 right-[16px] sm:right-16 sm:top-[75px] top-[26px] border-2 border-[#F85B02] shadow-[2px_1.5px_13px_#F85B02] rounded-xl z-10 text-white text-l sm:text-xl lg:text-3xl bg-[#424242BF] font-squid hover:bg-[#515151bf] hover:scale-105"
       >
         HOME
       </Link>
@@ -280,11 +277,12 @@ const Register = () => {
               >
                 <option value="">Select a City</option>
                 {cityOptions.map((option) => (
-                  <option key={option.isoCode} 
-                  value={option.name}
-                  className={`text-black bg-[#493d33] hover:bg-[#6b5b4c] ${
-                    state === option.isoCode ? "bg-orange-600 text-white" : ""
-                  }`}
+                  <option
+                    key={option.isoCode}
+                    value={option.name}
+                    className={`text-black bg-[#493d33] hover:bg-[#6b5b4c] ${
+                      state === option.isoCode ? "bg-orange-600 text-white" : ""
+                    }`}
                   >
                     {option.name}
                   </option>
@@ -356,27 +354,25 @@ const Register = () => {
               }`}>
               {isSubmitting ? "Submitting..." : "REGISTER"}
             </button>
-      
-
 
             <button
-              className="min-w-36 bg-transparent text-[rgba(164,164,164,1)] font-extrabold leading-[60px] tracking-[5%] border px-2 m-2 hover:bg-black"
+              className="min-w-36 bg-transparent text-xl text-[rgba(164,164,164,1)] font-extrabold leading-[60px] tracking-[5%] border px-2 m-2 hover:text-[#F6931C] hover:border-[#F6931C] hover:duration-300 hover:bg-[#1f1f1f]"
               onClick={handleRuleBook}
             >
-              RULEBOOK
+              GUIDELINES
             </button>
           </div>
         </div>
       </div>
 
-
       {/* Popup Component */}
       {popupVisible && (
         <div className="fixed inset-0  bg-opacity-70 flex justify-center items-center z-50 overflow-auto">
-          <div className="popup-content rounded-lg shadow-lg w-11/12 md:w-2/3 lg:w-1/2  lg:h-1/2 py-5  px-9 relative "
-          style={{
-          backgroundImage: `url(https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732953786/bottombg_bgswml.png)`,
-        }}
+          <div
+            className="popup-content rounded-lg shadow-lg w-11/12 md:w-2/3 lg:w-1/2 py-5  px-9 relative xl:px-12 xl:py-6 bg-cover border-2 border-white "
+            style={{
+              backgroundImage: `url(https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732953786/bottombg_bgswml.png)`,
+            }}
           >
             <button
               onClick={closePopup}
@@ -384,14 +380,28 @@ const Register = () => {
             >
               &#x2715;
             </button>
-            <h2 className="text-7xl font-bold mb-4 text-white font-dharma tracking-wide text-center">GUIDELINES</h2>
-            <p className="text-white text-justify text-md lg:text-xl">
-           <p className=" mb-3 lg:mb-5"> 1. Every participant from each team must register individually.</p>
-           <p className="mb-3 lg:mb-5"> 2. A participant may register for multiple sports or e-sports events.</p>
-            <p className="mb-3 lg:mb-5">3. Upon registration, the participant will receive a confirmation email regarding their registered event.</p>
-            <p className=" mb-3 lg:mb-5">4. For any further queries, the participant can contact the person mentioned in the email.</p>
-
-            </p>
+            <h2 className="text-7xl font-bold mb-4 text-white font-dharma tracking-wide text-center">
+              GUIDELINES
+            </h2>
+            <div className="text-white text-justify text-md lg:text-xl xl:text-center xl:text-2xl">
+              <p className=" mb-3 lg:mb-5">
+                {" "}
+                1. Every participant from each team must register individually.
+              </p>
+              <p className="mb-3 lg:mb-5">
+                {" "}
+                2. A participant may register for multiple sports or e-sports
+                events.
+              </p>
+              <p className="mb-3 lg:mb-5">
+                3. Upon registration, the participant will receive a
+                confirmation email regarding their registered event.
+              </p>
+              <p className=" mb-3 lg:mb-5">
+                4. For any further queries, the participant can contact the
+                person mentioned in the email.
+              </p>
+            </div>
           </div>
         </div>
       )}
