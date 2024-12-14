@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useRef } from "react";
 import { State, City } from "country-state-city"; // Importing required modules
 // import redbg from "../assets/redbg.png";
 // import bottombg from "../assets/bottombg.png";
@@ -14,7 +14,7 @@ const Register = () => {
   const [popupVisible, setPopupVisible] = useState(false); // State for popup visibility
 
   const handleArrowClick = () => {
-    console.log("Arrow clicked!"); // Debugging the click
+    console.log("Arrow clicked!"); 
 
     // Get the current scroll position
     const currentScrollY = window.scrollY;
@@ -82,6 +82,7 @@ const Register = () => {
     }
   }, [popupVisible]);
 
+  const [isSubmitting, setIsSubmitting] = useState(false); // State to disable the button during submission
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -97,6 +98,7 @@ const Register = () => {
     };
 
     try {
+      setIsSubmitting(true); // Disable the button during form submission
       console.log("Form data:", formData);
       const response = await fetch(
         "https://testbackenddespo.vercel.app/api/register",
@@ -117,12 +119,28 @@ const Register = () => {
       if (responsedata.message == "Registered Successfully") {
         console.log(formData);
         toast.success("Registered successfully! Please check your email.");
-      } else {
-        toast.error(` Registration Error: ${responsedata.message})`);
-      }
-    } catch (error) {
+        // Reset fields to null after successful submission
+      setName("");
+      setState("");
+      setCollegeName("");
+      setCity("");
+      setPhone("");
+      setEmail("");
+      setDomainName("");
+      setSelectedSport("");
+      setSelectedESport("");
+        }
+         else {
+          toast.error(` Registration Error: ${responsedata.message})`
+          );    
+         }
+        }
+          catch (error) {
       console.error("Error submitting form:", error);
       toast.error(" Server Error - Unable to Submit the Form");
+    }
+    finally {
+      setIsSubmitting(false); // Re-enable the button
     }
   };
 
@@ -329,9 +347,11 @@ const Register = () => {
             <button
               type="submit"
               onClick={handleSubmit}
-              className="min-w-36 bg-transparent text-xl text-[rgba(164,164,164,1)] font-extrabold leading-[60px] tracking-[5%] border px-2  m-2  hover:text-[#F6931C] hover:border-[#F6931C] hover:duration-300 hover:bg-[#1f1f1f]"
-            >
-              REGISTER
+              disabled={isSubmitting} // Disable when form is submitting
+              className={`min-w-36 bg-transparent text-[rgba(164,164,164,1)] font-extrabold leading-[60px] tracking-[5%] border px-2  m-2 hover:bg-black ${
+              isSubmitting ? "opacity-50 cursor-not-allowed" : ""
+              }`}>
+              {isSubmitting ? "Submitting..." : "REGISTER"}
             </button>
 
             <button

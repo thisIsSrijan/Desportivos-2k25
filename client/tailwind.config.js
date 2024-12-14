@@ -36,6 +36,7 @@
 export default {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}", // Make sure this matches the path to your React files
+    "node_modules/flowbite/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
     extend: {
@@ -79,7 +80,9 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require("flowbite/plugin"),
+  ],
 };
 
 
