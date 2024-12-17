@@ -5,6 +5,7 @@ function Mail(Name, Domain, Sports) {
   } else if (Domain === "ESports") {
     selectedActivity = `<li><strong>Selected E-Sports:</strong> ${Sports}</li>`;
   }
+  let click = `https://desportivos-2k25.vercel.app/register`;
 
   const MailTemplate = {
     title: "Test Email",
@@ -46,6 +47,11 @@ function Mail(Name, Domain, Sports) {
           <p style="margin: 0;padding: 0;"><strong>Himendra Yaduvanshi: +91 8890605538</strong></p>
           <p style="margin: 0;padding: 0;"><strong>Rajat Satonkar: +91 7499263746</strong></p>
           <p style="margin: 0;padding: 0;"><strong>Shreyansh Singh Rathore: +91 8854072705</strong></p>
+        </div>
+        
+        <div style="display: flex; align-items: center;">
+          <p style="margin: 0; padding: 0; margin-right: 5px;">To Register for another event</p>
+          <a href="${click}" style="color: #cc4b00; text-decoration: none;">Click Here</a>
         </div>
       </div>
 
