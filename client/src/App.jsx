@@ -1,9 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 import Register from "./pages/Register";
 import "./App.css";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
+import AboutUs from "./pages/AboutUs";
 
 const Preloader = ({ onFinish }) => {
   return (
@@ -20,15 +26,16 @@ const Preloader = ({ onFinish }) => {
 };
 
 const RandomLoader = () => {
-  const loaders = ["/pageTransition/square.gif", "/pageTransition/circle.gif", "/pageTransition/triangle.gif"];
+  const loaders = [
+    "/pageTransition/square.gif",
+    "/pageTransition/circle.gif",
+    "/pageTransition/triangle.gif",
+  ];
   const randomLoader = loaders[Math.floor(Math.random() * loaders.length)];
 
   return (
     <div className="preloader flex justify-center items-center h-screen w-screen bg-black">
-      <img
-        src={randomLoader}
-        className="max-h-full"
-      />
+      <img src={randomLoader} className="max-h-full" />
     </div>
   );
 };
@@ -39,6 +46,7 @@ const AppContent = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/aboutus" element={<AboutUs />} />
       </Routes>
       <Footer />
     </>
@@ -55,7 +63,7 @@ function App() {
     if (!hasLoaded) {
       const timer = setTimeout(() => {
         setIsLoading(false);
-        setHasLoaded(true); 
+        setHasLoaded(true);
       }, 5000);
 
       return () => clearTimeout(timer);
