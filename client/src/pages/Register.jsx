@@ -145,7 +145,7 @@ const Register = () => {
   };
 
   return (
-    <div className="h-full w-screen overflow-x-hidden">
+    <div className="h-full w-full overflow-x-hidden">
       <ToastContainer
         position="top-right"
         autoClose={3000}
