@@ -31,6 +31,7 @@ function Footer() {
       <div className="absolute top-0 sm:top-2 lg:mt-4 left-0 bottom-10 lg:bottom-10 w-full">
         <Marquee speed={150} autoFill={true} className="overflow-hidden no-scrollbar">
           <div className="flex space-x-8">{renderTextWithDot()}</div>
+          <div className="mr-8"></div>
         </Marquee>
         <div className="w-full h-[1px] bg-white"></div>
 
