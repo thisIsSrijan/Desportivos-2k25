@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 import {
   BrowserRouter as Router,
@@ -13,13 +14,14 @@ import AboutUs from "./pages/AboutUs";
 
 const Preloader = ({ onFinish }) => {
   return (
-    <div className="preloader flex justify-center items-center h-screen w-screen bg-black">
+    <div className="preloader flex justify-center items-center h-screen w-screen bg-black" style={{ backgroundImage: "url('/loaderBG.gif')" }}>
       <video
         src="/Loader.mp4"
         autoPlay
         muted
         onEnded={onFinish}
-        className="max-h-full"
+        
+        className="mix-blend-lighten absolute h-5/6 bottom-0 left-1/2 -translate-x-1/2 object-cover "
       />
     </div>
   );

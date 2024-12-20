@@ -116,7 +116,7 @@ function Footer() {
 
           <div className="flex justify-center">
             <img
-              className="h-[70px] sm:h-[100px] md:h-[150px] lg:w-[510px] lg:h-[250px] relative lg:right-10 right-2 sm:right-5"
+              className="h-[70px] w-[200px] sm:w-[250px] sm:h-[100px] md:h-[150px] lg:w-[550px] lg:h-[250px] relative lg:right-10 right-2 sm:right-5"
               src="https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952202/despo_text_mzyynm.png"
               alt="Desportivos Text"
             />
