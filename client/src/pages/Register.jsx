@@ -150,9 +150,7 @@ const Register = () => {
     } catch (error) {
       if (error instanceof z.ZodError) {
         // Handle validation errors
-        error.errors.forEach((err) => {
           toast.error(error.errors[0].message);
-        });
       } else {
         console.error("Error submitting form:", error);
         toast.error("Server Error - Unable to Submit the Form");
