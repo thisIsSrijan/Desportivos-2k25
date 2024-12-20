@@ -7,6 +7,7 @@ import "font-awesome/css/font-awesome.min.css";
 import { Link } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { z } from "zod";
 
 const Register = () => {
   const [fieldsVisible, setFieldsVisible] = useState(false);
@@ -83,6 +84,18 @@ const Register = () => {
   }, [popupVisible]);
 
   const [isSubmitting, setIsSubmitting] = useState(false); // State to disable the button during submission
+
+  const userSchema = z.object({
+    Name: z.string().min(1, "Name is required").max(100, "Name is too long"),
+    CollegeName: z.string().min(1, "College name is required"),
+    PhoneNumber: z.string().regex(/^\d{10}$/, "Phone number must be 10 digits"),
+    Email: z.string().email("Invalid email address"),
+    City: z.string().min(1, "City is required"),
+    State: z.string().min(1, "State is required"),
+    Domain: z.string().min(1, "Domain is required"),
+    Sports: z.string().min(1, "This field is required"),
+  });
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -98,8 +111,10 @@ const Register = () => {
     };
 
     try {
+      const parsedData = userSchema.parse(formData);
       setIsSubmitting(true); // Disable the button during form submission
-      console.log("Form data:", formData);
+      console.log("Validated form data:", parsedData);
+      // console.log("Form data:", formData);
       const response = await fetch(
         "https://testbackenddespo.vercel.app/api/register",
         {
@@ -107,7 +122,7 @@ const Register = () => {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(formData),
+          body: JSON.stringify(parsedData),
         }
       );
       console.log(response);
@@ -117,7 +132,7 @@ const Register = () => {
 
       const responsedata = await response.json();
       if (responsedata.message == "Registered Successfully") {
-        console.log(formData);
+        console.log(parsedData);
         toast.success("Registered successfully! Please check your email.");
         // Reset fields to null after successful submission
         setName("");
@@ -133,8 +148,15 @@ const Register = () => {
         toast.error(` Registration Error: ${responsedata.message})`);
       }
     } catch (error) {
-      console.error("Error submitting form:", error);
-      toast.error(" Server Error - Unable to Submit the Form");
+      if (error instanceof z.ZodError) {
+        // Handle validation errors
+        error.errors.forEach((err) => {
+          toast.error(err.message);
+        });
+      } else {
+        console.error("Error submitting form:", error);
+        toast.error("Server Error - Unable to Submit the Form");
+      }
     } finally {
       setIsSubmitting(false); // Re-enable the button
     }
@@ -161,7 +183,18 @@ const Register = () => {
         }}
       >
         {/* REGISTER NOW Text */}
-        <h1 className="absolute top-57 md:top-54 lg:top-51 uxl:top-47 w-full text-center text-5xl md:text-7xl lg:text-8xl uxl:text-9xl  text-white uppercase font-extrabold text-effect z-10 ">
+        <h1
+          className="absolute top-50 md:top-49 lg:top-49 uxl:top-48 w-full text-center text-8xl md:text-[130px] lg:text-[180px] uxl:text-[180px] text-white uppercase font-extrabold text-effect z-10 dharma-gothic-c "
+          style={{
+            // fontSize: "180px",
+            fontWeight: 800,
+            lineHeight: "115px",
+            letterSpacing: "0.09em",
+            textAlign: "center",
+            textUnderlinePosition: "from-font",
+            textDecorationSkipInk: "none",
+          }}
+        >
           Register Now
         </h1>
       </div>

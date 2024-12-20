@@ -38,7 +38,7 @@ function Footer() {
 
     return (
       <div
-        className={`relative w-[80%] max-w-[627px] h-36 rounded-[45px] flex items-center justify-start mx-auto px-6 bg-gray-400 transition-colors duration-300 ${colors[index]} my-2`}
+        className={`relative w-[80%] max-w-[550px] h-36 rounded-[50px] flex items-center justify-start mx-auto px-6 bg-gray-400 transition-colors duration-300 ${colors[index]} my-2`}
         onMouseEnter={handleMouseEnter} // Trigger on hover
       >
         <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl  dharma-gothic-c text-left">
@@ -68,7 +68,7 @@ function Footer() {
   };
   return (
     <div
-      className="relative w-full  h-[620px] sm:h-[550px] md:h-[650px] lg:h-[860px]  bg-cover bg-center bg-no-repeat overflow-hidden"
+      className="relative w-full  h-[650px] sm:h-[570px] md:h-[660px] lg:h-[860px]  bg-cover bg-center bg-no-repeat overflow-hidden"
       style={{
         backgroundImage:
           "url('https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952318/Background_qmcxay.png')",
