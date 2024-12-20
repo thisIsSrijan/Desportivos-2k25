@@ -1,5 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 import Register from "./pages/Register";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
@@ -14,6 +19,7 @@ const AppContent = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/aboutus" element={<AboutUs />} />
       </Routes>
       {(location.pathname == "/register" || location.pathname == "/")  && <Footer />}  
     </>
