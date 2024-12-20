@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import {
   BrowserRouter as Router,
@@ -7,42 +6,14 @@ import {
   useLocation,
 } from "react-router-dom";
 import Register from "./pages/Register";
-import "./App.css";
-import Footer from "./components/Footer";
 import Home from "./pages/Home";
-import AboutUs from "./pages/AboutUs";
-
-const Preloader = ({ onFinish }) => {
-  return (
-    <div className="preloader flex justify-center items-center h-screen w-screen bg-black" style={{ backgroundImage: "url('/loaderBG.gif')" }}>
-      <video
-        src="/Loader.mp4"
-        autoPlay
-        muted
-        onEnded={onFinish}
-        
-        className="mix-blend-lighten absolute h-5/6 bottom-0 left-1/2 -translate-x-1/2 object-cover "
-      />
-    </div>
-  );
-};
-
-const RandomLoader = () => {
-  const loaders = [
-    "/pageTransition/square.gif",
-    "/pageTransition/circle.gif",
-    "/pageTransition/triangle.gif",
-  ];
-  const randomLoader = loaders[Math.floor(Math.random() * loaders.length)];
-
-  return (
-    <div className="preloader flex justify-center items-center h-screen w-screen bg-black">
-      <img src={randomLoader} className="max-h-full" />
-    </div>
-  );
-};
+import Footer from "./components/Footer";
+import Preloader from './components/Preloader';
+import RandomLoader from './components/RandomLoader';
 
 const AppContent = () => {
+  const location = useLocation(); 
+
   return (
     <>
       <Routes>
@@ -50,7 +21,7 @@ const AppContent = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/aboutus" element={<AboutUs />} />
       </Routes>
-      <Footer />
+      {(location.pathname == "/register" || location.pathname == "/")  && <Footer />}  
     </>
   );
 };
@@ -67,7 +38,6 @@ function App() {
         setIsLoading(false);
         setHasLoaded(true);
       }, 5000);
-
       return () => clearTimeout(timer);
     }
   }, [hasLoaded]);
@@ -78,12 +48,11 @@ function App() {
       const timer = setTimeout(() => {
         setIsRouteChanging(false);
       }, 1500);
-
       return () => clearTimeout(timer);
     }
   }, [location]);
 
-  if (isLoading) {
+  if (isLoading && location.pathname === "/") {
     return <Preloader onFinish={() => setIsLoading(false)} />;
   }
 
@@ -92,12 +61,12 @@ function App() {
   }
 
   return <AppContent />;
-}
+};
 
 const Root = () => {
   return (
     <Router>
-      <App />
+      <App /> 
     </Router>
   );
 };
