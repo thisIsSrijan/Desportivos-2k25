@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion"; // Import Framer Motion
 import person from "../assets/aboutperson.svg";
 import aboutus from "../assets/aboutus.jpg";
@@ -6,6 +6,27 @@ import insta from "../assets/instagram.svg";
 import youtube from "../assets/youtube.svg";
 
 function AboutUs() {
+  const [xValue, setXValue] = useState(0);
+
+  useEffect(() => {
+    const updateXValue = () => {
+      if (window.innerWidth <= 1056 && window.innerWidth >= 990) {
+        setXValue(-20);
+      } else if (window.innerWidth <= 825 && window.innerWidth >= 768) {
+        setXValue(-27);
+      } else {
+        setXValue(0);
+      }
+    };
+
+    // Initialize on load
+    updateXValue();
+
+    // Update on resize
+    window.addEventListener("resize", updateXValue);
+    return () => window.removeEventListener("resize", updateXValue);
+  }, []);
+
   return (
     <div
       className="relative bg-black text-white min-h-screen flex flex-col items-center justify-center py-8 bg-cover bg-center bg-no-repeat overflow-hidden"
@@ -16,15 +37,15 @@ function AboutUs() {
     >
       {/* whileInViewd Heading */}
       <motion.h1
-        className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold text-gradient text-[#F85B02] dharma-gothic-c tracking-wide"
+        className="text-7xl sm:text-7xl md:text-8xl lg:text-9xl font-bold text-gradient text-[#F85B02] dharma-gothic-c tracking-wide"
         initial={{ opacity: 0, y: 100 }}
-        whileInView={{ opacity: 1, y: 0, scale: 1.2 }}
+        whileInView={{ opacity: 1, y: 0, scale: 1.3 }}
         transition={{ duration: 1 }}
       >
         ABOUT US
       </motion.h1>
 
-      <div className="flex flex-col lg:flex-row items-center justify-between w-full max-w-screen-lg px-8 pb-20 ">
+      <div className="flex flex-col lg:flex-row items-center justify-between w-full max-w-screen-lg px-9 pb-20 ">
         <motion.div
           className="relative w-full lg:w-1/3 md:w-[70%] md:h-[70%] mt-5"
           initial={{ opacity: 0, x: -50 }}
@@ -34,7 +55,7 @@ function AboutUs() {
           <img
             src={aboutus}
             alt="About Us"
-            className="object-cover w-full h-full rounded-lg shadow-xl"
+            className="object-cover w-[95%] pl-[5%] mb-5 sm:w-full sm:px-4 h-full rounded-lg shadow-xl"
           />
           <div className="flex justify-center lg:justify-start space-x-6 mt-6">
             <motion.a
@@ -58,11 +79,10 @@ function AboutUs() {
           </div>
         </motion.div>
 
-        {/* whileInViewd Text */}
         <motion.div
-          className="max-w-md text-center lg:text-left lg:w-2/3 py-8 space-y-5 lg:space-y-5 lg:px-5 text-[#DADADA] lg:mr-20"
+          className="max-w-md text-center lg:text-left lg:w-2/3 py-8 space-y-5 lg:space-y-5 lg:pr-14 text-[#DADADA] lg:mr-20"
           initial={{ opacity: 0, x: 50, scale: 0.7 }}
-          whileInView={{ opacity: 1, x: 0, scale: 1 }}
+          whileInView={{ opacity: 1, x: xValue, scale: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
         >
           <p className="text-sm leading-relaxed">
