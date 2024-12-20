@@ -1,4 +1,4 @@
-import React, { useState, useEffect,useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { State, City } from "country-state-city"; // Importing required modules
 // import redbg from "../assets/redbg.png";
 // import bottombg from "../assets/bottombg.png";
@@ -7,6 +7,7 @@ import "font-awesome/css/font-awesome.min.css";
 import { Link } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { z } from "zod";
 
 const Register = () => {
   const [fieldsVisible, setFieldsVisible] = useState(false);
@@ -14,7 +15,7 @@ const Register = () => {
   const [popupVisible, setPopupVisible] = useState(false); // State for popup visibility
 
   const handleArrowClick = () => {
-    console.log("Arrow clicked!"); 
+    console.log("Arrow clicked!");
 
     // Get the current scroll position
     const currentScrollY = window.scrollY;
@@ -83,6 +84,18 @@ const Register = () => {
   }, [popupVisible]);
 
   const [isSubmitting, setIsSubmitting] = useState(false); // State to disable the button during submission
+
+  const userSchema = z.object({
+    Name: z.string().min(1, "Name is required").max(100, "Name is too long"),
+    CollegeName: z.string().min(1, "College name is required"),
+    PhoneNumber: z.string().regex(/^\d{10}$/, "Phone number must be 10 digits"),
+    Email: z.string().email("Invalid email address"),
+    City: z.string().min(1, "City is required"),
+    State: z.string().min(1, "State is required"),
+    Domain: z.string().min(1, "Domain is required"),
+    Sports: z.string().min(1, "This field is required"),
+  });
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -98,8 +111,10 @@ const Register = () => {
     };
 
     try {
+      const parsedData = userSchema.parse(formData);
       setIsSubmitting(true); // Disable the button during form submission
-      console.log("Form data:", formData);
+      console.log("Validated form data:", parsedData);
+      // console.log("Form data:", formData);
       const response = await fetch(
         "https://testbackenddespo.vercel.app/api/register",
         {
@@ -107,7 +122,7 @@ const Register = () => {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(formData),
+          body: JSON.stringify(parsedData),
         }
       );
       console.log(response);
@@ -117,29 +132,30 @@ const Register = () => {
 
       const responsedata = await response.json();
       if (responsedata.message == "Registered Successfully") {
-        console.log(formData);
+        console.log(parsedData);
         toast.success("Registered successfully! Please check your email.");
         // Reset fields to null after successful submission
-      setName("");
-      setState("");
-      setCollegeName("");
-      setCity("");
-      setPhone("");
-      setEmail("");
-      setDomainName("");
-      setSelectedSport("");
-      setSelectedESport("");
-        }
-         else {
-          toast.error(` Registration Error: ${responsedata.message})`
-          );    
-         }
-        }
-          catch (error) {
-      console.error("Error submitting form:", error);
-      toast.error(" Server Error - Unable to Submit the Form");
-    }
-    finally {
+        setName("");
+        setState("");
+        setCollegeName("");
+        setCity("");
+        setPhone("");
+        setEmail("");
+        setDomainName("");
+        setSelectedSport("");
+        setSelectedESport("");
+      } else {
+        toast.error(` Registration Error: ${responsedata.message})`);
+      }
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        // Handle validation errors
+          toast.error(error.errors[0].message);
+      } else {
+        console.error("Error submitting form:", error);
+        toast.error("Server Error - Unable to Submit the Form");
+      }
+    } finally {
       setIsSubmitting(false); // Re-enable the button
     }
   };
@@ -165,7 +181,18 @@ const Register = () => {
         }}
       >
         {/* REGISTER NOW Text */}
-        <h1 className="absolute top-57 md:top-54 lg:top-51 uxl:top-47 w-full text-center text-5xl md:text-7xl lg:text-8xl uxl:text-9xl  text-white uppercase font-extrabold text-effect z-10">
+        <h1
+          className="absolute top-50 md:top-49 lg:top-49 uxl:top-48 w-full text-center text-8xl [@media(max-width:331px)]:text-7xl [@media(min-width:331px) and (max-width:576px)]:text-9xl md:text-[130px] lg:text-[180px] uxl:text-[180px] text-white uppercase font-extrabold text-effect z-10 dharma-gothic-c "
+          style={{
+            // fontSize: "180px",
+            fontWeight: 800,
+            lineHeight: "115px",
+            letterSpacing: "0.09em",
+            textAlign: "center",
+            textUnderlinePosition: "from-font",
+            textDecorationSkipInk: "none",
+          }}
+        >
           Register Now
         </h1>
       </div>
@@ -197,7 +224,7 @@ const Register = () => {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Enter Name"
-                className="p-2 text-gray-400 border border-gray-300 rounded-md bg-[#625342] font-medium"
+                className="p-2 text-white border border-gray-300 rounded-md bg-[#625342] font-medium placeholder-white"
               />
             </div>
 
@@ -209,7 +236,7 @@ const Register = () => {
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 placeholder="Enter Phone Number"
-                className="p-2 text-gray-400 border border-gray-300 rounded-md bg-[#625342] font-medium"
+                className="p-2 text-white border border-gray-300 rounded-md bg-[#625342] font-medium placeholder-white"
               />
             </div>
 
@@ -221,7 +248,7 @@ const Register = () => {
                 value={collegeName}
                 onChange={(e) => setCollegeName(e.target.value)}
                 placeholder="Enter College Name"
-                className="p-2 text-gray-400 border border-gray-300 rounded-md bg-[#625342] font-medium"
+                className="p-2 text-white border border-gray-300 rounded-md bg-[#625342] font-medium placeholder-white"
               />
             </div>
 
@@ -233,7 +260,7 @@ const Register = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter Email-ID"
-                className="p-2 text-gray-400 border border-gray-300 rounded-md bg-[#625342] font-medium"
+                className="p-2 text-white border border-gray-300 rounded-md bg-[#625342] font-medium placeholder-white"
               />
             </div>
 
@@ -349,8 +376,9 @@ const Register = () => {
               onClick={handleSubmit}
               disabled={isSubmitting} // Disable when form is submitting
               className={`min-w-36 bg-transparent text-[rgba(164,164,164,1)] font-extrabold leading-[60px] tracking-[5%] border px-2  m-2 hover:bg-black ${
-              isSubmitting ? "opacity-50 cursor-not-allowed" : ""
-              }`}>
+                isSubmitting ? "opacity-50 cursor-not-allowed" : ""
+              }`}
+            >
               {isSubmitting ? "Submitting..." : "REGISTER"}
             </button>
 
