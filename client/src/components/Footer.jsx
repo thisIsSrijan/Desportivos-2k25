@@ -41,7 +41,7 @@ function Footer() {
         className={`relative w-[80%] max-w-[550px] h-36 rounded-[50px] flex items-center justify-start mx-auto px-6 bg-gray-400 transition-colors duration-300 ${colors[index]} my-2`}
         onMouseEnter={handleMouseEnter} // Trigger on hover
       >
-        <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl  dharma-gothic-c text-left">
+        <h1 className="text-7xl sm:text-7xl md:text-8xl lg:text-9xl  dharma-gothic-c text-left ml-2">
           {title}
         </h1>
         <button
