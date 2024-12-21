@@ -11,7 +11,7 @@ import Footer from "./components/Footer";
 import Preloader from "./components/Preloader";
 import RandomLoader from "./components/RandomLoader";
 import AboutUs from "./pages/AboutUs";
-
+import "./App.css";
 const AppContent = () => {
   const location = useLocation();
 

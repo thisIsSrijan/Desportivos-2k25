@@ -189,7 +189,7 @@ const Register = () => {
       >
         {/* REGISTER NOW Text */}
         <h1
-          className="absolute top-50 md:top-49 lg:top-49 uxl:top-48 w-full text-center text-8xl [@media(max-width:331px)]:text-7xl [@media(min-width:331px) and (max-width:576px)]:text-9xl md:text-[130px] lg:text-[180px] uxl:text-[180px] text-white uppercase font-extrabold text-effect z-10 dharma-gothic-c "
+          className="absolute top-50 md:top-49 lg:top-49 uxl:top-48 w-full text-center text-8xl [@media(max-width:331px)]:text-7xl [@media(min-width:331px) and (max-width:576px)]:text-9xl md:text-[130px] lg:text-[180px] uxl:text-[190px] text-white uppercase font-extrabold  z-10 dharma-gothic-c text-effect "
           style={{
             // fontSize: "180px",
             fontWeight: 800,
