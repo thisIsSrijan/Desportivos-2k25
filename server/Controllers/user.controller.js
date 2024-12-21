@@ -50,6 +50,37 @@ async function registerUser(req, res) {
 
     await sendEmail(Name, Email, Domain, Sports);
 
+    try {
+      const response = await fetch(process.env.SHEET_API, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          data: {
+            Name,
+            CollegeName,
+            PhoneNumber,
+            Email,
+            City,
+            State,
+            Domain,
+            Sports,
+          },
+        }),
+      });
+
+      const sheetResponse = await response.json();
+      if (response.ok) {
+        console.log("Data sent to Google Sheet successfully:", sheetResponse);
+      } else {
+        console.error("Failed to send data to Google Sheet:", sheetResponse);
+      }
+    } catch (sheetError) {
+      console.error("Error while sending data to SheetDB:", sheetError);
+    }
+
     return res.status(200).json({ message: "Registered Successfully" });
   } catch (error) {
     console.error(error);
