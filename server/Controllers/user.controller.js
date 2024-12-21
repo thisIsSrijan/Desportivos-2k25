@@ -18,6 +18,7 @@ const userSchema = z.object({
 
 async function registerUser(req, res) {
   try {
+    // console.log(req.body);
     userSchema.parse(req.body);
   } catch (error) {
     return res.status(400).json({ message: error.errors[0]?.message });
