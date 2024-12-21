@@ -8,11 +8,12 @@ import {
 import Register from "./pages/Register";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
-import Preloader from './components/Preloader';
-import RandomLoader from './components/RandomLoader';
-
+import Preloader from "./components/Preloader";
+import RandomLoader from "./components/RandomLoader";
+import AboutUs from "./pages/AboutUs";
+import "./App.css";
 const AppContent = () => {
-  const location = useLocation(); 
+  const location = useLocation();
 
   return (
     <>
@@ -21,7 +22,9 @@ const AppContent = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/aboutus" element={<AboutUs />} />
       </Routes>
-      {(location.pathname == "/register" || location.pathname == "/")  && <Footer />}  
+      {(location.pathname == "/register" || location.pathname == "/") && (
+        <Footer />
+      )}
     </>
   );
 };
@@ -61,12 +64,12 @@ function App() {
   }
 
   return <AppContent />;
-};
+}
 
 const Root = () => {
   return (
     <Router>
-      <App /> 
+      <App />
     </Router>
   );
 };
