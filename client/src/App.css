@@ -1,0 +1,58 @@
+.text-effect {
+    color: transparent;
+    -webkit-text-stroke: 2px white; 
+    background: linear-gradient(to top, white 40%, transparent 50%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    mix-blend-mode:normal;
+}
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/* For WebKit-based browsers (Chrome, Safari, Opera) */
+.popup-content::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+  }
+  
+  /* For Firefox */
+  .popup-content {
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+  }
+  
+  /* For Internet Explorer and older Edge versions */
+  .popup-content {
+    -ms-overflow-style: none; /* Hide scrollbar in IE */
+  }
+  
+  .popup-content {
+    animation: scaleUp 0.4s ease-in-out; /* Animation duration and easing */
+  transform-origin: center; /* Set the origin for scaling */
+    overflow: auto; /* Ensure scrolling works */
+  }
+
+  /* Toast Notification Animations */
+.Toastify__toast {
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
+  transform-origin: 50% 0;
+}
+
+/* Disappear Animation */
+.Toastify__toast--success {
+  background: linear-gradient(to right, #0abf3055, #22242f 30%);
+}
+
+.Toastify__toast--error {
+  background: linear-gradient(to right, #0abf3055,#22242f 30%);
+}
+
+.Toastify__toast--default {
+  background: #0abf3055;
+}
