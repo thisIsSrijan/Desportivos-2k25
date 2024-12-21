@@ -26,66 +26,70 @@ function Footer() {
         </div>
       ));
   };
-  const color1 = ["hover:bg-[#9D1241]", "hover:bg-[#F6931C]"];
-  const color2 = ["hover:bg-[#12A79C]", "hover:bg-[#E4D6A7]"];
-  const SectionCard = ({ title, buttonLabel, colors }) => {
-    const [index, setIndex] = useState(0);
+  // const color1 = ["hover:bg-[#9D1241]", "hover:bg-[#F6931C]"];
+  // const color2 = ["hover:bg-[#12A79C]", "hover:bg-[#E4D6A7]"];
+  // const SectionCard = ({ title, buttonLabel, colors }) => {
+  //   const [index, setIndex] = useState(0);
 
-    const handleMouseEnter = () => {
-      // Increment the index on hover and reset if it exceeds the length of colors
-      setIndex((prevIndex) => (prevIndex + 1) % colors.length);
-    };
+  //   const handleMouseEnter = () => {
+  //     // Increment the index on hover and reset if it exceeds the length of colors
+  //     setIndex((prevIndex) => (prevIndex + 1) % colors.length);
+  //   };
 
-    return (
-      <div
-        className={`relative w-[80%] max-w-[550px] h-36 rounded-[50px] flex items-center justify-start mx-auto px-6 bg-gray-400 transition-colors duration-300 ${colors[index]} my-2`}
-        onMouseEnter={handleMouseEnter} // Trigger on hover
-      >
-        <h1 className="text-7xl sm:text-7xl md:text-8xl lg:text-9xl  dharma-gothic-c text-left ml-2">
-          {title}
-        </h1>
-        <button
-          className="absolute w-19 h-19 right-[20px] bottom-[20px] border-2 border-black rounded-full flex items-center justify-center rotate-45 duration-300  hover:rotate-0 hover:scale-110"
-          aria-label={buttonLabel}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={2}
-            stroke="currentColor"
-            className="w-8 h-8"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M4 12h12m0 0l-4 4m4-4l-4-4"
-            />
-          </svg>
-        </button>
-      </div>
-    );
-  };
+  //   return (
+  //     <div
+  //       className={`relative w-[80%] max-w-[550px] h-36 rounded-[50px] flex items-center justify-start mx-auto px-6 bg-gray-400 transition-colors duration-300 ${colors[index]} my-2`}
+  //       onMouseEnter={handleMouseEnter} // Trigger on hover
+  //     >
+  //       <h1 className="text-7xl sm:text-7xl md:text-8xl lg:text-9xl  dharma-gothic-c text-left ml-2">
+  //         {title}
+  //       </h1>
+  //       <button
+  //         className="absolute w-19 h-19 right-[20px] bottom-[20px] border-2 border-black rounded-full flex items-center justify-center rotate-45 duration-300  hover:rotate-0 hover:scale-110"
+  //         aria-label={buttonLabel}
+  //       >
+  //         <svg
+  //           xmlns="http://www.w3.org/2000/svg"
+  //           fill="none"
+  //           viewBox="0 0 24 24"
+  //           strokeWidth={2}
+  //           stroke="currentColor"
+  //           className="w-8 h-8"
+  //         >
+  //           <path
+  //             strokeLinecap="round"
+  //             strokeLinejoin="round"
+  //             d="M4 12h12m0 0l-4 4m4-4l-4-4"
+  //           />
+  //         </svg>
+  //       </button>
+  //     </div>
+  //   );
+  // };
   return (
+    // <div
+    //   className="relative w-full  h-[650px] sm:h-[570px] md:h-[660px] lg:h-[860px]  bg-cover bg-center bg-no-repeat overflow-hidden"
+    //   style={{
+    //     backgroundImage:
+    //       "url('https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952318/Background_qmcxay.png')",
+    //   }}
+    // >
     <div
-      className="relative w-full  h-[650px] sm:h-[570px] md:h-[660px] lg:h-[860px]  bg-cover bg-center bg-no-repeat overflow-hidden"
-      style={{
-        backgroundImage:
-          "url('https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952318/Background_qmcxay.png')",
-      }}
+      className="relative w-full  h-[300px] sm:h-[380px] md:h-[500px] lg:h-[720px]  bg-cover bg-center bg-no-repeat overflow-hidden"
+      style={{backgroundImage: "url('https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952318/Background_qmcxay.png')" }}
     >
-      <div className=" flex flex-col  gap-[8%] mt-4 sm:flex-row sm:px-[5%]">
-        <SectionCard
+      {/* <div className=" flex flex-col  gap-[8%] mt-4 sm:flex-row sm:px-[5%]"> */}
+        {/* <SectionCard
           title="MEET THE TEAM"
           buttonLabel="View team details"
           colors={color1}
-        />
-        <SectionCard
+        /> */}
+        {/* <SectionCard
           title="SPONSORS"
           buttonLabel="View sponsors details"
           colors={color2}
-        />
-      </div>
+        /> */}
+      {/* </div> */}
       <div className="lg:mt-4 left-0 bottom-10 lg:bottom-10 w-full">
         <Marquee
           speed={150}
