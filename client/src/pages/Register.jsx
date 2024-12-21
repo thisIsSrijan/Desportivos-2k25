@@ -277,14 +277,17 @@ const Register = () => {
                       : "bg-[#625342] text-gray-400"
                   }`}
                 >
-                  <option value="" className="text-black">
+                  <option
+                    value=""
+                    className="text-gray-400 bg-[#625342] hover:bg-[#6b5b4c]"
+                  >
                     Select a State
                   </option>
                   {stateOptions.map((option) => (
                     <option
                       key={option.isoCode}
                       value={option.isoCode}
-                      className={`text-black bg-[#493d33] hover:bg-[#6b5b4c] ${
+                      className={`text-gray-400 bg-[#493d33] hover:bg-[#6b5b4c] ${
                         formData.state === option.isoCode
                           ? "bg-orange-600 text-white"
                           : ""
@@ -308,12 +311,17 @@ const Register = () => {
                       : "bg-[#625342] text-gray-400"
                   }`}
                 >
-                  <option value="">Select a City</option>
+                  <option
+                    value=""
+                    className="text-gray-400 bg-[#625342] hover:bg-[#6b5b4c]"
+                  >
+                    Select a City
+                  </option>
                   {cityOptions.map((option) => (
                     <option
                       key={option.isoCode}
                       value={option.name}
-                      className={`text-black bg-[#493d33] hover:bg-[#6b5b4c] ${
+                      className={`text-gray-400 bg-[#493d33] hover:bg-[#6b5b4c] ${
                         formData.state === option.isoCode
                           ? "bg-orange-600 text-white"
                           : ""
@@ -391,6 +399,7 @@ const Register = () => {
               </button>
 
               <button
+                type="button"
                 className="bg-transparent  text-[rgba(164,164,164,1)] font-extrabold leading-[60px] tracking-wide border px-2 m-1 hover:text-[#F6931C] hover:border-[#F6931C] hover:duration-300 hover:bg-[#1f1f1f] font-dharma text-5xl "
                 onClick={handleRuleBook}
               >
