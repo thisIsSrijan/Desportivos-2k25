@@ -128,7 +128,7 @@ const Register = () => {
       console.log("Validated form data:", parsedData);
       // console.log("Form data:", dataToSubmit);
       const response = await fetch(
-        "https://testbackenddespo.vercel.app/api/register",
+        import.meta.env.VITE_BACKEND_URL,
         {
           method: "POST",
           headers: {
