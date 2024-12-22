@@ -38,14 +38,14 @@ function Footer() {
 
     return (
       <div
-        className={`relative w-[80%] max-w-[550px] h-36 rounded-[50px] flex items-center justify-start mx-auto px-6 bg-gray-400 transition-colors duration-300 ${colors[index]} my-2`}
+        className={`relative w-[80%] max-w-[510px]  md:max-w-[540px] h-[105px] xs1-sm:h-[110px] sm:h-[110px] md:h-[130px]  lg:h-[170px] uxl:h-[190px]  rounded-[45px] md:rounded-[50px] flex items-center justify-start mx-auto px-6  bg-gray-400 transition-colors duration-300 ${colors[index]} my-2 cursor-pointer mb-4 md:mb-0`}
         onMouseEnter={handleMouseEnter} // Trigger on hover
       >
-        <h1 className="text-7xl sm:text-7xl md:text-8xl lg:text-9xl  dharma-gothic-c text-left ml-2">
+        <h1 className="text-[3rem] xs2-xs1:text-[4.3rem] xs1-sm:text-[5.5rem]  sm:text-6xl md:text-7xl lg:text-[7rem] xl:text-9xl  dharma-gothic-c text-left m-2 tracking-wider ml-2 sm:ml-0  ">
           {title}
         </h1>
         <button
-          className="absolute w-19 h-19 right-[20px] bottom-[20px] border-2 border-black rounded-full flex items-center justify-center rotate-45 duration-300  hover:rotate-0 hover:scale-110"
+          className="absolute w-21 h-21 right-[20px] bottom-[20px] border-2 border-black rounded-full flex items-center justify-center rotate-45 duration-300  hover:rotate-0 hover:scale-110"
           aria-label={buttonLabel}
         >
           <svg
@@ -54,7 +54,7 @@ function Footer() {
             viewBox="0 0 24 24"
             strokeWidth={2}
             stroke="currentColor"
-            className="w-8 h-8"
+            className="w-9 h-9 sm:w-6 sm:h-6 md:w-9 md:h-9 lg:w-12 lg:h-12"
           >
             <path
               strokeLinecap="round"
