@@ -5,8 +5,8 @@ import { motion, AnimatePresence } from "framer-motion";
 // import image3 from "/carouselImages/3.png";
 // import image4 from "/carouselImages/4.png";
 // import moto from "/moto.png";
-import "../index.css";
-import logo from "../assets/images/image.png"
+import "../../App.css"
+import logo from "../../assets/images/image.png"
 import { Link } from "react-router-dom";
 
 function Carousel() {

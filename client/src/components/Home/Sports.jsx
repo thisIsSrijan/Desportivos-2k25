@@ -1,16 +1,30 @@
 import React, { useState } from "react";
-import xImage from "../assets/images/x.png";
-import zImage from "../assets/images/0.png";
-import tImage from "../assets/images/tri.png";
-import sqImage from "../assets/images/squ.png";
-import sp1 from "../assets/images/sp1.png";
-import sp2 from "../assets/images/sp2.png";
-import sp3 from "../assets/images/sp3.png";
-import sp4 from "../assets/images/sp4.png";
+import xImage from "../../assets/images/x.png"
+import zImage from "../../assets/images/0.png";
+import tImage from "../../assets/images/tri.png";
+import sqImage from "../../assets/images/squ.png";
+import sp1 from "../../assets/images/sp1.png";
+import sp2 from "../../assets/images/sp2.png";
+import sp3 from "../../assets/images/sp3.png";
+import sp4 from "../../assets/images/sp4.png";
 import contentData from "../../assets/data/aboutData";
 
 const Sports = () => {
+  const images = ["sp1", "sp2", "sp3", "sp4"];
   const [activeImage, setActiveImage] = useState("sp1");
+
+
+  const handleNext = () => {
+    const currentIndex = images.indexOf(activeImage);
+    const nextIndex = (currentIndex + 1) % images.length; 
+    setActiveImage(images[nextIndex]);
+  };
+
+  const handlePrev = () => {
+    const currentIndex = images.indexOf(activeImage);
+    const prevIndex = (currentIndex - 1 + images.length) % images.length; 
+    setActiveImage(images[prevIndex]);
+  };
 
   const handleImageClick = (image) => {
     setActiveImage(image);
@@ -20,7 +34,7 @@ const Sports = () => {
 
   return (
     <div
-      className="h-screen md:h-[60vw] w-full bg-cover bg-center overflow-hidden"
+      className="h-screen md:h-[60vw] w-full bg-cover bg-center overflow-hidden relative"
       style={{
         backgroundImage:
           "url('https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952318/Background_qmcxay.png')",
@@ -28,7 +42,7 @@ const Sports = () => {
       }}
     >
       {/* Left section */}
-      <div className="w-full md:w-1/2 h-full flex flex-row bg-cover bg-no-repeat">
+      <div className="w-full md:w-1/2 h-full flex flex-row bg-cover bg-no-repeat absolute left-0">
 
        {/* image1 */}
         <div
@@ -132,26 +146,37 @@ const Sports = () => {
             onClick={() => handleImageClick("sp4")}
           ></div>
         </div>
-
+            
       </div>
-
-      {/* Right section */}
-      {/* <div className="h-full absolute top-0 right-0 lg:w-1/2  ">
+            {/* Right section */}
+            <div className=" h-full w-full md:w-1/2  flex flex-col items-center justify-center " >
                 
                 {selectedContent && (
-                    <div className=' flex flex-col absolute top-[30px] left-[-420px] lg:items-center lg:justify-center h-full'>
-                        <h2 className=' text-center font-dharma font-extrabold text-[120px] lg:text-[150px] leading-[144px] lg:leading-[180px] tracking-wide ' 
+                    <div className=' flex flex-col '>
+                        <h2 className=' text-center flex justify-center items-center font-dharma font-extrabold text-[4.93vw] absolute  top-[8.67vw] left-[28.2vw] md:left-[53.5vw] leading-[9.51vw] tracking-wide' 
                         style={{ color: selectedContent.color }}>{selectedContent.title}</h2>
 
-                        <div className='w-[517px] h-[275px] text-center  -mt-12 lg:mt-0 text-[15px] lg:text-[20px] p-28  lg:p-0'>
-                            <p className='text-white text-center lg:text-left  '>{selectedContent.description}</p><br/>
-                            <p className='text-white text-center lg:text-left   '>{selectedContent.description2}</p>
+                        <div className='w-[94.99vw] sm:w-[85.45vw] md:w-[34.99vw] absolute top-[30vw] md:top-[19.15vw] left-[2vw] sm:left-[7vw]  md:left-[57.3vw] text-center text-[15px] md:text-[18px] lg:text-[20px] '>
+                            <p className='text-white   '>{selectedContent.description}</p><br/>
+                            <p className='text-white   '>{selectedContent.description2}</p>
                         </div>
                        
                     </div>
                 )}
-            </div> */}
-    </div>
+
+
+                <div className="flex space-x-7 absolute top-[63.86vh] left-[31.02vw] md:top-[90.58vh] md:left-[66.89vw] ">
+                      <button className="w-12 h-12 flex items-center justify-center bg-transparent text-white rounded-full border border-white shadow-md transform transition-transform duration-300 hover:scale-110" onClick={handlePrev}>
+                        <i className="fa fa-chevron-left text-lg"></i>
+                      </button>
+                      <button className="w-12 h-12 flex items-center justify-center bg-transparent text-white rounded-full border border-white shadow-md transform transition-transform duration-300 hover:scale-110" onClick={handleNext}>
+                        <i className="fa fa-chevron-right text-lg"></i>
+                      </button>
+                </div>
+              </div>
+      
+      </div>
+
   );
 };
 
