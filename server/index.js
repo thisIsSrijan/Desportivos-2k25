@@ -18,8 +18,8 @@ const corsPolicy = {
       callback(new Error("Blocked by CORS, register via desportivos.in only!"));
     }
   },
-  methods: "GET,POST",
-  allowedHeaders: "Content-Type",
+  methods: "GET,POST,OPTIONS",
+  allowedHeaders: "Content-Type, Authorization",
   credentials: true,
 };
 
