@@ -41,7 +41,7 @@ function AboutUs() {
 
   return (
     <div
-      className="relative bg-black text-white min-h-screen flex flex-col items-center justify-center py-8 sm:mb-5  bg-cover bg-center bg-no-repeat overflow-hidden"
+      className="relative bg-black text-white flex flex-col items-center justify-center py-8  bg-cover bg-center bg-no-repeat overflow-hidden"
       style={{
         backgroundImage:
           "url('https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952318/Background_qmcxay.png')",
@@ -57,9 +57,9 @@ function AboutUs() {
         ABOUT US
       </motion.h1>
 
-      <div className="flex flex-col lg:flex-row items-center justify-evenly w-full  px-9 pb-20 mt-2 ">
+      <div className="flex flex-col lg:flex-row items-center justify-evenly w-full  px-9 md:pb-20 mt-2  ">
         <motion.div
-          className="relative w-full lg:w-2/5 md:w-[70%] md:h-[70%] mt-5"
+          className="relative w-full lg:w-2/5 md:w-[70%] md:h-[70%] mt-5 "
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
@@ -69,7 +69,7 @@ function AboutUs() {
             alt="About Us"
             className="object-cover w-[95%] pl-[5%] mb-5 sm:w-full sm:px-4 sm:pl-0 h-full rounded-lg shadow-xl"
           />
-          <div className="flex justify-center lg:justify-start space-x-6 mt-6 ml-8 mb-10">
+          <div className="flex justify-center lg:justify-start space-x-6 mt-6 ml-8 mb-10 ">
             <motion.a
               href="#"
               className="transform transition duration-300 hover:scale-110"
@@ -114,7 +114,7 @@ function AboutUs() {
 
       {/* whileInViewd Person Image */}
       <motion.div
-        className="absolute right-0 bottom-0 hidden md:block"
+        className="absolute right-0 bottom-0 hidden md:block "
         initial={{ opacity: 0, x: 150, y: 250 }}
         whileInView={{ opacity: 1, x: 0, y: 0, scale: scaleValue }}
         transition={{ duration: 0.7, delay: 0.3 }}
