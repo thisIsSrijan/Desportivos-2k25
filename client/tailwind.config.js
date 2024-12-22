@@ -36,14 +36,14 @@ export default {
         xs: "331px",
         sm: "576px", // Small devices (phones, ≥ 576px)
         md: "768px", // Medium devices (tablets, ≥ 768px)
+        md2: "836px",
         lg: "992px", // Large devices (desktops, ≥ 992px)
         xl: "1200px", // Extra large devices (large desktops, ≥ 1200px)
+        lg2:"1264",
         "2xl": "1400px", // Extra extra large devices (larger desktops, ≥ 1400px)
         customBreakpoint: "400px",
         uxl: "1500px",
         custom: { min: "576px", max: "767.5px" },
-        lg2:"1264",
-        md2: "836",
       },
     },
   },
