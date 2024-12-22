@@ -1,4 +1,4 @@
-import flowbite from "flowbite/plugin"
+import flowbite from "flowbite/plugin";
 
 export default {
   content: [
@@ -6,26 +6,32 @@ export default {
     "node_modules/flowbite/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    colors: {
+      transparent: "transparent",
+      current: "currentColor",
+      despobackground: "#c76904",
+    },
     extend: {
-      spacing:{
-        60: '15rem',
-        59: '14.75rem',
-        58: '14.5rem',
-        57: '14.25rem',
-        55: '13.75rem',
-        54: '13.5rem',
-        53: '13.25rem',
-        52: '13rem',
-        51: '12.75rem',
-        50: '12.5rem',
-        49: '12.25rem',
-        47: '11.75rem',
-        164: '41rem',
+      spacing: {
+        60: "15rem",
+        59: "14.75rem",
+        58: "14.5rem",
+        57: "14.25rem",
+        55: "13.75rem",
+        54: "13.5rem",
+        53: "13.25rem",
+        52: "13rem",
+        51: "12.75rem",
+        50: "12.5rem",
+        49: "12.25rem",
+        47: "11.75rem",
+        164: "41rem",
       },
       backdropBlur: {
-        'custom': '40.14px', // Custom blur value
-      }, fontSize: {
-         'xxs': '0.625rem', // 10px
+        custom: "40.14px", // Custom blur value
+      },
+      fontSize: {
+        xxs: "0.625rem", // 10px
       },
       fontFamily: {
         dharma: ['"Dharma Gothic C"', "sans-serif"],
@@ -42,12 +48,10 @@ export default {
         customBreakpoint: "400px",
         uxl: "1500px",
         custom: { min: "576px", max: "767.5px" },
-        lg2:"1264",
+        lg2: "1264",
         md2: "836",
       },
     },
   },
-  plugins: [
-    flowbite
-  ],
+  plugins: [flowbite],
 };
