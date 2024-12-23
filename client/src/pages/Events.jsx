@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import ParallaxImages from "../components/ParallaxImages";
-import StaircaseText from "../components/StaircaseText";
+import StaircaseText from "../components/StaggeredText";
 
 function Events() {
   const scrollContainerRef = useRef(null);
