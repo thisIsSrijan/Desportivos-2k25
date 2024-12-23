@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: "Dharma Gothic C";
-  src: url("./fonts/DharmaGothicC.woff") format("woff");
+  src: url("./assets/fonts/DharmaGothicC.woff") format("woff");
 }
 .dharma-gothic-c {
   /* font-family: "Dharma Gothic C", "sans-serif"; */
@@ -13,7 +13,7 @@
 
 @font-face {
   font-family: "Game Of Squids";
-  src: url("./fonts/Game Of Squids.ttf") format("truetype");
+  src: url("./assets/fonts/Game Of Squids.ttf") format("truetype");
 }
 
 .squid {
