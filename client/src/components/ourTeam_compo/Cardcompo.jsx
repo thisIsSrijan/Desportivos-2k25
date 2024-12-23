@@ -57,18 +57,18 @@ const CardCompo = ({
       {/* Footer */}
       <div className="absolute bottom-0 w-full h-1/6 bg-black text-center border-t-white border border-black">
         {post ? (
-          <div className="flex justify-center items-center mt-2">
+          <div className="flex justify-center items-center mt-1 ml-2">
             <span className="text-white w-2/6 text-xxs mr-2">
               {post.toUpperCase()}
             </span>
             <span className="w-px h-7 bg-white mx-2"></span>{" "}
             {/* Vertical line */}
-            <span className="text-orange-500 w-4/6 text-md font-bold">
+            <span className="text-orange-500 w-4/6 text-[30px] tracking-wide font-dharma">
               {name.toUpperCase()}
             </span>
           </div>
         ) : (
-          <div className="mt-2 text-orange-500 text-2xl font-bold">
+          <div className="text-orange-500 text-[45px] tracking-wide font-dharma">
             {name.toUpperCase()}
           </div>
         )}
