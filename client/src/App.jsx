@@ -12,6 +12,7 @@ import Preloader from './components/loaders/Preloader';
 import RandomLoader from './components/loaders/RandomLoader';
 import AboutUs from "./components/Home/AboutUs";
 import Sports from "./components/Home/Sports";
+import OurTeam from "./pages/OurTeam";
 
 const AppContent = () => {
   const location = useLocation(); 
@@ -23,6 +24,7 @@ const AppContent = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/sports" element={<Sports />} />
+        <Route path="/ourteam" element={<OurTeam/>}/>
       </Routes>
       {(location.pathname == "/register" || location.pathname == "/")  && <Footer />}  
     </>
