@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import ParallaxImages from "../components/ParallaxImages";
-import "../index.css";
+import StaircaseText from "../components/StaircaseText";
 
 function Events() {
   const scrollContainerRef = useRef(null);
@@ -34,17 +34,19 @@ function Events() {
       </div>
 
       {/* Static Content */}
-      <h1 className="absolute z-10 text-9xl md:text-[220px] xl:text-[300px] dharma-gothic-c tracking-wide left-5 top-10 md:top-[-10px]">
-        TOGETHER.
-      </h1>
-      <div className="text-sm md:text-xl xl:text-3xl z-10 absolute top-[11rem] right-[12rem] md:right-[20rem] xl:right-[26rem] text-right">
+      <StaircaseText 
+        text="TOGETHER."
+        className="absolute z-10 text-9xl md:text-[220px] xl:text-[300px] dharma-gothic-c tracking-wider left-5 top-10 md:top-7"
+      />
+      <div className="text-sm md:text-xl xl:text-3xl z-10 absolute top-[11rem] right-[13rem] md:right-[23rem] xl:right-[30rem] text-right">
         <h1>NEW SEASON</h1>
         <h1>CAMPION TILL END</h1>
       </div>
       <div className="absolute z-10 right-0 top-[150px]">
-        <h1 className="text-9xl md:text-[220px] xl:text-[300px] dharma-gothic-c tracking-wide text-orange-500">
-          UNITED.
-        </h1>
+        <StaircaseText 
+          text="UNITED."
+          className="text-9xl md:text-[220px] xl:text-[300px] dharma-gothic-c tracking-wider text-orange-500"
+        />
         <h1 className="text-sm md:text-xl xl:text-3xl md:ml-[0px] xl:ml-[0px] xl:mt-[-50px] md:mt-[-40px]">
           DESPORTIVOS'25
         </h1>
@@ -58,9 +60,10 @@ function Events() {
           alt=""
           className="mb-[-250px] md:mb-[10px] xl:mb-[0px] ml-3"
         />
-        <h1 className="text-8xl md:text-[160px] xl:text-[14rem] dharma-gothic-c tracking-wide">
-          ONE MORE TIME
-        </h1>
+        <StaircaseText 
+          text="ONE MORE TIME"
+          className="text-8xl md:text-[160px] xl:text-[14rem] dharma-gothic-c tracking-widest"
+        />
       </div>
       <h1 className="text-sm md:text-xl lg:text-3xl absolute z-10 bottom-[150px] md:bottom-20 md:left-8 lg:left-[80px]">
         ON THE GAME.
