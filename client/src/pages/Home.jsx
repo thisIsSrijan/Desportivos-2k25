@@ -1,7 +1,7 @@
 import React from "react";
-import Carousel from "../components/Carousel";
-import AboutUs from "./AboutUs";
-import Sports from "./Sports";
+import Carousel from "../components/Home/Carousel";
+import AboutUs from "../components/Home/AboutUs";
+import Sports from "../components/Home/Sports";
 
 const Home = () => {
   return (

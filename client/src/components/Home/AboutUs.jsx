@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion"; // Import Framer Motion
-import person from "../assets/images/aboutperson.svg";
-import aboutus from "../assets/images/aboutus.jpg";
-import insta from "../assets/images/instagram.svg";
-import youtube from "../assets/images/youtube.svg";
+import person from "../../assets/images/aboutperson.svg";
+import aboutus from "../../assets/images/aboutus.jpg";
+import insta from "../../assets/images/instagram.svg";
+import youtube from "../../assets/images/youtube.svg";
 
 function AboutUs() {
   const [xValue, setXValue] = useState(0);

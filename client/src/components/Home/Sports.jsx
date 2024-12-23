@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import xImage from "../assets/images/x.png";
-import zImage from "../assets/images/0.png";
-import tImage from "../assets/images/tri.png";
-import sqImage from "../assets/images/squ.png";
-import sp1 from "../assets/images/sp1.png";
-import sp2 from "../assets/images/sp2.png";
-import sp3 from "../assets/images/sp3.png";
-import sp4 from "../assets/images/sp4.png";
+import xImage from "../../assets/images/x.png";
+import zImage from "../../assets/images/0.png";
+import tImage from "../../assets/images/tri.png";
+import sqImage from "../../assets/images/squ.png";
+import sp1 from "../../assets/images/sp1.png";
+import sp2 from "../../assets/images/sp2.png";
+import sp3 from "../../assets/images/sp3.png";
+import sp4 from "../../assets/images/sp4.png";
 import contentData from "../../assets/data/aboutData";
 
 const Sports = () => {

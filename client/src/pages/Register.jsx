@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { State, City } from "country-state-city"; // Importing required modules
-// import redbg from "../assets/images/redbg.png";
-// import bottombg from "../assets/images/bottombg.png";
-// import topbg from "../assets/images/topbg.png";
+// import redbg from "../../assets/images/redbg.png";
+// import bottombg from "../../assets/images/bottombg.png";
+// import topbg from "../../assets/images/topbg.png";
 import "font-awesome/css/font-awesome.min.css";
 import { Link } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
