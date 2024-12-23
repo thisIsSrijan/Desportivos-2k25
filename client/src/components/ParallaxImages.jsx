@@ -1,116 +1,123 @@
-import {motion, useMotionTemplate, useScroll, useTransform,} from "framer-motion";
+
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-  
-  const ParallaxImages = () => {
-    return (
-      <div className="mx-auto max-w-screen absolute z-10 top-0 overflow-hidden px-4">
-        <ParallaxImg
-          src="https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734769347/imgP1_v0he1z.png"
-          alt=""
-          start={{ sm: 1100, md: 1120, lg: 1300 }}
-          end={{ sm: -50, md: -300, lg: -150 }}
-          className="sm:ml-[5vw] md:ml-[10vw] lg:ml-[10vw] w-[8rem] lg:w-[16rem]"
+
+const ParallaxImages = ({ scrollContainer }) => {
+  const images = [
+    {
+      src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734769347/imgP1_v0he1z.png",
+      alt: "Image 1",
+      className: "ml-[7vw]  mt-[1000px] md:ml-[10vw] lg:ml-[10vw] w-[10rem] lg:w-[20rem] h-[200px] lg:h-[450px]",
+    },
+    {
+      src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734807975/imgK1_pujyuq.png",
+      alt: "Image 2",
+      className: "ml-[40vw] md:ml-[70vw] top-[100px] lg:ml-[70vw] w-[10rem] lg:w-[28rem]",
+    },
+    {
+      src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734769416/imgP2_iy2bg8.png",
+      alt: "Image 3",
+      className: "ml-[7vw] md:ml-[15vw] top-[400px] lg:ml-[40vw] w-[10rem] lg:w-[20rem] h-[200px]  lg:h-[450px]",
+    },
+    {
+      src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734807975/imgK2_wktv95.png",
+      alt: "Image 4",
+      className: "ml-[40vw] md:ml-[70vw] top-[600px] lg:ml-[70vw] w-[10rem] lg:w-[28rem]",
+    },
+    {
+      src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734769416/imgP3_jvcaxe.png",
+      alt: "Image 5",
+      className: "ml-[7vw] md:ml-[15vw] top-[800px] lg:ml-[40vw] w-[10rem] lg:w-[20rem] h-[200px]  lg:h-[450px]",
+    },
+    {
+      src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734807975/imgK3_xokcch.png",
+      alt: "Image 6",
+      className: "ml-[40vw] md:ml-[50vw] top-[900px] md:top-[1100px] lg:ml-[10vw] w-[10rem] lg:w-[28rem]",
+    },
+    {
+      src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734769416/imgP4_k2qzsv.png",
+      alt: "Image 7",
+      className: "ml-[40vw] md:ml-[70vw] top-[1700px] lg:ml-[10vw] w-[10rem] lg:w-[20rem] h-[200px] lg:h-[450px]",
+    },
+    {
+      src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734807975/imgK4_q9mubj.png",
+      alt: "Image 8",
+      className: "ml-[40vw] md:ml-[15vw] top-[800px] lg:ml-[70vw] w-[10rem]  lg:w-[28rem]",
+    },
+    {
+      src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734769416/imgP5_cbfh5s.png",
+      alt: "Image 9",
+      className: "ml-[7vw] md:ml-[10vw] top-[900px] lg:top-[1300px] lg:ml-[70vw] w-[10rem] lg:w-[20rem] h-[200px] lg:h-[450px]",
+    },
+    {
+      src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734807976/imgK5_yh0olk.png",
+      alt: "Image 10",
+      className: "ml-[40vw] md:ml-[10vw] top-[1840px] md:top-[1700px] lg:top-[1800px]  lg:ml-[70vw] w-[10rem]  lg:w-[28rem]",
+    },
+    {
+      src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734769416/imgP6_okvib9.png",
+      alt: "Image 11",
+      className: "ml-[7vw] md:ml-[78vw] top-[1800px]  lg:top-[1130px] bottom-10 lg:bottom-[130px] lg:ml-[15vw] w-[10rem] lg:w-[20rem] h-[160px]  lg:h-[450px]",
+    },
+  ];
+
+  return (
+    <div className="max-w-screen space-y-16">
+      {images.map((image, index) => (
+        <ParallaxImg 
+          key={index} 
+          {...image} 
+          scrollContainer={scrollContainer}
+          index={index}
         />
-        <ParallaxImg
-          src="https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734807975/imgK1_pujyuq.png"
-          alt=""
-          start={{ sm: 900, md: 1000, lg: 1000 }}
-          end={{ sm: -50, md: -300, lg: -150 }}
-          className="sm:ml-[20vw] md:ml-[50vw] lg:ml-[70vw] w-[12rem] lg:w-[25rem]"
-        />
-        <ParallaxImg
-          src="https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734769416/imgP2_iy2bg8.png"
-          alt=""
-          start={{ sm: 800, md: 850, lg: 900 }}
-          end={{ sm: -50, md: -300, lg: -150 }}
-          className="sm:ml-[10vw] md:ml-[15vw] lg:ml-[40vw] w-[8rem] lg:w-[16rem]"
-        />
-        <ParallaxImg
-          src="https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734807975/imgK2_wktv95.png"
-          alt=""
-          start={{ sm: 950, md: 1000, lg: 1050 }}
-          end={{ sm: -50, md: -100, lg: -150 }}
-          className="sm:ml-[20vw] md:ml-[60vw] lg:ml-[70vw] w-[12rem] lg:w-[25rem]"
-        />
-        <ParallaxImg
-          src="https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734769416/imgP3_jvcaxe.png"
-          alt=""
-          start={{ sm: 700, md: 750, lg: 800 }}
-          end={{ sm: -50, md: -100, lg: -150 }}
-          className="sm:ml-[5vw] md:ml-[30vw] lg:ml-[10vw] w-[8rem] lg:w-[16rem]"
-        />
-        <ParallaxImg
-          src="https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734807975/imgK3_xokcch.png"
-          alt=""
-          start={{ sm: 850, md: 900, lg: 950 }}
-          end={{ sm: -50, md: -100, lg: -150 }}
-          className="sm:ml-[20vw] md:ml-[50vw] lg:ml-[70vw] w-[12rem] lg:w-[25rem]"
-        />
-        <ParallaxImg
-          src="https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734769416/imgP4_k2qzsv.png"
-          alt=""
-          start={{ sm: 300, md: 350, lg: 400 }}
-          end={{ sm: -50, md: -100, lg: -150 }}
-          className="sm:ml-[5vw] md:ml-[15vw] lg:ml-[40vw] w-[8rem] lg:w-[16rem]"
-        />
-        <ParallaxImg
-          src="https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734807975/imgK4_q9mubj.png"
-          alt=""
-          start={{ sm: 750, md: 850, lg: 900 }}
-          end={{ sm: -50, md: -100, lg: -150 }}
-          className="sm:ml-[15vw] md:ml-[25vw] lg:ml-[50vw] w-[12rem] lg:w-[25rem]"
-        />
-        <ParallaxImg
-          src="https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734769416/imgP5_cbfh5s.png"
-          alt=""
-          start={{ sm: 380, md: 450, lg: 500 }}
-          end={{ sm: -50, md: -100, lg: -150 }}
-          className="sm:ml-[10vw] md:ml-[20vw] lg:ml-[35vw] w-[8rem] lg:w-[16rem]"
-        />
-        <ParallaxImg
-          src="https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734807976/imgK5_yh0olk.png"
-          alt=""
-          start={{ sm: 400, md: 450, lg: 500 }}
-          end={{ sm: -50, md: -100, lg: -150 }}
-          className="sm:ml-[10vw] md:ml-[20vw] lg:ml-[68vw] w-[12rem] lg:w-[25rem]"
-        />
-        <ParallaxImg
-          src="https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734769416/imgP6_okvib9.png"
-          alt=""
-          start={{ sm: -130, md: -50, lg: 10 }}
-          end={{ sm: -50, md: -100, lg: -150 }}
-          className="sm:ml-[5vw] md:ml-[10vw] lg:ml-[12vw] w-[8rem] lg:w-[16rem]"
-        />
-      </div>
-    );
-  };
-  
-  const ParallaxImg = ({ className, alt, src, start, end }) => {
-    const ref = useRef(null);
-  
-    const { scrollYProgress } = useScroll({
-      target: ref,
-      offset: [
-        `${start.sm}px ${start.md}px ${start.lg}px`,
-        `end ${end.sm * -1}px ${end.md * -1}px ${end.lg * -1}px`,
-      ],
-    });
-  
-    const opacity = useTransform(scrollYProgress, [0.75, 1], [1, 0]);
-    const scale = useTransform(scrollYProgress, [0.75, 1], [1, 0.85]);
-  
-    const y = useTransform(scrollYProgress, [0, 1], [start.sm, end.sm]);
-    const transform = useMotionTemplate`translateY(${y}px) scale(${scale})`;
-  
-    return (
+      ))}
+    </div>
+  );
+};
+
+const ParallaxImg = ({ className, alt, src, scrollContainer, index }) => {
+  const ref = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    container: scrollContainer,
+    offset: ["start 100%", "end 0%"],
+  });
+
+
+  const revealY = useTransform(
+    scrollYProgress,
+    [0, 1],  
+    ["0%", "-400%"]
+  );
+
+  return (
+    <div
+      ref={ref}
+      className={`relative w-full aspect-[4/3] overflow-hidden ${className}`}
+    >
       <motion.img
         src={src}
         alt={alt}
-        className={`${className} w-[8rem] lg:w-[16rem] `}
-        ref={ref}
-        style={{ transform, opacity }}
+        className="absolute inset-0 w-full h-full object-cover"
       />
-    );
-  };
-  
-  export default ParallaxImages;
+      <motion.div
+        className="absolute inset-0 bg-orange-500 origin-bottom"
+       
+        style={{
+          y: revealY,
+        }}
+        transition={{
+          duration: 0.8,
+          ease: [0.22, 1, 0.36, 1],
+        }}
+    
+      />
+    </div>
+  );
+};
+
+export default ParallaxImages;
+
+
+
