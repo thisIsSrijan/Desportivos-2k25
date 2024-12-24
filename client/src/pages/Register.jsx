@@ -54,26 +54,99 @@ const Register = () => {
   });
 
   // Options for dropdowns
-  const [stateOptions, setStateOptions] = useState([]);
+  const statesOfIndia = [
+    { name: "Andhra Pradesh", iso: "AP" },
+    { name: "Arunachal Pradesh", iso: "AR" },
+    { name: "Assam", iso: "AS" },
+    { name: "Bihar", iso: "BR" },
+    { name: "Chhattisgarh", iso: "CG" },
+    { name: "Goa", iso: "GA" },
+    { name: "Gujarat", iso: "GJ" },
+    { name: "Haryana", iso: "HR" },
+    { name: "Himachal Pradesh", iso: "HP" },
+    { name: "Jharkhand", iso: "JH" },
+    { name: "Karnataka", iso: "KA" },
+    { name: "Kerala", iso: "KL" },
+    { name: "Madhya Pradesh", iso: "MP" },
+    { name: "Maharashtra", iso: "MH" },
+    { name: "Manipur", iso: "MN" },
+    { name: "Meghalaya", iso: "ML" },
+    { name: "Mizoram", iso: "MZ" },
+    { name: "Nagaland", iso: "NL" },
+    { name: "Odisha", iso: "OR" },
+    { name: "Punjab", iso: "PB" },
+    { name: "Rajasthan", iso: "RJ" },
+    { name: "Sikkim", iso: "SK" },
+    { name: "Tamil Nadu", iso: "TN" },
+    { name: "Telangana", iso: "TG" },
+    { name: "Tripura", iso: "TR" },
+    { name: "Uttar Pradesh", iso: "UP" },
+    { name: "Uttarakhand", iso: "UK" },
+    { name: "West Bengal", iso: "WB" },
+  ];
+
   const [cityOptions, setCityOptions] = useState([]);
   const [DomainName, setDomainName] = useState("");
   const [selectedSport, setSelectedSport] = useState("");
   const [selectedESport, setSelectedESport] = useState("");
 
-  useEffect(() => {
-    // Fetch states for India (country code: IN)
-    const states = State.getStatesOfCountry("IN"); // India country code
-    setStateOptions(states);
-  }, []);
+  // useEffect(() => {
+  //   // Fetch states for India (country code: IN)
+  //   const states = State.getStatesOfCountry("IN"); // India country code
+  //   setStateOptions(states);
+  // }, []);
 
   // Update cities based on selected state
+  // useEffect(() => {
+  //   if (formData.state) {
+  //     const cities = City.getCitiesOfState("IN", formData.state); // Fetch cities for selected state
+  //     setCityOptions(cities);
+  //   } else {
+  //     setCityOptions([]); // Clear cities if no state selected
+  //   }
+  // }, [formData.state]);
+
   useEffect(() => {
-    if (formData.state) {
-      const cities = City.getCitiesOfState("IN", formData.state); // Fetch cities for selected state
-      setCityOptions(cities);
-    } else {
-      setCityOptions([]); // Clear cities if no state selected
-    }
+    const fetchCities = async () => {
+      if (formData.state) {
+        const headers = new Headers();
+        headers.append("X-CSCAPI-KEY", "NHhvOEcyWk50N2Vna3VFTE00bFp3MjFKR0ZEOUhkZlg4RTk1MlJlaA=="); 
+  
+        const requestOptions = {
+          method: 'GET',
+          headers: headers,
+          redirect: 'follow',
+        };
+        try {
+
+          const response = await fetch(
+            `https://api.countrystatecity.in/v1/countries/IN/states/${formData.state}/cities`, requestOptions
+          );
+
+          if (response.status === 401) {
+            throw new Error("Unauthorized: Check your API key.");
+          }
+
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+
+          
+
+          const cities = await response.json(); // Parse JSON response
+          // console.log(cities);
+
+          if (cities) setCityOptions(cities);
+        } catch (error) {
+          console.error("Error fetching cities:", error.message);
+          setCityOptions([]); // Clear cities on error
+        }
+      } else {
+        setCityOptions([]); // Clear cities on error
+      }
+    };
+
+    fetchCities();
   }, [formData.state]);
 
   // Function to handle input changes
@@ -125,7 +198,7 @@ const Register = () => {
     try {
       const parsedData = userSchema.parse(dataToSubmit);
       setIsSubmitting(true); // Disable the button during form submission
-      console.log("Validated form data:", parsedData);
+      // console.log("Validated form data:", parsedData);
       // console.log("Form data:", dataToSubmit);
       const response = await fetch(
         "https://testbackenddespo.vercel.app/api/register",
@@ -137,14 +210,14 @@ const Register = () => {
           body: JSON.stringify(parsedData),
         }
       );
-      console.log(response);
+      // console.log(response);
       // if (!response.ok) {
       //   throw new Error(response.status);
       // }
 
       const responsedata = await response.json();
       if (responsedata.message == "Registered Successfully") {
-        console.log(parsedData);
+        // console.log(parsedData);
         toast.success("Registered successfully! Please check your email.");
         // Reset fields to null after successful submission
         form.reset();
@@ -283,12 +356,12 @@ const Register = () => {
                   >
                     Select a State
                   </option>
-                  {stateOptions.map((option) => (
+                  {statesOfIndia.map((option) => (
                     <option
-                      key={option.isoCode}
-                      value={option.isoCode}
+                      key={statesOfIndia.indexOf(option)}
+                      value={option.iso}
                       className={`text-gray-400 bg-[#493d33] hover:bg-[#6b5b4c] ${
-                        formData.state === option.isoCode
+                        formData.state === option.iso
                           ? "bg-orange-600 text-white"
                           : ""
                       }`}
@@ -319,7 +392,7 @@ const Register = () => {
                   </option>
                   {cityOptions.map((option) => (
                     <option
-                      key={option.isoCode}
+                      key={option.id}
                       value={option.name}
                       className={`text-gray-400 bg-[#493d33] hover:bg-[#6b5b4c] ${
                         formData.state === option.isoCode
