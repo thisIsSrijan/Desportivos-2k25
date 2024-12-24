@@ -1,8 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import { State, City } from "country-state-city"; // Importing required modules
-// import redbg from "../assets/redbg.png";
-// import bottombg from "../assets/bottombg.png";
-// import topbg from "../assets/topbg.png";
 import "font-awesome/css/font-awesome.min.css";
 import { Link } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
@@ -10,30 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { z } from "zod";
 
 const Register = () => {
-  // const [fieldsVisible, setFieldsVisible] = useState(false);
-  // const [arrowVisible, setArrowVisible] = useState(true);
   const [popupVisible, setPopupVisible] = useState(false); // State for popup visibility
-
-  // const handleArrowClick = () => {
-  //   console.log("Arrow clicked!");
-
-  //   // Get the current scroll position
-  //   const currentScrollY = window.scrollY;
-
-  //   // Scroll by a specific number of pixels (10-12px)
-  //   window.scrollTo({
-  //     top: currentScrollY + 440, // Scroll by 12px
-  //     behavior: "smooth", // Smooth scroll
-  //   });
-
-  //   // Optionally, make the fields visible after the scroll (as before)
-  //   setFieldsVisible(true);
-
-  //   // Hide the arrow after it's clicked
-  //   setArrowVisible(false);
-  // };
-
-  // const handleRegister = () => alert("Register Clicked");
 
   const handleRuleBook = () => {
     setPopupVisible(true); // Show the popup when Rulebook is clicked
@@ -89,22 +62,6 @@ const Register = () => {
   const [DomainName, setDomainName] = useState("");
   const [selectedSport, setSelectedSport] = useState("");
   const [selectedESport, setSelectedESport] = useState("");
-
-  // useEffect(() => {
-  //   // Fetch states for India (country code: IN)
-  //   const states = State.getStatesOfCountry("IN"); // India country code
-  //   setStateOptions(states);
-  // }, []);
-
-  // Update cities based on selected state
-  // useEffect(() => {
-  //   if (formData.state) {
-  //     const cities = City.getCitiesOfState("IN", formData.state); // Fetch cities for selected state
-  //     setCityOptions(cities);
-  //   } else {
-  //     setCityOptions([]); // Clear cities if no state selected
-  //   }
-  // }, [formData.state]);
 
   useEffect(() => {
     const fetchCities = async () => {
@@ -201,7 +158,7 @@ const Register = () => {
       // console.log("Validated form data:", parsedData);
       // console.log("Form data:", dataToSubmit);
       const response = await fetch(
-        "https://testbackenddespo.vercel.app/api/register",
+        import.meta.env.VITE_BACKEND_URL,
         {
           method: "POST",
           headers: {
@@ -210,10 +167,6 @@ const Register = () => {
           body: JSON.stringify(parsedData),
         }
       );
-      // console.log(response);
-      // if (!response.ok) {
-      //   throw new Error(response.status);
-      // }
 
       const responsedata = await response.json();
       if (responsedata.message == "Registered Successfully") {
