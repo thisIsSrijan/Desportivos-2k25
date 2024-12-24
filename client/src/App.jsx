@@ -7,26 +7,22 @@ import {
 } from "react-router-dom";
 import Register from "./pages/Register";
 import Home from "./pages/Home";
-import Footer from "./components/base/Footer";
-import Preloader from './components/loaders/Preloader';
-import RandomLoader from './components/loaders/RandomLoader';
-import AboutUs from "./components/Home/AboutUs";
-import Sports from "./components/Home/Sports";
-import OurTeam from "./pages/OurTeam";
+import Footer from "../src/components/base/Footer";
+import Preloader from "../src/components/loaders/Preloader";
+import RandomLoader from "../src/components/loaders/RandomLoader";
 
 const AppContent = () => {
-  const location = useLocation(); 
+  const location = useLocation();
 
   return (
     <>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/aboutus" element={<AboutUs />} />
-        <Route path="/sports" element={<Sports />} />
-        <Route path="/ourteam" element={<OurTeam/>}/>
       </Routes>
-      {(location.pathname == "/register" || location.pathname == "/")  && <Footer />}  
+      {(location.pathname == "/register" || location.pathname == "/") && (
+        <Footer />
+      )}
     </>
   );
 };
@@ -66,12 +62,12 @@ function App() {
   }
 
   return <AppContent />;
-};
+}
 
 const Root = () => {
   return (
     <Router>
-      <App /> 
+      <App />
     </Router>
   );
 };
