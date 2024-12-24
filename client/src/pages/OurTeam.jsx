@@ -64,7 +64,7 @@ const OurTeam = () => {
             <TextField heading="creative team" />
           </div>
           <div>
-            <div className="flex flex-wrap justify-center gap-50 mb-32">
+            <div className="flex flex-wrap justify-center gap-24 md:gap-50 mb-24">
               {/* render only two member here */}
               {creativeteamdata.slice(0, 2).map((member, index) => (
                 <Cardcompo
