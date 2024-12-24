@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../index.css";
+import "../../index.css"
 import "bootstrap-icons/font/bootstrap-icons.css";
 import Marquee from "react-fast-marquee";
 

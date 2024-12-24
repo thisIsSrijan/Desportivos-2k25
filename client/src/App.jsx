@@ -7,11 +7,11 @@ import {
 } from "react-router-dom";
 import Register from "./pages/Register";
 import Home from "./pages/Home";
-import Footer from "./components/base/Footer";
-import Preloader from './components/loaders/Preloader';
-import RandomLoader from './components/loaders/RandomLoader';
-import AboutUs from "./components/Home/AboutUs";
-import Sports from "./components/Home/Sports";
+import Footer from "../src/components/base/Footer"
+import Preloader from "../src/components/loaders/Preloader";
+import RandomLoader from '../src/components/loaders/RandomLoader';
+import AboutUs from "../src/components/Home/AboutUs"
+import Sports from "../src/components/Home/Sports"
 
 const AppContent = () => {
   const location = useLocation(); 
