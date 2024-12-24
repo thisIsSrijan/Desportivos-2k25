@@ -1,13 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
-import { State, City } from "country-state-city"; // Importing required modules
-// import redbg from "../../assets/images/redbg.png";
-// import bottombg from "../../assets/images/bottombg.png";
-// import topbg from "../../assets/images/topbg.png";
 import "font-awesome/css/font-awesome.min.css";
 import { Link } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { z } from "zod";
+
+
 
 const Register = () => {
   const [fieldsVisible, setFieldsVisible] = useState(false);
@@ -52,26 +50,74 @@ const Register = () => {
   const [email, setEmail] = useState("");
 
   // Options for dropdowns
-  const [stateOptions, setStateOptions] = useState([]); // For storing states dynamically
+  const [stateOptions] = useState([
+    "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh",
+    "Goa", "Gujarat", "Haryana", "Himachal Pradesh", "Jharkhand", "Karnataka",
+    "Kerala", "Madhya Pradesh", "Maharashtra", "Manipur", "Meghalaya", "Mizoram",
+    "Nagaland", "Odisha", "Punjab", "Rajasthan", "Sikkim", "Tamil Nadu", "Telangana",
+    "Tripura", "Uttar Pradesh", "Uttarakhand", "West Bengal", "Delhi", "Lakshadweep"
+  ]);  
+  const stateNameToCode = {
+    "Andhra Pradesh": "AP",
+    "Arunachal Pradesh": "AR",
+    "Assam": "AS",
+    "Bihar": "BR",
+    "Chhattisgarh": "CT",
+    "Goa": "GA",
+    "Gujarat": "GJ",
+    "Haryana": "HR",
+    "Himachal Pradesh": "HP",
+    "Jharkhand": "JH",
+    "Karnataka": "KA",
+    "Kerala": "KL",
+    "Madhya Pradesh": "MP",
+    "Maharashtra": "MH",
+    "Manipur": "MN",
+    "Meghalaya": "ML",
+    "Mizoram": "MZ",
+    "Nagaland": "NL",
+    "Odisha": "OR",
+    "Punjab": "PB",
+    "Rajasthan": "RJ",
+    "Sikkim": "SK",
+    "Tamil Nadu": "TN",
+    "Telangana": "TG",
+    "Tripura": "TR",
+    "Uttar Pradesh": "UP",
+    "Uttarakhand": "UT",
+    "West Bengal": "WB",
+    "Delhi": "DL",
+    "Lakshadweep": "LD"
+  };
+  
   const [cityOptions, setCityOptions] = useState([]); // For storing cities dynamically
   const [DomainName, setDomainName] = useState(""); // Add this line
   const [selectedSport, setSelectedSport] = useState("");
   const [selectedESport, setSelectedESport] = useState("");
 
-  useEffect(() => {
-    // Fetch states for India (country code: IN)
-    const states = State.getStatesOfCountry("IN"); // India country code
-    setStateOptions(states);
-  }, []);
+  
 
-  // Update cities based on selected state
-  useEffect(() => {
+   // Fetch cities for the selected state
+   useEffect(() => {
     if (state) {
-      const cities = City.getCitiesOfState("IN", state); // Fetch cities for selected state
-      setCityOptions(cities);
-    } else {
-      setCityOptions([]); // Clear cities if no state selected
-    }
+      const stateCode = stateNameToCode[state]; // Get the state code from the mapping
+      fetch(`https://api.countrystatecity.in/v1/countries/IN/states/${stateCode}/cities`, {
+        headers: { "X-CSCAPI-KEY": "NHhvOEcyWk50N2Vna3VFTE00bFp3MjFKR0ZEOUhkZlg4RTk1MlJlaA==" },
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          // Ensure the data is an array
+          if (Array.isArray(data)) {
+            setCityOptions(data);
+          } else {
+            setCityOptions([]); // Reset to an empty array if the data is not an array
+          }
+        })
+        .catch((error) => {
+          console.error("Error loading cities:", error);
+          setCityOptions([]); // Reset to an empty array if there is an error
+        });
+          }
   }, [state]);
 
   //stop scrolling in bg when popup
@@ -277,15 +323,15 @@ const Register = () => {
                 <option value="" className="text-black">
                   Select a State
                 </option>
-                {stateOptions.map((option) => (
+                {stateOptions.map((option,index) => (
                   <option
-                    key={option.isoCode}
-                    value={option.isoCode}
+                    key={option}
+                    value={option}
                     className={`text-black bg-[#493d33] hover:bg-[#6b5b4c] ${
-                      state === option.isoCode ? "bg-orange-600 text-white" : ""
+                      state === option ? "bg-orange-600 text-white" : ""
                     }`}
                   >
-                    {option.name}
+                    {option}
                   </option>
                 ))}
               </select>
