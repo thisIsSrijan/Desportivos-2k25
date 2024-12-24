@@ -36,6 +36,7 @@ function App() {
   const location = useLocation();
 
   useEffect(() => {
+    console.clear();
     if (!hasLoaded) {
       const timer = setTimeout(() => {
         setIsLoading(false);
