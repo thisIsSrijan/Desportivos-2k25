@@ -59,9 +59,23 @@ const Register = () => {
   const [selectedESport, setSelectedESport] = useState("");
 
   useEffect(() => {
-    // Fetch states for India (country code: IN)
-    const states = State.getStatesOfCountry("IN"); // India country code
-    setStateOptions(states);
+    const states = State.getStatesOfCountry("IN") || [];
+
+    // Add Union Territories manually
+    const unionTerritories = [
+      { isoCode: "DL", name: "Delhi" },
+      { isoCode: "LD", name: "Lakshadweep" },
+      { isoCode: "CH", name: "Chandigarh" },
+      { isoCode: "JK", name: "Jammu and Kashmir" },
+      { isoCode: "LA", name: "Ladakh" },
+      { isoCode: "AN", name: "Andaman and Nicobar Islands" },
+      { isoCode: "DH", name: "Dadra and Nagar Haveli and Daman and Diu" },
+      { isoCode: "PY", name: "Puducherry" },
+    ];
+
+    // Merge states and Union Territories
+    const allStates = [...states, ...unionTerritories];
+    setStateOptions(allStates);
   }, []);
 
   // Update cities based on selected state
@@ -150,7 +164,7 @@ const Register = () => {
     } catch (error) {
       if (error instanceof z.ZodError) {
         // Handle validation errors
-          toast.error(error.errors[0].message);
+        toast.error(error.errors[0].message);
       } else {
         console.error("Error submitting form:", error);
         toast.error("Server Error - Unable to Submit the Form");
