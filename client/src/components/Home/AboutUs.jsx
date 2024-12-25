@@ -51,7 +51,7 @@ function AboutUs() {
     >
       {/* whileInViewd Heading */}
       <motion.h1
-        className="text-[150px] font-bold text-gradient text-[#F85B02] dharma-gothic-c tracking-wide "
+        className="text-[120px] xs1-sm:text-[145px] sm:text-[150px] font-bold text-gradient text-[#F85B02] dharma-gothic-c tracking-wide "
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0, scale: 1.2 }}
         transition={{ duration: 1 }}

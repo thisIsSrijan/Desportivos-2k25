@@ -35,8 +35,8 @@ export default {
       screens: {
         xsm: "200px",
         xs: "331px",
-        "xs2-xs1": { min: "372px", max: "467px" },
-        "xs1-sm": { min: "468px", max: "575px" },
+        "xs2-xs1": { min: "368px", max: "439px" },
+        "xs1-sm": { min: "440px", max: "575px" },
         sm: "576px", // Small devices (phones, ≥ 576px)
         md: "768px", // Medium devices (tablets, ≥ 768px)
         md2: "836px",

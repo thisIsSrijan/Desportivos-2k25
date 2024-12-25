@@ -38,10 +38,10 @@ function Footer() {
 
     return (
       <div
-        className={`relative w-[80%] max-w-[510px]  md:max-w-[540px] h-[105px] xs1-sm:h-[110px] sm:h-[110px] md:h-[130px]  lg:h-[170px] uxl:h-[190px]  rounded-[45px] md:rounded-[50px] flex items-center justify-start mx-auto px-6  bg-gray-400 transition-colors duration-300 ${colors[index]} my-2 cursor-pointer mb-4 md:mb-0`}
+        className={`relative w-[80%] max-w-[510px]  md:max-w-[540px] h-[100px] xs2-xs1:h-[105px] xs1-sm:h-[110px] sm:h-[110px] md:h-[130px]  lg:h-[170px] uxl:h-[190px]  rounded-[45px] md:rounded-[50px] flex items-center justify-start mx-auto px-6  bg-gray-400 transition-colors duration-300 ${colors[index]} my-2 cursor-pointer mb-4 md:mb-0`}
         onMouseEnter={handleMouseEnter} // Trigger on hover
       >
-        <h1 className="text-[3rem] xs2-xs1:text-[4.3rem] xs1-sm:text-[5.5rem]  sm:text-6xl md:text-7xl lg:text-[7rem] xl:text-9xl  dharma-gothic-c text-left m-2 tracking-wider ml-2 sm:ml-0  ">
+        <h1 className="text-[4.1rem] xs2-xs1:text-[4.6rem] xs1-sm:text-[5.5rem]  sm:text-6xl md:text-7xl lg:text-[7rem] xl:text-9xl  dharma-gothic-c text-left m-2 tracking-wider  sm:ml-0  ">
           {title}
         </h1>
         <button
@@ -54,7 +54,7 @@ function Footer() {
             viewBox="0 0 24 24"
             strokeWidth={2}
             stroke="currentColor"
-            className="w-9 h-9 sm:w-6 sm:h-6 md:w-9 md:h-9 lg:w-12 lg:h-12"
+            className="w-6 h-6  xs2-xs1:w-7 xs2-xs1:h-7 xs1-sm:w-8 xs1-sm:h-8   sm:w-6 sm:h-6 md:w-9 md:h-9 lg:w-12 lg:h-12"
           >
             <path
               strokeLinecap="round"
