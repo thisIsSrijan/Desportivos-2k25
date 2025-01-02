@@ -28,18 +28,25 @@ const Register = () => {
 
   // Options for dropdowns
   const statesOfIndia = [
+    { name: "Andaman and Nicobar Islands", iso: "AN" },
     { name: "Andhra Pradesh", iso: "AP" },
     { name: "Arunachal Pradesh", iso: "AR" },
     { name: "Assam", iso: "AS" },
     { name: "Bihar", iso: "BR" },
+    { name: "Chandigarh", iso: "CH" },
     { name: "Chhattisgarh", iso: "CG" },
+    { name: "Dadra and Nagar Haveli and Daman and Diu", iso: "DH" },
+    { name: "Delhi", iso: "DL" },
     { name: "Goa", iso: "GA" },
     { name: "Gujarat", iso: "GJ" },
     { name: "Haryana", iso: "HR" },
     { name: "Himachal Pradesh", iso: "HP" },
+    { name: "Jammu and Kashmir", iso: "JK" },
     { name: "Jharkhand", iso: "JH" },
     { name: "Karnataka", iso: "KA" },
     { name: "Kerala", iso: "KL" },
+    { name: "Ladakh", iso: "LA" },
+    { name: "Lakshadweep", iso: "LD" },
     { name: "Madhya Pradesh", iso: "MP" },
     { name: "Maharashtra", iso: "MH" },
     { name: "Manipur", iso: "MN" },
@@ -47,6 +54,7 @@ const Register = () => {
     { name: "Mizoram", iso: "MZ" },
     { name: "Nagaland", iso: "NL" },
     { name: "Odisha", iso: "OR" },
+    { name: "Puducherry", iso: "PY" },
     { name: "Punjab", iso: "PB" },
     { name: "Rajasthan", iso: "RJ" },
     { name: "Sikkim", iso: "SK" },
@@ -67,17 +75,20 @@ const Register = () => {
     const fetchCities = async () => {
       if (formData.state) {
         const headers = new Headers();
-        headers.append("X-CSCAPI-KEY", "NHhvOEcyWk50N2Vna3VFTE00bFp3MjFKR0ZEOUhkZlg4RTk1MlJlaA=="); 
-  
+        headers.append(
+          "X-CSCAPI-KEY",
+          "NHhvOEcyWk50N2Vna3VFTE00bFp3MjFKR0ZEOUhkZlg4RTk1MlJlaA=="
+        );
+
         const requestOptions = {
-          method: 'GET',
+          method: "GET",
           headers: headers,
-          redirect: 'follow',
+          redirect: "follow",
         };
         try {
-
           const response = await fetch(
-            `https://api.countrystatecity.in/v1/countries/IN/states/${formData.state}/cities`, requestOptions
+            `https://api.countrystatecity.in/v1/countries/IN/states/${formData.state}/cities`,
+            requestOptions
           );
 
           if (response.status === 401) {
@@ -87,8 +98,6 @@ const Register = () => {
           if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
           }
-
-          
 
           const cities = await response.json(); // Parse JSON response
           // console.log(cities);
@@ -157,16 +166,13 @@ const Register = () => {
       setIsSubmitting(true); // Disable the button during form submission
       // console.log("Validated form data:", parsedData);
       // console.log("Form data:", dataToSubmit);
-      const response = await fetch(
-        import.meta.env.VITE_BACKEND_URL,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(parsedData),
-        }
-      );
+      const response = await fetch(import.meta.env.VITE_BACKEND_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(parsedData),
+      });
 
       const responsedata = await response.json();
       if (responsedata.message == "Registered Successfully") {
