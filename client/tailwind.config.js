@@ -7,6 +7,11 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        transparent: "transparent",
+        current: "currentColor",
+        despobackground: "#c76904",
+      },
       spacing:{
         60: '15rem',
         59: '14.75rem',
