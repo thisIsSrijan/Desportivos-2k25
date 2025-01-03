@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import "../../App.css"
 import logo from "../../assets/images/image.png"
 import { Link } from "react-router-dom";
+import CountdownTimer from "./CountdownTimer";
 
 function Carousel() {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -45,6 +46,10 @@ function Carousel() {
       >
         REGISTER
       </Link>
+
+      {/* Countdown Timer Component */}
+        <CountdownTimer />
+
       <AnimatePresence mode="popLayout">
         {words_images.map(
           (item, index) =>
@@ -106,10 +111,12 @@ function Carousel() {
                   }}
                   className="absolute bottom-0 left-0 h-2 bg-[#F85B02] z-10"
                 ></motion.div> */}
+              
               </div>
             )
         )}
       </AnimatePresence>
+      
     </div>
   );
 }
