@@ -1,21 +1,20 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
-const StaircaseText = ({ text, className = '' }) => {
-  const characters = Array.from(text); 
+const StaircaseText = ({ text, className = "" }) => {
+  const characters = Array.from(text);
   const container = {
     hidden: { opacity: 0 },
     visible: (i = 1) => ({
       opacity: 1,
-      transition: { staggerChildren: 0.06, delayChildren: 0.02 * i }, 
+      transition: { staggerChildren: 0.06, delayChildren: 0.02 * i },
     }),
   };
 
-  
   const child = {
     visible: {
       opacity: 1,
-      clipPath: 'inset(0 0 0 0)', 
+      clipPath: "inset(0 0 0 0)",
       transition: {
         type: "tween",
         ease: "easeOut",
@@ -24,7 +23,7 @@ const StaircaseText = ({ text, className = '' }) => {
     },
     hidden: {
       opacity: 0,
-      clipPath: 'inset(100% 0 0 0)', 
+      clipPath: "inset(100% 0 0 0)",
       transition: {
         type: "tween",
         ease: "easeIn",
@@ -38,23 +37,23 @@ const StaircaseText = ({ text, className = '' }) => {
       className={className}
       variants={container}
       initial="hidden"
-      whileInView="visible" 
-      viewport={{ amount: 0.5 }} 
+      whileInView="visible"
+      viewport={{ amount: 0.5 }}
     >
       {characters.map((char, index) => (
         <motion.span
           key={`${char}-${index}`}
           variants={child}
-          style={{ display: 'inline-block', position: 'relative' }}
+          style={{ display: "inline-block", position: "relative" }}
         >
-          <span style={{ visibility: 'hidden' }}>{char}</span>
+          <span style={{ visibility: "hidden" }}>{char}</span>
           <motion.span
             style={{
-              position: 'absolute',
+              position: "absolute",
               left: 0,
             }}
           >
-            {char === ' ' ? '\u00A0' : char} 
+            {char === " " ? "\u00A0" : char}
           </motion.span>
         </motion.span>
       ))}
