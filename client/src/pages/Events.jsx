@@ -4,20 +4,41 @@ import ParallaxImages from "../components/ParallaxImages";
 import StaircaseText from "../components/StaggeredText";
 
 function Events() {
-  // const [scrollEnabled, setScrollEnabled] = useState(false); // Toggle scroll behavior
+  const [isInViewport, setIsInViewport] = useState(false); // State to track if Events page is in viewport
   const scrollContainerRef = useRef(null); // Ref for the scroll container
-  // const [scrollPosition, setScrollPosition] = useState(0);
+  const eventsRef = useRef(null); // Ref for the Events page element
 
-  // const handleScroll = (e) => {
-  //   const { scrollTop, scrollHeight, clientHeight } = e.target;
-  //   const position = Math.ceil(
-  //     (scrollTop / (scrollHeight - clientHeight)) * 100
-  //   );
-  //   setScrollPosition(position);
-  // };
-  // console.log(scrollPosition);
+  useEffect(() => {
+    // Create the IntersectionObserver
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInViewport(true); // Set to true when Events page is visible
+        } else {
+          setIsInViewport(false); // Set to false when it's out of view
+        }
+      },
+      {
+        threshold: 0.9, // The page is considered in viewport when 80% is visible
+      }
+    );
+
+    // Start observing the Events section
+    if (eventsRef.current) {
+      observer.observe(eventsRef.current);
+    }
+
+    // Clean up observer on component unmount
+    return () => {
+      if (eventsRef.current) {
+        observer.unobserve(eventsRef.current);
+      }
+    };
+  }, []);
+
   return (
     <div
+      ref={eventsRef} // Attach the ref to the Events section
       className="relative w-full h-full min-h-screen text-white flex justify-center items-center overflow-hidden"
       style={{
         backgroundImage:
@@ -71,9 +92,9 @@ function Events() {
           scrollbarWidth: "none",
           msOverflowStyle: "none",
         }}
-        // onScroll={handleScroll}
       >
-        <ParallaxImages scrollContainer={scrollContainerRef} />
+        {/* Only show ParallaxImages when Events page is in viewport */}
+        {isInViewport && <ParallaxImages scrollContainer={scrollContainerRef} />}
       </motion.div>
     </div>
   );
