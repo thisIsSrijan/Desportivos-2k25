@@ -26,7 +26,7 @@ const Sports = () => {
     setTimeout(() => {
       setActiveImage(images[nextIndex]);
       setIsLoading(false);
-    }, 500);
+    });
     // setActiveImage(images[nextIndex]);
   };
 
@@ -40,7 +40,7 @@ const Sports = () => {
     setTimeout(() => {
       setActiveImage(images[prevIndex]);
       setIsLoading(false);
-    }, 500); // Simulated delay
+    }); 
   };
 
   const handleImageClick = (image) => {
@@ -59,7 +59,7 @@ const Sports = () => {
 
   return (
     <div
-      className="h-screen md:h-[60vw] w-full bg-cover bg-center overflow-hidden relative"
+      className="h-screen  w-full bg-cover bg-center overflow-hidden relative"
       style={{
         backgroundImage:
           "url('https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952318/Background_qmcxay.png')",
@@ -210,31 +210,42 @@ const Sports = () => {
   whileInView={{ opacity: 1, x: 0 }} // Slide into view
   transition={{ duration: 2 }} // Smooth animation
 > */}
-  <motion.div
+  <div
         className="z-10 h-full w-full md:w-1/2 flex flex-col items-center justify-center"
-        key={activeImage} // Unique key triggers re-mount for animation
+        
+      >
+                {selectedContent && (
+                    <div className=' flex flex-col'>
+                        <motion.h2 className='  flex justify-center  font-dharma font-extrabold text-[30.88vw] md:text-[9.92vw]   relative top-[-35vh] md:top-[-28vh] lg:top-[-30vh]  md:left-[47.39vw] leading-[9.51vw] tracking-wide' 
+                          style={{ color: selectedContent.color }}
+                          key={activeImage} // Unique key triggers re-mount for animation
         variants={animationVariants}
         initial="hidden"
         animate="visible"
         exit="exit"
         transition={{ duration: 0.5 }}
-      >
-                {selectedContent && (
-                    <div className=' flex flex-col'>
-                        <h2 className=' text-center flex justify-center  font-dharma font-extrabold text-[30.88vw] md:text-[9.92vw]  relative top-[-35vh] md:top-[-28vh]  md:left-[48.39vw] leading-[9.51vw] tracking-wide' 
-                        style={{ color: selectedContent.color }}>{selectedContent.title}</h2>
+                          >
+                          {selectedContent.title}
+                        </motion.h2>
 
-                        <div className='flex flex-col gap-y-2 md:gap-y-4 xl:gap-y-10  w-[94.99vw] sm:w-[85.45vw] md:w-[34.99vw] absolute top-[25.37vh] md:top-[35.75vh] lg:top-[39.5vh] xl:top-[47vh] left-[3.05vw] sm:left-[7vw]  md:left-[57.21vw] text-center'>
-                            <div>
-                              <p className='text-white  text-center  md:text-left  text-sm sm:text-lg md:text-[1.7vw] lg:text-base xl:text-lg leading-relaxed  '>{selectedContent.description}</p><br/>
-                              <p className='text-white text-center   md:text-left text-sm sm:text-lg md:text-[1.7vw] lg:text-base xl:text-lg leading-relaxed'>{selectedContent.description2}</p>
-                            </div>
+                        <div className='flex flex-col gap-y-2 md:gap-y-4 xl:gap-y-10  w-[94.99vw] sm:w-[85.45vw] md:w-[34.99vw] absolute top-[27.37vh] md:top-[31.75vh] lg:top-[35.5vh] xl:top-[45vh] uxl:top-[38vh] left-[3.05vw] sm:left-[7vw]  md:left-[57.21vw] text-center'>
+                            <motion.div
+                            key={activeImage} // Unique key triggers re-mount for animation
+                            variants={animationVariants}
+                            initial="hidden"
+                            animate="visible"
+                            exit="exit"
+                            transition={{ duration: 0.5 }}
+                            >
+                              <p className='lg:w-[34.2vw] uxl:w-[30vw]  text-white  text-center  md:text-left  text-sm sm:text-lg md:text-[1.7vw] lg:text-base xl:text-lg  leading-relaxed  '>{selectedContent.description}</p><br/>
+                              <p className='lg:w-[34.2vw] uxl:w-[30vw] text-white text-center   md:text-left text-sm sm:text-lg md:text-[1.7vw] lg:text-base xl:text-lg  leading-relaxed'>{selectedContent.description2}</p>
+                            </motion.div>
                             <div className="flex space-x-7 mx-auto md:top-[90.58vh] md:left-[66.89vw] ">
-                                  <button className="w-7 md:w-12 h-7 md:h-12 flex items-center justify-center bg-transparent text-white rounded-full border border-white shadow-md transform transition-transform duration-300 hover:scale-110" onClick={handlePrev}>
-                                    <i className="fa fa-chevron-left text-lg"></i>
+                                  <button className="w-7 md:w-12 h-7 md:h-12 uxl:w-16 uxl:h-16 text-lg uxl:text-xl flex items-center justify-center bg-transparent text-white rounded-full border border-white shadow-md transform transition-transform duration-300 hover:scale-110" onClick={handlePrev}>
+                                    <i className="fa fa-chevron-left "></i>
                                   </button>
-                                  <button className="w-7 md:w-12 h-7 md:h-12 flex items-center justify-center bg-transparent text-white rounded-full border border-white shadow-md transform transition-transform duration-300 hover:scale-110" onClick={handleNext}>
-                                    <i className="fa fa-chevron-right text-lg"></i>
+                                  <button className="w-7 md:w-12 h-7 md:h-12 uxl:w-16 uxl:h-16 text-lg uxl:text-xl flex items-center justify-center bg-transparent text-white rounded-full border border-white shadow-md transform transition-transform duration-300 hover:scale-110" onClick={handleNext}>
+                                    <i className="fa fa-chevron-right "></i>
                                   </button>
                             </div>
                         </div>
@@ -248,7 +259,7 @@ const Sports = () => {
 
                 
               {/* </div> */}
-      </motion.div>
+      </div>
       </div>
 
   );
