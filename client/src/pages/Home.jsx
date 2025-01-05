@@ -1,5 +1,5 @@
 import React from "react";
-import Carousel from "../components/Home/Carousel"
+import Carousel from "../components/Home/Carousel";
 import AboutUs from "../components/Home/AboutUs";
 import Sports from "../components/Home/Sports";
 import Events from "../components/Home/Events";
@@ -9,8 +9,8 @@ const Home = () => {
     <div>
       <Carousel />
       <AboutUs />
-      <Sports/>
-      <Events/>
+      <Sports />
+      <Events />
     </div>
   );
 };
