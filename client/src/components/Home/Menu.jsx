@@ -29,7 +29,7 @@ const Menu = () => {
         }}
         transition={{
           opacity: { duration: 1, ease: "easeInOut" },
-          width: { duration: 0.8, ease: "easeInOut" },
+          width: { duration: 0.4, ease: "easeInOut" },
         }}
         onUpdate={(latest) => {
           if (latest.width) {
