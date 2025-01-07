@@ -5,19 +5,36 @@ import { motion, AnimatePresence } from "framer-motion";
 // import image3 from "/carouselImages/3.png";
 // import image4 from "/carouselImages/4.png";
 // import moto from "/moto.png";
-import "../../App.css"
-import logo from "../../assets/images/image.png"
+import "../../App.css";
+import logo from "../../assets/images/image.png";
 import { Link } from "react-router-dom";
 import CountdownTimer from "./CountdownTimer";
+import Menu from "./Menu";
 
 function Carousel() {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const interval = 4500;
   const words_images = [
-    { word: "DESPORTIVOS' 25", image: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952256/1_qjkggx.png" },
-    { word: "SPORTS", image: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952256/2_iun5fj.png" },
-    { word: "PRONITE", image:  "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952257/3_p2ilnb.png"},
-    { word: "ESPORTS", image: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952258/4_a7xisu.png" },
+    {
+      word: "DESPORTIVOS' 25",
+      image:
+        "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952256/1_qjkggx.png",
+    },
+    {
+      word: "SPORTS",
+      image:
+        "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952256/2_iun5fj.png",
+    },
+    {
+      word: "PRONITE",
+      image:
+        "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952257/3_p2ilnb.png",
+    },
+    {
+      word: "ESPORTS",
+      image:
+        "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952258/4_a7xisu.png",
+    },
   ];
 
   useEffect(() => {
@@ -29,7 +46,7 @@ function Carousel() {
   }, []);
 
   return (
-    <div className="relative bg-black flex h-full w-full justify-center items-center overflow-hidden">
+    <div className="relative bg-black flex h-full w-full justify-center items-center overflow-hidden ">
       <div>
         <img
           src={logo}
@@ -115,6 +132,9 @@ function Carousel() {
               </div>
             )
         )}
+        <div className="absolute bottom-14">
+          <Menu />
+        </div>
       </AnimatePresence>
       
     </div>

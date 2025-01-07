@@ -87,7 +87,6 @@ const Sports = () => {
     backgroundPosition: "0% 0%",
     backgroundRepeat: "no-repeat",
   }}
-  onClick={() => handleImageClick("sp1")}
   initial={{  x: -100 }} // Start slightly off-screen to the left
   // animate={{ opacity: 1, x: 0 }} // Slide in and become visible
   whileInView={{  x: 0}} // S
@@ -104,7 +103,6 @@ const Sports = () => {
       backgroundPosition: "center",
       backgroundSize: "contain",
     }}
-    onClick={() => handleImageClick("sp1")}
   ></div>
 </motion.div>
 
@@ -121,7 +119,6 @@ const Sports = () => {
             backgroundPosition: "32% 0%",
             backgroundRepeat: "no-repeat",
           }}
-          onClick={() => handleImageClick("sp2")}
           initial={{  x: -100 }} // Start slightly off-screen to the left
   // animate={{ opacity: 1, x: 0 }} // Slide in and become visible
   whileInView={{  x: 0}} // S
@@ -135,7 +132,6 @@ const Sports = () => {
               backgroundImage: `url(${sp2})`,
               backgroundSize: "contain",
             }}
-            onClick={() => handleImageClick("sp2")}
 
           ></div>
         </motion.div>
@@ -151,7 +147,6 @@ const Sports = () => {
             backgroundPosition: "67% 0%",
             backgroundRepeat: "no-repeat",
           }}
-          onClick={() => handleImageClick("sp3")}
           initial={{  x: -100 }} // Start slightly off-screen to the left
           // animate={{ opacity: 1, x: 0 }} // Slide in and become visible
           whileInView={{  x: 0}} // S
@@ -166,7 +161,6 @@ const Sports = () => {
               backgroundSize: "contain",
               
             }}
-            onClick={() => handleImageClick("sp3")}
           ></div>
         </motion.div>
 
@@ -182,7 +176,6 @@ const Sports = () => {
             backgroundPosition: "100% 100%",
             backgroundRepeat: "no-repeat",
           }}
-          onClick={() => handleImageClick("sp4")}
           initial={{  x: -100 }} // Start slightly off-screen to the left
           // animate={{ opacity: 1, x: 0 }} // Slide in and become visible
           whileInView={{  x: 0}} // S
@@ -196,7 +189,6 @@ const Sports = () => {
               backgroundImage: `url(${sp4})`,
               backgroundSize: "contain",
             }}
-            onClick={() => handleImageClick("sp4")}
           ></div>
         </motion.div>
             

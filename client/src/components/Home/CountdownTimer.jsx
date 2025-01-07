@@ -23,32 +23,43 @@ const CountdownTimer = () => {
     }, []);
 
     return (
-        <div className='absolute z-20  h-[30vh] md:h-[20vh] w-[90vw] md:w-[70vw] flex  flex-col p-[10vh] md:p-[20vh]'>
-            <div className='w-[60.47vw] h-[6.21vh]   absolute top-[30vh]  md:top-[30vh] left-[15.56vw] md:left-[6vw] lg:left-[7.5vw] '>
-                <img className=' w-[60.47vw] h-[6.21vh]' src={counter}></img>
-            </div>
-            <div className="w-[60.47vw] h-[16.66vh] flex text-white absolute top-[27vh] sm:top-[37vh] md:top-[40vh] left-[15.56vw] md:left-[7.5vw]   gap-x-[6vw] sm:gap-x-[8.5vw] md:gap-x-[10vw]  ">
-                <div className='font-dharma w-[10vw]  mx-auto'>    
-                    <h1 className=' text-3xl sm:text-5xl lg:text-8xl uxl:text-9xl font-semibold leading-[9.37rem] tracking-[7.5px] pl-1'>
+        <div className=' w-[90.18vw] md:w-[62.18vw] h-[24.88vh]  absolute z-20 top-[62.5vh] md:top-[59.29vh]  grid grid-cols-4 text-white xxs:gap-x-[6vw]'>
+                <div className='w-full h-full font-dharma   flex flex-col items-center justify-center '> 
+                    <div className='flex flex-col items-center justify-start'>
+                    <img src={counter} className='w-[200%] h-[100%]'></img>
+                    <p className='text-md sm:text-2xl uxl:text-4xl tracking-[2.5px] font-sans -mt-[4.4vh]  xs1-sm:-mt-[5.5vh] sm:-mt-[6.4vh] md:-mt-[6.2vh] lg:-mt-[7vh] xl:-mt-[6.9vh] xxl:-mt-[5.5vh] uxl:-mt-[6vh]'>DAYS</p>
+                    </div>
+                    <h1 className=' text-3xl sm:text-5xl lg:text-8xl uxl:text-9xl font-semibold leading-[9.37rem] tracking-[7.5px] pl-1 '>
                         {days < 10 ? "0" + days : days}
                     </h1>
                 </div>
-                <div className='font-dharma w-[10vw] mx-auto'>
-                    <h1 className='text-3xl sm:text-5xl lg:text-8xl uxl:text-9xl font-semibold leading-[9.37rem] tracking-[7.5px] pl-2'>
-                        {hours < 10 ? "0" + hours : hours}
+                <div className='font-dharma   flex flex-col items-center justify-center h-full'> 
+                    <div className='flex flex-col items-center justify-start'>
+                    <img src={counter} className='w-[200%] h-[100%]'></img>
+                    <p className='text-md sm:text-2xl uxl:text-4xl tracking-[2.5px] font-sans -mt-[4.4vh]  xs1-sm:-mt-[5.5vh] sm:-mt-[6.4vh] md:-mt-[6.2vh] lg:-mt-[7vh] xl:-mt-[6.9vh] xxl:-mt-[5.5vh] uxl:-mt-[6vh]'>HOURS</p>
+                    </div>
+                    <h1 className=' text-3xl sm:text-5xl lg:text-8xl uxl:text-9xl font-semibold leading-[9.37rem] tracking-[7.5px] pl-1'>
+                        {days < 10 ? "0" + hours : hours}
                     </h1>
                 </div>
-                <div className='font-dharma w-[10vw] mx-auto'>
-                    <h1 className='text-3xl sm:text-5xl lg:text-8xl uxl:text-9xl font-semibold leading-[9.37rem] tracking-[7.5px] pl-2'>
-                        {mins < 10 ? "0" + mins : mins}
+                <div className='font-dharma   flex flex-col items-center justify-center h-full'> 
+                    <div className='flex flex-col items-center justify-start'>
+                    <img src={counter} className='w-[200%] h-[100%]'></img>
+                        <p className='text-md sm:text-2xl uxl:text-4xl  tracking-[2.5px] font-sans -mt-[4.4vh]  xs1-sm:-mt-[5.5vh] sm:-mt-[6.4vh] md:-mt-[6.2vh]  lg:-mt-[7vh] xl:-mt-[6.9vh] xxl:-mt-[5.5vh] uxl:-mt-[6vh]'>MINS</p>
+                    </div>
+                    <h1 className=' text-3xl sm:text-5xl lg:text-8xl uxl:text-9xl font-semibold leading-[9.37rem] tracking-[7.5px] pl-1'>
+                        {days < 10 ? "0" + mins : mins}
                     </h1>
                 </div>
-                <div className='font-dharma w-[10vw] mx-auto'>
-                    <h1 className='text-3xl sm:text-5xl lg:text-8xl uxl:text-9xl font-semibold leading-[9.37rem] tracking-[7.5px] pl-3'>
-                        {secs < 10 ? "0" + secs : secs}
+                <div className='font-dharma   flex flex-col items-center justify-center h-full'> 
+                    <div className='flex flex-col items-center justify-start'>
+                    <img src={counter} className='w-[200%] h-[100%]'></img>
+                        <p className='text-md sm:text-2xl uxl:text-4xl tracking-[2.5px] font-sans -mt-[4.4vh]  xs1-sm:-mt-[5.5vh] sm:-mt-[6.4vh] md:-mt-[6.2vh]  lg:-mt-[7vh] xl:-mt-[6.9vh] xxl:-mt-[5.5vh] uxl:-mt-[6vh]'>SECS</p>
+                    </div>
+                    <h1 className=' text-3xl sm:text-5xl lg:text-8xl uxl:text-9xl font-semibold leading-[9.37rem] tracking-[7.5px] pl-1'>
+                        {days < 10 ? "0" + secs : secs}
                     </h1>
                 </div>
-            </div>
         </div>
     );
 };
