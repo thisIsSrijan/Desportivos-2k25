@@ -4,7 +4,6 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import Marquee from "react-fast-marquee";
 
 function Footer() {
-
   const renderTextWithDot = () => {
     return Array(9)
       .fill()
@@ -73,12 +72,12 @@ function Footer() {
       }}
     >
       <div className=" flex flex-col  gap-[8%] mt-4 sm:flex-row sm:px-[5%]">
-      <SectionCard
+        <SectionCard
           title="MEET THE TEAM"
           buttonLabel="View team details"
           colors={color1}
         />
-      <SectionCard
+        <SectionCard
           title="SPONSORS"
           buttonLabel="View sponsors details"
           colors={color2}
@@ -126,7 +125,7 @@ function Footer() {
                   <h1 className="font-bold">SOCIAL HANDLES</h1>
                   <div className="flex float-end items-end ">
                     <a
-                      href="https://www.youtube.com/@Desportivoslnmiit"
+                      href="https://www.youtube.com/@desportivoslnmiit2733"
                       className="text-black text-xs flex items-center space-x-1"
                     >
                       <i className="bi bi-youtube"></i>
