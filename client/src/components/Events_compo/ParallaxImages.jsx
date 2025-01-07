@@ -1,5 +1,5 @@
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useScroll, useTransform, motion } from "framer-motion";
+import React, { useRef, useState } from "react";
 
 const ParallaxImages = ({ scrollContainer }) => {
   const images = [
@@ -95,56 +95,66 @@ const ParallaxImages = ({ scrollContainer }) => {
 
 
 const ParallaxImg = ({ className, alt, src, scrollContainer, index, text }) => {
-  const ref = useRef(null);
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    container: scrollContainer,
-    offset: ["start 100%", "end 0%"],
-  });
-
-  const revealY = useTransform(scrollYProgress, [0, 0.4], ["0%", "-120%"]);
-  const scale = useTransform(scrollYProgress, [0.4, 0], [1, 1.7]);
-  const textOpacity = useTransform(scrollYProgress, [0, 0.2, 0.4], [1, 1, 0]);
-  const textY = useTransform(scrollYProgress, [0, 0.7], ["100%", "-50%"]);
-
-  return (
-    <div
-      ref={ref}
-      className={`relative w-full aspect-[4/3] overflow-hidden ${className}`}
-    >
-      <motion.img
-        src={src}
-        alt={alt}
-        className="absolute inset-0 w-full h-full object-cover"
-        style={{
-          scale: scale,
-        }}
-      />
-      <motion.div
-        className="absolute inset-0 bg-orange-500 origin-bottom"
-        style={{
-          y: revealY,
-          scale: scale,
-        }}
-        transition={{
-          duration: 0.6,
-          ease: [0.22, 1, 0.36, 1],
-        }}
-      />
-      <motion.div
-        className="absolute left-0 right-0 text-center text-white text-8xl tracking-wide font-bold"
-        style={{
-          top: "40px",
-          y: textY,
-          fontFamily: "Dharma Gothic C",
-          opacity: textOpacity,
-        }}
+    const ref = useRef(null);
+    const [hasScrolled, setHasScrolled] = useState(false);
+  
+    const { scrollYProgress } = useScroll({
+      target: ref,
+      container: scrollContainer,
+      offset: ["start 100%", "end 0%"],
+    });
+  
+    const revealY = useTransform(scrollYProgress, [0, 0.4], ["0%", "-120%"]);
+    const scale = useTransform(scrollYProgress, [0.4, 0], [1, 1.7]);
+    const textOpacity = useTransform(scrollYProgress, [0, 0.2, 0.4], [1, 1, 0]);
+    const textY = useTransform(scrollYProgress, [0, 0.7], ["100%", "-50%"]);
+  
+    // Watch the scrollYProgress to detect if the user has scrolled
+    scrollYProgress.onChange((progress) => {
+      if (progress > 0.4 && !hasScrolled) {
+        setHasScrolled(true);
+      }
+    });
+  
+    return (
+      <div
+        ref={ref}
+        className={`relative w-full aspect-[4/3] overflow-hidden ${className}`}
       >
-        {text}
-      </motion.div>
-    </div>
-  );
-};
-
+        <motion.img
+          src={src}
+          alt={alt}
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{
+            scale: scale,
+          }}
+        />
+        <motion.div
+          className="absolute inset-0 bg-orange-500 origin-bottom"
+          style={{
+            y: revealY,
+            scale: scale,
+          }}
+          transition={{
+            duration: 0.6,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+        />
+        {!hasScrolled && (
+          <motion.div
+            className="absolute left-0 right-0 text-center text-white text-8xl tracking-wide font-bold"
+            style={{
+              top: "40px",
+              y: textY,
+              fontFamily: "Dharma Gothic C",
+              opacity: textOpacity,
+            }}
+          >
+            {text}
+          </motion.div>
+        )}
+      </div>
+    );
+  };
+  
 export default ParallaxImages;
