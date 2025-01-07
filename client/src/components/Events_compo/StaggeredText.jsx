@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const StaggeredText = ({ text, className = "" }) => {
+const StaircaseText = ({ text, className = "" }) => {
   const characters = Array.from(text);
   const container = {
     hidden: { opacity: 0 },
@@ -61,4 +61,4 @@ const StaggeredText = ({ text, className = "" }) => {
   );
 };
 
-export default StaggeredText;
+export default StaircaseText;
