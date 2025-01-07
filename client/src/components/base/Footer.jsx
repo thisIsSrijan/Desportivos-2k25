@@ -4,7 +4,6 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import Marquee from "react-fast-marquee";
 
 function Footer() {
-
   const renderTextWithDot = () => {
     return Array(9)
       .fill()
@@ -36,7 +35,7 @@ function Footer() {
 
     return (
       <div
-        className={`relative w-[80%] max-w-[510px]  md:max-w-[540px] h-[100px] xs2-xs1:h-[105px] xs1-sm:h-[110px] sm:h-[110px] md:h-[130px]  lg:h-[170px] uxl:h-[190px]  rounded-[45px] md:rounded-[50px] flex items-center justify-start mx-auto px-6  bg-gray-400 transition-colors duration-300 ${colors[index]} my-2 cursor-pointer mb-4 md:mb-0`}
+        className={`snap-start relative w-[80%] max-w-[510px]  md:max-w-[540px] h-[100px] xs2-xs1:h-[105px] xs1-sm:h-[110px] sm:h-[110px] md:h-[130px]  lg:h-[170px] uxl:h-[190px]  rounded-[45px] md:rounded-[50px] flex items-center justify-start mx-auto px-6  bg-gray-400 transition-colors duration-300 ${colors[index]} my-2 cursor-pointer mb-4 md:mb-0`}
         onMouseEnter={handleMouseEnter} // Trigger on hover
       >
         <h1 className="text-[4rem] xs2-xs1:text-[4.6rem] xs1-sm:text-[5.5rem]  sm:text-6xl md:text-7xl lg:text-[7rem] xl:text-9xl  dharma-gothic-c text-left m-1 xs2-sm:m-1 tracking-wider  sm:ml-0  ">
@@ -73,12 +72,12 @@ function Footer() {
       }}
     >
       <div className=" flex flex-col  gap-[8%] mt-4 sm:flex-row sm:px-[5%]">
-      <SectionCard
+        <SectionCard
           title="MEET THE TEAM"
           buttonLabel="View team details"
           colors={color1}
         />
-      <SectionCard
+        <SectionCard
           title="SPONSORS"
           buttonLabel="View sponsors details"
           colors={color2}

@@ -11,21 +11,21 @@ import Footer from "../src/components/base/Footer";
 import Preloader from "../src/components/loaders/Preloader";
 import RandomLoader from "../src/components/loaders/RandomLoader";
 import OurTeam from "./pages/OurTeam";
+import Gallery from "./pages/Gallery";
 
 const AppContent = () => {
   const location = useLocation();
 
   return (
-    <>
+    <div>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
         <Route path="/ourteam" element={<OurTeam />} />
+        <Route path="/gallery" element={<Gallery />} />
       </Routes>
-      {(location.pathname == "/register" || location.pathname == "/") && (
-        <Footer />
-      )}
-    </>
+      {location.pathname == "/register" && <Footer />}
+    </div>
   );
 };
 
