@@ -7,10 +7,18 @@ import Events from "../components/Home/Events";
 const Home = () => {
   return (
     <div>
-      <Carousel />
-      <AboutUs />
-      <Sports />
-      <Events />
+      <section id="carousel">
+        <Carousel />
+      </section>
+      <section id="aboutus">
+        <AboutUs />
+      </section>
+      <section id="sports">
+        <Sports />
+      </section>
+      <section id="events">
+        <Events />
+      </section>
     </div>
   );
 };

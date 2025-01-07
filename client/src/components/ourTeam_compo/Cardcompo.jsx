@@ -9,9 +9,9 @@ const CardCompo = ({
   emailLink,
 }) => {
   return (
-    <div className="w-72 h-80 rounded-3xl relative overflow-hidden text-white shadow-lg">
+    <div className="w-72 h-80 rounded-3xl relative overflow-hidden text-white shadow-lg transition-transform transform hover:scale-105">
       {/* Geometric Background */}
-      <div className="absolute inset-0 ">
+      <div className="absolute inset-0">
         <img
           src="https://res.cloudinary.com/dturzqo8m/image/upload/v1734959025/mj6bfq3aevupbrc6gkhr.jpg"
           alt=""
@@ -26,23 +26,23 @@ const CardCompo = ({
             href={instagramLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white hover:text-orange-500"
+            className="text-white hover:text-orange-500 transition-transform transform hover:scale-150"
           >
-            <i class="bi bi-instagram"></i>
+            <i className="bi bi-instagram"></i>
           </a>
           <a
             href={linkedinLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white hover:text-blue-500"
+            className="text-white hover:text-blue-500 transition-transform transform hover:scale-150"
           >
-            <i class="bi bi-linkedin"></i>
+            <i className="bi bi-linkedin"></i>
           </a>
           <a
             href={`mailto:${emailLink}`}
-            className="text-white hover:text-red-500"
+            className="text-white hover:text-red-500 transition-transform transform hover:scale-150"
           >
-            <i class="bi bi-envelope"></i>
+            <i className="bi bi-envelope"></i>
           </a>
         </div>
         {/* Links */}
@@ -51,7 +51,7 @@ const CardCompo = ({
         <div className="flex justify-center mt-5 relative z-10">
           <img src={imageUrl} alt={name} className="w-55 object-cover" />
         </div>
-        {/* Imgage */}
+        {/* Image */}
       </div>
 
       {/* Footer */}

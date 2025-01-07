@@ -59,13 +59,13 @@ function Carousel() {
 
       <Link
         to="/register"
-        className="text-center align-middle absolute w-fit h-fit p-2 right-[16px] sm:right-16 sm:top-[75px] top-[30px] border-2 border-[#F85B02] shadow-[2px_1.5px_13px_#F85B02] rounded-xl z-10 text-white text-l sm:text-xl lg:text-3xl bg-[#424242BF] font-squid hover:bg-[#515151bf] hover:scale-105"
+        className=" hidden md:block text-center align-middle absolute w-fit h-fit p-2 right-[16px] sm:right-16 sm:top-[75px] top-[30px] border-2 border-[#F85B02] shadow-[2px_1.5px_13px_#F85B02] rounded-xl z-10 text-white text-l sm:text-xl lg:text-3xl bg-[#424242BF] font-squid hover:bg-[#515151bf] hover:scale-105"
       >
         REGISTER
       </Link>
 
       {/* Countdown Timer Component */}
-        <CountdownTimer />
+      <CountdownTimer />
 
       <AnimatePresence mode="popLayout">
         {words_images.map(
@@ -128,15 +128,13 @@ function Carousel() {
                   }}
                   className="absolute bottom-0 left-0 h-2 bg-[#F85B02] z-10"
                 ></motion.div> */}
-              
               </div>
             )
         )}
-        <div className="absolute bottom-14">
+        <div className="absolute h-screen w-screen flex justify-center items-end pb-8">
           <Menu />
         </div>
       </AnimatePresence>
-      
     </div>
   );
 }
