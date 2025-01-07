@@ -5,6 +5,8 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { z } from "zod";
 
+
+
 const Register = () => {
   const [popupVisible, setPopupVisible] = useState(false); // State for popup visibility
 
