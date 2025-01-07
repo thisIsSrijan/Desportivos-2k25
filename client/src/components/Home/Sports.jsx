@@ -78,7 +78,7 @@ const Sports = () => {
 
        {/* image1 */}
        <motion.div
-  className={`flex-1 order-1 cursor-pointer opacity-50 relative  ${
+  className={`flex-1 order-1 opacity-50 relative  ${
     activeImage === "sp1" ? "md:z-10 md:opacity-100" : "md:opacity-50"
   }`}
   style={{
@@ -93,7 +93,7 @@ const Sports = () => {
   transition={{ duration: 1,delay:0.6 }} // Smooth animation
 >
   <div
-    className={`cursor-pointer absolute w-[47.3vw] md:w-[28.2vw] aspect-[0.73] -left-[2vw] bottom-0 bg-no-repeat  ${
+    className={` absolute w-[47.3vw] md:w-[28.2vw] aspect-[0.73] -left-[2vw] bottom-0 bg-no-repeat  ${
       activeImage === "sp1"
         ? "z-50 opacity-100"
         : " z-20 md:opacity-50 opacity-100"
@@ -110,7 +110,7 @@ const Sports = () => {
 
         {/* image2 */}     
         <motion.div
-          className={`flex-1 order-4 md:order-2 cursor-pointer opacity-50 relative ${
+          className={`flex-1 order-4 md:order-2 opacity-50 relative ${
             activeImage === "sp2" ? "z-10 md:opacity-100" : "opacity-50"
           }`}
           style={{
@@ -125,7 +125,7 @@ const Sports = () => {
   transition={{ duration: 1,delay:0.4 }}
         >
           <div
-            className={` cursor-pointer absolute aspect-[0.73] w-[42vw] md:w-[21.5vw] -left-[16vw] md:-left-[2vw] -bottom-[12vw] md:-bottom-[6vw] bg-no-repeat  ${
+            className={` absolute aspect-[0.73] w-[42vw] md:w-[21.5vw] -left-[16vw] md:-left-[2vw] -bottom-[12vw] md:-bottom-[6vw] bg-no-repeat  ${
               activeImage === "sp2" ? "z-50 opacity-100" : "z-20 md:opacity-50"
             }`}
             style={{
@@ -138,7 +138,7 @@ const Sports = () => {
 
         {/* image3 */}
         <motion.div
-          className={`flex-1 order-3 cursor-pointer opacity-50  relative ${
+          className={`flex-1 order-3 opacity-50  relative ${
             activeImage === "sp3" ? "z-10 opacity-100" : "opacity-50"
           }`}
           style={{
@@ -153,7 +153,7 @@ const Sports = () => {
           transition={{ duration: 1,delay:0.2 }}
         >
           <div
-            className={` cursor-pointer absolute bg-no-repeat  aspect-[0.67] w-[41vw] md:w-[22.5vw] -left-[6vw] md:-left-[3vw] -bottom-[0.4vw] ${
+            className={` absolute bg-no-repeat  aspect-[0.67] w-[41vw] md:w-[22.5vw] -left-[6vw] md:-left-[3vw] -bottom-[0.4vw] ${
               activeImage === "sp3" ? "z-50 opacity-100 " : "z-10 opacity-100 md:opacity-50"
             }`}
             style={{
@@ -167,7 +167,7 @@ const Sports = () => {
 
         {/* image4 */}
         <motion.div
-          className={`flex-1 order-2 md:order-4 cursor-pointer relative opacity-50  ${
+          className={`flex-1 order-2 md:order-4  relative opacity-50  ${
             activeImage === "sp4" ? "md:z-10 md:opacity-100" : "opacity-50"
           }`}
           style={{
@@ -182,7 +182,7 @@ const Sports = () => {
           transition={{ duration: 1,delay:0 }}
         >
           <div
-            className={`cursor-pointer absolute aspect-[0.8] md:w-[24vw]  w-[42vw] -bottom-[3vw] md:-bottom-[2vw] -left-[5vw]   bg-no-repeat  ${
+            className={` absolute aspect-[0.8] md:w-[24vw]  w-[42vw] -bottom-[3vw] md:-bottom-[2vw] -left-[5vw]   bg-no-repeat  ${
               activeImage === "sp4" ? "z-50 opacity-100" : "z-20 md:opacity-50"
             }`}
             style={{
