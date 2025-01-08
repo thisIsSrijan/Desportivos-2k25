@@ -90,13 +90,13 @@ const Menu = () => {
       >
         {/* Hamburger Icon */}
         <button
-          className="p-2 backdrop-blur-md border-2 border-[#F85B02] shadow-[2px_1.5px_13px_#F85B02] rounded-lg text-white focus:outline-none"
+          className="p-1 px-1 backdrop-blur-md border-2 border-[#F85B02] shadow-[2px_1.5px_13px_#F85B02] rounded-lg text-white focus:outline-none"
           onClick={toggleMenu}
         >
           {isMenuOpen ? (
-            <i className="bi bi-x-lg"></i>
+            <i className="bi bi-x-lg" style={{ fontSize: "25px" }}></i>
           ) : (
-            <i className="bi bi-list"></i>
+            <i className="bi bi-list" style={{ fontSize: "25px" }}></i>
           )}
         </button>
 
