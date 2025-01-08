@@ -19,7 +19,7 @@ const ErrorPage = () => {
           alt="Coming Soon"
           className="mb-4"
         />
-        <div className="sm:text-[80px] text-gradient text-[#F85B02] dharma-gothic-c tracking-wide ">
+        <div className="text-[50px] sm:text-[80px] text-wrap text-gradient text-[#F85B02] dharma-gothic-c tracking-wide ">
           WE REGRET TO INFORM YOU THAT THE LINK YOU ENTERED DOES NOT EXIST !!!
         </div>
       </div>
