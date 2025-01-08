@@ -64,41 +64,6 @@ const OurTeam = () => {
         </div>
         <div>
           <div className="text-right">
-            <TextField heading="creative team" />
-          </div>
-          <div>
-            <div className="flex flex-wrap justify-center gap-24 md:gap-50 mb-24">
-              {/* render only two member here */}
-              {creativeteamdata.slice(0, 2).map((member, index) => (
-                <Cardcompo
-                  key={index}
-                  name={member.name}
-                  imageUrl={member.imageUrl}
-                  instagramLink={member.instagramLink}
-                  linkedinLink={member.linkedinLink}
-                  emailLink={member.emailLink}
-                  post={member.post}
-                />
-              ))}
-            </div>
-            <div className="flex flex-wrap justify-center gap-24">
-              {/* render the rest of people here */}
-              {creativeteamdata.slice(2).map((member, index) => (
-                <Cardcompo
-                  key={index}
-                  name={member.name}
-                  imageUrl={member.imageUrl}
-                  instagramLink={member.instagramLink}
-                  linkedinLink={member.linkedinLink}
-                  emailLink={member.emailLink}
-                  post={member.post}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-        <div>
-          <div className="text-right">
             <TextField heading="web development team" />
           </div>
           <div>
@@ -132,6 +97,42 @@ const OurTeam = () => {
             </div>
           </div>
         </div>
+        <div>
+          <div className="text-right">
+            <TextField heading="creative team" />
+          </div>
+          <div>
+            <div className="flex flex-wrap justify-center gap-24 md:gap-50 mb-24">
+              {/* render only two member here */}
+              {creativeteamdata.slice(0, 2).map((member, index) => (
+                <Cardcompo
+                  key={index}
+                  name={member.name}
+                  imageUrl={member.imageUrl}
+                  instagramLink={member.instagramLink}
+                  linkedinLink={member.linkedinLink}
+                  emailLink={member.emailLink}
+                  post={member.post}
+                />
+              ))}
+            </div>
+            <div className="flex flex-wrap justify-center gap-24">
+              {/* render the rest of people here */}
+              {creativeteamdata.slice(2).map((member, index) => (
+                <Cardcompo
+                  key={index}
+                  name={member.name}
+                  imageUrl={member.imageUrl}
+                  instagramLink={member.instagramLink}
+                  linkedinLink={member.linkedinLink}
+                  emailLink={member.emailLink}
+                  post={member.post}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+
         <div>
           <div className="text-right">
             <TextField heading="sponsorship team" />

@@ -7,6 +7,15 @@ export default {
   ],
   theme: {
     extend: {
+      animation: {
+        "slide-down": "slideDown 0.5s ease-out",
+      },
+      keyframes: {
+        slideDown: {
+          "0%": { transform: "translateY(-20px)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
+        },
+      },
       colors: {
         transparent: "transparent",
         current: "currentColor",
@@ -48,7 +57,7 @@ export default {
         lg: "992px", // Large devices (desktops, ≥ 992px)
         xl: "1200px", // Extra large devices (large desktops, ≥ 1200px)
         lg2: "1264",
-        xxl:"1400px", // Extra extra large devices (larger desktops, ≥ 1400px)
+        xxl: "1400px", // Extra extra large devices (larger desktops, ≥ 1400px)
         customBreakpoint: "400px",
         uxl: "1500px",
         custom: { min: "576px", max: "767.5px" },

@@ -85,7 +85,7 @@ const Menu = () => {
 
       {/* Hamburger Menu for Small Screens */}
       <div
-        className="md:hidden absolute top-10 text-xs sm:text-sm right-5 sm:right-10 z-50"
+        className="md:hidden absolute top-10 sm:top-20 px-2 right-0 text-xs sm:text-sm z-50"
         ref={menuRef}
       >
         {/* Hamburger Icon */}
@@ -102,15 +102,18 @@ const Menu = () => {
 
         {/* Dropdown Menu */}
         {isMenuOpen && (
-          <div className="absolute top-10 sm:top-11 right-0 backdrop-blur-md border-2 border-[#F85B02] shadow-[2px_1.5px_13px_#F85B02] rounded-lg text-white w-32 sm:w-44 font-squid">
+          <div
+            className="absolute font-bold top-11 right-0 backdrop-blur-md border-2 border-[#F85B02] shadow-[2px_1.5px_13px_#F85B02] rounded-lg text-white w-screen font-squid
+        animate-slide-down"
+          >
             <ul className="flex flex-col items-center ">
-              <li className="py-2 w-full text-center hover:bg-[#F85B02]">
+              <li className="py-2 sm:py-1 w-full text-center hover:bg-[#F85B02]">
                 <Link to="/register" onClick={() => setIsMenuOpen(false)}>
                   REGISTER
                 </Link>
               </li>
-              <li className="py-2 w-full text-center hover:bg-[#F85B02]">
-                <nav className="">
+              <li className="py-2 sm:py-1 w-full text-center hover:bg-[#F85B02]">
+                <nav>
                   <a
                     href="#aboutus"
                     onClick={(e) => {
@@ -122,17 +125,17 @@ const Menu = () => {
                   </a>
                 </nav>
               </li>
-              <li className="py-2 w-full text-center hover:bg-[#F85B02]">
+              <li className="py-2 sm:py-1 w-full text-center hover:bg-[#F85B02]">
                 <Link to="/ourteam" onClick={() => setIsMenuOpen(false)}>
                   OUR TEAM
                 </Link>
               </li>
-              <li className="py-2 w-full text-center hover:bg-[#F85B02]">
+              <li className="py-2 sm:py-1 w-full text-center hover:bg-[#F85B02]">
                 <Link to="/gallery" onClick={() => setIsMenuOpen(false)}>
                   GALLERY
                 </Link>
               </li>
-              <li className="py-2 w-full text-center hover:bg-[#F85B02]">
+              <li className="py-2 sm:py-1 w-full text-center hover:bg-[#F85B02]">
                 <Link to="/sponsors" onClick={() => setIsMenuOpen(false)}>
                   SPONSORS
                 </Link>

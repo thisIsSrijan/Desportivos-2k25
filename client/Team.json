@@ -178,7 +178,7 @@
   "publicrelations": [
     {
       "name": "hardik makkar",
-      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1736319825/sf45nmwdyimsm6djsplr.heic",
+      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/f_auto,q_auto/sf45nmwdyimsm6djsplr",
       "instagramLink": "https://instagram.com/chetan",
       "linkedinLink": "https://linkedin.com/in/chetan",
       "emailLink": "chetan@example.com",
@@ -186,7 +186,7 @@
     },
     {
       "name": "rajat satonkar",
-      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1736319825/lche6z95uk4mh4kqjcvj.heic",
+      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/f_auto,q_auto/lche6z95uk4mh4kqjcvj",
       "instagramLink": "https://instagram.com/chetan",
       "linkedinLink": "https://linkedin.com/in/chetan",
       "emailLink": "chetan@example.com",
