@@ -73,7 +73,7 @@ function AboutUs() {
           />
           <div className="flex  justify-start space-x-6 mt-6 ml-8 mb-10 ">
             <motion.a
-              href="#"
+              href="https://www.instagram.com/desportivos.lnmiit/"
               className="transform transition duration-300 hover:scale-110"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0, scale: 1.2 }}
@@ -82,7 +82,7 @@ function AboutUs() {
               <img src={insta} alt="Instagram" className="h-8 w-8" />
             </motion.a>
             <motion.a
-              href="#"
+              href="https://www.youtube.com/@desportivoslnmiit2733"
               className="transform transition duration-300 hover:scale-110"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0, scale: 1.4 }}

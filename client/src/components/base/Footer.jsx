@@ -195,7 +195,7 @@ function Footer() {
                 <h1 className="font-bold">SOCIAL HANDLES</h1>
                 <div className="flex float-end sm:flex-col items-end ">
                   <a
-                    href="https://www.youtube.com/@Desportivoslnmiit"
+                    href="https://www.youtube.com/@desportivoslnmiit2733"
                     className="text-black text-xs md:text-sm  lg:text-xl flex items-center space-x-1"
                   >
                     <i className="bi bi-youtube"></i>

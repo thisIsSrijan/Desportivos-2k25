@@ -19,9 +19,9 @@ const CardCompo = ({
       </div>
       {/* Geometric Background */}
 
-      <div className="flex gap-2 h-5/6 relative z-10">
+      <div className="flex justify-center h-5/6 relative z-10">
         {/* Links */}
-        <div className="flex flex-col mt-6 ml-4 gap-2">
+        {/* <div className="flex flex-col mt-6 ml-4 gap-2">
           <a
             href={instagramLink}
             target="_blank"
@@ -44,12 +44,12 @@ const CardCompo = ({
           >
             <i className="bi bi-envelope"></i>
           </a>
-        </div>
+        </div> */}
         {/* Links */}
 
         {/* Image */}
         <div className="flex justify-center relative z-10">
-          <img src={imageUrl} alt={name} className="w-55 object-cover" />
+          <img src={imageUrl} alt={name} className="w-72 object-cover" />
         </div>
         {/* Image */}
       </div>
