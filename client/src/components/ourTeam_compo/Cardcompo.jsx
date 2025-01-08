@@ -48,7 +48,7 @@ const CardCompo = ({
         {/* Links */}
 
         {/* Image */}
-        <div className="flex justify-center mt-5 relative z-10">
+        <div className="flex justify-center relative z-10">
           <img src={imageUrl} alt={name} className="w-55 object-cover" />
         </div>
         {/* Image */}

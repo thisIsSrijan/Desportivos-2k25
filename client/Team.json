@@ -2,14 +2,14 @@
   "festhead": [
     {
       "name": "Chetan Sharma",
-      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1734953575/cvggow7lr0qy0r1rwl6k.png",
+      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1736317972/f4lfava70mk5ddzyhllt.png",
       "instagramLink": "https://instagram.com/chetan",
       "linkedinLink": "https://linkedin.com/in/chetan",
       "emailLink": "chetan@example.com"
     },
     {
-      "name": "Aditya Bajpayee",
-      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1734953575/cvggow7lr0qy0r1rwl6k.png",
+      "name": "Sanchay Goel",
+      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1736318219/ydtn2qpwmmckzgxoo4v0.png",
       "instagramLink": "https://instagram.com/aditya",
       "linkedinLink": "https://linkedin.com/in/aditya",
       "emailLink": "aditya@example.com"
@@ -17,122 +17,88 @@
   ],
   "sportscouncil": [
     {
-      "name": "Chetan Sharma",
-      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1734953575/cvggow7lr0qy0r1rwl6k.png",
+      "name": "Prem chaudhary",
+      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1736318496/klazfjv4ptudi0mt1avh.jpg",
       "instagramLink": "https://instagram.com/chetan",
       "linkedinLink": "https://linkedin.com/in/chetan",
       "emailLink": "chetan@example.com",
-      "post": "General Secretary Sports"
+      "post": "GSEC"
     },
     {
-      "name": "Aditya Bajpayee",
-      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1734953575/cvggow7lr0qy0r1rwl6k.png",
+      "name": "Rishika Parashar",
+      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1736318610/bznrbe2x6r8cykf6jalz.jpg",
       "instagramLink": "https://instagram.com/aditya",
       "linkedinLink": "https://linkedin.com/in/aditya",
       "emailLink": "aditya@example.com",
-      "post": "Sports Council"
-    }
-  ],
-  "creativeteam": [
-    {
-      "name": "Chetan Sharma",
-      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1734953575/cvggow7lr0qy0r1rwl6k.png",
-      "instagramLink": "https://instagram.com/chetan",
-      "linkedinLink": "https://linkedin.com/in/chetan",
-      "emailLink": "chetan@example.com",
-      "post": "Creative Team"
+      "post": "AGSEC"
     },
     {
-      "name": "Chetan Sharma",
-      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1734953575/cvggow7lr0qy0r1rwl6k.png",
-      "instagramLink": "https://instagram.com/chetan",
-      "linkedinLink": "https://linkedin.com/in/chetan",
-      "emailLink": "chetan@example.com",
-      "post": "Creative Team"
-    },
-    {
-      "name": "Aditya Bajpayee",
-      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1734953575/cvggow7lr0qy0r1rwl6k.png",
+      "name": "Shivin Goel",
+      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1736318611/o0grn8qrwykt9wyqdkdt.jpg",
       "instagramLink": "https://instagram.com/aditya",
       "linkedinLink": "https://linkedin.com/in/aditya",
       "emailLink": "aditya@example.com",
-      "post": "Creative Team"
-    },
-    {
-      "name": "Aditya Bajpayee",
-      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1734953575/cvggow7lr0qy0r1rwl6k.png",
-      "instagramLink": "https://instagram.com/aditya",
-      "linkedinLink": "https://linkedin.com/in/aditya",
-      "emailLink": "aditya@example.com",
-      "post": "Creative Team"
-    },
-    {
-      "name": "Aditya Bajpayee",
-      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1734953575/cvggow7lr0qy0r1rwl6k.png",
-      "instagramLink": "https://instagram.com/aditya",
-      "linkedinLink": "https://linkedin.com/in/aditya",
-      "emailLink": "aditya@example.com",
-      "post": "Creative Team"
-    }
-  ],
-  "webdevelopment": [
-    {
-      "name": "Chetan Sharma",
-      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1734953575/cvggow7lr0qy0r1rwl6k.png",
-      "instagramLink": "https://instagram.com/chetan",
-      "linkedinLink": "https://linkedin.com/in/chetan",
-      "emailLink": "chetan@example.com",
-      "post": "Web Development"
-    },
-    {
-      "name": "Aditya Bajpayee",
-      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1734953575/cvggow7lr0qy0r1rwl6k.png",
-      "instagramLink": "https://instagram.com/aditya",
-      "linkedinLink": "https://linkedin.com/in/aditya",
-      "emailLink": "aditya@example.com",
-      "post": "Web Development"
-    },
-    {
-      "name": "Aditya Bajpayee",
-      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1734953575/cvggow7lr0qy0r1rwl6k.png",
-      "instagramLink": "https://instagram.com/aditya",
-      "linkedinLink": "https://linkedin.com/in/aditya",
-      "emailLink": "aditya@example.com",
-      "post": "Creative Team"
-    },
-    {
-      "name": "Aditya Bajpayee",
-      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1734953575/cvggow7lr0qy0r1rwl6k.png",
-      "instagramLink": "https://instagram.com/aditya",
-      "linkedinLink": "https://linkedin.com/in/aditya",
-      "emailLink": "aditya@example.com",
-      "post": "Creative Team"
+      "post": "FC"
     }
   ],
   "sponsorshipteam": [
     {
-      "name": "Chetan Sharma",
-      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1734953575/cvggow7lr0qy0r1rwl6k.png",
+      "name": "Pearl Agarwal",
+      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1736318840/zfmnhbqau943lafcfmun.jpg",
       "instagramLink": "https://instagram.com/chetan",
       "linkedinLink": "https://linkedin.com/in/chetan",
       "emailLink": "chetan@example.com",
       "post": "Sponsorship Team"
     },
     {
-      "name": "Aditya Bajpayee",
-      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1734953575/cvggow7lr0qy0r1rwl6k.png",
+      "name": "Burhan Vora",
+      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1736319012/wxhertd842o4upjwsibn.jpg",
+      "instagramLink": "https://instagram.com/chetan",
+      "linkedinLink": "https://linkedin.com/in/chetan",
+      "emailLink": "chetan@example.com",
+      "post": "Sponsorship Team"
+    },
+    {
+      "name": "Lakshay Mittal",
+      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1736319043/th0yxse0ty6jzg1xyreo.jpg",
       "instagramLink": "https://instagram.com/aditya",
       "linkedinLink": "https://linkedin.com/in/aditya",
       "emailLink": "aditya@example.com",
       "post": "Sponsorship Team"
     },
     {
-      "name": "Aditya Bajpayee",
+      "name": "Kalash Jain",
+      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1736319044/rvwlfi8at3i3hungy4ch.png",
+      "instagramLink": "https://instagram.com/aditya",
+      "linkedinLink": "https://linkedin.com/in/aditya",
+      "emailLink": "aditya@example.com",
+      "post": "Sponsorship Team"
+    },
+    {
+      "name": "Mridul Sharma",
+      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1736319135/nrzsxqbjkslnt6bjs92i.png",
+      "instagramLink": "https://instagram.com/aditya",
+      "linkedinLink": "https://linkedin.com/in/aditya",
+      "emailLink": "aditya@example.com",
+      "post": "Sponsorship Team"
+    }
+  ],
+  "webdevelopment": [
+    {
+      "name": "Krishna khattri",
+      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1734953575/cvggow7lr0qy0r1rwl6k.png",
+      "instagramLink": "https://instagram.com/chetan",
+      "linkedinLink": "https://linkedin.com/in/chetan",
+      "emailLink": "chetan@example.com",
+      "post": "Web Development"
+    },
+    {
+      "name": "Srijan das",
       "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1734953575/cvggow7lr0qy0r1rwl6k.png",
       "instagramLink": "https://instagram.com/aditya",
       "linkedinLink": "https://linkedin.com/in/aditya",
       "emailLink": "aditya@example.com",
-      "post": "Creative Team"
+      "post": "Web Development"
     },
     {
       "name": "Aditya Bajpayee",
@@ -140,7 +106,159 @@
       "instagramLink": "https://instagram.com/aditya",
       "linkedinLink": "https://linkedin.com/in/aditya",
       "emailLink": "aditya@example.com",
+      "post": "Web Development"
+    },
+    {
+      "name": "manas deshai",
+      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1734953575/cvggow7lr0qy0r1rwl6k.png",
+      "instagramLink": "https://instagram.com/aditya",
+      "linkedinLink": "https://linkedin.com/in/aditya",
+      "emailLink": "aditya@example.com",
+      "post": "Web Development"
+    },
+    {
+      "name": "Ritigya gupta",
+      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1734953575/cvggow7lr0qy0r1rwl6k.png",
+      "instagramLink": "https://instagram.com/aditya",
+      "linkedinLink": "https://linkedin.com/in/aditya",
+      "emailLink": "aditya@example.com",
+      "post": "Web Development"
+    },
+    {
+      "name": "Vanshika thadani",
+      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1734953575/cvggow7lr0qy0r1rwl6k.png",
+      "instagramLink": "https://instagram.com/aditya",
+      "linkedinLink": "https://linkedin.com/in/aditya",
+      "emailLink": "aditya@example.com",
+      "post": "Web Development"
+    }
+  ],
+  "creativeteam": [
+    {
+      "name": "eesan yadav",
+      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1736319452/kg2fmanvsf78jpobvopb.jpg",
+      "instagramLink": "https://instagram.com/chetan",
+      "linkedinLink": "https://linkedin.com/in/chetan",
+      "emailLink": "chetan@example.com",
       "post": "Creative Team"
+    },
+    {
+      "name": "Harshit manchanda",
+      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1736319459/acgucndmdvlcevehm2qn.png",
+      "instagramLink": "https://instagram.com/aditya",
+      "linkedinLink": "https://linkedin.com/in/aditya",
+      "emailLink": "aditya@example.com",
+      "post": "Creative Team"
+    },
+    {
+      "name": "Divay yadav",
+      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1734953575/cvggow7lr0qy0r1rwl6k.png",
+      "instagramLink": "https://instagram.com/aditya",
+      "linkedinLink": "https://linkedin.com/in/aditya",
+      "emailLink": "aditya@example.com",
+      "post": "Creative Team"
+    },
+    {
+      "name": "Arihant Bhura",
+      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1736321571/lrowf05icftduxw1k1jc.jpg",
+      "instagramLink": "https://instagram.com/aditya",
+      "linkedinLink": "https://linkedin.com/in/aditya",
+      "emailLink": "aditya@example.com",
+      "post": "Creative Team"
+    },
+    {
+      "name": "eeshan singh",
+      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1736321571/wkreohj8lfwqvjwzkrda.jpg",
+      "instagramLink": "https://instagram.com/aditya",
+      "linkedinLink": "https://linkedin.com/in/aditya",
+      "emailLink": "aditya@example.com",
+      "post": "Creative Team"
+    }
+  ],
+  "publicrelations": [
+    {
+      "name": "hardik makkar",
+      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1736319825/sf45nmwdyimsm6djsplr.heic",
+      "instagramLink": "https://instagram.com/chetan",
+      "linkedinLink": "https://linkedin.com/in/chetan",
+      "emailLink": "chetan@example.com",
+      "post": "Public Relations"
+    },
+    {
+      "name": "rajat satonkar",
+      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1736319825/lche6z95uk4mh4kqjcvj.heic",
+      "instagramLink": "https://instagram.com/chetan",
+      "linkedinLink": "https://linkedin.com/in/chetan",
+      "emailLink": "chetan@example.com",
+      "post": "Public Relations"
+    },
+    {
+      "name": "shreyansh singh",
+      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1736319824/vh2act18wpwo31lrtxju.jpg",
+      "instagramLink": "https://instagram.com/chetan",
+      "linkedinLink": "https://linkedin.com/in/chetan",
+      "emailLink": "chetan@example.com",
+      "post": "Public Relations"
+    },
+    {
+      "name": "hemandra yaduvanshi",
+      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1736319825/vjllweclgba2okoya5xr.jpg",
+      "instagramLink": "https://instagram.com/chetan",
+      "linkedinLink": "https://linkedin.com/in/chetan",
+      "emailLink": "chetan@example.com",
+      "post": "Public Relations"
+    }
+  ],
+  "eventmanagement": [
+    {
+      "name": "Paridhi Jain",
+      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1736320200/exm5r6ydcgjoe9iu2gdx.jpg",
+      "instagramLink": "https://instagram.com/chetan",
+      "linkedinLink": "https://linkedin.com/in/chetan",
+      "emailLink": "chetan@example.com",
+      "post": "Event Management"
+    },
+    {
+      "name": "Shivani agarwal",
+      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1736320200/y5ojot4zayrsycbmmbdn.jpg",
+      "instagramLink": "https://instagram.com/chetan",
+      "linkedinLink": "https://linkedin.com/in/chetan",
+      "emailLink": "chetan@example.com",
+      "post": "Event Management"
+    },
+    {
+      "name": "ayush miglani",
+      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1736320199/xz70pwt1pbpeb7nstsgh.jpg",
+      "instagramLink": "https://instagram.com/chetan",
+      "linkedinLink": "https://linkedin.com/in/chetan",
+      "emailLink": "chetan@example.com",
+      "post": "Event Management"
+    },
+    {
+      "name": "anshul luharkha",
+      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1736320199/yl8hbmcvfrx0uhiyvpn2.jpg",
+      "instagramLink": "https://instagram.com/chetan",
+      "linkedinLink": "https://linkedin.com/in/chetan",
+      "emailLink": "chetan@example.com",
+      "post": "Event Management"
+    }
+  ],
+  "artistandlogistics": [
+    {
+      "name": "Harsh mange",
+      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1736321215/ag3irpo3upzv7hpsaxus.jpg",
+      "instagramLink": "https://instagram.com/chetan",
+      "linkedinLink": "https://linkedin.com/in/chetan",
+      "emailLink": "chetan@example.com",
+      "post": "Artist Management"
+    },
+    {
+      "name": "Navam Garg",
+      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1736321214/owaef8bubyunnowvbufe.jpg",
+      "instagramLink": "https://instagram.com/chetan",
+      "linkedinLink": "https://linkedin.com/in/chetan",
+      "emailLink": "chetan@example.com",
+      "post": "Logistics"
     }
   ]
 }
