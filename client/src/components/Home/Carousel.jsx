@@ -6,9 +6,14 @@ import { motion, AnimatePresence } from "framer-motion";
 // import image4 from "/carouselImages/4.png";
 // import moto from "/moto.png";
 import "../../App.css";
-import logo from "../../assets/images/image.png";
+import logo from "../../assets/images/logo.webp";
 import { Link } from "react-router-dom";
 import CountdownTimer from "./CountdownTimer";
+import heropage from "../../assets/images/heropage.webp";
+import heroESports from "../../assets/images/heroESports.webp";
+import heroSports from "../../assets/images/heroSports.webp";
+import heroPronite from "../../assets/images/heroPronite.webp";
+import img from "../../assets/images/EventsImg.webp";
 import Menu from "./Menu";
 
 function Carousel() {
@@ -17,23 +22,23 @@ function Carousel() {
   const words_images = [
     {
       word: "DESPORTIVOS' 25",
-      image:
-        "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952256/1_qjkggx.png",
+      //image:"https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952256/1_qjkggx.png",
+      image:heropage,
     },
     {
       word: "SPORTS",
-      image:
-        "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952256/2_iun5fj.png",
+      //image:"https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952256/2_iun5fj.png",
+      image:heroSports,
     },
     {
       word: "PRONITE",
-      image:
-        "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952257/3_p2ilnb.png",
+      //image:"https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952257/3_p2ilnb.png",
+      image:heroPronite,
     },
     {
       word: "ESPORTS",
-      image:
-        "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952258/4_a7xisu.png",
+      //image:"https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952258/4_a7xisu.png",
+      image:heroESports,
     },
   ];
 
@@ -110,7 +115,8 @@ function Carousel() {
                   {item.word}
                 </motion.div>
                 <img
-                  src="https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952325/moto_khggbl.png"
+                  // src="https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952325/moto_khggbl.png"
+                  src={img}
                   alt="moto"
                   className="absolute bottom-3 right-4 w-24 lg:bottom-8 lg:right-8 lg:w-36 h-auto"
                 />

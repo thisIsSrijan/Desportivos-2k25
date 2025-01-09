@@ -1,12 +1,30 @@
-import { React} from 'react';
 import {useScroll } from 'framer-motion';
 import StaggeredText from '../Events_compo/StaggeredText';
 import ParallaxImg from '../Events_compo/ParallaxImages';
+import React, { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
+import ParallaxImages from "../Events_compo/ParallaxImages";
+import StaircaseText from "../Events_compo/StaggeredText";
+import Background from "../../assets/images/Background.webp";
+import img from "../../assets/images/EventsImg.webp";
+import img1 from "../../assets/images/Eventsimg1.webp";
+import img2 from "../../assets/images/Eventsimg2.webp";
+import img3 from "../../assets/images/Eventsimg3.webp";
+import img4 from "../../assets/images/Eventsimg4.webp";
+import img5 from "../../assets/images/Eventsimg5.webp";
+import img6 from "../../assets/images/Eventsimg6.webp";
+import img7 from "../../assets/images/Eventsimg7.webp";
+import img8 from "../../assets/images/Eventsimg8.webp";
+import img9 from "../../assets/images/Eventsimg9.webp";
+import img10 from "../../assets/images/Eventsimg10.webp";
+import img11 from "../../assets/images/Eventsimg11.webp";
+
 
 const Events = () => {
   const images = [
     {
-      src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734769347/imgP1_v0he1z.png",
+      // src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734769347/imgP1_v0he1z.png",
+      src:img6,
       alt: "Image 1",
       className:
         "ml-[7vw] sm:ml-[10vw] w-[38%] lg:w-[20rem] h-[220px] xs1-sm:h-[260px] sm:h-[280px] md:h-[350px] lg:h-[450px] ",
@@ -14,69 +32,79 @@ const Events = () => {
        pdfLink: "/Basketball.pdf"
     },
     {
-      src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734807975/imgK1_pujyuq.png",
+      // src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734807975/imgK1_pujyuq.png",
+      src:img1,
       alt: "Image 2",
       className: "ml-[40%] md:ml-[45vw] top-[150px] lg:ml-[60vw] uxl:ml-[70vw] w-[55%] sm:w-[48%] md:w-[50%] xl:w-[28rem] lg:w-[25rem]",
       text: "FUTSAL",
       pdfLink: "/FUTSAL.pdf"
     },
     {
-      src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734769416/imgP2_iy2bg8.png",
+      // src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734769416/imgP2_iy2bg8.png",
+      src:img7,
       alt: "Image 3",
       className: "ml-[10vw] md:ml-[15vw] top-[250px] lg:ml-[20vw] w-[38%] lg:w-[20rem] h-[220px] xs1-sm:h-[260px] sm:h-[280px] md:h-[350px] lg:h-[450px]",
       text: "VOLLEYBALL",
       pdfLink: "/.pdf"
     },
     {
-      src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734807975/imgK2_wktv95.png",
+      // src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734807975/imgK2_wktv95.png",
+      src:img2,
       alt: "Image 4",
       className: "ml-[40%] md:ml-[45vw] top-[400px] lg:ml-[60vw] uxl:ml-[70vw] w-[55%] sm:w-[48%] md:w-[50%]  xl:w-[28rem] lg:w-[25rem]",
       text: "KABADDI",
       pdfLink: "/Kabaddi.pdf"
     },
     {
-      src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734769416/imgP3_jvcaxe.png",
+      // src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734769416/imgP3_jvcaxe.png",
+      src:img8,
       alt: "Image 5",
       className: "ml-[10vw] md:ml-[15vw] top-[500px] lg:ml-[20vw] w-[38%] lg:w-[20rem] h-[220px] xs1-sm:h-[260px] sm:h-[280px] md:h-[350px] lg:h-[450px]",
       text: "LAWN TENNIS",
       pdfLink: "/Lawn Tennis.pdf"
     },
     {
-      src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734807975/imgK3_xokcch.png",
+      // src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734807975/imgK3_xokcch.png",
+      src:img3,
       alt: "Image 6",
       className: "ml-[40%] md:ml-[42vw] lg:ml-[60vw] top-[700px] lg:ml-[10vw] w-[55%] sm:w-[48%] md:w-[55%] xl:w-[28rem] lg:w-[25rem]",
       text: "SQUASH",
       pdfLink: "/SQUASH.pdf"
     },
     {
-      src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734769416/imgP4_k2qzsv.png",
+      // src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734769416/imgP4_k2qzsv.png",
+      src:img9,
       alt: "Image 7",
       className: "ml-[5vw] md:ml-[5vw] top-[800px] lg:ml-[10vw] w-[38%] lg:w-[20rem] xl:w-[20rem] h-[220px] xs1-sm:h-[260px] sm:h-[280px] md:h-[350px] lg:h-[450px]",
       text: "CRICKET",
       pdfLink: "/.pdf"
     },
     {
-      src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734807975/imgK4_q9mubj.png",
+      // src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734807975/imgK4_q9mubj.png",
+      src:img4,
       alt: "Image 8",
       className: "ml-[40%] md:ml-[40vw] top-[900px] lg:ml-[60vw] uxl:ml-[70vw] w-[55%] sm:w-[48%] md:w-[55%] xl:w-[28rem] lg:w-[25rem]",
       text: "CHESS",
       pdfLink: "/Chess.pdf"
     },
     {
-      src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734769416/imgP5_cbfh5s.png",
+      // src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734769416/imgP5_cbfh5s.png",
+      src:img10,
       alt: "Image 9",
       className: "ml-[7vw] md:ml-[10vw] top-[1000px] lg:ml-[10vw] uxl:ml-[10vw] w-[38%] lg:w-[20rem] h-[220px] xs1-sm:h-[260px] sm:h-[280px] md:h-[350px] lg:h-[450px]",
       text: "CARROM",
     },
     {
-      src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734807976/imgK5_yh0olk.png",
+      // src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734807976/imgK5_yh0olk.png",
+      src:img5,
       alt: "Image 10",
       className: "ml-[40%] md:ml-[45vw] top-[1100px] lg:top-[1200px] lg:ml-[60vw] uxl:ml-[70vw] w-[55%] sm:w-[48%] md:w-[50%] lg:w-[25rem]",
       text: "BADMINTON",
       pdfLink: "/Badminton.pdf"
     },
     {
-      src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734769416/imgP6_okvib9.png",
+      // src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734769416/imgP6_okvib9.png",
+      src:img11,
       alt: "Image 11",
       className: "top-[1200px] ml-[10vw]  lg:ml-[10vw] uxl:ml-[10vw] w-[38%] lg:w-[20rem] h-[220px] xs1-sm:h-[260px] sm:h-[280px] md:h-[350px] lg:h-[450px]",
       text: "Football",
@@ -91,7 +119,8 @@ const Events = () => {
       <div
         className="fixed inset-0 w-full h-full"
         style={{
-          backgroundImage: "url('https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952318/Background_qmcxay.png')",
+          // backgroundImage: "url('https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952318/Background_qmcxay.png')",
+          backgroundImage: `url(${Background})`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
@@ -129,7 +158,8 @@ const Events = () => {
 
   <div className="absolute z-10 -bottom-5 md:-bottom-7 md:ml-[10rem] lg:ml-[48rem] lg:-bottom-10">
     <img
-      src="https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952325/moto_khggbl.png"
+      // src="https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952325/moto_khggbl.png"
+      src={img}
       alt="Moto"
       className="mb-[-8px] md:mb-[-10px] lg:mb-[-10px] xl:mb-[-10px] ml-1"
     />
