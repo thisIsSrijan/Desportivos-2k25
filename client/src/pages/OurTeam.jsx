@@ -1,6 +1,7 @@
 import React from "react";
 import Cardcompo from "../components/ourTeam_compo/Cardcompo";
 import TextField from "../components/ourTeam_compo/TextField";
+import Background from "../assets/images/Background.webp";
 import Team from "../../Team.json";
 import DespoFooter from "../components/base/DespoFooter";
 
@@ -16,14 +17,14 @@ const OurTeam = () => {
 
   return (
     <div
-      className=" bg-black bg-contain relative"
+      className="  bg-contain relative"
       style={{
-        backgroundImage:
-          "url('https://res.cloudinary.com/dturzqo8m/image/upload/v1734955828/ijjesgbpw5ky12jqtjqn.svg')",
+        //backgroundImage:"url('https://res.cloudinary.com/dturzqo8m/image/upload/v1734955828/ijjesgbpw5ky12jqtjqn.svg')",
+        backgroundImage: `url(${Background})`
       }}
     >
       {/* Content overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-75"></div>
+      <div className="absolute inset-0  bg-opacity-75"></div>
 
       {/* Content */}
       <div className="relative z-10 px-5">

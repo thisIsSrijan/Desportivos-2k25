@@ -1,6 +1,14 @@
 import React, { useState } from "react";
 import "../../index.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import Background from "../../assets/images/Background.webp"
+import despotext from "../../assets/images/despoText.webp"
+import Ellipse from "../../assets/images/MarqueEllipse.webp"
+import circle from "../../assets/images/circle.webp"
+import umbrella from "../../assets/images/umbrella.webp"
+import star from "../../assets/images/star.webp"
+import triangle from "../../assets/images/triangle.webp"
+import gdg from "../../assets/images/gdg.webp"
 import Marquee from "react-fast-marquee";
 import DespoFooter from "./DespoFooter";
 
@@ -18,7 +26,8 @@ function Footer() {
           </span>
           <img
             className="w-3 h-3 md:w-5 md:h-5"
-            src="https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952175/Ellipse_36_1_usfyas.png"
+            // src="https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952175/Ellipse_36_1_usfyas.png"
+              src={Ellipse}
             alt="dot"
           />
         </div>
@@ -66,11 +75,11 @@ function Footer() {
   };
   return (
     <div
-      className="relative w-full sm:h-[570px] md:h-[660px] lg:h-[890px]  bg-cover bg-center bg-no-repeat overflow-hidden"
+      className="relative w-full sm:h-[570px] md:h-[660px] lg:h-[890px]  bg-cover bg-center bg-no-repeat overflow-hidden py-2"
       style={{
-        backgroundImage:
-          "url('https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952318/Background_qmcxay.png')",
-      }}
+        // backgroundImage:"url('https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952318/Background_qmcxay.png')",
+        backgroundImage: `url(${Background})`,
+            }}
     >
       <div className=" flex flex-col  gap-[8%] mt-4 sm:flex-row sm:px-[5%]">
         <SectionCard
@@ -93,7 +102,6 @@ function Footer() {
           <div className="flex ">{renderTextWithDot()}</div>
         </Marquee>
         <div className="w-full h-[1px] bg-white"></div>
-
         <DespoFooter />
         {/* asd */}
       </div>
