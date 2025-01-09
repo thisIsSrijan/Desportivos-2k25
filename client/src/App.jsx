@@ -14,7 +14,6 @@ import OurTeam from "./pages/OurTeam";
 import Gallery from "./pages/Gallery";
 import Sponsors from "./pages/Sponsors";
 import ErrorPage from "./pages/ErrorPage";
-import DespoFooter from "./components/base/DespoFooter";
 
 const AppContent = () => {
   const location = useLocation();
