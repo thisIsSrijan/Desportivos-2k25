@@ -148,7 +148,7 @@ const Events = () => {
         </div>
 
         <div className="relative">
-          <div className="relative pt-[100vh]">
+          <div className="relative pt-[5vh]">
             {images.map((image, index) => (
               <ParallaxImg key={index} {...image} scrollYProgress={scrollYProgress}  pdfLink={image.pdfLink}/>
             ))}
