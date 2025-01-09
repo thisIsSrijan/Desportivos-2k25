@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion"; // Import Framer Motion
+import Background from "../../assets/images/Background.webp"
 import person from "../../assets/images/aboutperson.svg";
-import aboutus from "../../assets/images/aboutus.jpg";
+import aboutus from "../../assets/images/aboutus.webp";
 import insta from "../../assets/images/instagram.svg";
 import youtube from "../../assets/images/youtube.svg";
 
@@ -45,8 +46,8 @@ function AboutUs() {
     <div
       className="relative bg-black text-white flex flex-col items-center justify-center py-8  bg-cover bg-center bg-no-repeat overflow-hidden"
       style={{
-        backgroundImage:
-          "url('https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952318/Background_qmcxay.png')",
+        // backgroundImage:"url('https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952318/Background_qmcxay.png')",
+        backgroundImage: `url(${Background})`,
       }}
     >
       {/* whileInViewd Heading */}
