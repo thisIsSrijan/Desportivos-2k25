@@ -21,6 +21,7 @@ const AppContent = () => {
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
         <Route path="/ourteam" element={<OurTeam />} />
+        
       </Routes>
       {(location.pathname == "/register" || location.pathname == "/") && (
         <Footer />

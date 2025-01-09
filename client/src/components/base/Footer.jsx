@@ -65,7 +65,7 @@ function Footer() {
   };
   return (
     <div
-      className="relative w-full sm:h-[570px] md:h-[660px] lg:h-[860px]  bg-cover bg-center bg-no-repeat overflow-hidden"
+      className="relative w-full sm:h-[570px] md:h-[660px] lg:h-[890px]  bg-cover bg-center bg-no-repeat overflow-hidden"
       style={{
         backgroundImage:
           "url('https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952318/Background_qmcxay.png')",
