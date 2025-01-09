@@ -2,27 +2,28 @@ import React from "react";
 import Cardcompo from "../components/ourTeam_compo/Cardcompo";
 import TextField from "../components/ourTeam_compo/TextField";
 import Background from "../assets/images/Background.webp";
-import Team from "../../Team.json";
+import logo from "../assets/images/logo.webp";
 import { Link } from "react-router-dom";
-import logo from "../assets/images/image.png";
+
+import teams from "../assets/data/teams";
 
 const OurTeam = () => {
-  const festheaddata = Team.festhead;
-  const sportscouncildata = Team.sportscouncil;
-  const creativeteamdata = Team.creativeteam;
-  const webdevelopmentdata = Team.webdevelopment;
-  const sponsorshipdata = Team.sponsorshipteam;
-  const publicrelationdata = Team.publicrelations;
-  const eventmanagementdata = Team.eventmanagement;
-  const artistandlogisticsdata = Team.artistandlogistics;
-  const uiuxdata = Team.uiux;
+  const festheaddata = teams.festhead;
+  const sportscouncildata = teams.sportscouncil;
+  const creativeteamdata = teams.creativeteam;
+  const webdevelopmentdata = teams.webdevelopment;
+  const sponsorshipdata = teams.sponsorshipteam;
+  const publicrelationdata = teams.publicrelations;
+  const eventmanagementdata = teams.eventmanagement;
+  const artistandlogisticsdata = teams.artistandlogistics;
+  const uiuxdata = teams.uiux;
 
   return (
     <div
       className="  bg-contain relative"
       style={{
         //backgroundImage:"url('https://res.cloudinary.com/dturzqo8m/image/upload/v1734955828/ijjesgbpw5ky12jqtjqn.svg')",
-        backgroundImage: `url(${Background})`
+        backgroundImage: `url(${Background})`,
       }}
     >
       {/* Content overlay */}
@@ -102,19 +103,18 @@ const OurTeam = () => {
                 />
               ))}
             </div>
-            <div className="flex flex-wrap justify-center gap-24">
-              {/* render the rest of people here */}
-              {webdevelopmentdata.slice(2).map((member, index) => (
-                <Cardcompo
-                  key={index}
-                  name={member.name}
-                  imageUrl={member.imageUrl}
-                  instagramLink={member.instagramLink}
-                  linkedinLink={member.linkedinLink}
-                  emailLink={member.emailLink}
-                  post={member.post}
-                />
-              ))}
+            <div className="grid grid-cols-2 sm:grid-cols-3 text-center relative mt-8">
+              {webdevelopmentdata.map(
+                (member, index) =>
+                  !member.post && (
+                    <span
+                      key={index}
+                      className="text-white font-dharma tracking-wide text-[20px]  md:text-[30px] lg:text-[50px]"
+                    >
+                      {member.name}
+                    </span>
+                  )
+              )}
             </div>
           </div>
         </div>
@@ -181,7 +181,7 @@ const OurTeam = () => {
                 !member.post && (
                   <span
                     key={index}
-                    className="text-white font-dharma tracking-wide text-[30px]  md:text-[50px] lg:text-[70px]"
+                    className="text-white font-dharma tracking-wide text-[20px]  md:text-[30px] lg:text-[50px]"
                   >
                     {member.name}
                   </span>

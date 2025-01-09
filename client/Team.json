@@ -265,7 +265,7 @@
     },
     {
       "name": "anshul luharkha",
-      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1736320199/yl8hbmcvfrx0uhiyvpn2.jpg",
+      "imageUrl": "./src/assets/images/Anshul.webp",
       "instagramLink": "https://instagram.com/chetan",
       "linkedinLink": "https://linkedin.com/in/chetan",
       "emailLink": "chetan@example.com",
