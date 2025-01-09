@@ -11,6 +11,9 @@ import Footer from "../src/components/base/Footer";
 import Preloader from "../src/components/loaders/Preloader";
 import RandomLoader from "../src/components/loaders/RandomLoader";
 import OurTeam from "./pages/OurTeam";
+import Gallery from "./pages/Gallery";
+import Sponsors from "./pages/Sponsors";
+import ErrorPage from "./pages/ErrorPage";
 
 const AppContent = () => {
   const location = useLocation();
@@ -21,7 +24,9 @@ const AppContent = () => {
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
         <Route path="/ourteam" element={<OurTeam />} />
-        
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/sponsors" element={<Sponsors />} />
+        <Route path="/*" element={<ErrorPage />} />
       </Routes>
       {(location.pathname == "/register" || location.pathname == "/") && (
         <Footer />

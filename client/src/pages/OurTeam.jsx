@@ -3,6 +3,7 @@ import Cardcompo from "../components/ourTeam_compo/Cardcompo";
 import TextField from "../components/ourTeam_compo/TextField";
 import Background from "../assets/images/Background.webp";
 import Team from "../../Team.json";
+import DespoFooter from "../components/base/DespoFooter";
 
 const OurTeam = () => {
   const festheaddata = Team.festhead;
@@ -10,6 +11,9 @@ const OurTeam = () => {
   const creativeteamdata = Team.creativeteam;
   const webdevelopmentdata = Team.webdevelopment;
   const sponsorshipdata = Team.sponsorshipteam;
+  const publicrelationdata = Team.publicrelations;
+  const eventmanagementdata = Team.eventmanagement;
+  const artistandlogisticsdata = Team.artistandlogistics;
 
   return (
     <div
@@ -62,6 +66,41 @@ const OurTeam = () => {
         </div>
         <div>
           <div className="text-right">
+            <TextField heading="development team" />
+          </div>
+          <div>
+            <div className="flex flex-wrap justify-center gap-24 md:gap-50 mb-24">
+              {/* render only two member here */}
+              {webdevelopmentdata.slice(0, 2).map((member, index) => (
+                <Cardcompo
+                  key={index}
+                  name={member.name}
+                  imageUrl={member.imageUrl}
+                  instagramLink={member.instagramLink}
+                  linkedinLink={member.linkedinLink}
+                  emailLink={member.emailLink}
+                  post={member.post}
+                />
+              ))}
+            </div>
+            <div className="flex flex-wrap justify-center gap-24">
+              {/* render the rest of people here */}
+              {webdevelopmentdata.slice(2).map((member, index) => (
+                <Cardcompo
+                  key={index}
+                  name={member.name}
+                  imageUrl={member.imageUrl}
+                  instagramLink={member.instagramLink}
+                  linkedinLink={member.linkedinLink}
+                  emailLink={member.emailLink}
+                  post={member.post}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+        <div>
+          <div className="text-right">
             <TextField heading="creative team" />
           </div>
           <div>
@@ -95,24 +134,7 @@ const OurTeam = () => {
             </div>
           </div>
         </div>
-        <div>
-          <div>
-            <TextField heading="web development" />
-          </div>
-          <div className="flex flex-wrap justify-center gap-24">
-            {webdevelopmentdata.map((member, index) => (
-              <Cardcompo
-                key={index}
-                name={member.name}
-                imageUrl={member.imageUrl}
-                instagramLink={member.instagramLink}
-                linkedinLink={member.linkedinLink}
-                emailLink={member.emailLink}
-                post={member.post}
-              />
-            ))}
-          </div>
-        </div>
+
         <div>
           <div className="text-right">
             <TextField heading="sponsorship team" />
@@ -131,6 +153,61 @@ const OurTeam = () => {
             ))}
           </div>
         </div>
+        <div>
+          <div>
+            <TextField heading="public relations" />
+          </div>
+          <div className="flex flex-wrap justify-center gap-24">
+            {publicrelationdata.map((member, index) => (
+              <Cardcompo
+                key={index}
+                name={member.name}
+                imageUrl={member.imageUrl}
+                instagramLink={member.instagramLink}
+                linkedinLink={member.linkedinLink}
+                emailLink={member.emailLink}
+                post={member.post}
+              />
+            ))}
+          </div>
+        </div>
+        <div>
+          <div className="text-right">
+            <TextField heading="event management" />
+          </div>
+          <div className="flex flex-wrap justify-center gap-24">
+            {eventmanagementdata.map((member, index) => (
+              <Cardcompo
+                key={index}
+                name={member.name}
+                imageUrl={member.imageUrl}
+                instagramLink={member.instagramLink}
+                linkedinLink={member.linkedinLink}
+                emailLink={member.emailLink}
+                post={member.post}
+              />
+            ))}
+          </div>
+        </div>
+        <div>
+          <div>
+            <TextField heading="artist and logistics team" />
+          </div>
+          <div className="flex flex-wrap justify-center gap-24">
+            {artistandlogisticsdata.map((member, index) => (
+              <Cardcompo
+                key={index}
+                name={member.name}
+                imageUrl={member.imageUrl}
+                instagramLink={member.instagramLink}
+                linkedinLink={member.linkedinLink}
+                emailLink={member.emailLink}
+                post={member.post}
+              />
+            ))}
+          </div>
+        </div>
+        <DespoFooter />
       </div>
     </div>
   );
