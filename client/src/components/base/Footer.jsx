@@ -81,7 +81,7 @@ function Footer() {
         backgroundImage: `url(${Background})`,
             }}
     >
-      <div className=" flex flex-col  gap-[8%] mt-4 sm:flex-row sm:px-[5%]">
+      <div className=" flex flex-col  gap-[8%] mt-10 sm:flex-row sm:px-[5%]">
         <SectionCard
           title="MEET THE TEAM"
           buttonLabel="View team details"

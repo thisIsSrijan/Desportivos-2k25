@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import counter from '../../assets/images/counter.webp';
-
+import {motion} from 'framer-motion';
 
 const CountdownTimer = () => {
   const [days, setDays] = useState(0);
@@ -27,7 +27,11 @@ const CountdownTimer = () => {
   // digits not visible for font dharma on sm devices
 
   return (
-    <div
+    <motion.div
+    initial={{scale:0 }} 
+    whileInView={{ scale: 1 }}
+    transition={{ duration: 0.5, delay: 0.4 }}
+    viewport={{ once: true }}
       className="w-[90.18vw] md:w-[62.18vw] h-[24.88vh] absolute z-20 top-[60vh] md:top-[62vh] 
         grid grid-cols-4 text-white gap-x-8 xxs:gap-x-[6vw]"
     >
@@ -63,7 +67,7 @@ const CountdownTimer = () => {
           </h1>
         </div>
       ))}
-    </div>
+    </motion.div>
   );
 };
 
