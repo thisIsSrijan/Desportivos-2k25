@@ -7,17 +7,17 @@ import ParallaxImages from "../Events_compo/ParallaxImages";
 import StaircaseText from "../Events_compo/StaggeredText";
 import Background from "../../assets/images/Background.webp";
 import img from "../../assets/images/EventsImg.webp";
-import img1 from "../../assets/images/EventsImg1.webp";
-import img2 from "../../assets/images/EventsImg2.webp";
-import img3 from "../../assets/images/EventsImg3.webp";
-import img4 from "../../assets/images/EventsImg4.webp";
-import img5 from "../../assets/images/EventsImg5.webp";
-import img6 from "../../assets/images/EventsImg6.webp";
-import img7 from "../../assets/images/EventsImg7.webp";
-import img8 from "../../assets/images/EventsImg8.webp";
-import img9 from "../../assets/images/EventsImg9.webp";
-import img10 from "../../assets/images/EventsImg10.webp";
-import img11 from "../../assets/images/EventsImg11.webp";
+import img1 from "../../assets/images/Eventsimg1.webp";
+import img2 from "../../assets/images/Eventsimg2.webp";
+import img3 from "../../assets/images/Eventsimg3.webp";
+import img4 from "../../assets/images/Eventsimg4.webp";
+import img5 from "../../assets/images/Eventsimg5.webp";
+import img6 from "../../assets/images/Eventsimg6.webp";
+import img7 from "../../assets/images/Eventsimg7.webp";
+import img8 from "../../assets/images/Eventsimg8.webp";
+import img9 from "../../assets/images/Eventsimg9.webp";
+import img10 from "../../assets/images/Eventsimg10.webp";
+import img11 from "../../assets/images/Eventsimg11.webp";
 
 
 const Events = () => {
