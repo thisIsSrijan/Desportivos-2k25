@@ -2,6 +2,7 @@ import React from "react";
 import Cardcompo from "../components/ourTeam_compo/Cardcompo";
 import TextField from "../components/ourTeam_compo/TextField";
 import Team from "../../Team.json";
+import DespoFooter from "../components/base/DespoFooter";
 
 const OurTeam = () => {
   const festheaddata = Team.festhead;
@@ -64,7 +65,7 @@ const OurTeam = () => {
         </div>
         <div>
           <div className="text-right">
-            <TextField heading="web development team" />
+            <TextField heading="development team" />
           </div>
           <div>
             <div className="flex flex-wrap justify-center gap-24 md:gap-50 mb-24">
@@ -205,6 +206,7 @@ const OurTeam = () => {
             ))}
           </div>
         </div>
+        <DespoFooter />
       </div>
     </div>
   );

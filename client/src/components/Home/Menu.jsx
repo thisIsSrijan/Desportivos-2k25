@@ -14,6 +14,7 @@ const Menu = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [dynamicWidth, setDynamicWidth] = useState(130);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isTriangle, setIsTriangle] = useState(false);
   const menuRef = useRef(null);
 
   const handleMouseEnter = () => {
@@ -26,6 +27,7 @@ const Menu = () => {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+    setIsTriangle(!isTriangle);
   };
 
   const handleClickOutside = (e) => {
@@ -85,19 +87,44 @@ const Menu = () => {
 
       {/* Hamburger Menu for Small Screens */}
       <div
-        className="md:hidden w-screen flex justify-end absolute right-0 top-10 sm:top-20 px-2 text-xs sm:text-sm z-50"
+        className="md:hidden w-screen flex justify-end absolute right-0 top-8 sm:top-[4.8rem] px-2 text-xs sm:text-sm z-50"
         ref={menuRef}
       >
         {/* Hamburger Icon */}
         <button
-          className="p-1 px-1 absolute backdrop-blur-md border-2 border-[#F85B02] shadow-[2px_1.5px_13px_#F85B02] rounded-lg text-white focus:outline-none"
+          className="p-1 mr-3 px-1 absolute backdrop-blur-md border-2 border-[#F85B02] shadow-[2px_1.5px_13px_#F85B02] rounded-lg text-white focus:outline-none"
           onClick={toggleMenu}
         >
-          {isMenuOpen ? (
-            <i className="bi bi-x-lg" style={{ fontSize: "25px" }}></i>
-          ) : (
-            <i className="bi bi-list" style={{ fontSize: "25px" }}></i>
-          )}
+          <div
+            onClick={toggleMenu}
+            className="relative flex h-[30px] w-[30px] cursor-pointer items-center justify-center"
+          >
+            <div
+              className={`relative flex flex-col items-center justify-between h-[30px] w-[30px] transform transition-transform duration-500 ${
+                isTriangle ? "-translate-y-1" : ""
+              }`}
+            >
+              <span
+                className={`h-[4px] w-[24px] bg-white rounded-sm transition-all duration-500 ${
+                  isTriangle
+                    ? "rotate-[60deg] translate-x-[5px] translate-y-[17px]"
+                    : ""
+                }`}
+              ></span>
+              <span
+                className={`h-[4px] w-[24px] bg-white rounded-sm transition-all duration-500 ${
+                  isTriangle
+                    ? "rotate-[-60deg] -translate-x-[5.5px] translate-y-1"
+                    : ""
+                }`}
+              ></span>
+              <span
+                className={`h-[4px] w-[24px] bg-white rounded-sm transition-all duration-500 ${
+                  isTriangle ? "" : ""
+                }`}
+              ></span>
+            </div>
+          </div>
         </button>
 
         {/* Dropdown Menu */}
