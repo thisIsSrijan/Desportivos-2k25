@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
+import { delay, motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const scrollToAboutUs = (e) => {
@@ -53,12 +53,14 @@ const Menu = () => {
       >
         <motion.div
           className="flex items-center justify-center backdrop-blur-md border-2 border-[#F85B02] shadow-[2px_1.5px_13px_#F85B02] rounded-lg text-white font-bold text-xl h-full px-5"
-          initial={false}
+          initial={{ y: 100 }}
           animate={{
+            y: 0,
             opacity: 1,
             width: isHovered ? 650 : 130,
           }}
           transition={{
+            y: { duration: 0.5, delay: 0.4 },
             opacity: { duration: 1, ease: "easeInOut" },
             width: { duration: 0.4, ease: "easeInOut" },
           }}
