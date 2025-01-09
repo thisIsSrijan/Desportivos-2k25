@@ -1,6 +1,8 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
+
+
 const ParallaxImg = ({ className, alt, src, text, pdfLink }) => {
   const ref = useRef(null);
 

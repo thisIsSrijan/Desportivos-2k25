@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-import xImage from "../../assets/images/x.png";
-import zImage from "../../assets/images/0.png";
-import tImage from "../../assets/images/tri.png";
-import sqImage from "../../assets/images/squ.png";
-import sp1 from "../../assets/images/sp1.png";
-import sp2 from "../../assets/images/sp2.png";
-import sp3 from "../../assets/images/sp3.png";
-import sp4 from "../../assets/images/sp4.png";
+import Background from "../../assets/images/Background.webp"
+import xImage from "../../assets/images/x.webp";
+import zImage from "../../assets/images/0.webp";
+import tImage from "../../assets/images/tri.webp";
+import sqImage from "../../assets/images/squ.webp";
+import sp1 from "../../assets/images/sp1.webp";
+import sp2 from "../../assets/images/sp2.webp";
+import sp3 from "../../assets/images/sp3.webp";
+import sp4 from "../../assets/images/sp4.webp";
 import contentData from "../../assets/data/aboutData";
 import { motion } from "framer-motion";
 
@@ -61,19 +62,12 @@ const Sports = () => {
     <div
       className="h-screen  w-full bg-cover bg-center overflow-hidden relative"
       style={{
-        backgroundImage:
-          "url('https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952318/Background_qmcxay.png')",
+        // backgroundImage:"url('https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952318/Background_qmcxay.png')",
+        backgroundImage: `url(${Background})`,
         minHeight: "100vh",
       }}
     >
       {/* Left section */}
-      {/* <motion.div
-      className="z-0 w-full md:w-1/2 h-full flex flex-row bg-cover bg-no-repeat absolute left-0"
-      initial={{ opacity: 0, x: -100 }} // Start from off-screen bottom
-      whileInView={{ opacity: 1, x: 0}} // Slide and scale into view
-      transition={{ duration: 2 }} // Smooth and quick animation
-      // viewport={{ once: true }} // Ensures the animation plays only once when in view
-    > */}
       <div className="z-0 w-full md:w-1/2 h-full flex flex-row bg-cover bg-no-repeat absolute left-0">
 
        {/* image1 */}
@@ -91,6 +85,7 @@ const Sports = () => {
   // animate={{ opacity: 1, x: 0 }} // Slide in and become visible
   whileInView={{  x: 0}} // S
   transition={{ duration: 1,delay:0.6 }} // Smooth animation
+  viewport={{once:true}}
 >
   <div
     className={` absolute w-[47.3vw] md:w-[28.2vw] aspect-[0.73] -left-[2vw] bottom-0 bg-no-repeat  ${
@@ -123,6 +118,7 @@ const Sports = () => {
   // animate={{ opacity: 1, x: 0 }} // Slide in and become visible
   whileInView={{  x: 0}} // S
   transition={{ duration: 1,delay:0.4 }}
+  viewport={{once:true}}
         >
           <div
             className={` absolute aspect-[0.73] w-[42vw] md:w-[21.5vw] -left-[16vw] md:-left-[2vw] -bottom-[12vw] md:-bottom-[6vw] bg-no-repeat  ${
@@ -151,6 +147,7 @@ const Sports = () => {
           // animate={{ opacity: 1, x: 0 }} // Slide in and become visible
           whileInView={{  x: 0}} // S
           transition={{ duration: 1,delay:0.2 }}
+          viewport={{once:true}}
         >
           <div
             className={` absolute bg-no-repeat  aspect-[0.67] w-[41vw] md:w-[22.5vw] -left-[6vw] md:-left-[3vw] -bottom-[0.4vw] ${
@@ -180,6 +177,7 @@ const Sports = () => {
           // animate={{ opacity: 1, x: 0 }} // Slide in and become visible
           whileInView={{  x: 0}} // S
           transition={{ duration: 1,delay:0 }}
+          viewport={{once:true}}
         >
           <div
             className={` absolute aspect-[0.8] md:w-[24vw]  w-[42vw] -bottom-[3vw] md:-bottom-[2vw] -left-[5vw]   bg-no-repeat  ${
@@ -192,42 +190,34 @@ const Sports = () => {
           ></div>
         </motion.div>
             
-      {/* </motion.div> */}
       </div>
             {/* Right section */}
-          {/* <div className="z-10 h-full w-full md:w-1/2  flex flex-col items-center justify-center " > */}
-          {/* <motion.div
-  className="z-10 h-full w-full md:w-1/2 flex flex-col items-center justify-center"
-  initial={{ opacity: 0, x: 100 }} // Start from off-screen right
-  whileInView={{ opacity: 1, x: 0 }} // Slide into view
-  transition={{ duration: 2 }} // Smooth animation
-> */}
   <div
-        className="z-10 h-full w-full md:w-1/2 flex flex-col items-center justify-center"
-        
-      >
+        className="z-10 h-full w-full md:w-1/2 flex flex-col items-center justify-center">
                 {selectedContent && (
                     <div className=' flex flex-col'>
                         <motion.h2 className='  flex justify-center  font-dharma font-extrabold text-[30.88vw] md:text-[9.92vw]   relative top-[-35vh] md:top-[-28vh] lg:top-[-30vh]  md:left-[47.39vw] leading-[9.51vw] tracking-wide' 
                           style={{ color: selectedContent.color }}
                           key={activeImage} // Unique key triggers re-mount for animation
-        variants={animationVariants}
-        initial="hidden"
-        animate="visible"
-        exit="exit"
-        transition={{ duration: 0.5 }}
-                          >
+                          initial={{  x: 100 }} // Start slightly off-screen to the left
+                          whileInView={{  x: 0}} // S
+                          animate="visible"
+                          exit="exit"
+                          transition={{ duration: 1,delay:0 }} // Smooth animation
+                          viewport={{once:true}}
+        >
                           {selectedContent.title}
                         </motion.h2>
 
                         <div className='flex flex-col gap-y-2 md:gap-y-4 xl:gap-y-10  w-[94.99vw] sm:w-[85.45vw] md:w-[34.99vw] absolute top-[27.37vh] md:top-[31.75vh] lg:top-[35.5vh] xl:top-[45vh] uxl:top-[38vh] left-[3.05vw] sm:left-[7vw]  md:left-[57.21vw] text-center'>
                             <motion.div
                             key={activeImage} // Unique key triggers re-mount for animation
-                            variants={animationVariants}
-                            initial="hidden"
+                            initial={{  x: 100 }} // Start slightly off-screen to the left
+                            whileInView={{  x: 0}} // S
                             animate="visible"
                             exit="exit"
-                            transition={{ duration: 0.5 }}
+                            transition={{ duration: 1,delay:0 }} // Smooth animation
+                            viewport={{once:true}}
                             >
                               <p className='lg:w-[34.2vw] uxl:w-[30vw]  text-white  text-center  md:text-left  text-sm sm:text-lg md:text-[1.7vw] lg:text-base xl:text-lg  leading-relaxed  '>{selectedContent.description}</p><br/>
                               <p className='lg:w-[34.2vw] uxl:w-[30vw] text-white text-center   md:text-left text-sm sm:text-lg md:text-[1.7vw] lg:text-base xl:text-lg  leading-relaxed'>{selectedContent.description2}</p>
@@ -247,10 +237,6 @@ const Sports = () => {
                         
                     </div>
                 )}
-
-
-                
-              {/* </div> */}
       </div>
       </div>
 

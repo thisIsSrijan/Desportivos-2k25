@@ -1,5 +1,5 @@
 import React from "react";
-
+import cardimg from "../../assets/images/cardImg.webp";
 const CardCompo = ({
   name,
   post,
@@ -13,7 +13,8 @@ const CardCompo = ({
       {/* Geometric Background */}
       <div className="absolute inset-0 ">
         <img
-          src="https://res.cloudinary.com/dturzqo8m/image/upload/v1734959025/mj6bfq3aevupbrc6gkhr.jpg"
+          //src="https://res.cloudinary.com/dturzqo8m/image/upload/v1734959025/mj6bfq3aevupbrc6gkhr.jpg"
+          src={cardimg}
           alt=""
         />
       </div>

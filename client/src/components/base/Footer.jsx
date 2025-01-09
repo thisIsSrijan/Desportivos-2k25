@@ -1,6 +1,14 @@
 import React, { useState } from "react";
 import "../../index.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import Background from "../../assets/images/Background.webp"
+import despotext from "../../assets/images/despoText.webp"
+import Ellipse from "../../assets/images/MarqueEllipse.webp"
+import circle from "../../assets/images/circle.webp"
+import umbrella from "../../assets/images/umbrella.webp"
+import star from "../../assets/images/star.webp"
+import triangle from "../../assets/images/triangle.webp"
+import gdg from "../../assets/images/gdg.webp"
 import Marquee from "react-fast-marquee";
 
 function Footer() {
@@ -17,7 +25,8 @@ function Footer() {
           </span>
           <img
             className="w-3 h-3 md:w-5 md:h-5"
-            src="https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952175/Ellipse_36_1_usfyas.png"
+            // src="https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952175/Ellipse_36_1_usfyas.png"
+              src={Ellipse}
             alt="dot"
           />
         </div>
@@ -65,11 +74,11 @@ function Footer() {
   };
   return (
     <div
-      className="relative w-full sm:h-[570px] md:h-[660px] lg:h-[890px]  bg-cover bg-center bg-no-repeat overflow-hidden"
+      className="relative w-full sm:h-[570px] md:h-[660px] lg:h-[890px]  bg-cover bg-center bg-no-repeat overflow-hidden py-2"
       style={{
-        backgroundImage:
-          "url('https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952318/Background_qmcxay.png')",
-      }}
+        // backgroundImage:"url('https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952318/Background_qmcxay.png')",
+        backgroundImage: `url(${Background})`,
+            }}
     >
       <div className=" flex flex-col  gap-[8%] mt-4 sm:flex-row sm:px-[5%]">
         <SectionCard
@@ -96,12 +105,14 @@ function Footer() {
         <div className="w-[97%] mx-auto rounded-xl md:rounded-3xl pt-2 mt-[1.8rem] sm:mt-[2rem] md:mt-[2.5rem] lg:mt-[3rem] h-[210px] sm:h-[220px] md:h-[300px] lg:h-[400px] bg-despobackground py-1 px-5 sm:px-6 sm:py-3 ">
           <div className="flex justify-between items-center ">
             <img
-              src="https://res.cloudinary.com/dturzqo8m/image/upload/v1734869208/k2evaihskut0tq3a5rfy.svg"
+              // src="https://res.cloudinary.com/dturzqo8m/image/upload/v1734869208/k2evaihskut0tq3a5rfy.svg"
+              src={circle}
               alt="circle"
               className="size-4 sm:size-7 md:size-10 "
             />
             <img
-              src="https://res.cloudinary.com/dturzqo8m/image/upload/v1734869209/pjwdq9xxxekcen8eyk81.svg"
+              // src="https://res.cloudinary.com/dturzqo8m/image/upload/v1734869209/pjwdq9xxxekcen8eyk81.svg"
+              src={umbrella}
               alt=""
               className="size-4 sm:size-7 md:size-10 "
             />
@@ -181,7 +192,8 @@ function Footer() {
             <div className="flex justify-center grow ">
               <img
                 className=" sm:w-[260px] sm:h-[100px] md:h-[180px] md:w-[450px] lg:w-[600px] lg:h-[300px] relative lg:right-10 right-2 sm:right-5"
-                src="https://res.cloudinary.com/dturzqo8m/image/upload/v1734868921/aqzis54jpex2rqpy9ev5.svg"
+                 //src="https://res.cloudinary.com/dturzqo8m/image/upload/v1734868921/aqzis54jpex2rqpy9ev5.svg"
+                 src={despotext}
                 alt="Desportivos Text"
               />
             </div>
@@ -225,7 +237,8 @@ function Footer() {
 
           <div className="flex justify-between items-center">
             <img
-              src="https://res.cloudinary.com/dturzqo8m/image/upload/v1734869208/vdcblcmhh4b4dlchkavc.svg"
+              //src="https://res.cloudinary.com/dturzqo8m/image/upload/v1734869208/vdcblcmhh4b4dlchkavc.svg"
+              src={star}
               alt=""
               className="size-4 sm:size-7 md:size-10 lg:size-10"
             />
@@ -235,7 +248,8 @@ function Footer() {
               </p>
             </div>
             <img
-              src="https://res.cloudinary.com/dturzqo8m/image/upload/v1734869209/zuqyfl9bhzydpfol9bek.svg"
+              //src="https://res.cloudinary.com/dturzqo8m/image/upload/v1734869209/zuqyfl9bhzydpfol9bek.svg"
+              src={triangle}
               alt=""
               className="size-4 sm:size-7 md:size-10 lg:size-10"
             />
@@ -253,7 +267,8 @@ function Footer() {
         >
           <p className="font-poppins text-[7px] sm:text-[8px] md:text-[10px] lg:text-[13px] xl:text-[17px] font-normal tracking-[0.16em] text-center">
             <img
-              src="https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734027212/transparentgdg_jymiok.png"
+              // src="https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734027212/transparentgdg_jymiok.png"
+              src={gdg}
               alt="GDG logo"
               className="inline-block w-8 h-8 mr-3"
             />
