@@ -62,6 +62,7 @@ export default {
         customBreakpoint: "400px",
         uxl: "1500px",
         custom: { min: "576px", max: "767.5px" },
+        
       },
     },
   },

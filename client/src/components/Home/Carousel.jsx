@@ -108,7 +108,7 @@ function Carousel() {
                     duration: 0.6,
                     ease: "easeInOut",
                   }}
-                  className={`absolute text-8xl lg:text-[12rem] tracking-wider text-center select-none z-10 ${
+                  className={`absolute text-8xl lg:text-[10rem] tracking-wider text-center select-none z-10 ${
                     index % 2 === 1 ? "text-[#F85B02]" : "text-white"
                   } dharma-gothic-c`}
                 >
