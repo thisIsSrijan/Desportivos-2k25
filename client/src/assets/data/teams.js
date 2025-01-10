@@ -107,10 +107,13 @@ const teams = {
       name: "Priyal Maheshwari",
     },
     {
+      name: "Raghav Khandelwal",
+    },
+    {
       name: "Parth Pandey",
     },
     {
-      name: "Aryan dadhich",
+      name: "Aryan Dadhich",
     },
     {
       name: "Kushank",
@@ -123,9 +126,6 @@ const teams = {
     },
     {
       name: "Aabhas",
-    },
-    {
-      name: "Raghav Khandelwal",
     },
     {
       name: "Karan",
@@ -175,10 +175,10 @@ const teams = {
       name: "Manav Desai",
     },
     {
-      name: "Ritigya gupta",
+      name: "Ritigya Gupta",
     },
     {
-      name: "Vanshika thadani",
+      name: "Vanshika Thadani",
     },
   ],
   creativeteam: [

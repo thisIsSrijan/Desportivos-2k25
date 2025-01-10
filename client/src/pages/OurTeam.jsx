@@ -103,13 +103,13 @@ const OurTeam = () => {
                 />
               ))}
             </div>
-            <div className="grid grid-cols-2 sm:grid-cols-3 text-center relative mt-8">
+            <div className="w-10/12 mx-auto grid grid-cols-2 sm:grid-cols-3 text-center relative mt-8">
               {webdevelopmentdata.map(
                 (member, index) =>
                   !member.post && (
                     <span
                       key={index}
-                      className="text-white font-dharma tracking-wide text-[20px]  md:text-[30px] lg:text-[50px]"
+                      className="text-white font-dharma font-light tracking-wide text-[40px] md:text-[30px] lg:text-[60px]"
                     >
                       {member.name}
                     </span>
@@ -175,16 +175,16 @@ const OurTeam = () => {
               )
             )}
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 text-center relative mt-10">
+          <div className="w-10/12 mx-auto grid grid-cols-2 sm:grid-cols-3 text-center relative mt-10">
             {sponsorshipdata.map(
               (member, index) =>
                 !member.post && (
-                  <span
+                  <div
                     key={index}
-                    className="text-white font-dharma tracking-wide text-[20px]  md:text-[30px] lg:text-[50px]"
+                    className="text-white font-dharma font-light tracking-wide text-[35px] md:text-[40px] lg:text-[60px]"
                   >
                     {member.name}
-                  </span>
+                  </div>
                 )
             )}
           </div>
