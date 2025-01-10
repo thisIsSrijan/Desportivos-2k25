@@ -81,6 +81,51 @@
       "linkedinLink": "https://linkedin.com/in/aditya",
       "emailLink": "aditya@example.com",
       "post": "Sponsorship Team"
+    },
+    {
+      "name": "Priyal Maheshwari"
+    },
+    {
+      "name": "Parth Pandey"
+    },
+    {
+      "name": "Aryan dadhich"
+    },
+    {
+      "name": "Kushank"
+    },
+    {
+      "name": "Bhavy"
+    },
+    {
+      "name": "Rajat"
+    },
+    {
+      "name": "Aabhas"
+    },
+    {
+      "name": "Raghav Khandelwal"
+    },
+    {
+      "name": "Karan"
+    },
+    {
+      "name": "Pulkit"
+    },
+    {
+      "name": "Aniket"
+    },
+    {
+      "name": "Abhinandan"
+    },
+    {
+      "name": "Sai"
+    },
+    {
+      "name": "Yash"
+    },
+    {
+      "name": "Nalin Chandola"
     }
   ],
   "webdevelopment": [
@@ -157,22 +202,6 @@
       "linkedinLink": "https://linkedin.com/in/aditya",
       "emailLink": "aditya@example.com",
       "post": "Creative Team"
-    },
-    {
-      "name": "Arihant Bhura",
-      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1736321571/lrowf05icftduxw1k1jc.jpg",
-      "instagramLink": "https://instagram.com/aditya",
-      "linkedinLink": "https://linkedin.com/in/aditya",
-      "emailLink": "aditya@example.com",
-      "post": "Creative Team"
-    },
-    {
-      "name": "eeshan singh",
-      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1736321571/wkreohj8lfwqvjwzkrda.jpg",
-      "instagramLink": "https://instagram.com/aditya",
-      "linkedinLink": "https://linkedin.com/in/aditya",
-      "emailLink": "aditya@example.com",
-      "post": "Creative Team"
     }
   ],
   "publicrelations": [
@@ -236,7 +265,7 @@
     },
     {
       "name": "anshul luharkha",
-      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1736320199/yl8hbmcvfrx0uhiyvpn2.jpg",
+      "imageUrl": "./src/assets/images/Anshul.webp",
       "instagramLink": "https://instagram.com/chetan",
       "linkedinLink": "https://linkedin.com/in/chetan",
       "emailLink": "chetan@example.com",
@@ -259,6 +288,16 @@
       "linkedinLink": "https://linkedin.com/in/chetan",
       "emailLink": "chetan@example.com",
       "post": "Logistics"
+    }
+  ],
+  "uiux": [
+    {
+      "name": "Paras Jain",
+      "imageUrl": "https://res.cloudinary.com/dturzqo8m/image/upload/v1734953575/cvggow7lr0qy0r1rwl6k.png",
+      "instagramLink": "https://instagram.com/aditya",
+      "linkedinLink": "https://linkedin.com/in/aditya",
+      "emailLink": "aditya@example.com",
+      "post": "Lead Designer"
     }
   ]
 }
