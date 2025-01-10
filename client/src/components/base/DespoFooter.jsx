@@ -193,7 +193,7 @@ const DespoFooter = () => {
         </div>
       </div>
       <div
-        className="z-10 text-white h-auto mt-1 sm:mt-2 md:mt-0 lg:mt-3 w-full flex justify-center items-center"
+        className="z-10 text-white h-auto mt-1 sm:mt-3 md:mt-0 lg:mt-3 w-full flex justify-center items-center"
         style={{ backgroundSize: "cover", backgroundPosition: "center" }}
       >
         <a

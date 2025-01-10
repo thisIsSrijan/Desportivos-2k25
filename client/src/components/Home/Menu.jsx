@@ -33,6 +33,7 @@ const Menu = () => {
   const handleClickOutside = (e) => {
     if (menuRef.current && !menuRef.current.contains(e.target)) {
       setIsMenuOpen(false);
+      setIsTriangle(false);
     }
   };
 
@@ -89,7 +90,7 @@ const Menu = () => {
 
       {/* Hamburger Menu for Small Screens */}
       <div
-        className="md:hidden w-screen flex justify-end absolute right-0 top-8 sm:top-[4.8rem] px-2 text-xs sm:text-sm z-50"
+        className="md:hidden w-screen flex justify-end absolute right-0 top-7 sm:top-[4.8rem] px-2 text-xs sm:text-sm z-50"
         ref={menuRef}
       >
         {/* Hamburger Icon */}
@@ -99,7 +100,7 @@ const Menu = () => {
         >
           <div
             onClick={toggleMenu}
-            className="relative flex h-[30px] w-[30px] cursor-pointer items-center justify-center"
+            className="relative flex h-[35px] w-[35px] cursor-pointer items-center justify-center"
           >
             <div
               className={`relative flex flex-col items-center justify-between h-[30px] w-[30px] transform transition-transform duration-500 ${

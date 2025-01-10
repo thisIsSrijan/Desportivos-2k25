@@ -156,7 +156,7 @@ const Events = () => {
     JOIN US.
   </p>
 
-  <div className="absolute z-10 -bottom-5 md:-bottom-7 md:ml-[10rem] lg:ml-[48rem] lg:-bottom-10">
+  <div className="absolute z-10 -bottom-5  md:ml-[10rem] lg:ml-[48rem]">
     <img
       // src="https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952325/moto_khggbl.png"
       src={img}
