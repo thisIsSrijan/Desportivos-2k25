@@ -12,7 +12,7 @@ const scrollToAboutUs = (e) => {
 const DespoFooter = () => {
   return (
     <div>
-      <div className="w-[97%] mx-auto rounded-xl md:rounded-3xl pt-2 mt-[1.8rem] sm:mt-[2rem] md:mt-[2.5rem] lg:mt-[2rem] h-[210px] sm:h-[220px] md:h-[300px] lg:h-[400px] bg-despobackground py-1 px-5 sm:px-6 sm:py-3 ">
+      <div className="w-[97%] mx-auto rounded-xl md:rounded-3xl pt-2 mt-[1.8rem] sm:mt-[2rem] lg:mt-[2rem] h-[210px] sm:h-[220px] md:h-[300px] lg:h-[400px] bg-despobackground py-1 px-5 sm:px-6 sm:py-3 ">
         <div className="flex justify-between items-center ">
           <img
             src="https://res.cloudinary.com/dturzqo8m/image/upload/v1734869208/k2evaihskut0tq3a5rfy.svg"
@@ -193,7 +193,7 @@ const DespoFooter = () => {
         </div>
       </div>
       <div
-        className="z-10 text-white h-auto sm:mt-2 lg:mt-5  w-full flex justify-center items-center"
+        className="z-10 text-white h-auto mt-1 sm:mt-2 md:mt-0 lg:mt-3 w-full flex justify-center items-center"
         style={{ backgroundSize: "cover", backgroundPosition: "center" }}
       >
         <a
@@ -201,11 +201,11 @@ const DespoFooter = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <p className="font-poppins text-[7px] sm:text-[8px] md:text-[10px] lg:text-[13px] xl:text-[17px] font-normal tracking-[0.16em] text-center">
+          <p className="font-poppins text-[8px] md:text-[10px] lg:text-[17px] font-normal tracking-[0.16em] text-center">
             <img
               src="https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734027212/transparentgdg_jymiok.png"
               alt="GDG logo"
-              className="inline-block w-8 h-8 mr-3"
+              className="inline-block w-7 h-7 md:w-9 md:h-9 mr-2"
             />
             Developed by GDG on Campus, LNMIIT
           </p>
