@@ -43,7 +43,7 @@ const teams = {
       instagramLink: "https://instagram.com/chetan",
       linkedinLink: "https://linkedin.com/in/chetan",
       emailLink: "chetan@example.com",
-      post: "GSEC",
+      post: "General Secretary",
     },
     {
       name: "Rishika Parashar",
@@ -51,7 +51,7 @@ const teams = {
       instagramLink: "https://instagram.com/aditya",
       linkedinLink: "https://linkedin.com/in/aditya",
       emailLink: "aditya@example.com",
-      post: "AGSEC",
+      post: "Associate General Secretary",
     },
     {
       name: "Shivin Goel",
@@ -59,7 +59,7 @@ const teams = {
       instagramLink: "https://instagram.com/aditya",
       linkedinLink: "https://linkedin.com/in/aditya",
       emailLink: "aditya@example.com",
-      post: "FC",
+      post: "Financy Convener",
     },
   ],
   sponsorshipteam: [
@@ -69,7 +69,7 @@ const teams = {
       instagramLink: "https://instagram.com/chetan",
       linkedinLink: "https://linkedin.com/in/chetan",
       emailLink: "chetan@example.com",
-      post: "Sponsorship Team",
+      post: "Sponsorship Head",
     },
     {
       name: "Burhan Vora",
@@ -77,7 +77,7 @@ const teams = {
       instagramLink: "https://instagram.com/chetan",
       linkedinLink: "https://linkedin.com/in/chetan",
       emailLink: "chetan@example.com",
-      post: "Sponsorship Team",
+      post: "Sponsorship Head",
     },
     {
       name: "Lakshay Mittal",
@@ -85,7 +85,7 @@ const teams = {
       instagramLink: "https://instagram.com/aditya",
       linkedinLink: "https://linkedin.com/in/aditya",
       emailLink: "aditya@example.com",
-      post: "Sponsorship Team",
+      post: "Sponsorship Head",
     },
     {
       name: "Kalash Jain",
@@ -93,7 +93,7 @@ const teams = {
       instagramLink: "https://instagram.com/aditya",
       linkedinLink: "https://linkedin.com/in/aditya",
       emailLink: "aditya@example.com",
-      post: "Sponsorship Team",
+      post: "Sponsorship Head",
     },
     {
       name: "Mridul Sharma",
@@ -101,7 +101,7 @@ const teams = {
       instagramLink: "https://instagram.com/aditya",
       linkedinLink: "https://linkedin.com/in/aditya",
       emailLink: "aditya@example.com",
-      post: "Sponsorship Team",
+      post: "Sponsorship Head",
     },
     {
       name: "Priyal Maheshwari",
@@ -157,7 +157,7 @@ const teams = {
       instagramLink: "https://instagram.com/aditya",
       linkedinLink: "https://linkedin.com/in/aditya",
       emailLink: "aditya@example.com",
-      post: "Web Development",
+      post: "Development Head",
     },
     {
       name: "Krishna khattri",
@@ -166,7 +166,7 @@ const teams = {
       instagramLink: "https://instagram.com/chetan",
       linkedinLink: "https://linkedin.com/in/chetan",
       emailLink: "chetan@example.com",
-      post: "Web Development",
+      post: "Development Head",
     },
     {
       name: "Aditya Bajpayee",
@@ -189,7 +189,7 @@ const teams = {
       instagramLink: "https://instagram.com/aditya",
       linkedinLink: "https://linkedin.com/in/aditya",
       emailLink: "aditya@example.com",
-      post: "Creative Team",
+      post: "Creative Head",
     },
     {
       name: "eesan yadav",
@@ -197,7 +197,7 @@ const teams = {
       instagramLink: "https://instagram.com/chetan",
       linkedinLink: "https://linkedin.com/in/chetan",
       emailLink: "chetan@example.com",
-      post: "Creative Team",
+      post: "Creative Head",
     },
     {
       name: "Harshit manchanda",
@@ -206,7 +206,7 @@ const teams = {
       instagramLink: "https://instagram.com/aditya",
       linkedinLink: "https://linkedin.com/in/aditya",
       emailLink: "aditya@example.com",
-      post: "Creative Team",
+      post: "Creative Head",
     },
     { name: "Arihant Bhura" },
     { name: "Eeshan Singh" },
@@ -221,7 +221,7 @@ const teams = {
       instagramLink: "https://instagram.com/chetan",
       linkedinLink: "https://linkedin.com/in/chetan",
       emailLink: "chetan@example.com",
-      post: "Public Relations",
+      post: "Public Relations Head",
     },
     {
       name: "rajat satonkar",
@@ -229,7 +229,7 @@ const teams = {
       instagramLink: "https://instagram.com/chetan",
       linkedinLink: "https://linkedin.com/in/chetan",
       emailLink: "chetan@example.com",
-      post: "Public Relations",
+      post: "Public Relations Head",
     },
     {
       name: "shreyansh singh",
@@ -237,7 +237,7 @@ const teams = {
       instagramLink: "https://instagram.com/chetan",
       linkedinLink: "https://linkedin.com/in/chetan",
       emailLink: "chetan@example.com",
-      post: "Public Relations",
+      post: "Public Relations Head",
     },
     {
       name: "hemandra yaduvanshi",
@@ -245,7 +245,7 @@ const teams = {
       instagramLink: "https://instagram.com/chetan",
       linkedinLink: "https://linkedin.com/in/chetan",
       emailLink: "chetan@example.com",
-      post: "Public Relations",
+      post: "Public Relations Head",
     },
     { name: "Savitur Chauhan" },
     { name: "Kavish Jain" },
