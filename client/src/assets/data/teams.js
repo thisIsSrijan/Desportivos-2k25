@@ -22,18 +22,18 @@ import hemandra from "../images/Hemandra.webp";
 const teams = {
   festhead: [
     {
-      name: "Chetan Sharma",
-      imageUrl: `${Chetan}`,
-      instagramLink: "https://instagram.com/chetan",
-      linkedinLink: "https://linkedin.com/in/chetan",
-      emailLink: "chetan@example.com",
-    },
-    {
       name: "Sanchay Goel",
       imageUrl: `${Sanchay}`,
       instagramLink: "https://instagram.com/aditya",
       linkedinLink: "https://linkedin.com/in/aditya",
       emailLink: "aditya@example.com",
+    },
+    {
+      name: "Chetan Sharma",
+      imageUrl: `${Chetan}`,
+      instagramLink: "https://instagram.com/chetan",
+      linkedinLink: "https://linkedin.com/in/chetan",
+      emailLink: "chetan@example.com",
     },
   ],
   sportscouncil: [
@@ -151,21 +151,21 @@ const teams = {
   ],
   webdevelopment: [
     {
-      name: "Krishna khattri",
-      imageUrl:
-        "https://res.cloudinary.com/dturzqo8m/image/upload/v1734953575/cvggow7lr0qy0r1rwl6k.png",
-      instagramLink: "https://instagram.com/chetan",
-      linkedinLink: "https://linkedin.com/in/chetan",
-      emailLink: "chetan@example.com",
-      post: "Web Development",
-    },
-    {
       name: "Srijan das",
       imageUrl:
         "https://res.cloudinary.com/dturzqo8m/image/upload/v1734953575/cvggow7lr0qy0r1rwl6k.png",
       instagramLink: "https://instagram.com/aditya",
       linkedinLink: "https://linkedin.com/in/aditya",
       emailLink: "aditya@example.com",
+      post: "Web Development",
+    },
+    {
+      name: "Krishna khattri",
+      imageUrl:
+        "https://res.cloudinary.com/dturzqo8m/image/upload/v1734953575/cvggow7lr0qy0r1rwl6k.png",
+      instagramLink: "https://instagram.com/chetan",
+      linkedinLink: "https://linkedin.com/in/chetan",
+      emailLink: "chetan@example.com",
       post: "Web Development",
     },
     {
@@ -183,6 +183,15 @@ const teams = {
   ],
   creativeteam: [
     {
+      name: "Divay yadav",
+      imageUrl:
+        "https://res.cloudinary.com/dturzqo8m/image/upload/v1734953575/cvggow7lr0qy0r1rwl6k.png",
+      instagramLink: "https://instagram.com/aditya",
+      linkedinLink: "https://linkedin.com/in/aditya",
+      emailLink: "aditya@example.com",
+      post: "Creative Team",
+    },
+    {
       name: "eesan yadav",
       imageUrl: `${eesan}`,
       instagramLink: "https://instagram.com/chetan",
@@ -199,15 +208,11 @@ const teams = {
       emailLink: "aditya@example.com",
       post: "Creative Team",
     },
-    {
-      name: "Divay yadav",
-      imageUrl:
-        "https://res.cloudinary.com/dturzqo8m/image/upload/v1734953575/cvggow7lr0qy0r1rwl6k.png",
-      instagramLink: "https://instagram.com/aditya",
-      linkedinLink: "https://linkedin.com/in/aditya",
-      emailLink: "aditya@example.com",
-      post: "Creative Team",
-    },
+    { name: "Arihant Bhura" },
+    { name: "Eeshan Singh" },
+    { name: "Akshat Gupta" },
+    { name: "Dhairya Chhabra" }
+
   ],
   publicrelations: [
     {
@@ -242,6 +247,18 @@ const teams = {
       emailLink: "chetan@example.com",
       post: "Public Relations",
     },
+    { name: "Savitur Chauhan" },
+    { name: "Kavish Jain" },
+    { name: "Kartik Singh" },
+    { name: "Sabhay Thakkar" },
+    { name: "Naman Arora" },
+    { name: "Kirti Singhal" },
+    { name: "Sahil Raghuvansh" },
+    { name: "Ishan Bansal" },
+    { name: "Shulin Agarwal" },
+    { name: "Arpita Garg" },
+    { name: "Hatim Ali" },
+    { name: "Yashvardhan Singh Nain" }
   ],
   eventmanagement: [
     {
@@ -304,6 +321,9 @@ const teams = {
       emailLink: "aditya@example.com",
       post: "Lead Designer",
     },
+    { name: "Arihant Bhura" },
+    { name: "Eeshan Singh" },
+    { name: "Akshat Gupta" }
   ],
 };
 

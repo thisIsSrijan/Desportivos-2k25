@@ -89,7 +89,7 @@ const OurTeam = () => {
             <TextField heading="development team" />
           </div>
           <div>
-            <div className="flex flex-wrap justify-center gap-24 md:gap-50 mb-24">
+            <div className="flex flex-wrap justify-center gap-12 sm:gap-24 lg:gap-50 sm:mb-24">
               {/* render only two member here */}
               {webdevelopmentdata.slice(0, 2).map((member, index) => (
                 <Cardcompo
@@ -103,13 +103,13 @@ const OurTeam = () => {
                 />
               ))}
             </div>
-            <div className="w-10/12 mx-auto grid grid-cols-2 sm:grid-cols-3 text-center relative mt-8">
+            <div className="w-[80vw] lg:w-[70vw] uxl:w-[60vw] mx-auto grid grid-cols-1 sm:grid-cols-2  md:grid-cols-4 text-center relative mt-8">
               {webdevelopmentdata.map(
                 (member, index) =>
                   !member.post && (
                     <span
                       key={index}
-                      className="text-white font-dharma font-light tracking-wide text-[40px] md:text-[30px] lg:text-[60px]"
+                      className="text-white font-dharma font-light tracking-wide text-[40px] md:text-[40px] lg:text-[50px]"
                     >
                       {member.name}
                     </span>
@@ -123,10 +123,10 @@ const OurTeam = () => {
             <TextField heading="creative team" />
           </div>
           <div>
-            <div className="flex flex-wrap justify-center gap-24 md:gap-50 mb-24">
+            <div className="flex flex-wrap justify-center gap-24">
               {/* render only two member here */}
-              {creativeteamdata.slice(0, 2).map((member, index) => (
-                <Cardcompo
+              {creativeteamdata.map((member, index) => (
+                member.post && (<Cardcompo
                   key={index}
                   name={member.name}
                   imageUrl={member.imageUrl}
@@ -134,22 +134,21 @@ const OurTeam = () => {
                   linkedinLink={member.linkedinLink}
                   emailLink={member.emailLink}
                   post={member.post}
-                />
+                />)
               ))}
             </div>
-            <div className="flex flex-wrap justify-center gap-24">
-              {/* render the rest of people here */}
-              {creativeteamdata.slice(2).map((member, index) => (
-                <Cardcompo
-                  key={index}
-                  name={member.name}
-                  imageUrl={member.imageUrl}
-                  instagramLink={member.instagramLink}
-                  linkedinLink={member.linkedinLink}
-                  emailLink={member.emailLink}
-                  post={member.post}
-                />
-              ))}
+            <div className="w-[80vw] lg:w-[70vw] uxl:w-[60vw] mx-auto grid grid-cols-1 sm:grid-cols-2  md:grid-cols-4 text-center relative mt-20 ">
+              {creativeteamdata.map(
+                (member, index) =>
+                  !member.post && (
+                    <span
+                      key={index}
+                      className="text-white font-dharma font-light tracking-wide text-[40px] md:text-[40px] lg:text-[50px]"
+                    >
+                      {member.name}
+                    </span>
+                  )
+              )}
             </div>
           </div>
         </div>
@@ -175,13 +174,13 @@ const OurTeam = () => {
               )
             )}
           </div>
-          <div className="w-10/12 mx-auto grid grid-cols-2 sm:grid-cols-3 text-center relative mt-10">
+          <div className=" uxl:w-[80vw] mx-auto grid grid-cols-1 sm:grid-cols-3  md:grid-cols-5 text-center relative mt-8">
             {sponsorshipdata.map(
               (member, index) =>
                 !member.post && (
                   <div
                     key={index}
-                    className="text-white font-dharma font-light tracking-wide text-[35px] md:text-[40px] lg:text-[60px]"
+                    className="text-white font-dharma font-light tracking-wide text-[40px] md:text-[40px] lg:text-[50px]"
                   >
                     {member.name}
                   </div>
@@ -195,7 +194,7 @@ const OurTeam = () => {
           </div>
           <div className="flex flex-wrap justify-center gap-24">
             {publicrelationdata.map((member, index) => (
-              <Cardcompo
+              member.post &&(<Cardcompo
                 key={index}
                 name={member.name}
                 imageUrl={member.imageUrl}
@@ -203,9 +202,22 @@ const OurTeam = () => {
                 linkedinLink={member.linkedinLink}
                 emailLink={member.emailLink}
                 post={member.post}
-              />
+              />)
             ))}
           </div>
+          <div className="w-[80vw] lg:w-[70vw] uxl:w-[60vw] mx-auto grid grid-cols-1 sm:grid-cols-2  md:grid-cols-4 text-center relative mt-20 ">
+              {publicrelationdata.map(
+                (member, index) =>
+                  !member.post && (
+                    <span
+                      key={index}
+                      className="text-white font-dharma font-light tracking-wide text-[40px] md:text-[40px] lg:text-[50px]"
+                    >
+                      {member.name}
+                    </span>
+                  )
+              )}
+            </div>
         </div>
         <div>
           <div className="text-right">
@@ -249,7 +261,7 @@ const OurTeam = () => {
           </div>
           <div className="flex flex-wrap justify-center gap-24">
             {uiuxdata.map((member, index) => (
-              <Cardcompo
+              member.post && (<Cardcompo
                 key={index}
                 name={member.name}
                 imageUrl={member.imageUrl}
@@ -257,9 +269,22 @@ const OurTeam = () => {
                 linkedinLink={member.linkedinLink}
                 emailLink={member.emailLink}
                 post={member.post}
-              />
+              />)
             ))}
           </div>
+          <div className="w-[80vw] lg:w-[70vw] uxl:w-[60vw] mx-auto grid grid-cols-1 sm:grid-cols-3 text-center relative mt-20 ">
+              {uiuxdata.map(
+                (member, index) =>
+                  !member.post && (
+                    <span
+                      key={index}
+                      className="text-white font-dharma font-light tracking-wide text-[40px] md:text-[40px] lg:text-[50px]"
+                    >
+                      {member.name}
+                    </span>
+                  )
+              )}
+            </div>
         </div>
       </div>
     </div>
