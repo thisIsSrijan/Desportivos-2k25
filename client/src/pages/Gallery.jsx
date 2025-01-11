@@ -44,8 +44,8 @@ const img38 = `${aws}/38.webp`;
 const img39 = `${aws}/39.webp`;
 const img40 = `${aws}/40.webp`;
 const img41 = `${aws}/41.webp`;
-import GalleryMobile from "../components/gallarymobile";
-import CustomCursor from "../components/customcursor";
+import GalleryMobile from "../components/GallaryMobile";
+import CustomCursor from "../components/CustomCursor";
 import { Link } from "react-router-dom";
 
 const images = [
