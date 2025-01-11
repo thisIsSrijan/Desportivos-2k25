@@ -21,6 +21,7 @@ const Harsh = "Harsh Mange.webp";
 const hemandra = "Hemandra.webp";
 const srijan = "srijan_despo.webp"
 const divay = "divay.webp";
+const nitish = "nitishgupta.webp"
 
 const aws=import.meta.env.VITE_AWS;
 
@@ -216,12 +217,22 @@ const teams = {
       emailLink: "aditya@example.com",
       post: "Creative Head",
     },
+    {
+      name: "Nitish Gupta",
+      imageUrl:
+        `${aws}/${nitish}`,
+      instagramLink: "https://instagram.com/aditya",
+      linkedinLink: "https://linkedin.com/in/aditya",
+      emailLink: "aditya@example.com",
+      post: "Content Head",
+    },
     { name: "Arihant Bhura" },
     { name: "Eeshan Singh" },
     { name: "Akshat Gupta" },
     { name: "Dhairya Chhabra" },
     { name: "Arnav Rinawa" },
     { name: "Akshat Tyagi" },
+    { name: "Manas Tewari"}
   ],
   publicrelations: [
     {
