@@ -42,6 +42,8 @@ import img39 from "../assets/images/39.png";
 import img40 from "../assets/images/40.png";
 import img41 from "../assets/images/41.png";
 import GalleryMobile from "../components/gallerymobile";
+import CustomCursor from "../components/CustomCusror";
+import { Link } from "react-router-dom";
 
 const images = [
   img1,
@@ -121,31 +123,31 @@ const SportsCollageScroll = () => {
 
   const [activeLayer, setActiveLayer] = useState(0);
 
-  useEffect(() => {
-    let timeout;
+  // useEffect(() => {
+  //   let timeout;
 
-    const handleScroll = (event) => {
-      clearTimeout(timeout);
+  //   const handleScroll = (event) => {
+  //     clearTimeout(timeout);
 
-      timeout = setTimeout(() => {
-        const deltaY = event.deltaY;
-        if (deltaY > 0) {
-          console.log("Scrolled up");
-          setActiveLayer((prevLayer) => (prevLayer + 1) % 13);
-        } else {
-          console.log("Scrolled down");
-          setActiveLayer((prevLayer) => (prevLayer - 1) % 13);
-        }
-      }, 90); // Adjust the delay as needed
-    };
+  //     timeout = setTimeout(() => {
+  //       const deltaY = event.deltaY;
+  //       if (deltaY > 0) {
+  //         console.log("Scrolled up");
+  //         setActiveLayer((prevLayer) => (prevLayer + 1) % 13);
+  //       } else {
+  //         console.log("Scrolled down");
+  //         setActiveLayer((prevLayer) => (prevLayer - 1) % 13);
+  //       }
+  //     }, 90); // Adjust the delay as needed
+  //   };
 
-    window.addEventListener("wheel", handleScroll);
+  //   window.addEventListener("wheel", handleScroll);
 
-    return () => {
-      window.removeEventListener("wheel", handleScroll);
-      clearTimeout(timeout);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("wheel", handleScroll);
+  //     clearTimeout(timeout);
+  //   };
+  // }, []);
 
   const handleNextLayer = () => {
     setActiveLayer((prevLayer) => (prevLayer + 1) % 13); // Updated for new layers
@@ -181,7 +183,15 @@ const SportsCollageScroll = () => {
       <div
         className="relative w-full h-screen text-white flex justify-center items-center overflow-hidden bg-black hidden sm:block "
         onClick={handleNextLayer}
+        style={{ cursor: "none" }}
       >
+        <CustomCursor />
+        <Link
+          to="/"
+          className="text-center align-middle absolute w-fit h-fit py-2 px-3 right-[16px] sm:right-4 sm:top-[10px] top-[26px] border-2 border-[#F85B02] shadow-[2px_1.5px_13px_#F85B02] rounded-xl  text-white text-l sm:text-xl lg:text-3xl bg-[#424242BF] font-squid hover:bg-[#515151bf] hover:scale-105 z-50"
+        >
+          HOME
+        </Link>
         <div className="absolute inset-0 z-30 flex flex-col justify-center items-center">
           <p className="text-lg md:text-2xl lg:text-3xl mb-[-10px] md:mb-[-15px]">
             MORE THAN
@@ -368,6 +378,12 @@ const SportsCollageScroll = () => {
 
       <div className="block sm:hidden">
         <GalleryMobile />
+        <Link
+          to="/"
+          className="text-center align-middle absolute w-fit h-fit py-2 px-3 right-[16px] sm:right-4 sm:top-[10px] top-[26px] border-2 border-[#F85B02] shadow-[2px_1.5px_13px_#F85B02] rounded-xl  text-white text-l sm:text-xl lg:text-3xl bg-[#424242BF] font-squid hover:bg-[#515151bf] hover:scale-105 z-50"
+        >
+          HOME
+        </Link>
       </div>
     </>
   );
