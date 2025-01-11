@@ -30,7 +30,7 @@ const Sports = () => {
     setTimeout(() => {
       setActiveImage(images[nextIndex]);
       setIsLoading(false);
-    });
+    }, 300);
   };
 
   const handlePrev = () => {
@@ -41,40 +41,38 @@ const Sports = () => {
 
     const currentIndex = images.indexOf(activeImage);
     const prevIndex = (currentIndex - 1 + images.length) % images.length;
-    
+
     setTimeout(() => {
       setActiveImage(images[prevIndex]);
       setIsLoading(false);
-    });
+    }, 300);
   };
 
   const handleImageClick = (image) => {
-    // setActiveImage(image);
     if (!isLoading) {
       setActiveImage(image);
     }
   };
 
   const selectedContent = contentData.find((item) => item.id === activeImage);
-  const animationVariants = {
-    hidden: { opacity: 0, x: 100 }, // Start off-screen
-    visible: { opacity: 1, x: 0 }, // Slide into view
-    exit: { opacity: 0, x: -100 }, // Slide out to the left
-  };
 
   return (
-    <div
-      className="h-screen  w-full bg-cover bg-center overflow-hidden relative"
-      style={{
-        // backgroundImage:"url('https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952318/Background_qmcxay.png')",
-        backgroundImage: `url(${Background})`,
-        minHeight: "100vh",
-      }}
-    >
-      {/* Left section */}
-      <div className="z-0 w-full md:w-1/2 h-full flex flex-row bg-cover bg-no-repeat absolute left-0">
-        {/* image1 */}
-        <motion.div
+    <div className="flex flex-col md:flex-row min-h-screen w-full relative">
+      {/* Background */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `url(${Background})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      />
+
+      {/* Left section - becomes background on mobile */}
+      <div className="w-full md:w-1/2 h-screen absolute md:relative z-0 md:z-10">
+        <div className="w-full h-full flex">
+          {/* image1 */}
+          <motion.div
           className={`flex-1 order-1 opacity-50 relative  ${
             activeImage === "sp1" ? "md:z-10 md:opacity-100" : "md:opacity-50"
           }`}
@@ -84,7 +82,7 @@ const Sports = () => {
             backgroundPosition: "0% 0%",
             backgroundRepeat: "no-repeat",
           }}
-          initial={{ x: 0, height: 0 }} // Start slightly off-screen to the left
+          initial={{ x: -100, height: 0 }} // Start slightly off-screen to the left
           // animate={{ opacity: 1, x: 0 }} // Slide in and become visible
           whileInView={{ x: 0, height: "100%" }} // S
           transition={{ duration: 0.5, delay: 0.2 }} // Smooth animation
@@ -108,7 +106,6 @@ const Sports = () => {
             }}
           ></motion.div>
         </motion.div>
-
         {/* image2 */}
         <motion.div
           className={`flex-1 order-4 md:order-2 opacity-50 relative ${
@@ -210,16 +207,15 @@ const Sports = () => {
           ></motion.div>
         </motion.div>
       </div>
-      {/* Right section */}
-      <motion.div className="z-10 h-full w-full md:w-1/2 flex flex-col items-center justify-center">
+      </div>
+
+      {/* Right section - overlays on mobile */}
+      <div className="w-full md:w-1/2 min-h-screen flex items-center justify-center relative z-10 bg-black bg-opacity-50 md:bg-transparent">
         {selectedContent && (
-          <div className="flex flex-col">
+          <div className="flex flex-col items-center px-4 md:px-8 py-12 md:py-0">
             <AnimatePresence mode="wait">
-              <motion.h2
-                key={activeImage}
-                className="flex justify-center font-dharma font-extrabold text-[30.88vw] md:text-[9.92vw] 
-                relative top-[-35vh] md:top-[-28vh] lg:top-[-30vh] md:left-[47.39vw] leading-[9.51vw] tracking-wide"
-                style={{ color: selectedContent.color }}
+              <motion.h1
+                key={selectedContent.title}
                 initial={{
                   rotateX: titleDirection === "front-to-top" ? -90 : 90,
                   opacity: 0,
@@ -236,51 +232,47 @@ const Sports = () => {
                   duration: 0.4,
                   ease: "easeInOut",
                 }}
+                className="font-dharma font-extrabold text-6xl md:text-7xl lg:text-9xl mb-8"
+                style={{ color: selectedContent.color }}
               >
                 {selectedContent.title}
-              </motion.h2>
+              </motion.h1>
             </AnimatePresence>
-
-            <div
-              className="flex flex-col gap-y-2 md:gap-y-4 xl:gap-y-10 w-[94.99vw] sm:w-[85.45vw] md:w-[34.99vw] absolute 
-            top-[27.37vh] md:top-[31.75vh] lg:top-[35.5vh] xl:top-[45vh] uxl:top-[38vh] left-[3.05vw] sm:left-[7vw] 
-            md:left-[57.21vw] text-center"
+   
+            <motion.div
+              key={activeImage}
+              initial={{ x: direction === "right" ? 100 : -100, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: direction === "right" ? -100 : 100, opacity: 0 }}
+              transition={{ duration: 0.5 }}
+              className="flex flex-col gap-6 max-w-xl"
             >
-              <motion.div
-                key={activeImage}
-                initial={{ x: direction === "right" ? 100 : -100 }}
-                animate={{ x: 0 }}
-                exit={{ x: direction === "right" ? -100 : 100 }}
-                transition={{ duration: 0.8, delay: 0 }}
-                viewport={{ once: true }}
-              >
-                <p className="lg:w-[34.2vw] uxl:w-[30vw] text-white text-center md:text-left text-sm sm:text-lg md:text-[1.7vw] lg:text-base xl:text-lg leading-relaxed">
-                  {selectedContent.description}
-                </p>
-                <br />
-                <p className="lg:w-[34.2vw] uxl:w-[30vw] text-white text-center md:text-left text-sm sm:text-lg md:text-[1.7vw] lg:text-base xl:text-lg leading-relaxed">
-                  {selectedContent.description2}
-                </p>
-              </motion.div>
+              <p className="text-white text-center text-base md:text-lg">
+                {selectedContent.description}
+              </p>
+              
+              <p className="text-white text-center text-base md:text-lg">
+                {selectedContent.description2}
+              </p>
+            </motion.div>
 
-              <div className="flex space-x-7 mx-auto md:top-[90.58vh] md:left-[66.89vw]">
-                <button
-                  className="w-7 md:w-12 h-7 md:h-12 uxl:w-16 uxl:h-16 text-lg uxl:text-xl flex items-center justify-center bg-transparent text-white rounded-full border border-white shadow-md transform transition-transform duration-300 hover:scale-110"
-                  onClick={handlePrev}
-                >
-                  <i className="fa fa-chevron-left"></i>
-                </button>
-                <button
-                  className="w-7 md:w-12 h-7 md:h-12 uxl:w-16 uxl:h-16 text-lg uxl:text-xl flex items-center justify-center bg-transparent text-white rounded-full border border-white shadow-md transform transition-transform duration-300 hover:scale-110"
-                  onClick={handleNext}
-                >
-                  <i className="fa fa-chevron-right"></i>
-                </button>
-              </div>
+            <div className="flex gap-6 mt-12">
+              <button
+                className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center bg-white bg-opacity-10 text-white rounded-full border border-white backdrop-blur-sm transition-transform hover:scale-110"
+                onClick={handlePrev}
+              >
+                <i className="fa fa-chevron-left"></i>
+              </button>
+              <button
+                className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center bg-white bg-opacity-10 text-white rounded-full border border-white backdrop-blur-sm transition-transform hover:scale-110"
+                onClick={handleNext}
+              >
+                <i className="fa fa-chevron-right"></i>
+              </button>
             </div>
           </div>
         )}
-      </motion.div>
+      </div>
     </div>
   );
 };

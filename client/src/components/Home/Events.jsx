@@ -18,7 +18,17 @@ import img8 from "../../assets/images/Eventsimg8.webp";
 import img9 from "../../assets/images/Eventsimg9.webp";
 import img10 from "../../assets/images/Eventsimg10.webp";
 import img11 from "../../assets/images/Eventsimg11.webp";
-
+import pdf1 from "../../assets/pdf/Basketball (1).pdf"
+import pdf2 from "../../assets/pdf/Futsal (1).pdf"
+import pdf3 from "../../assets/pdf/Volleyball.pdf"
+import pdf4 from "../../assets/pdf/Kabaddi (1).pdf"
+import pdf5 from "../../assets/pdf/Lawn Tennis (1).pdf"
+import pdf6 from "../../assets/pdf/Squash (1).pdf"
+import pdf7 from "../../assets/pdf/Cricket.pdf"
+import pdf8 from "../../assets/pdf/Chess (1).pdf"
+import pdf9 from "../../assets/pdf/Carrom.pdf"
+import pdf10 from "../../assets/pdf/Badminton (1).pdf"
+import pdf11 from "../../assets/pdf/Football (1).pdf"
 
 const Events = () => {
   const images = [
@@ -29,7 +39,7 @@ const Events = () => {
       className:
         "ml-[7vw] sm:ml-[10vw] w-[38%] lg:w-[20rem] h-[220px] xs1-sm:h-[260px] sm:h-[280px] md:h-[350px] lg:h-[450px] ",
         text : "BASKETBALL",
-       pdfLink: "/Basketball (1).pdf"
+       pdfLink: pdf1
     },
     {
       // src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734807975/imgK1_pujyuq.png",
@@ -37,7 +47,7 @@ const Events = () => {
       alt: "Image 2",
       className: "ml-[40%] md:ml-[45vw] top-[150px] lg:ml-[60vw] uxl:ml-[70vw] w-[55%] sm:w-[48%] md:w-[50%] xl:w-[28rem] lg:w-[25rem]",
       text: "FUTSAL",
-      pdfLink: "/Futsal (1).pdf"
+      pdfLink: pdf2
     },
     {
       // src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734769416/imgP2_iy2bg8.png",
@@ -45,7 +55,7 @@ const Events = () => {
       alt: "Image 3",
       className: "ml-[10vw] md:ml-[15vw] top-[250px] lg:ml-[20vw] w-[38%] lg:w-[20rem] h-[220px] xs1-sm:h-[260px] sm:h-[280px] md:h-[350px] lg:h-[450px]",
       text: "VOLLEYBALL",
-      pdfLink: "/Volleyball.pdf"
+      pdfLink: pdf3
     },
     {
       // src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734807975/imgK2_wktv95.png",
@@ -53,7 +63,7 @@ const Events = () => {
       alt: "Image 4",
       className: "ml-[40%] md:ml-[45vw] top-[400px] lg:ml-[60vw] uxl:ml-[70vw] w-[55%] sm:w-[48%] md:w-[50%]  xl:w-[28rem] lg:w-[25rem]",
       text: "KABADDI",
-      pdfLink: "/Kabaddi (1).pdf"
+      pdfLink: pdf4
     },
     {
       // src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734769416/imgP3_jvcaxe.png",
@@ -61,7 +71,7 @@ const Events = () => {
       alt: "Image 5",
       className: "ml-[10vw] md:ml-[15vw] top-[500px] lg:ml-[20vw] w-[38%] lg:w-[20rem] h-[220px] xs1-sm:h-[260px] sm:h-[280px] md:h-[350px] lg:h-[450px]",
       text: "LAWN TENNIS",
-      pdfLink: "/Lawn Tennis (1).pdf"
+      pdfLink: pdf5
     },
     {
       // src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734807975/imgK3_xokcch.png",
@@ -69,7 +79,7 @@ const Events = () => {
       alt: "Image 6",
       className: "ml-[40%] md:ml-[42vw] lg:ml-[60vw] top-[700px] lg:ml-[10vw] w-[55%] sm:w-[48%] md:w-[55%] xl:w-[28rem] lg:w-[25rem]",
       text: "SQUASH",
-      pdfLink: "/Squash (1).pdf"
+      pdfLink: pdf6
     },
     {
       // src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734769416/imgP4_k2qzsv.png",
@@ -77,7 +87,7 @@ const Events = () => {
       alt: "Image 7",
       className: "ml-[5vw] md:ml-[5vw] top-[800px] lg:ml-[10vw] w-[38%] lg:w-[20rem] xl:w-[20rem] h-[220px] xs1-sm:h-[260px] sm:h-[280px] md:h-[350px] lg:h-[450px]",
       text: "CRICKET",
-      pdfLink: "/Cricket.pdf"
+      pdfLink: pdf7
     },
     {
       // src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734807975/imgK4_q9mubj.png",
@@ -85,7 +95,7 @@ const Events = () => {
       alt: "Image 8",
       className: "ml-[40%] md:ml-[40vw] top-[900px] lg:ml-[60vw] uxl:ml-[70vw] w-[55%] sm:w-[48%] md:w-[55%] xl:w-[28rem] lg:w-[25rem]",
       text: "CHESS",
-      pdfLink: "/Chess (1).pdf"
+      pdfLink: pdf8
     },
     {
       // src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734769416/imgP5_cbfh5s.png",
@@ -93,7 +103,7 @@ const Events = () => {
       alt: "Image 9",
       className: "ml-[7vw] md:ml-[10vw] top-[1000px] lg:ml-[10vw] uxl:ml-[10vw] w-[38%] lg:w-[20rem] h-[220px] xs1-sm:h-[260px] sm:h-[280px] md:h-[350px] lg:h-[450px]",
       text: "CARROM",
-      pdfLink: "/Carrom.pdf"
+      pdfLink: pdf9
     },
     {
       // src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734807976/imgK5_yh0olk.png",
@@ -101,7 +111,7 @@ const Events = () => {
       alt: "Image 10",
       className: "ml-[40%] md:ml-[45vw] top-[1100px] lg:top-[1200px] lg:ml-[60vw] uxl:ml-[70vw] w-[55%] sm:w-[48%] md:w-[50%] lg:w-[25rem]",
       text: "BADMINTON",
-      pdfLink: "/Badminton (1).pdf"
+      pdfLink: pdf10
     },
     {
       // src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734769416/imgP6_okvib9.png",
@@ -109,7 +119,7 @@ const Events = () => {
       alt: "Image 11",
       className: "top-[1200px] ml-[10vw]  lg:ml-[10vw] uxl:ml-[10vw] w-[38%] lg:w-[20rem] h-[220px] xs1-sm:h-[260px] sm:h-[280px] md:h-[350px] lg:h-[450px]",
       text: "Football",
-      pdfLink: "/Football (1).pdf"
+      pdfLink: pdf11
     },
   ];
 
@@ -133,6 +143,7 @@ const Events = () => {
         <div className="sticky top-0 h-screen w-full">
           <div className="relative w-full h-full flex flex-col justify-center">
           <div className="relative w-full h-full flex flex-col justify-center">
+            
   {/* Static Content */}
   <StaggeredText
     text="TOGETHER."

@@ -1,7 +1,10 @@
 import React from 'react';
+import square from "../../assets/gif/square.gif";
+import circle from "../../assets/gif/circle.gif";
+import triangle from "../../assets/gif/triangle.gif";
 
 const RandomLoader = () => {
-  const loaders = ["/pageTransition/square.gif", "/pageTransition/circle.gif", "/pageTransition/triangle.gif"];
+  const loaders = [square, circle, triangle];
   const randomLoader = loaders[Math.floor(Math.random() * loaders.length)];
 
   return (
