@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../index.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import Background from "../../assets/images/Background.webp";
-import Ellipse from "../../assets/images/MarqueEllipse.webp";
-import Marquee from "react-fast-marquee";
 import DespoFooter from "./DespoFooter";
+import Marquee from "react-fast-marquee";
+const aws = import.meta.env.VITE_AWS;
+const Background = `${aws}/Background.webp`;
+const Ellipse = `${aws}/MarqueEllipse.webp`;
+
 
 function Footer() {
   const renderTextWithDot = () => {

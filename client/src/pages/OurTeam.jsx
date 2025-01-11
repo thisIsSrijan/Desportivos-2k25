@@ -1,12 +1,13 @@
 import React from "react";
 import Cardcompo from "../components/ourTeam_compo/Cardcompo";
 import TextField from "../components/ourTeam_compo/TextField";
-import Background from "../assets/images/Background.webp";
-import logo from "../assets/images/logo.webp";
 import { Link } from "react-router-dom";
 import Footer from "../components/base/Footer";
 import teams from "../assets/data/teams";
 
+const aws=import.meta.env.VITE_AWS;
+const Background = `${aws}/Background.webp`;
+const logo = `${aws}/logo.webp`;
 const OurTeam = () => {
   const festheaddata = teams.festhead;
   const sportscouncildata = teams.sportscouncil;
