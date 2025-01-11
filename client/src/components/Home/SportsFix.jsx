@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Background from "../../assets/images/Background.webp";
 import xImage from "../../assets/images/x.webp";
 import zImage from "../../assets/images/0.webp";
@@ -56,6 +56,10 @@ const SportsFix = () => {
 
   const selectedContent = contentData.find((item) => item.id === activeImage);
 
+  const [imgVissible,setImgVissible]=useState([false,false,false,false]);
+
+
+
   return (
     <div className="flex flex-col md:flex-row min-h-screen w-full relative"  style={{
             // backgroundImage:"url('https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952318/Background_qmcxay.png')",
@@ -91,12 +95,20 @@ const SportsFix = () => {
           whileInView={{ x: 0, height: "100%" }} // S
           transition={{ duration: 0.5, delay: 0.2 }} // Smooth animation
           viewport={{ once: true }}
+
+          onAnimationComplete={()=>{
+            setImgVissible((prevState) => {
+                const updatedState = [...prevState];
+                updatedState[0] = true; // Update index 0 to true
+                return updatedState;
+              });
+          }}
         >
-          <motion.div
-           initial={{ scale: 0 }} // Start slightly off-screen to the left
+            {imgVissible[0] &&  <motion.div
+           initial={{ scale: 0}} // Start slightly off-screen to the left
            // animate={{ opacity: 1, x: 0 }} // Slide in and become visible
            whileInView={{ scale: 1 }} // S
-           transition={{ duration: 0.5, delay: 1.9 }} // Smooth animation
+           transition={{ duration: 0.5, delay: 0.8 }} // Smooth animation
            viewport={{ once: true }}
             className={` absolute w-[47.3vw] md:w-[28.2vw] aspect-[0.73] -left-[2vw] bottom-0 bg-no-repeat  ${
               activeImage === "sp1"
@@ -108,8 +120,13 @@ const SportsFix = () => {
               backgroundPosition: "center",
               backgroundSize: "contain",
             }}
-          ></motion.div>
+          ></motion.div>}
+         
         </motion.div>
+
+
+
+
         {/* image2 */}
         <motion.div
           className={`flex-1 order-4 md:order-2 opacity-150 relative ${
@@ -126,12 +143,19 @@ const SportsFix = () => {
           whileInView={{ x: 0, height: "100%" }} // S
           transition={{ duration: 0.5, delay: 0.4 }} // Smooth animation
           viewport={{ once: true }}
+          onAnimationComplete={()=>{
+            setImgVissible((prevState) => {
+                const updatedState = [...prevState];
+                updatedState[1] = true; // Update index 0 to true
+                return updatedState;
+              });
+          }}
         >
-          <motion.div
+       {imgVissible[1] &&    <motion.div
             initial={{ scale: 0 }} // Start slightly off-screen to the left
             // animate={{ opacity: 1, x: 0 }} // Slide in and become visible
             whileInView={{ scale: 1 }} // S
-            transition={{ duration: 0.5, delay: 1.7 }} // Smooth animation
+            transition={{ duration: 0.5, delay: 0.6 }} // Smooth animation
             viewport={{ once: true }}
             className={` absolute aspect-[0.73] w-[42vw] md:w-[21.5vw] -left-[16vw] md:-left-[2vw] -bottom-[12vw] md:-bottom-[6vw] bg-no-repeat  ${
               activeImage === "sp2" ? "z-50 opacity-100" : "z-20 md:opacity-50"
@@ -140,8 +164,10 @@ const SportsFix = () => {
               backgroundImage: `url(${sp2})`,
               backgroundSize: "contain",
             }}
-          ></motion.div>
+          ></motion.div>}
         </motion.div>
+
+
 
         {/* image3 */}
         <motion.div
@@ -159,12 +185,19 @@ const SportsFix = () => {
           whileInView={{ x: 0, height: "100%" }} // S
           transition={{ duration: 0.5, delay: 0.6 }} // Smooth animation
           viewport={{ once: true }}
+          onAnimationComplete={()=>{
+            setImgVissible((prevState) => {
+                const updatedState = [...prevState];
+                updatedState[2] = true; // Update index 0 to true
+                return updatedState;
+              });
+          }}
         >
-          <motion.div
+         {imgVissible[2] &&  <motion.div
             initial={{ scale: 0 }} // Start slightly off-screen to the left
             // animate={{ opacity: 1, x: 0 }} // Slide in and become visible
             whileInView={{ scale: 1 }} // S
-            transition={{ duration: 0.5, delay: 1.5 }} // Smooth animation
+            transition={{ duration: 0.5, delay: 0.3 }} // Smooth animation
             viewport={{ once: true }}
             className={` absolute bg-no-repeat  aspect-[0.67] w-[41vw] md:w-[22.5vw] -left-[6vw] md:-left-[3vw] -bottom-[0.4vw] ${
               activeImage === "sp3"
@@ -175,7 +208,7 @@ const SportsFix = () => {
               backgroundImage: ` url(${sp3})`,
               backgroundSize: "contain",
             }}
-          ></motion.div>
+          ></motion.div>}
         </motion.div>
 
         {/* image4 */}
@@ -194,12 +227,19 @@ const SportsFix = () => {
           whileInView={{ x: 0, height: "100%" }} // S
           transition={{ duration: 0.5, delay: 0.8 }} // Smooth animation
           viewport={{ once: true }}
+          onAnimationComplete={()=>{
+            setImgVissible((prevState) => {
+                const updatedState = [...prevState];
+                updatedState[3] = true; // Update index 0 to true
+                return updatedState;
+              });
+          }}
         >
-          <motion.div
+          {imgVissible[3] && <motion.div
             initial={{ scale: 0 }} // Start slightly off-screen to the left
             // animate={{ opacity: 1, x: 0 }} // Slide in and become visible
             whileInView={{ scale: 1 }} // S
-            transition={{ duration: 0.5, delay: 1.3 }} // Smooth animation
+            transition={{ duration: 0.5, delay: 0 }} // Smooth animation
             viewport={{ once: true }}
             className={` absolute aspect-[0.8] md:w-[24vw]  w-[42vw] -bottom-[3vw] md:-bottom-[2vw] -left-[5vw]   bg-no-repeat  ${
               activeImage === "sp4" ? "z-50 opacity-100" : "z-20 md:opacity-50"
@@ -208,7 +248,7 @@ const SportsFix = () => {
               backgroundImage: `url(${sp4})`,
               backgroundSize: "contain",
             }}
-          ></motion.div>
+          ></motion.div>}
         </motion.div>
       </div>
       </div>
