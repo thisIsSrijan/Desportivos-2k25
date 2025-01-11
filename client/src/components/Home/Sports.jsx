@@ -84,7 +84,7 @@ const Sports = () => {
             backgroundPosition: "0% 0%",
             backgroundRepeat: "no-repeat",
           }}
-          initial={{ x: -100, height: 0 }} // Start slightly off-screen to the left
+          initial={{ x: 0, height: 0 }} // Start slightly off-screen to the left
           // animate={{ opacity: 1, x: 0 }} // Slide in and become visible
           whileInView={{ x: 0, height: "100%" }} // S
           transition={{ duration: 0.5, delay: 0.2 }} // Smooth animation
