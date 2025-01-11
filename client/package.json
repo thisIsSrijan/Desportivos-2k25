@@ -15,7 +15,7 @@
     "downshift": "^9.0.8",
     "flowbite": "^2.5.2",
     "font-awesome": "^4.7.0",
-    "framer-motion": "^11.11.17",
+    "framer-motion": "^11.16.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-fast-marquee": "^1.6.5",
