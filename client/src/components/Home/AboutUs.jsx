@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion"; // Import Framer Motion
+import Background from "../../assets/images/Background.webp"
 import person from "../../assets/images/aboutperson.svg";
-import aboutus from "../../assets/images/aboutus.jpg";
+import aboutus from "../../assets/images/aboutus.webp";
 import insta from "../../assets/images/instagram.svg";
 import youtube from "../../assets/images/youtube.svg";
 
@@ -45,8 +46,8 @@ function AboutUs() {
     <div
       className="relative bg-black text-white flex flex-col items-center justify-center py-8  bg-cover bg-center bg-no-repeat overflow-hidden"
       style={{
-        backgroundImage:
-          "url('https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952318/Background_qmcxay.png')",
+        // backgroundImage:"url('https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952318/Background_qmcxay.png')",
+        backgroundImage: `url(${Background})`,
       }}
     >
       {/* whileInViewd Heading */}
@@ -55,6 +56,7 @@ function AboutUs() {
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0, scale: 1.2 }}
         transition={{ duration: 1 }}
+        viewport={{ once: true }}
       >
         ABOUT US
       </motion.h1>
@@ -65,6 +67,7 @@ function AboutUs() {
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
+          viewport={{ once: true }}
         >
           <img
             src={aboutus}
@@ -73,20 +76,22 @@ function AboutUs() {
           />
           <div className="flex  justify-start space-x-6 mt-6 ml-8 mb-10 ">
             <motion.a
-              href="#"
+              href="https://www.instagram.com/desportivos.lnmiit/"
               className="transform transition duration-300 hover:scale-110"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0, scale: 1.2 }}
               transition={{ duration: 0.3, delay: 0.1 }}
+              viewport={{ once: true }}
             >
               <img src={insta} alt="Instagram" className="h-8 w-8" />
             </motion.a>
             <motion.a
-              href="#"
+              href="https://www.youtube.com/@desportivoslnmiit2733"
               className="transform transition duration-300 hover:scale-110"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0, scale: 1.4 }}
               transition={{ duration: 0.3, delay: 0.2 }}
+              viewport={{ once: true }}
             >
               <img src={youtube} alt="YouTube" className="h-8 w-8" />
             </motion.a>
@@ -98,6 +103,7 @@ function AboutUs() {
           initial={{ opacity: 0, x: 50, scale: 0.7 }}
           whileInView={{ opacity: 1, x: xValue, scale: scaleValue }}
           transition={{ duration: 1, delay: 0.5 }}
+          viewport={{ once: true }}
         >
           <p className="text-left text-sm  sm:text-lg md:text-md lg:text-base xl:text-lg leading-relaxed">
             Welcome to DESPORTIVOS, the largest sports meet of Rajasthan, an
@@ -120,6 +126,7 @@ function AboutUs() {
         initial={{ opacity: 0, x: 150, y: 250 }}
         whileInView={{ opacity: 1, x: 0, y: 0, scale: scaleValue }}
         transition={{ duration: 0.7, delay: 0.3 }}
+        viewport={{ once: true }}
       >
         <img
           src={person}

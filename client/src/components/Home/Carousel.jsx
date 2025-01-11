@@ -6,9 +6,14 @@ import { motion, AnimatePresence } from "framer-motion";
 // import image4 from "/carouselImages/4.png";
 // import moto from "/moto.png";
 import "../../App.css";
-import logo from "../../assets/images/image.png";
+import logo from "../../assets/images/logo.webp";
 import { Link } from "react-router-dom";
 import CountdownTimer from "./CountdownTimer";
+import heropage from "../../assets/images/heropage.webp";
+import heroESports from "../../assets/images/heroESports.webp";
+import heroSports from "../../assets/images/heroSports.webp";
+import heroPronite from "../../assets/images/heroPronite.webp";
+import img from "../../assets/images/EventsImg.webp";
 import Menu from "./Menu";
 
 function Carousel() {
@@ -17,23 +22,23 @@ function Carousel() {
   const words_images = [
     {
       word: "DESPORTIVOS' 25",
-      image:
-        "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952256/1_qjkggx.png",
+      //image:"https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952256/1_qjkggx.png",
+      image:heropage,
     },
     {
       word: "SPORTS",
-      image:
-        "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952256/2_iun5fj.png",
+      //image:"https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952256/2_iun5fj.png",
+      image:heroSports,
     },
     {
       word: "PRONITE",
-      image:
-        "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952257/3_p2ilnb.png",
+      //image:"https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952257/3_p2ilnb.png",
+      image:heroPronite,
     },
     {
       word: "ESPORTS",
-      image:
-        "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952258/4_a7xisu.png",
+      //image:"https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952258/4_a7xisu.png",
+      image:heroESports,
     },
   ];
 
@@ -59,13 +64,13 @@ function Carousel() {
 
       <Link
         to="/register"
-        className="text-center align-middle absolute w-fit h-fit p-2 right-[16px] sm:right-16 sm:top-[75px] top-[30px] border-2 border-[#F85B02] shadow-[2px_1.5px_13px_#F85B02] rounded-xl z-10 text-white text-l sm:text-xl lg:text-3xl bg-[#424242BF] font-squid hover:bg-[#515151bf] hover:scale-105"
+        className=" hidden md:block text-center align-middle absolute w-fit h-fit p-2 right-[16px] sm:right-16 sm:top-[75px] top-[30px] border-2 border-[#F85B02] shadow-[2px_1.5px_13px_#F85B02] rounded-xl z-10 text-white text-l sm:text-xl lg:text-3xl bg-[#424242BF] font-squid hover:bg-[#515151bf] hover:scale-105"
       >
         REGISTER
       </Link>
 
       {/* Countdown Timer Component */}
-        <CountdownTimer />
+      <CountdownTimer />
 
       <AnimatePresence mode="popLayout">
         {words_images.map(
@@ -110,7 +115,8 @@ function Carousel() {
                   {item.word}
                 </motion.div>
                 <img
-                  src="https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952325/moto_khggbl.png"
+                  // src="https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952325/moto_khggbl.png"
+                  src={img}
                   alt="moto"
                   className="absolute bottom-3 right-4 w-24 lg:bottom-8 lg:right-8 lg:w-36 h-auto"
                 />
@@ -128,15 +134,13 @@ function Carousel() {
                   }}
                   className="absolute bottom-0 left-0 h-2 bg-[#F85B02] z-10"
                 ></motion.div> */}
-              
               </div>
             )
         )}
-        <div className="absolute bottom-14">
+        <div className="absolute h-screen w-screen flex justify-center items-end pb-8">
           <Menu />
         </div>
       </AnimatePresence>
-      
     </div>
   );
 }

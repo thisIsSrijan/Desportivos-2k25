@@ -35,10 +35,10 @@ const StaircaseText = ({ text, className = "" }) => {
   return (
     <motion.div
       className={className}
+      whileInView="visible"
       variants={container}
       initial="hidden"
-      whileInView="visible"
-      viewport={{ amount: 0.5 }}
+      viewport={{ once: true }} 
     >
       {characters.map((char, index) => (
         <motion.span
