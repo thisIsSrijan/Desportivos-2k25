@@ -6,6 +6,11 @@ export default {
     "node_modules/flowbite/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    colors: {
+      transparent: "transparent",
+      current: "currentColor",
+      despobackground: "#c76904",
+    },
     extend: {
       animation: {
         "slide-down": "slideDown 0.3s ease-out forwards",
