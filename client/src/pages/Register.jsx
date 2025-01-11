@@ -4,6 +4,13 @@ import { Link } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { z } from "zod";
+import redbg from "../assets/images/redbg.webp"
+import bg1 from "../assets/images/RegisterBG.webp"
+import bg2 from "../assets/images/RegisterBG2.webp"
+
+
+
+
 
 const Register = () => {
   const [popupVisible, setPopupVisible] = useState(false); // State for popup visibility
@@ -28,18 +35,25 @@ const Register = () => {
 
   // Options for dropdowns
   const statesOfIndia = [
+    { name: "Andaman and Nicobar Islands", iso: "AN" },
     { name: "Andhra Pradesh", iso: "AP" },
     { name: "Arunachal Pradesh", iso: "AR" },
     { name: "Assam", iso: "AS" },
     { name: "Bihar", iso: "BR" },
+    { name: "Chandigarh", iso: "CH" },
     { name: "Chhattisgarh", iso: "CG" },
+    { name: "Dadra and Nagar Haveli and Daman and Diu", iso: "DH" },
+    { name: "Delhi", iso: "DL" },
     { name: "Goa", iso: "GA" },
     { name: "Gujarat", iso: "GJ" },
     { name: "Haryana", iso: "HR" },
     { name: "Himachal Pradesh", iso: "HP" },
+    { name: "Jammu and Kashmir", iso: "JK" },
     { name: "Jharkhand", iso: "JH" },
     { name: "Karnataka", iso: "KA" },
     { name: "Kerala", iso: "KL" },
+    { name: "Ladakh", iso: "LA" },
+    { name: "Lakshadweep", iso: "LD" },
     { name: "Madhya Pradesh", iso: "MP" },
     { name: "Maharashtra", iso: "MH" },
     { name: "Manipur", iso: "MN" },
@@ -47,6 +61,7 @@ const Register = () => {
     { name: "Mizoram", iso: "MZ" },
     { name: "Nagaland", iso: "NL" },
     { name: "Odisha", iso: "OR" },
+    { name: "Puducherry", iso: "PY" },
     { name: "Punjab", iso: "PB" },
     { name: "Rajasthan", iso: "RJ" },
     { name: "Sikkim", iso: "SK" },
@@ -67,17 +82,20 @@ const Register = () => {
     const fetchCities = async () => {
       if (formData.state) {
         const headers = new Headers();
-        headers.append("X-CSCAPI-KEY", "NHhvOEcyWk50N2Vna3VFTE00bFp3MjFKR0ZEOUhkZlg4RTk1MlJlaA=="); 
-  
+        headers.append(
+          "X-CSCAPI-KEY",
+          "NHhvOEcyWk50N2Vna3VFTE00bFp3MjFKR0ZEOUhkZlg4RTk1MlJlaA=="
+        );
+
         const requestOptions = {
-          method: 'GET',
+          method: "GET",
           headers: headers,
-          redirect: 'follow',
+          redirect: "follow",
         };
         try {
-
           const response = await fetch(
-            `https://api.countrystatecity.in/v1/countries/IN/states/${formData.state}/cities`, requestOptions
+            `https://api.countrystatecity.in/v1/countries/IN/states/${formData.state}/cities`,
+            requestOptions
           );
 
           if (response.status === 401) {
@@ -87,8 +105,6 @@ const Register = () => {
           if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
           }
-
-          
 
           const cities = await response.json(); // Parse JSON response
           // console.log(cities);
@@ -157,16 +173,13 @@ const Register = () => {
       setIsSubmitting(true); // Disable the button during form submission
       // console.log("Validated form data:", parsedData);
       // console.log("Form data:", dataToSubmit);
-      const response = await fetch(
-        import.meta.env.VITE_BACKEND_URL,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(parsedData),
-        }
-      );
+      const response = await fetch(import.meta.env.VITE_BACKEND_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(parsedData),
+      });
 
       const responsedata = await response.json();
       if (responsedata.message == "Registered Successfully") {
@@ -210,7 +223,8 @@ const Register = () => {
       <div
         className="relative w-screen h-64 bg-cover bg-center"
         style={{
-          backgroundImage: `url('https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952364/redbg_j0otcw.png`,
+          // backgroundImage: `url('https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952364/redbg_j0otcw.png`,
+          backgroundImage: `url(${redbg})`,
         }}
       >
         {/* REGISTER NOW Text */}
@@ -239,13 +253,15 @@ const Register = () => {
       <div
         className="w-screen  h-full  bg-cover py-11 md:py-20 "
         style={{
-          backgroundImage: `url(https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732953786/bottombg_bgswml.png)`,
-        }}
+        // backgroundImage: `url(https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732953786/bottombg_bgswml.png)`,
+        backgroundImage: `url(${bg1})`,  
+      }}
       >
         <div
           className="uxl:mt-5 md:rounded-lg mx-6 p-6 sm:mx-26 sm:p-6 md:mx-36 md:p-12 md2:mx-44 lg:mx-56 lg2:mx-64 lg2:p-24 uxl:max-w-[1200px] uxl:mx-auto bg-cover z-5 min-w-[200px] md:min-w-[480px] lg2:min-w-[750px]"
           style={{
-            backgroundImage: `url('https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952363/topbg_xhjmoc.png`,
+            // backgroundImage: `url('https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732952363/topbg_xhjmoc.png`,
+            backgroundImage: `url(${bg2})`,
           }}
         >
           <form onSubmit={handleSubmit}>
