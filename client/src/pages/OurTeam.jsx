@@ -104,7 +104,7 @@ const OurTeam = () => {
               />
             </div>
             <div>
-              <div className="flex flex-wrap justify-center gap-12 sm:gap-24 lg:gap-50 sm:mb-24">
+              <div className="flex flex-wrap justify-center gap-12 sm:gap-24 lg:gap-50 sm:mb-14">
                 {/* render only two member here */}
                 {webdevelopmentdata.slice(0, 2).map((member, index) => (
                   <Cardcompo
@@ -118,18 +118,16 @@ const OurTeam = () => {
                   />
                 ))}
               </div>
-              <div className="w-[80vw] lg:w-[70vw] uxl:w-[60vw] mx-auto grid grid-cols-1 sm:grid-cols-2  md:grid-cols-4 text-center relative mt-8">
-                {webdevelopmentdata.map(
-                  (member, index) =>
-                    !member.post && (
-                      <span
-                        key={index}
-                        className="text-white font-dharma font-light tracking-wide text-[40px] md:text-[40px] lg:text-[50px]"
-                      >
-                        {member.name}
-                      </span>
-                    )
-                )}
+              <div className="text-white flex flex-col items-center justify-center mt-5 sm:mt-10">
+                <div className="text-3xl uppercase mb-5 font-squid">
+                  Team Members:
+                </div>
+                <div className="w-2/3 font-serif flex justify-center text-xl sm:text-2xl text-center font-medium flex-wrap">
+                  {webdevelopmentdata
+                    .filter((member) => !member.post)
+                    .map((member) => member.name)
+                    .join(", ")}
+                </div>
               </div>
             </div>
           </div>
@@ -158,18 +156,16 @@ const OurTeam = () => {
                     )
                 )}
               </div>
-              <div className="w-[80vw] lg:w-[70vw] uxl:w-[60vw] mx-auto grid grid-cols-1 sm:grid-cols-2  md:grid-cols-4 text-center relative mt-20 ">
-                {creativeteamdata.map(
-                  (member, index) =>
-                    !member.post && (
-                      <span
-                        key={index}
-                        className="text-white font-dharma font-light tracking-wide text-[40px] md:text-[40px] lg:text-[50px]"
-                      >
-                        {member.name}
-                      </span>
-                    )
-                )}
+              <div className="text-white flex flex-col items-center justify-center mt-5 sm:mt-14">
+                <div className="text-3xl uppercase mb-5 font-squid">
+                  Team Members:
+                </div>
+                <div className="w-2/3 font-serif flex justify-center text-xl sm:text-2xl text-center font-medium flex-wrap">
+                  {creativeteamdata
+                    .filter((member) => !member.post)
+                    .map((member) => member.name)
+                    .join(", ")}
+                </div>
               </div>
             </div>
           </div>
@@ -198,18 +194,16 @@ const OurTeam = () => {
                 )
               )}
             </div>
-            <div className=" uxl:w-[80vw] mx-auto grid grid-cols-1 sm:grid-cols-3  md:grid-cols-5 text-center relative mt-8">
-              {sponsorshipdata.map(
-                (member, index) =>
-                  !member.post && (
-                    <div
-                      key={index}
-                      className="text-white font-dharma font-light tracking-wide text-[40px] md:text-[40px] lg:text-[50px]"
-                    >
-                      {member.name}
-                    </div>
-                  )
-              )}
+            <div className="text-white flex flex-col items-center justify-center mt-5 sm:mt-14">
+              <div className="text-3xl uppercase mb-5 font-squid">
+                Team Members:
+              </div>
+              <div className="w-2/3 font-serif flex justify-center text-xl sm:text-2xl text-center font-medium flex-wrap">
+                {sponsorshipdata
+                  .filter((member) => !member.post)
+                  .map((member) => member.name)
+                  .join(", ")}
+              </div>
             </div>
           </div>
           <div>
@@ -235,18 +229,16 @@ const OurTeam = () => {
                   )
               )}
             </div>
-            <div className="w-[80vw] lg:w-[70vw] uxl:w-[60vw] mx-auto grid grid-cols-1 sm:grid-cols-2  md:grid-cols-4 text-center relative mt-20 ">
-              {publicrelationdata.map(
-                (member, index) =>
-                  !member.post && (
-                    <span
-                      key={index}
-                      className="text-white font-dharma font-light tracking-wide text-[40px] md:text-[40px] lg:text-[50px]"
-                    >
-                      {member.name}
-                    </span>
-                  )
-              )}
+            <div className="text-white flex flex-col items-center justify-center mt-5 sm:mt-14">
+              <div className="text-3xl uppercase mb-5 font-squid">
+                Team Members:
+              </div>
+              <div className="w-2/3  font-serif flex justify-center text-xl sm:text-2xl text-center font-medium flex-wrap">
+                {publicrelationdata
+                  .filter((member) => !member.post)
+                  .map((member) => member.name)
+                  .join(", ")}
+              </div>
             </div>
           </div>
           <div>
@@ -314,18 +306,16 @@ const OurTeam = () => {
                   )
               )}
             </div>
-            <div className="w-[80vw] lg:w-[70vw] uxl:w-[60vw] mx-auto grid grid-cols-1 sm:grid-cols-3 text-center relative mt-20 ">
-              {uiuxdata.map(
-                (member, index) =>
-                  !member.post && (
-                    <span
-                      key={index}
-                      className="text-white font-dharma font-light tracking-wide text-[40px] md:text-[40px] lg:text-[50px]"
-                    >
-                      {member.name}
-                    </span>
-                  )
-              )}
+            <div className="text-white flex flex-col items-center justify-center mt-5 sm:mt-14">
+              <div className="text-3xl uppercase mb-5 font-squid">
+                Team Members:
+              </div>
+              <div className="w-2/3 font-serif flex justify-center text-xl sm:text-2xl text-center font-medium flex-wrap">
+                {uiuxdata
+                  .filter((member) => !member.post)
+                  .map((member) => member.name)
+                  .join(", ")}
+              </div>
             </div>
           </div>
         </div>

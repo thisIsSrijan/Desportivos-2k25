@@ -148,6 +148,9 @@ const teams = {
     {
       name: "Nalin Chandola",
     },
+    {
+      name: "Aahan Sharma",
+    },
   ],
   webdevelopment: [
     {
@@ -211,10 +214,27 @@ const teams = {
     { name: "Arihant Bhura" },
     { name: "Eeshan Singh" },
     { name: "Akshat Gupta" },
-    { name: "Dhairya Chhabra" }
-
+    { name: "Dhairya Chhabra" },
+    { name: "Arnav Rinawa" },
+    { name: "Akshat Tyagi" },
   ],
   publicrelations: [
+    {
+      name: "shreyansh singh",
+      imageUrl: `${Shreyansh}`,
+      instagramLink: "https://instagram.com/chetan",
+      linkedinLink: "https://linkedin.com/in/chetan",
+      emailLink: "chetan@example.com",
+      post: "Public Relations Head",
+    },
+    {
+      name: "hemendra yaduvanshi",
+      imageUrl: `${hemandra}`,
+      instagramLink: "https://instagram.com/chetan",
+      linkedinLink: "https://linkedin.com/in/chetan",
+      emailLink: "chetan@example.com",
+      post: "Public Relations Head",
+    },
     {
       name: "hardik makkar",
       imageUrl: `${hardik}`,
@@ -231,22 +251,6 @@ const teams = {
       emailLink: "chetan@example.com",
       post: "Public Relations Head",
     },
-    {
-      name: "shreyansh singh",
-      imageUrl: `${Shreyansh}`,
-      instagramLink: "https://instagram.com/chetan",
-      linkedinLink: "https://linkedin.com/in/chetan",
-      emailLink: "chetan@example.com",
-      post: "Public Relations Head",
-    },
-    {
-      name: "hemandra yaduvanshi",
-      imageUrl: `${hemandra}`,
-      instagramLink: "https://instagram.com/chetan",
-      linkedinLink: "https://linkedin.com/in/chetan",
-      emailLink: "chetan@example.com",
-      post: "Public Relations Head",
-    },
     { name: "Savitur Chauhan" },
     { name: "Kavish Jain" },
     { name: "Kartik Singh" },
@@ -258,7 +262,7 @@ const teams = {
     { name: "Shulin Agarwal" },
     { name: "Arpita Garg" },
     { name: "Hatim Ali" },
-    { name: "Yashvardhan Singh Nain" }
+    { name: "Yashvardhan Singh Nain" },
   ],
   eventmanagement: [
     {
@@ -323,7 +327,7 @@ const teams = {
     },
     { name: "Arihant Bhura" },
     { name: "Eeshan Singh" },
-    { name: "Akshat Gupta" }
+    { name: "Akshat Gupta" },
   ],
 };
 
