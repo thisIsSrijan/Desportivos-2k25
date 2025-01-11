@@ -32,7 +32,7 @@ const CountdownTimer = () => {
     whileInView={{ scale: 1 }}
     transition={{ duration: 0.5, delay: 0.4 }}
     viewport={{ once: true }}
-      className="w-[90.18vw] md:w-[62.18vw] h-[24.88vh] absolute z-20 top-[60vh] md:top-[62vh] 
+      className="w-[90.18vw] md:w-[62.18vw] h-[24.88vh] absolute z-20 top-[60vh] lg:top-[62vh]
         grid grid-cols-4 text-white gap-x-8 xxs:gap-x-[6vw]"
     >
       {[
@@ -62,7 +62,7 @@ const CountdownTimer = () => {
           >
             {label}
           </p>
-          <h1 className="text-2xl sm:text-5xl lg:text-8xl uxl:text-9xl tracking-[7.5px] pl-1">
+          <h1 className="text-2xl sm:text-5xl lg:text-7xl uxl:text-9xl tracking-[7.5px] pl-1">
             {value < 10 ? "0" + value : value}
           </h1>
         </div>

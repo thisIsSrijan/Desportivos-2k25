@@ -29,7 +29,7 @@ const Events = () => {
       className:
         "ml-[7vw] sm:ml-[10vw] w-[38%] lg:w-[20rem] h-[220px] xs1-sm:h-[260px] sm:h-[280px] md:h-[350px] lg:h-[450px] ",
         text : "BASKETBALL",
-       pdfLink: "/Basketball.pdf"
+       pdfLink: "/Basketball (1).pdf"
     },
     {
       // src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734807975/imgK1_pujyuq.png",
@@ -37,7 +37,7 @@ const Events = () => {
       alt: "Image 2",
       className: "ml-[40%] md:ml-[45vw] top-[150px] lg:ml-[60vw] uxl:ml-[70vw] w-[55%] sm:w-[48%] md:w-[50%] xl:w-[28rem] lg:w-[25rem]",
       text: "FUTSAL",
-      pdfLink: "/FUTSAL.pdf"
+      pdfLink: "/Futsal (1).pdf"
     },
     {
       // src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734769416/imgP2_iy2bg8.png",
@@ -45,7 +45,7 @@ const Events = () => {
       alt: "Image 3",
       className: "ml-[10vw] md:ml-[15vw] top-[250px] lg:ml-[20vw] w-[38%] lg:w-[20rem] h-[220px] xs1-sm:h-[260px] sm:h-[280px] md:h-[350px] lg:h-[450px]",
       text: "VOLLEYBALL",
-      pdfLink: "/.pdf"
+      pdfLink: "/Volleyball.pdf"
     },
     {
       // src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734807975/imgK2_wktv95.png",
@@ -53,7 +53,7 @@ const Events = () => {
       alt: "Image 4",
       className: "ml-[40%] md:ml-[45vw] top-[400px] lg:ml-[60vw] uxl:ml-[70vw] w-[55%] sm:w-[48%] md:w-[50%]  xl:w-[28rem] lg:w-[25rem]",
       text: "KABADDI",
-      pdfLink: "/Kabaddi.pdf"
+      pdfLink: "/Kabaddi (1).pdf"
     },
     {
       // src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734769416/imgP3_jvcaxe.png",
@@ -61,7 +61,7 @@ const Events = () => {
       alt: "Image 5",
       className: "ml-[10vw] md:ml-[15vw] top-[500px] lg:ml-[20vw] w-[38%] lg:w-[20rem] h-[220px] xs1-sm:h-[260px] sm:h-[280px] md:h-[350px] lg:h-[450px]",
       text: "LAWN TENNIS",
-      pdfLink: "/Lawn Tennis.pdf"
+      pdfLink: "/Lawn Tennis (1).pdf"
     },
     {
       // src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734807975/imgK3_xokcch.png",
@@ -69,7 +69,7 @@ const Events = () => {
       alt: "Image 6",
       className: "ml-[40%] md:ml-[42vw] lg:ml-[60vw] top-[700px] lg:ml-[10vw] w-[55%] sm:w-[48%] md:w-[55%] xl:w-[28rem] lg:w-[25rem]",
       text: "SQUASH",
-      pdfLink: "/SQUASH.pdf"
+      pdfLink: "/Squash (1).pdf"
     },
     {
       // src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734769416/imgP4_k2qzsv.png",
@@ -77,7 +77,7 @@ const Events = () => {
       alt: "Image 7",
       className: "ml-[5vw] md:ml-[5vw] top-[800px] lg:ml-[10vw] w-[38%] lg:w-[20rem] xl:w-[20rem] h-[220px] xs1-sm:h-[260px] sm:h-[280px] md:h-[350px] lg:h-[450px]",
       text: "CRICKET",
-      pdfLink: "/.pdf"
+      pdfLink: "/Cricket.pdf"
     },
     {
       // src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734807975/imgK4_q9mubj.png",
@@ -85,7 +85,7 @@ const Events = () => {
       alt: "Image 8",
       className: "ml-[40%] md:ml-[40vw] top-[900px] lg:ml-[60vw] uxl:ml-[70vw] w-[55%] sm:w-[48%] md:w-[55%] xl:w-[28rem] lg:w-[25rem]",
       text: "CHESS",
-      pdfLink: "/Chess.pdf"
+      pdfLink: "/Chess (1).pdf"
     },
     {
       // src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734769416/imgP5_cbfh5s.png",
@@ -93,6 +93,7 @@ const Events = () => {
       alt: "Image 9",
       className: "ml-[7vw] md:ml-[10vw] top-[1000px] lg:ml-[10vw] uxl:ml-[10vw] w-[38%] lg:w-[20rem] h-[220px] xs1-sm:h-[260px] sm:h-[280px] md:h-[350px] lg:h-[450px]",
       text: "CARROM",
+      pdfLink: "/Carrom.pdf"
     },
     {
       // src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734807976/imgK5_yh0olk.png",
@@ -100,7 +101,7 @@ const Events = () => {
       alt: "Image 10",
       className: "ml-[40%] md:ml-[45vw] top-[1100px] lg:top-[1200px] lg:ml-[60vw] uxl:ml-[70vw] w-[55%] sm:w-[48%] md:w-[50%] lg:w-[25rem]",
       text: "BADMINTON",
-      pdfLink: "/Badminton.pdf"
+      pdfLink: "/Badminton (1).pdf"
     },
     {
       // src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734769416/imgP6_okvib9.png",
@@ -108,7 +109,7 @@ const Events = () => {
       alt: "Image 11",
       className: "top-[1200px] ml-[10vw]  lg:ml-[10vw] uxl:ml-[10vw] w-[38%] lg:w-[20rem] h-[220px] xs1-sm:h-[260px] sm:h-[280px] md:h-[350px] lg:h-[450px]",
       text: "Football",
-      pdfLink: "/Football.pdf"
+      pdfLink: "/Football (1).pdf"
     },
   ];
 

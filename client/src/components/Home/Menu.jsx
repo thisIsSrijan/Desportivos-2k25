@@ -12,7 +12,7 @@ const scrollToAboutUs = (e) => {
 
 const Menu = () => {
   const [isHovered, setIsHovered] = useState(false);
-  const [dynamicWidth, setDynamicWidth] = useState(130);
+  const [dynamicWidth, setDynamicWidth] = useState(100);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isTriangle, setIsTriangle] = useState(false);
   const menuRef = useRef(null);
@@ -48,17 +48,17 @@ const Menu = () => {
     <div>
       {/* Full Menu for Larger Screens */}
       <div
-        className="relative hidden md:flex justify-center h-16 mx-auto font-squid"
+        className="relative hidden md:flex justify-center h-12 lg:h-14 mx-auto font-squid"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
         <motion.div
-          className="flex items-center justify-center backdrop-blur-md border-2 border-[#F85B02] shadow-[2px_1.5px_13px_#F85B02] rounded-lg text-white font-bold text-xl h-full px-5"
+          className="flex items-center justify-center backdrop-blur-md border-2 border-[#F85B02] shadow-[2px_1.5px_13px_#F85B02] rounded-lg text-white font-bold text-xl h-full lg:px-5"
           initial={{ y: 100 }}
           animate={{
             y: 0,
             opacity: 1,
-            width: isHovered ? 650 : 130,
+            width: isHovered ? 650 : 100,
           }}
           transition={{
             y: { duration: 0.5, delay: 0.4 },
