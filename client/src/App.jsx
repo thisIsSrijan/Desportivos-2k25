@@ -7,11 +7,14 @@ import {
 } from "react-router-dom";
 import Register from "./pages/Register";
 import Home from "./pages/Home";
-import Footer from "./components/Footer";
-import Preloader from "./components/Preloader";
-import RandomLoader from "./components/RandomLoader";
-import AboutUs from "./pages/AboutUs";
-import "./App.css";
+import Footer from "../src/components/base/Footer";
+import Preloader from "../src/components/loaders/Preloader";
+import RandomLoader from "../src/components/loaders/RandomLoader";
+import OurTeam from "./pages/OurTeam";
+import Gallery from "./pages/Gallery";
+import Sponsors from "./pages/Sponsors";
+import ErrorPage from "./pages/ErrorPage";
+
 const AppContent = () => {
   const location = useLocation();
 
@@ -20,7 +23,10 @@ const AppContent = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
-        {/* <Route path="/aboutus" element={<AboutUs />} /> */}
+        <Route path="/ourteam" element={<OurTeam />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/sponsors" element={<Sponsors />} />
+        <Route path="/*" element={<ErrorPage />} />
       </Routes>
       {(location.pathname == "/register" || location.pathname == "/") && (
         <Footer />

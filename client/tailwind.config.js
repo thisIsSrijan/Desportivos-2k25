@@ -12,6 +12,21 @@ export default {
       despobackground: "#c76904",
     },
     extend: {
+      animation: {
+        "slide-down": "slideDown 0.3s ease-out forwards",
+      },
+      keyframes: {
+        slideDown: {
+          "0%": { transform: "translateY(-100%)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
+        },
+      },
+
+      colors: {
+        transparent: "transparent",
+        current: "currentColor",
+        despobackground: "#c76904",
+      },
       spacing: {
         60: "15rem",
         59: "14.75rem",
@@ -40,16 +55,19 @@ export default {
       screens: {
         xsm: "200px",
         xs: "331px",
+        "xs2-xs1": { min: "369px", max: "439px" },
+        "xs1-sm": { min: "440px", max: "575px" },
         sm: "576px", // Small devices (phones, ≥ 576px)
         md: "768px", // Medium devices (tablets, ≥ 768px)
+        md2: "836px",
         lg: "992px", // Large devices (desktops, ≥ 992px)
         xl: "1200px", // Extra large devices (large desktops, ≥ 1200px)
-        "2xl": "1400px", // Extra extra large devices (larger desktops, ≥ 1400px)
+        lg2: "1264",
+        xxl: "1400px", // Extra extra large devices (larger desktops, ≥ 1400px)
         customBreakpoint: "400px",
         uxl: "1500px",
         custom: { min: "576px", max: "767.5px" },
-        lg2: "1264",
-        md2: "836",
+        
       },
     },
   },
