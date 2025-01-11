@@ -26,9 +26,13 @@ const CustomCursor = () => {
 
   return (
     <div
-      className={`custom-cursor ${clicked ? "clicked" : ""}`}
+      className={`custom-cursor ${
+        clicked ? "clicked" : ""
+      } text-xs  flex items-center justify-center`}
       style={{ left: `${position.x}px`, top: `${position.y}px` }}
-    />
+    >
+      Click
+    </div>
   );
 };
 

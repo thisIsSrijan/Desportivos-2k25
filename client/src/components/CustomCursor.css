@@ -14,8 +14,8 @@
 
 .custom-cursor {
   position: fixed;
-  width: 20px;
-  height: 20px;
+  width: 35px;
+  height: 35px;
   border: 2px solid white;
   border-radius: 50%; /* Perfect circle */
   pointer-events: none; /* Prevent interference with clicks */
