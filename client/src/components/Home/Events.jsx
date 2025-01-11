@@ -143,6 +143,7 @@ const Events = () => {
         <div className="sticky top-0 h-screen w-full">
           <div className="relative w-full h-full flex flex-col justify-center">
           <div className="relative w-full h-full flex flex-col justify-center">
+            
   {/* Static Content */}
   <StaggeredText
     text="TOGETHER."
