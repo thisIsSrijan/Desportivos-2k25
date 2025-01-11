@@ -89,11 +89,11 @@ const Sports = () => {
           viewport={{ once: true }}
         >
           <motion.div
-            initial={{ scale: 0 }} // Start slightly off-screen to the left
-            // animate={{ opacity: 1, x: 0 }} // Slide in and become visible
-            whileInView={{ scale: 1 }} // S
-            transition={{ duration: 0.5, delay: 1.8 }} // Smooth animation
-            viewport={{ once: true }}
+            // initial={{ scale: 0 }} // Start slightly off-screen to the left
+            // // animate={{ opacity: 1, x: 0 }} // Slide in and become visible
+            // whileInView={{ scale: 1 }} // S
+            // transition={{ duration: 0.5, delay: 1.8 }} // Smooth animation
+            // viewport={{ once: true }}
             className={` absolute w-[47.3vw] md:w-[28.2vw] aspect-[0.73] -left-[2vw] bottom-0 bg-no-repeat  ${
               activeImage === "sp1"
                 ? "z-50 opacity-100"
