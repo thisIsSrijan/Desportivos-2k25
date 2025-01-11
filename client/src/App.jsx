@@ -11,6 +11,7 @@ import Footer from "../src/components/base/Footer";
 import Preloader from "../src/components/loaders/Preloader";
 import RandomLoader from "../src/components/loaders/RandomLoader";
 import OurTeam from "./pages/OurTeam";
+import Gallery from "./pages/gallery";
 
 const AppContent = () => {
   const location = useLocation();
@@ -21,6 +22,7 @@ const AppContent = () => {
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
         <Route path="/ourteam" element={<OurTeam />} />
+        <Route path="/gallery" element={<Gallery />} />
       </Routes>
       {(location.pathname == "/register" || location.pathname == "/") && (
         <Footer />
@@ -30,38 +32,38 @@ const AppContent = () => {
 };
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
-  const [hasLoaded, setHasLoaded] = useState(false);
-  const [isRouteChanging, setIsRouteChanging] = useState(false);
-  const location = useLocation();
+  // const [isLoading, setIsLoading] = useState(true);
+  // const [hasLoaded, setHasLoaded] = useState(false);
+  // const [isRouteChanging, setIsRouteChanging] = useState(false);
+  // const location = useLocation();
 
-  useEffect(() => {
-    if (!hasLoaded) {
-      const timer = setTimeout(() => {
-        setIsLoading(false);
-        setHasLoaded(true);
-      }, 5000);
-      return () => clearTimeout(timer);
-    }
-  }, [hasLoaded]);
+  // useEffect(() => {
+  //   if (!hasLoaded) {
+  //     const timer = setTimeout(() => {
+  //       setIsLoading(false);
+  //       setHasLoaded(true);
+  //     }, 5000);
+  //     return () => clearTimeout(timer);
+  //   }
+  // }, [hasLoaded]);
 
-  useEffect(() => {
-    if (hasLoaded) {
-      setIsRouteChanging(true);
-      const timer = setTimeout(() => {
-        setIsRouteChanging(false);
-      }, 1500);
-      return () => clearTimeout(timer);
-    }
-  }, [location]);
+  // useEffect(() => {
+  //   if (hasLoaded) {
+  //     setIsRouteChanging(true);
+  //     const timer = setTimeout(() => {
+  //       setIsRouteChanging(false);
+  //     }, 1500);
+  //     return () => clearTimeout(timer);
+  //   }
+  // }, [location]);
 
-  if (isLoading && location.pathname === "/") {
-    return <Preloader onFinish={() => setIsLoading(false)} />;
-  }
+  // if (isLoading && location.pathname === "/") {
+  //   return <Preloader onFinish={() => setIsLoading(false)} />;
+  // }
 
-  if (isRouteChanging) {
-    return <RandomLoader />;
-  }
+  // if (isRouteChanging) {
+  //   return <RandomLoader />;
+  // }
 
   return <AppContent />;
 }
