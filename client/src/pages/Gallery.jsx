@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import img1 from "../assets/images/1.png";
 import img2 from "../assets/images/2.png";
@@ -121,30 +121,56 @@ const SportsCollageScroll = () => {
 
   const [activeLayer, setActiveLayer] = useState(0);
 
+  useEffect(() => {
+    let timeout;
+
+    const handleScroll = (event) => {
+      clearTimeout(timeout);
+
+      timeout = setTimeout(() => {
+        const deltaY = event.deltaY;
+        if (deltaY > 0) {
+          console.log("Scrolled up");
+          setActiveLayer((prevLayer) => (prevLayer + 1) % 13);
+        } else {
+          console.log("Scrolled down");
+          setActiveLayer((prevLayer) => (prevLayer - 1) % 13);
+        }
+      }, 90); // Adjust the delay as needed
+    };
+
+    window.addEventListener("wheel", handleScroll);
+
+    return () => {
+      window.removeEventListener("wheel", handleScroll);
+      clearTimeout(timeout);
+    };
+  }, []);
+
   const handleNextLayer = () => {
-    setActiveLayer((prevLayer) => (prevLayer + 1) % 9); // Updated for new layers
+    setActiveLayer((prevLayer) => (prevLayer + 1) % 13); // Updated for new layers
   };
 
   const getHeadingStyle = (layerIndex) => {
-    if (layerIndex < 3) {
+    if (layerIndex < 4) {
       return { color: "#F85B02", textAlign: "center" };
     }
-    if (layerIndex >= 3 && layerIndex <= 4) {
+    if (layerIndex >= 4 && layerIndex <= 6) {
       return { color: "#479A76", textAlign: "center" };
-    } else if (layerIndex >= 5 && layerIndex <= 6) {
+    } else if (layerIndex >= 7 && layerIndex <= 9) {
       return { color: "#AC3A76", textAlign: "center" };
-    } else if (layerIndex >= 7) {
+    } else if (layerIndex >= 10) {
       return { color: "#7E2894", textAlign: "center" };
     }
     return { textAlign: "center" };
   };
 
   const getHeadingText = (layerIndex) => {
-    if (layerIndex >= 3 && layerIndex <= 4) {
+    if (layerIndex >= 4 && layerIndex <= 6) {
       return "ESPORTS";
-    } else if (layerIndex >= 5 && layerIndex <= 6) {
+    } else if (layerIndex >= 7 && layerIndex <= 9) {
       return "FOOD FESTIVAL";
-    } else if (layerIndex >= 7) {
+    } else if (layerIndex >= 10) {
       return "PRONIGHT";
     }
     return "SPORTS";
@@ -181,22 +207,43 @@ const SportsCollageScroll = () => {
           </p>
         </div>
         <div className="h-full w-full absolute top-0 left-0">
-          {[0, 1, 2, 3, 4, 5, 6, 7, 8].map((layerIndex) => (
+          {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((layerIndex) => (
             <div
               key={layerIndex}
-              className={`absolute inset-0 h-screen w-screen flex justify-center items-center transition-all duration-[1000ms] ${
+              className={`absolute inset-0 h-screen w-screen flex justify-center items-center transition-all duration-[800ms] ${
                 layerIndex === activeLayer
                   ? "z-20 blur-none opacity-100"
-                  : "z-10 blur-3xl opacity-50"
+                  : layerIndex === (activeLayer - 1 + 9) % 9
+                  ? "z-15 blur-sm opacity-75"
+                  : "z-10 blur-md opacity-50"
               }`}
               style={{
-                zIndex: layerIndex === activeLayer ? 20 : 10,
-                filter: layerIndex === activeLayer ? "blur(0px)" : "blur(10px)",
+                zIndex:
+                  layerIndex === activeLayer
+                    ? 20
+                    : layerIndex === (activeLayer - 1 + 9) % 9
+                    ? 18
+                    : 10,
+
+                filter:
+                  layerIndex === activeLayer
+                    ? "blur(0px)"
+                    : layerIndex === (activeLayer - 1 + 9) % 9
+                    ? "blur(7px)"
+                    : "blur(8px)",
                 opacity: layerIndex === activeLayer ? 1 : 0.5,
+                transform:
+                  layerIndex === activeLayer
+                    ? "scale(1)"
+                    : layerIndex === (activeLayer - 1 + 13) % 13
+                    ? "scale(0.9)"
+                    : "scale(0.8)",
+                transition:
+                  "z-index 1s, filter 0.8s, opacity 0.8s, transform 0.8s",
               }}
             >
               <div className="relative w-full h-full">
-                {layerIndex === 0 &&
+                {layerIndex === 1 &&
                   images.slice(0, 5).map((img, index) => (
                     <div
                       key={index}
@@ -209,7 +256,7 @@ const SportsCollageScroll = () => {
                       }}
                     ></div>
                   ))}
-                {layerIndex === 1 &&
+                {layerIndex === 2 &&
                   images.slice(5, 10).map((img, index) => (
                     <div
                       key={index}
@@ -222,7 +269,7 @@ const SportsCollageScroll = () => {
                       }}
                     ></div>
                   ))}
-                {layerIndex === 2 &&
+                {layerIndex === 3 &&
                   images.slice(10, 13).map((img, index) => (
                     <div
                       key={index}
@@ -235,7 +282,7 @@ const SportsCollageScroll = () => {
                       }}
                     ></div>
                   ))}
-                {layerIndex === 3 &&
+                {layerIndex === 5 &&
                   images.slice(13, 18).map((img, index) => (
                     <div
                       key={index}
@@ -248,7 +295,7 @@ const SportsCollageScroll = () => {
                       }}
                     ></div>
                   ))}
-                {layerIndex === 4 &&
+                {layerIndex === 6 &&
                   images.slice(18, 21).map((img, index) => (
                     <div
                       key={index}
@@ -261,7 +308,7 @@ const SportsCollageScroll = () => {
                       }}
                     ></div>
                   ))}
-                {layerIndex === 5 &&
+                {layerIndex === 8 &&
                   images.slice(21, 26).map((img, index) => (
                     <div
                       key={index}
@@ -274,7 +321,7 @@ const SportsCollageScroll = () => {
                       }}
                     ></div>
                   ))}
-                {layerIndex === 6 &&
+                {layerIndex === 9 &&
                   images.slice(26, 30).map((img, index) => (
                     <div
                       key={index}
@@ -287,7 +334,7 @@ const SportsCollageScroll = () => {
                       }}
                     ></div>
                   ))}{" "}
-                {layerIndex === 7 &&
+                {layerIndex === 11 &&
                   images.slice(30, 35).map((img, index) => (
                     <div
                       key={index}
@@ -300,7 +347,7 @@ const SportsCollageScroll = () => {
                       }}
                     ></div>
                   ))}{" "}
-                {layerIndex === 8 &&
+                {layerIndex === 12 &&
                   images.slice(35, 41).map((img, index) => (
                     <div
                       key={index}
@@ -327,40 +374,3 @@ const SportsCollageScroll = () => {
 };
 
 export default SportsCollageScroll;
-// import React from "react";
-// import { Link } from "react-router-dom";
-
-// const Gallery = () => {
-//   return (
-//     <div
-//       className="bg-black bg-cover relative h-screen w-full"
-//       style={{
-//         backgroundImage:
-//           "url('https://res.cloudinary.com/dturzqo8m/image/upload/v1734955828/ijjesgbpw5ky12jqtjqn.svg')",
-//       }}
-//     >
-//       <Link
-//         to="/"
-//         className="text-center align-middle absolute w-fit h-fit py-2 px-5 right-[16px] sm:right-16 sm:top-[75px] top-[26px] border-2 border-[#F85B02] shadow-[2px_1.5px_13px_#F85B02] rounded-xl z-10 text-white text-l sm:text-xl lg:text-3xl bg-[#424242BF] font-squid hover:bg-[#515151bf] hover:scale-105"
-//       >
-//         HOME
-//       </Link>
-//       {/* Dark overlay */}
-//       <div className="absolute inset-0 bg-black bg-opacity-75"></div>
-
-//       {/* Centered content */}
-//       <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
-//         <img
-//           src="https://res.cloudinary.com/dturzqo8m/image/upload/v1736368604/wq9aixy5glrmnynvpm0z.png"
-//           alt="Coming Soon"
-//           className="mb-4"
-//         />
-//         <div className="text-[50px] sm:text-[150px] font-light sm:font-bold text-gradient text-[#F85B02] dharma-gothic-c tracking-wide ">
-//           COMING SOON...
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Gallery;
