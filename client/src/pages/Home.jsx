@@ -3,6 +3,7 @@ import Carousel from "../components/Home/Carousel";
 import AboutUs from "../components/Home/AboutUs";
 import Sports from "../components/Home/Sports";
 import Events from "../components/Home/Events";
+import SportsFix from "../components/Home/SportsFix";
 
 const Home = () => {
   return (
@@ -14,7 +15,8 @@ const Home = () => {
         <AboutUs />
       </section>
       <section id="sports">
-        <Sports />
+        {/* <Sports /> */}
+        <SportsFix/>
       </section>
       <section id="events">
         <Events />
