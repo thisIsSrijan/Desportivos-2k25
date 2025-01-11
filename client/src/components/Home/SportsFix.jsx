@@ -296,7 +296,7 @@ const SportsFix = () => {
               </p>
               
               <p className="text-white text-center lg:w-[34.2vw] uxl:w-[30vw] text-sm sm:text-lg md:text-[1.7vw] lg:text-base xl:text-lg leading-relaxed">
-                {selectedContent.description2}
+                {selectedContent?.description2}
               </p>
             </motion.div>
 
