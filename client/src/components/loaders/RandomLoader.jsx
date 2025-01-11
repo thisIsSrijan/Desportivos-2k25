@@ -1,7 +1,8 @@
 import React from 'react';
-import square from "../../assets/gif/square.gif";
-import circle from "../../assets/gif/circle.gif";
-import triangle from "../../assets/gif/triangle.gif";
+const aws=import.meta.env.VITE_AWS;
+const square = `${aws}/square.gif`;
+const circle = `${aws}/circle.gif`;
+const triangle = `${aws}/triangle.gif`;
 
 const RandomLoader = () => {
   const loaders = [square, circle, triangle];

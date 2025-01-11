@@ -4,9 +4,10 @@ import { Link } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { z } from "zod";
-import redbg from "../assets/images/redbg.webp"
-import bg1 from "../assets/images/RegisterBG.webp"
-import bg2 from "../assets/images/RegisterBG2.webp"
+const aws=import.meta.env.VITE_AWS;
+const redbg = `${aws}/redbg.webp`;
+const bg1 = `${aws}/RegisterBG.webp`;
+const bg2 = `${aws}/RegisterBG2.webp`;
 
 
 

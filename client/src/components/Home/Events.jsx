@@ -5,30 +5,35 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import ParallaxImages from "../Events_compo/ParallaxImages";
 import StaircaseText from "../Events_compo/StaggeredText";
-import Background from "../../assets/images/Background.webp";
-import img from "../../assets/images/EventsImg.webp";
-import img1 from "../../assets/images/Eventsimg1.webp";
-import img2 from "../../assets/images/Eventsimg2.webp";
-import img3 from "../../assets/images/Eventsimg3.webp";
-import img4 from "../../assets/images/Eventsimg4.webp";
-import img5 from "../../assets/images/Eventsimg5.webp";
-import img6 from "../../assets/images/Eventsimg6.webp";
-import img7 from "../../assets/images/Eventsimg7.webp";
-import img8 from "../../assets/images/Eventsimg8.webp";
-import img9 from "../../assets/images/Eventsimg9.webp";
-import img10 from "../../assets/images/Eventsimg10.webp";
-import img11 from "../../assets/images/Eventsimg11.webp";
-import pdf1 from "../../assets/pdf/Basketball (1).pdf"
-import pdf2 from "../../assets/pdf/Futsal (1).pdf"
-import pdf3 from "../../assets/pdf/Volleyball.pdf"
-import pdf4 from "../../assets/pdf/Kabaddi (1).pdf"
-import pdf5 from "../../assets/pdf/Lawn Tennis (1).pdf"
-import pdf6 from "../../assets/pdf/Squash (1).pdf"
-import pdf7 from "../../assets/pdf/Cricket.pdf"
-import pdf8 from "../../assets/pdf/Chess (1).pdf"
-import pdf9 from "../../assets/pdf/Carrom.pdf"
-import pdf10 from "../../assets/pdf/Badminton (1).pdf"
-import pdf11 from "../../assets/pdf/Football (1).pdf"
+
+const aws=import.meta.env.VITE_AWS;
+// Images
+const Background = `${aws}/Background.webp`;
+const img = `${aws}/EventsImg.webp`;
+const img1 = `${aws}/Eventsimg1.webp`;
+const img2 = `${aws}/Eventsimg2.webp`;
+const img3 = `${aws}/Eventsimg3.webp`;
+const img4 = `${aws}/Eventsimg4.webp`;
+const img5 = `${aws}/Eventsimg5.webp`;
+const img6 = `${aws}/Eventsimg6.webp`;
+const img7 = `${aws}/Eventsimg7.webp`;
+const img8 = `${aws}/Eventsimg8.webp`;
+const img9 = `${aws}/Eventsimg9.webp`;
+const img10 = `${aws}/Eventsimg10.webp`;
+const img11 = `${aws}/Eventsimg11.webp`;
+
+// PDFs
+const pdf1 = `${aws}/Basketball (1).pdf`;
+const pdf2 = `${aws}/Futsal (1).pdf`;
+const pdf3 = `${aws}/Volleyball.pdf`;
+const pdf4 = `${aws}/Kabaddi (1).pdf`;
+const pdf5 = `${aws}/Lawn Tennis (1).pdf`;
+const pdf6 = `${aws}/Squash (1).pdf`;
+const pdf7 = `${aws}/Cricket.pdf`;
+const pdf8 = `${aws}/Chess (1).pdf`;
+const pdf9 = `${aws}/Carrom.pdf`;
+const pdf10 = `${aws}/Badminton (1).pdf`;
+const pdf11 = `${aws}/Football (1).pdf`;
 
 const Events = () => {
   const images = [

@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
-import counter from '../../assets/images/counter.webp';
 import {motion} from 'framer-motion';
+
+const aws=import.meta.env.VITE_AWS;
+const counter = `${aws}/counter.webp`;
 
 const CountdownTimer = () => {
   const [days, setDays] = useState(0);
