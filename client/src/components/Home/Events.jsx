@@ -21,6 +21,7 @@ const img8 = `${aws}/Eventsimg8.webp`;
 const img9 = `${aws}/Eventsimg9.webp`;
 const img10 = `${aws}/Eventsimg10.webp`;
 const img11 = `${aws}/Eventsimg11.webp`;
+const img12 = `${aws}/Eventsimg12.webp`;
 
 // PDFs
 const pdf1 = `${aws}/Basketball (1).pdf`;
@@ -34,6 +35,7 @@ const pdf8 = `${aws}/Chess (1).pdf`;
 const pdf9 = `${aws}/Carrom.pdf`;
 const pdf10 = `${aws}/Badminton (1).pdf`;
 const pdf11 = `${aws}/Football (1).pdf`;
+const pdf12 = `${aws}/Table Tennis.pdf`;
 
 const Events = () => {
   const images = [
@@ -125,6 +127,14 @@ const Events = () => {
       className: "top-[1200px] ml-[10vw]  lg:ml-[10vw] uxl:ml-[10vw] w-[38%] lg:w-[20rem] h-[220px] xs1-sm:h-[260px] sm:h-[280px] md:h-[350px] lg:h-[450px]",
       text: "Football",
       pdfLink: pdf11
+    },
+    {
+      // src: "https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734769416/imgP6_okvib9.png",
+      src:img12,
+      alt: "Image 12",
+      className: "ml-[40%] md:ml-[45vw] top-[1300px] lg:top-[1200px] lg:ml-[60vw] uxl:ml-[70vw] w-[55%] sm:w-[48%] md:w-[50%] lg:w-[25rem]",
+      text: "Table Tennis",
+      pdfLink: pdf12
     },
   ];
 
