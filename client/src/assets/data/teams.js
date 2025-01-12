@@ -66,7 +66,7 @@ const teams = {
       instagramLink: "https://instagram.com/aditya",
       linkedinLink: "https://linkedin.com/in/aditya",
       emailLink: "aditya@example.com",
-      post: "Financy Convener",
+      post: "Finance Convener",
     },
   ],
   sponsorshipteam: [
