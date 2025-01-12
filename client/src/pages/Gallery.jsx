@@ -191,14 +191,14 @@ const SportsCollageScroll = () => {
         <CustomCursor />
         <Link
           to="/"
-          className="text-center align-middle absolute w-fit h-fit py-2 px-3 right-[16px] sm:right-4 sm:top-[10px] top-[26px] border-2 border-[#F85B02] shadow-[2px_1.5px_13px_#F85B02] rounded-xl  text-white text-l sm:text-xl lg:text-3xl bg-[#424242BF] font-squid hover:bg-[#515151bf] hover:scale-105 z-50"
+          className="text-center align-middle absolute w-fit h-fit py-2 px-3 right-[16px] sm:right-16 sm:top-[75px] top-[30px] border-2 border-[#F85B02] shadow-[2px_1.5px_13px_#F85B02] rounded-xl  text-white text-l sm:text-xl lg:text-3xl bg-[#424242BF] font-squid hover:bg-[#515151bf] hover:scale-105 z-50"
         >
           HOME
         </Link>
         <div className="absolute inset-0 z-30 flex flex-col justify-center items-center">
-          <p className="text-lg md:text-2xl lg:text-3xl mb-[-10px] md:mb-[-15px]">
+          {/* <p className="text-lg md:text-2xl lg:text-3xl mb-[-10px] md:mb-[-15px]">
             MORE THAN
-          </p>
+          </p> */}
           <h1
             className="text-center"
             style={{
@@ -215,9 +215,9 @@ const SportsCollageScroll = () => {
           >
             {getHeadingText(activeLayer)}
           </h1>
-          <p className="text-lg md:text-2xl lg:text-3xl mt-[-20px] md:mt-[-40px]">
+          {/* <p className="text-lg md:text-2xl lg:text-3xl mt-[-20px] md:mt-[-40px]">
             A RIVALRY
-          </p>
+          </p> */}
         </div>
         <div className="h-full w-full absolute top-0 left-0">
           {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((layerIndex) => (

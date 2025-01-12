@@ -22,6 +22,7 @@ const hemandra = "Hemandra.webp";
 const srijan = "srijan_despo.webp"
 const divay = "divay.webp";
 const nitish = "nitishgupta.webp"
+const krishna = "krishna.webp"
 
 const aws=import.meta.env.VITE_AWS;
 
@@ -65,7 +66,7 @@ const teams = {
       instagramLink: "https://instagram.com/aditya",
       linkedinLink: "https://linkedin.com/in/aditya",
       emailLink: "aditya@example.com",
-      post: "Financy Convener",
+      post: "Finance Convener",
     },
   ],
   sponsorshipteam: [
@@ -171,7 +172,7 @@ const teams = {
     {
       name: "Krishna khattri",
       imageUrl:
-        "https://res.cloudinary.com/dturzqo8m/image/upload/v1734953575/cvggow7lr0qy0r1rwl6k.png",
+        `${aws}/${krishna}`,
       instagramLink: "https://instagram.com/chetan",
       linkedinLink: "https://linkedin.com/in/chetan",
       emailLink: "chetan@example.com",
