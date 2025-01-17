@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion"; // Import Framer Motion
-import Background from "../../assets/images/Background.webp"
-import person from "../../assets/images/aboutperson.svg";
-import aboutus from "../../assets/images/aboutus.webp";
-import insta from "../../assets/images/instagram.svg";
-import youtube from "../../assets/images/youtube.svg";
+
+const aws=import.meta.env.VITE_AWS;
+const Background = `${aws}/Background.webp`;
+const person =  `${aws}/aboutperson.svg`;
+const aboutus = `${aws}/aboutus.webp`;
+const insta = `${aws}/instagram.svg`;
+const youtube = `${aws}/youtube.svg`;
 
 function AboutUs() {
   const [xValue, setXValue] = useState(0);

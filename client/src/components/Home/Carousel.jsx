@@ -1,20 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-// import image1 from "/carouselImages/1.png";
-// import image2 from "/carouselImages/2.png";
-// import image3 from "/carouselImages/3.png";
-// import image4 from "/carouselImages/4.png";
-// import moto from "/moto.png";
 import "../../App.css";
-import logo from "../../assets/images/logo.webp";
 import { Link } from "react-router-dom";
 import CountdownTimer from "./CountdownTimer";
-import heropage from "../../assets/images/heropage.webp";
-import heroESports from "../../assets/images/heroESports.webp";
-import heroSports from "../../assets/images/heroSports.webp";
-import heroPronite from "../../assets/images/heroPronite.webp";
-import img from "../../assets/images/EventsImg.webp";
 import Menu from "./Menu";
+
+const aws=import.meta.env.VITE_AWS;
+const logo = `${aws}/logo.webp`;
+const heropage = `${aws}/heropage.webp`;
+const heroESports = `${aws}/heroESports.webp`;
+const heroSports = `${aws}/heroSports.webp`;
+const heroPronite = `${aws}/heroPronite.webp`;
+const img = `${aws}/EventsImg.webp`;
 
 function Carousel() {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);

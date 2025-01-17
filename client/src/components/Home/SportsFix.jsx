@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
-import Background from "../../assets/images/Background.webp";
-import xImage from "../../assets/images/x.webp";
-import zImage from "../../assets/images/0.webp";
-import tImage from "../../assets/images/tri.webp";
-import sqImage from "../../assets/images/squ.webp";
-import sp1 from "../../assets/images/sp1.webp";
-import sp2 from "../../assets/images/sp2.webp";
-import sp3 from "../../assets/images/sp3.webp";
-import sp4 from "../../assets/images/sp4.webp";
+const aws=import.meta.env.VITE_AWS;
+const Background = `${aws}/Background.webp`;
+const xImage = `${aws}/x.webp`;
+const zImage = `${aws}/0.webp`;
+const tImage = `${aws}/tri.webp`;
+const sqImage = `${aws}/squ.webp`;
+const sp1 = `${aws}/sp1.webp`;
+const sp2 = `${aws}/sp2.webp`;
+const sp3 = `${aws}/sp3.webp`;
+const sp4 = `${aws}/sp4.webp`;
 import contentData from "../../assets/data/aboutData";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -296,7 +297,7 @@ const SportsFix = () => {
               </p>
               
               <p className="text-white text-center lg:w-[34.2vw] uxl:w-[30vw] text-sm sm:text-lg md:text-[1.7vw] lg:text-base xl:text-lg leading-relaxed">
-                {selectedContent.description2}
+                {selectedContent?.description2}
               </p>
             </motion.div>
 

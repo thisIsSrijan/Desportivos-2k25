@@ -1,0 +1,46 @@
+@keyframes throb {
+    0%,
+    100% {
+      transform: translate(-50%, -50%) scale(0.9); /* Normal size */
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.6),
+        0 0 20px rgba(255, 255, 255, 0.4); /* Faint glow */
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.2); /* Slightly larger */
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.8),
+        0 0 40px rgba(255, 255, 255, 0.7); /* Stronger glow */
+    }
+  }
+  
+  .custom-cursor {
+    position: fixed;
+    width: 35px;
+    height: 35px;
+    border: 2px solid white;
+    border-radius: 50%; /* Perfect circle */
+    pointer-events: none; /* Prevent interference with clicks */
+    z-index: 9999;
+    animation: throb 1.5s infinite; /* Continuous throbbing */
+    transition: background-color 0.2s ease, transform 0.1s ease-out,
+      box-shadow 0.3s ease; /* Smooth transitions */
+    mix-blend-mode: difference; /* Allows cursor to stand out against different backgrounds */
+  }
+  
+  .custom-cursor.clicked {
+    background-color: rgba(0, 0, 0, 0.5); /* Change color on click */
+    transform: translate(-50%, -50%) scale(0.8); /* Temporary shrink on click */
+    animation: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5), 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .custom-cursor:hover {
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.3
+    ); /* Slight background when hovering over elements */
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8),
+      0 0 50px rgba(255, 255, 255, 0.6); /* Stronger glow on hover */
+  }
+  

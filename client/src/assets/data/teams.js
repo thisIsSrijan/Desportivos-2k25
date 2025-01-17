@@ -1,36 +1,43 @@
-import Chetan from "../images/Chetan Sharma.webp";
-import Sanchay from "../images/ydtn2qpwmmckzgxoo4v0.webp";
-import Prem from "../images/Prem Chaudhary.webp";
-import Rishika from "../images/Rishika Parashar.webp";
-import Shivin from "../images/Shivin Goel.webp";
-import Pearl from "../images/Pearl Agarwal.webp";
-import Burhan from "../images/Burhan Vohra.webp";
-import Lakshay from "../images/Lakshay Mittal.webp";
-import Kalash from "../images/Kalash Jain.webp";
-import Anshul from "../images/Anshul.webp";
-import Ayush from "../images/Ayush Miglani.webp";
-import eesan from "../images/eesan yadav.webp";
-import hardik from "../images/Hardik Makkar.webp";
-import Mridul from "../images/Mridul Sharma.webp";
-import Paridhi from "../images/Paridhi Jain.webp";
-import Rajat from "../images/Rajat Satonkar.webp";
-import Shivani from "../images/Shivani Agarwal.webp";
-import Shreyansh from "../images/Shreyansh Singh.webp";
-import whatsapp from "../images/WhatsApp.webp";
-import Harsh from "../images/Harsh Mange.webp";
-import hemandra from "../images/Hemandra.webp";
+const Chetan = "Chetan Sharma.webp";
+const Sanchay = "ydtn2qpwmmckzgxoo4v0.webp";
+const Prem = "Prem Chaudhary.webp";
+const Rishika = "Rishika Parashar.webp";
+const Shivin = "Shivin Goel.webp";
+const Pearl = "Pearl Agarwal.webp";
+const Burhan = "Burhan Vohra.webp";
+const Lakshay = "Lakshay Mittal.webp";
+const Kalash = "Kalash Jain.webp";
+const Anshul = "Anshul.webp";
+const Ayush = "Ayush Miglani.webp";
+const eesan = "eesan yadav.webp";
+const hardik = "Hardik Makkar.webp";
+const Mridul = "Mridul Sharma.webp";
+const Paridhi = "Paridhi Jain.webp";
+const Rajat = "Rajat Satonkar.webp";
+const Shivani = "Shivani Agarwal.webp";
+const Shreyansh = "Shreyansh Singh.webp";
+const whatsapp = "WhatsApp.webp";
+const Harsh = "Harsh Mange.webp";
+const hemandra = "Hemandra.webp";
+const srijan = "srijan_despo.webp"
+const divay = "divay.webp";
+const nitish = "nitishgupta.webp"
+const krishna = "krishna.webp"
+
+const aws=import.meta.env.VITE_AWS;
+
 const teams = {
   festhead: [
     {
       name: "Sanchay Goel",
-      imageUrl: `${Sanchay}`,
+      imageUrl: `${aws}/${Sanchay}`,
       instagramLink: "https://instagram.com/aditya",
       linkedinLink: "https://linkedin.com/in/aditya",
       emailLink: "aditya@example.com",
     },
     {
       name: "Chetan Sharma",
-      imageUrl: `${Chetan}`,
+      imageUrl: `${aws}/${Chetan}`,
       instagramLink: "https://instagram.com/chetan",
       linkedinLink: "https://linkedin.com/in/chetan",
       emailLink: "chetan@example.com",
@@ -39,7 +46,7 @@ const teams = {
   sportscouncil: [
     {
       name: "Prem chaudhary",
-      imageUrl: `${Prem}`,
+      imageUrl: `${aws}/${Prem}`,
       instagramLink: "https://instagram.com/chetan",
       linkedinLink: "https://linkedin.com/in/chetan",
       emailLink: "chetan@example.com",
@@ -47,7 +54,7 @@ const teams = {
     },
     {
       name: "Rishika Parashar",
-      imageUrl: `${Rishika}`,
+      imageUrl: `${aws}/${Rishika}`,
       instagramLink: "https://instagram.com/aditya",
       linkedinLink: "https://linkedin.com/in/aditya",
       emailLink: "aditya@example.com",
@@ -55,17 +62,17 @@ const teams = {
     },
     {
       name: "Shivin Goel",
-      imageUrl: `${Shivin}`,
+      imageUrl: `${aws}/${Shivin}`,
       instagramLink: "https://instagram.com/aditya",
       linkedinLink: "https://linkedin.com/in/aditya",
       emailLink: "aditya@example.com",
-      post: "Financy Convener",
+      post: "Finance Convener",
     },
   ],
   sponsorshipteam: [
     {
       name: "Pearl Agarwal",
-      imageUrl: `${Pearl}`,
+      imageUrl: `${aws}/${Pearl}`,
       instagramLink: "https://instagram.com/chetan",
       linkedinLink: "https://linkedin.com/in/chetan",
       emailLink: "chetan@example.com",
@@ -73,7 +80,7 @@ const teams = {
     },
     {
       name: "Burhan Vora",
-      imageUrl: `${Burhan}`,
+      imageUrl: `${aws}/${Burhan}`,
       instagramLink: "https://instagram.com/chetan",
       linkedinLink: "https://linkedin.com/in/chetan",
       emailLink: "chetan@example.com",
@@ -81,7 +88,7 @@ const teams = {
     },
     {
       name: "Lakshay Mittal",
-      imageUrl: `${Lakshay}`,
+      imageUrl: `${aws}/${Lakshay}`,
       instagramLink: "https://instagram.com/aditya",
       linkedinLink: "https://linkedin.com/in/aditya",
       emailLink: "aditya@example.com",
@@ -89,7 +96,7 @@ const teams = {
     },
     {
       name: "Kalash Jain",
-      imageUrl: `${Kalash}`,
+      imageUrl: `${aws}/${Kalash}`,
       instagramLink: "https://instagram.com/aditya",
       linkedinLink: "https://linkedin.com/in/aditya",
       emailLink: "aditya@example.com",
@@ -97,7 +104,7 @@ const teams = {
     },
     {
       name: "Mridul Sharma",
-      imageUrl: `${Mridul}`,
+      imageUrl: `${aws}/${Mridul}`,
       instagramLink: "https://instagram.com/aditya",
       linkedinLink: "https://linkedin.com/in/aditya",
       emailLink: "aditya@example.com",
@@ -156,7 +163,7 @@ const teams = {
     {
       name: "Srijan das",
       imageUrl:
-        "https://res.cloudinary.com/dturzqo8m/image/upload/v1734953575/cvggow7lr0qy0r1rwl6k.png",
+        `${aws}/${srijan}`,
       instagramLink: "https://instagram.com/aditya",
       linkedinLink: "https://linkedin.com/in/aditya",
       emailLink: "aditya@example.com",
@@ -165,7 +172,7 @@ const teams = {
     {
       name: "Krishna khattri",
       imageUrl:
-        "https://res.cloudinary.com/dturzqo8m/image/upload/v1734953575/cvggow7lr0qy0r1rwl6k.png",
+        `${aws}/${krishna}`,
       instagramLink: "https://instagram.com/chetan",
       linkedinLink: "https://linkedin.com/in/chetan",
       emailLink: "chetan@example.com",
@@ -188,7 +195,7 @@ const teams = {
     {
       name: "Divay yadav",
       imageUrl:
-        "https://res.cloudinary.com/dturzqo8m/image/upload/v1734953575/cvggow7lr0qy0r1rwl6k.png",
+        `${aws}/${divay}`,
       instagramLink: "https://instagram.com/aditya",
       linkedinLink: "https://linkedin.com/in/aditya",
       emailLink: "aditya@example.com",
@@ -196,7 +203,7 @@ const teams = {
     },
     {
       name: "eesan yadav",
-      imageUrl: `${eesan}`,
+      imageUrl: `${aws}/${eesan}`,
       instagramLink: "https://instagram.com/chetan",
       linkedinLink: "https://linkedin.com/in/chetan",
       emailLink: "chetan@example.com",
@@ -211,17 +218,27 @@ const teams = {
       emailLink: "aditya@example.com",
       post: "Creative Head",
     },
+    {
+      name: "Nitish Gupta",
+      imageUrl:
+        `${aws}/${nitish}`,
+      instagramLink: "https://instagram.com/aditya",
+      linkedinLink: "https://linkedin.com/in/aditya",
+      emailLink: "aditya@example.com",
+      post: "Content Head",
+    },
     { name: "Arihant Bhura" },
     { name: "Eeshan Singh" },
     { name: "Akshat Gupta" },
     { name: "Dhairya Chhabra" },
     { name: "Arnav Rinawa" },
     { name: "Akshat Tyagi" },
+    { name: "Manas Tewari"}
   ],
   publicrelations: [
     {
       name: "shreyansh singh",
-      imageUrl: `${Shreyansh}`,
+      imageUrl: `${aws}/${Shreyansh}`,
       instagramLink: "https://instagram.com/chetan",
       linkedinLink: "https://linkedin.com/in/chetan",
       emailLink: "chetan@example.com",
@@ -229,7 +246,7 @@ const teams = {
     },
     {
       name: "hemendra yaduvanshi",
-      imageUrl: `${hemandra}`,
+      imageUrl: `${aws}/${hemandra}`,
       instagramLink: "https://instagram.com/chetan",
       linkedinLink: "https://linkedin.com/in/chetan",
       emailLink: "chetan@example.com",
@@ -237,7 +254,7 @@ const teams = {
     },
     {
       name: "hardik makkar",
-      imageUrl: `${hardik}`,
+      imageUrl: `${aws}/${hardik}`,
       instagramLink: "https://instagram.com/chetan",
       linkedinLink: "https://linkedin.com/in/chetan",
       emailLink: "chetan@example.com",
@@ -245,7 +262,7 @@ const teams = {
     },
     {
       name: "rajat satonkar",
-      imageUrl: `${Rajat}`,
+      imageUrl: `${aws}/${Rajat}`,
       instagramLink: "https://instagram.com/chetan",
       linkedinLink: "https://linkedin.com/in/chetan",
       emailLink: "chetan@example.com",
@@ -267,7 +284,7 @@ const teams = {
   eventmanagement: [
     {
       name: "Paridhi Jain",
-      imageUrl: `${Paridhi}`,
+      imageUrl: `${aws}/${Paridhi}`,
       instagramLink: "https://instagram.com/chetan",
       linkedinLink: "https://linkedin.com/in/chetan",
       emailLink: "chetan@example.com",
@@ -275,7 +292,7 @@ const teams = {
     },
     {
       name: "Shivani agarwal",
-      imageUrl: `${Shivani}`,
+      imageUrl: `${aws}/${Shivani}`,
       instagramLink: "https://instagram.com/chetan",
       linkedinLink: "https://linkedin.com/in/chetan",
       emailLink: "chetan@example.com",
@@ -283,7 +300,7 @@ const teams = {
     },
     {
       name: "ayush miglani",
-      imageUrl: `${Ayush}`,
+      imageUrl: `${aws}/${Ayush}`,
       instagramLink: "https://instagram.com/chetan",
       linkedinLink: "https://linkedin.com/in/chetan",
       emailLink: "chetan@example.com",
@@ -291,7 +308,7 @@ const teams = {
     },
     {
       name: "anshul luharkha",
-      imageUrl: `${Anshul}`,
+      imageUrl: `${aws}/${Anshul}`,
       instagramLink: "https://instagram.com/chetan",
       linkedinLink: "https://linkedin.com/in/chetan",
       emailLink: "chetan@example.com",
@@ -301,7 +318,7 @@ const teams = {
   artistandlogistics: [
     {
       name: "Harsh mange",
-      imageUrl: `${Harsh}`,
+      imageUrl: `${aws}/${Harsh}`,
       instagramLink: "https://instagram.com/chetan",
       linkedinLink: "https://linkedin.com/in/chetan",
       emailLink: "chetan@example.com",
@@ -309,7 +326,7 @@ const teams = {
     },
     {
       name: "Navam Garg",
-      imageUrl: `${whatsapp}`,
+      imageUrl: `${aws}/${whatsapp}`,
       instagramLink: "https://instagram.com/chetan",
       linkedinLink: "https://linkedin.com/in/chetan",
       emailLink: "chetan@example.com",
@@ -318,12 +335,20 @@ const teams = {
   ],
   uiux: [
     {
-      name: "Paras Jain",
+      name: "Parth Jain",
       imageUrl: ``,
       instagramLink: "https://instagram.com/aditya",
       linkedinLink: "https://linkedin.com/in/aditya",
       emailLink: "aditya@example.com",
-      post: "Lead Designer",
+      post: "UI/UX",
+    },
+    {
+      name: "Atharva Bhawalkar",
+      imageUrl: ``,
+      instagramLink: "https://instagram.com/aditya",
+      linkedinLink: "https://linkedin.com/in/aditya",
+      emailLink: "aditya@example.com",
+      post: "UI/UX",
     },
     { name: "Arihant Bhura" },
     { name: "Eeshan Singh" },

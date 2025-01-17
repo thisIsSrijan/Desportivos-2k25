@@ -1,12 +1,13 @@
 import React from "react";
 import Cardcompo from "../components/ourTeam_compo/Cardcompo";
 import TextField from "../components/ourTeam_compo/TextField";
-import Background from "../assets/images/Background.webp";
-import logo from "../assets/images/logo.webp";
 import { Link } from "react-router-dom";
 import Footer from "../components/base/Footer";
 import teams from "../assets/data/teams";
 
+const aws = import.meta.env.VITE_AWS;
+const Background = `${aws}/Background.webp`;
+const logo = `${aws}/logo.webp`;
 const OurTeam = () => {
   const festheaddata = teams.festhead;
   const sportscouncildata = teams.sportscouncil;
@@ -97,7 +98,43 @@ const OurTeam = () => {
             </div>
           </div>
           <div>
-            <div className="text-right">
+            <div>
+              <div className="text-right">
+                <TextField
+                  text="sponsorship team"
+                  className="block text-[80px] sm:text-[150px] font-bold text-gradient uppercase text-white font-dharma tracking-wide"
+                />
+              </div>
+              <div className="flex flex-wrap justify-center gap-24">
+                {sponsorshipdata.map((member, index) =>
+                  member.post ? (
+                    <Cardcompo
+                      key={index}
+                      name={member.name}
+                      imageUrl={member.imageUrl}
+                      instagramLink={member.instagramLink}
+                      linkedinLink={member.linkedinLink}
+                      emailLink={member.emailLink}
+                      post={member.post}
+                    />
+                  ) : (
+                    ""
+                  )
+                )}
+              </div>
+              <div className="text-white flex flex-col items-center justify-center mt-5 sm:mt-14">
+                <div className="text-3xl uppercase mb-5 font-squid">
+                  Team Members:
+                </div>
+                <div className="w-2/3 font-serif flex justify-center text-xl sm:text-2xl text-center font-medium flex-wrap">
+                  {sponsorshipdata
+                    .filter((member) => !member.post)
+                    .map((member) => member.name)
+                    .join(", ")}
+                </div>
+              </div>
+            </div>
+            <div className="text-left">
               <TextField
                 text="development team"
                 className="block text-[80px] sm:text-[150px] font-bold text-gradient uppercase text-white font-dharma tracking-wide"
@@ -132,7 +169,7 @@ const OurTeam = () => {
             </div>
           </div>
           <div>
-            <div className="text-left">
+            <div className="text-right">
               <TextField
                 text="creative team"
                 className="block text-[80px] sm:text-[150px] font-bold text-gradient uppercase text-white font-dharma tracking-wide"
@@ -170,42 +207,6 @@ const OurTeam = () => {
             </div>
           </div>
 
-          <div>
-            <div className="text-right">
-              <TextField
-                text="sponsorship team"
-                className="block text-[80px] sm:text-[150px] font-bold text-gradient uppercase text-white font-dharma tracking-wide"
-              />
-            </div>
-            <div className="flex flex-wrap justify-center gap-24">
-              {sponsorshipdata.map((member, index) =>
-                member.post ? (
-                  <Cardcompo
-                    key={index}
-                    name={member.name}
-                    imageUrl={member.imageUrl}
-                    instagramLink={member.instagramLink}
-                    linkedinLink={member.linkedinLink}
-                    emailLink={member.emailLink}
-                    post={member.post}
-                  />
-                ) : (
-                  ""
-                )
-              )}
-            </div>
-            <div className="text-white flex flex-col items-center justify-center mt-5 sm:mt-14">
-              <div className="text-3xl uppercase mb-5 font-squid">
-                Team Members:
-              </div>
-              <div className="w-2/3 font-serif flex justify-center text-xl sm:text-2xl text-center font-medium flex-wrap">
-                {sponsorshipdata
-                  .filter((member) => !member.post)
-                  .map((member) => member.name)
-                  .join(", ")}
-              </div>
-            </div>
-          </div>
           <div>
             <div>
               <TextField

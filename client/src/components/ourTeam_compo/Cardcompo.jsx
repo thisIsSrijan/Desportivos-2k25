@@ -1,5 +1,6 @@
 import React from "react";
-import cardimg from "../../assets/images/cardImg.webp";
+const aws=import.meta.env.VITE_AWS;
+const cardimg = `${aws}/cardImg.webp`;
 const CardCompo = ({
   name,
   post,
