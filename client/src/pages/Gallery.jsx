@@ -173,7 +173,7 @@ const SportsCollageScroll = () => {
     } else if (layerIndex >= 7 && layerIndex <= 9) {
       return "FOOD FESTIVAL";
     } else if (layerIndex >= 10) {
-      return "PRONIGHT";
+      return "PRONITE";
     }
     return "SPORTS";
   };
