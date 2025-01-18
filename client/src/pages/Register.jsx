@@ -4,14 +4,10 @@ import { Link } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { z } from "zod";
-const aws=import.meta.env.VITE_AWS;
+const aws = import.meta.env.VITE_AWS;
 const redbg = `${aws}/redbg.webp`;
 const bg1 = `${aws}/RegisterBG.webp`;
 const bg2 = `${aws}/RegisterBG2.webp`;
-
-
-
-
 
 const Register = () => {
   const [popupVisible, setPopupVisible] = useState(false); // State for popup visibility
@@ -254,9 +250,9 @@ const Register = () => {
       <div
         className="w-screen  h-full  bg-cover py-11 md:py-20 "
         style={{
-        // backgroundImage: `url(https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732953786/bottombg_bgswml.png)`,
-        backgroundImage: `url(${bg1})`,  
-      }}
+          // backgroundImage: `url(https://res.cloudinary.com/dzlzhtbfn/image/upload/v1732953786/bottombg_bgswml.png)`,
+          backgroundImage: `url(${bg1})`,
+        }}
       >
         <div
           className="uxl:mt-5 md:rounded-lg mx-6 p-6 sm:mx-26 sm:p-6 md:mx-36 md:p-12 md2:mx-44 lg:mx-56 lg2:mx-64 lg2:p-24 uxl:max-w-[1200px] uxl:mx-auto bg-cover z-5 min-w-[200px] md:min-w-[480px] lg2:min-w-[750px]"
@@ -423,6 +419,7 @@ const Register = () => {
                     onChange={(e) => setSelectedESport(e.target.value)}
                     className="p-2 border border-gray-300 rounded-md bg-[#625342] text-white"
                   >
+                    <option value="">Select Sport</option>
                     <option value="bgmi">BGMI</option>
                     <option value="valorant">Valorant</option>
                   </select>
