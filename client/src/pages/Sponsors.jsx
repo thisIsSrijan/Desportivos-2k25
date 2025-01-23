@@ -2,12 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import bg from "../assets/images/sponbg.webp";
 
-import vivo from "../assets/images/vivo.png";
-import krafton from "../assets/images/krafton.png";
-import ktm from "../assets/images/ktm.png";
-import gym from "../assets/images/gym.png";
-import cloth from "../assets/images/cloth.png";
-import bakery from "../assets/images/bakery.png";
+import vivo from "../assets/images/vivo.webp";
+import krafton from "../assets/images/krafton.webp";
+import ktm from "../assets/images/ktm.webp";
+import gym from "../assets/images/gym.webp";
+import cloth from "../assets/images/cloth.webp";
+import bakery from "../assets/images/bakery.webp";
 
 import SponsorCard from "../components/sponsorcard";
 
