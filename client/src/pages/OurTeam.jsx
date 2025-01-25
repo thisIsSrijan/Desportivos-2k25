@@ -144,7 +144,7 @@ const OurTeam = () => {
               <div className="flex flex-wrap justify-center gap-12 sm:gap-24 lg:gap-50 sm:mb-14">
                 {/* render only two member here */}
                 {sponsorshipdata.map((member, index) => (
-                  <Cardcompo
+                 member.post ? ( <Cardcompo
                     key={index}
                     name={member.name}
                     imageUrl={member.imageUrl}
@@ -152,7 +152,7 @@ const OurTeam = () => {
                     linkedinLink={member.linkedinLink}
                     emailLink={member.emailLink}
                     post={member.post}
-                  />
+                  /> ) : ("")
                 ))}
               </div>
               <div className="text-white flex flex-col items-center justify-center mt-5 sm:mt-10">
