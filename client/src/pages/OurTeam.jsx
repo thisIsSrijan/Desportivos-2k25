@@ -101,12 +101,12 @@ const OurTeam = () => {
             <div>
               <div className="text-right">
                 <TextField
-                  text="sponsorship team"
+                  text="development team"
                   className="block text-[80px] sm:text-[150px] font-bold text-gradient uppercase text-white font-dharma tracking-wide"
                 />
               </div>
               <div className="flex flex-wrap justify-center gap-24">
-                {sponsorshipdata.map((member, index) =>
+                {webdevelopmentdata.slice(0,2).map((member, index) =>
                   member.post ? (
                     <Cardcompo
                       key={index}
@@ -127,7 +127,7 @@ const OurTeam = () => {
                   Team Members:
                 </div>
                 <div className="w-2/3 font-serif flex justify-center text-xl sm:text-2xl text-center font-medium flex-wrap">
-                  {sponsorshipdata
+                  {webdevelopmentdata
                     .filter((member) => !member.post)
                     .map((member) => member.name)
                     .join(", ")}
@@ -136,14 +136,14 @@ const OurTeam = () => {
             </div>
             <div className="text-left">
               <TextField
-                text="development team"
+                text="sponsorship team"
                 className="block text-[80px] sm:text-[150px] font-bold text-gradient uppercase text-white font-dharma tracking-wide"
               />
             </div>
             <div>
               <div className="flex flex-wrap justify-center gap-12 sm:gap-24 lg:gap-50 sm:mb-14">
                 {/* render only two member here */}
-                {webdevelopmentdata.slice(0, 2).map((member, index) => (
+                {sponsorshipdata.map((member, index) => (
                   <Cardcompo
                     key={index}
                     name={member.name}
@@ -160,7 +160,7 @@ const OurTeam = () => {
                   Team Members:
                 </div>
                 <div className="w-2/3 font-serif flex justify-center text-xl sm:text-2xl text-center font-medium flex-wrap">
-                  {webdevelopmentdata
+                  {sponsorshipdata
                     .filter((member) => !member.post)
                     .map((member) => member.name)
                     .join(", ")}
