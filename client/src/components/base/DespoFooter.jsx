@@ -203,7 +203,7 @@ const DespoFooter = () => {
         >
           <p className="font-poppins text-[8px] md:text-[10px] lg:text-[17px] font-normal tracking-[0.16em] text-center">
             <img
-              src="https://res.cloudinary.com/dzlzhtbfn/image/upload/v1734027212/transparentgdg_jymiok.png"
+              src="https://d1zcdwyv76c2xf.cloudfront.net/gdg.svg"
               alt="GDG logo"
               className="inline-block w-7 h-7 md:w-9 md:h-9 mr-2"
             />
